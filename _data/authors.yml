@@ -1,0 +1,526 @@
+#################################   Teams   #################################
+
+Cisco Software Management Team:
+  name        : "Cisco MIG Routing Team"
+  github      : "ios-xr"
+  bio         : "A Team of coders and network engineers determined to build the best architectures & technology for Service Providers."
+  avatar      : "cisco-web-team.jpg"
+  twitter     : "xrdocs"
+
+Cisco Automation Team:
+  name        : "Cisco MIG Routing Team"
+  github      : "ios-xr"
+  bio         : "A Team of coders and network engineers determined to build the best architectures & technology for Service Providers."
+  avatar      : "cisco-web-team.jpg"
+  twitter     : "xrdocs"
+
+Cisco Cloud Scale Networking Team:
+  name        : "Cisco MIG Routing Team"
+  github      : "ios-xr"
+  bio         : "A Team of coders and network engineers determined to build the best architectures & technology for Service Providers."
+  avatar      : "cisco-web-team.jpg"
+  twitter     : "xrdocs"
+
+Cisco Service Layer Team:
+  name        : "Cisco MIG Routing Team"
+  github      : "ios-xr"
+  bio         : "A Team of coders and network engineers determined to build the best architectures & technology for Service Providers."
+  avatar      : "cisco-web-team.jpg"
+  twitter     : "xrdocs"
+
+Cisco Telemetry Team:
+  name        : "Cisco MIG Routing Team"
+  github      : "ios-xr"
+  bio         : "A Team of coders and network engineers determined to build the best architectures & technology for Service Providers."
+  avatar      : "cisco-web-team.jpg"
+  twitter     : "xrdocs"
+
+Cisco Web Team:
+  name        : "Cisco MIG Routing Team"
+  github      : "ios-xr"
+  bio         : "A Team of coders and network engineers determined to build the best architectures & technology for Service Providers."
+  avatar      : "cisco-web-team.jpg"
+  twitter     : "xrdocs"
+
+Cisco Design Team:
+  name        : "Cisco MIG Routing Team"
+  github      : "ios-xr"
+  bio         : "A Team of coders and network engineers determined to build the best architectures & technology for Service Providers."
+  avatar      : "cisco-web-team.jpg"
+  twitter     : "xrdocs"
+
+Cisco SP BU:
+  name        : "Cisco MIG"
+  github      : "ios-xr"
+  bio         : "A Team of dedicated network engineers determined to build the best network operating system for Web-Scale Service Providers."
+  avatar      : "cisco-design-team.png"
+  twitter     : "xrdocs"
+
+Cisco Application Hosting Team:
+  name        : "Cisco MIG Routing Team"
+  github      : "ios-xr"
+  bio         : "A Team of coders and network engineers determined to build the best architectures & technology for Service Providers."
+  avatar      : "cisco-web-team.jpg"
+  twitter     : "xrdocs"
+
+Cisco Programmability Team:
+  name        : "Cisco MIG Routing Team"
+  github      : "ios-xr"
+  bio         : "A Team of coders and network engineers determined to build the best architectures & technology for Service Providers."
+  avatar      : "cisco-web-team.jpg"
+  twitter     : "xrdocs"
+
+#################################   Authors   #################################
+
+Shelly Cadora:
+  name        : "Shelly Cadora"
+  email       : "scadora@cisco.com"
+  bio         : "Principal Technical Marketing Engineer, Cisco"
+  avatar      : "scadora16.jpeg"
+  twitter     : "scadora"
+  github      : "scadora"
+
+Akshat Sharma:
+  name        : "Akshat Sharma"
+  github      : "akshshar"
+  email       : "akshshar@cisco.com"
+  bio         : "Evangelist, tinkerer, dog-lover and Technical Marketing Engineer, Cisco."
+  avatar      : "akshat_bio_photo.jpeg"
+  twitter     : "irakshat"
+
+Mike Korshunov:
+  name        : "Mike Korshunov"
+  github      : "maikor"
+  email       : "mkorshun@cisco.com"
+  bio         : "Technical Marketing Engineer, Cisco"
+  avatar      : "Mike_pic.jpg"
+  twitter     : "mike_korshunov"   
+
+Bruce McDougall:
+  name        : "Bruce McDougall"
+  github      : "brmcdoug"
+  email       : "brmcdoug@cisco.com"
+  avatar      : "brucemc_bio.jpg"
+  bio         : "Systems Engineer, Web Solutions, Cisco."
+  
+Praveen Bhagwatula:
+  name        : "Praveen Bhagwatula"
+  github      : "pbhagwat27"
+  email       : "pbhagwat@cisco.com"
+  avatar      : "pbhagwat.jpg"
+  bio         : "Distinguished Engineer, Cisco"
+  
+Richard Wade:
+  name        : "Richard Wade"
+  github      : "rikwade"
+  avatar      : "ricwade_bio.jpeg"
+  bio         : "ex-Cisco"  
+  
+Marco Umer:
+  name        : "Marco Umer"
+  github      : "marumer"
+  email       : "marumer@cisco.com"
+  avatar      : "marumer_bio.png"
+  bio         : "Technology, martial arts and nature are my passions"
+
+Lisa Roach:
+  name        : "Lisa Roach"
+  github      : "lisroach"
+  bio         : "ex-Cisco"
+  avatar      : "lisa_bio.png"
+ 
+Jose Palafox:
+  name        : "Jose Palafox"
+  github      : "josepalafox"
+  twitter     : "cruzfox"
+  bio         : "ex-Cisco"
+  avatar      : "josep_bio.jpeg"
+
+Anne Sequeira:
+  name        : "Anne Sequeira"
+  github      : "annesequeira"
+  avatar      : "anneseque_bio.png"
+  bio         : "ex-Cisco"
+
+Richard Wellum:
+  name        : "Richard Wellum"
+  github      : "RichWellum"
+  avatar      : "richwellum_bio.jpg"
+  bio         : "ex-Cisco"
+  twitter     : "XRvCiscoRich"
+
+Sushrut Shirole:
+  name        : "Sushrut Shirole"
+  github      : "sushirol"
+  avatar      : "sushirol_bio.jpg"
+  bio         : "ex-Cisco"
+
+Santiago Alvarez:
+  name        : "Santiago Alvarez"
+  bio         : "ex-Cisco"
+  avatar      : "salvarez_bio.jpg"
+  twitter     : "111pontes"
+  github      : "111pontes"
+
+Nicolas Leiva:
+  name        : "Nicolas Leiva"
+  github      : "nleiva"
+  bio         : "ex-Cisco"
+  avatar      : "nleiva.png"
+  twitter     : "nleiv4"
+
+Jose Liste:
+  name        : "Jose Liste"
+  github      : "joseliste"
+  email       : "jliste@cisco.com"
+  avatar      : "jliste_bio.jpg"
+  bio         : "Principal Technical Marketing Engineer, Cisco."
+  twitter     : "jliste2002"
+  
+Patrick Warichet:
+  name        : "Patrick Warichet"
+  avatar      : "pwariche_bio.jpg"
+  bio         : "ex-Cisco"
+  
+Karthik Kumaravel:
+  name        : "Karthik Kumaravel"
+  github      : "skkumaravel"
+  bio         : "ex-Cisco"
+  avatar      : "kkumara3.jpg"
+
+Phil Bedard:
+  name        : "Phil Bedard"
+  github      : "philbedard"
+  email       : "phbedard@cisco.com"
+  bio         : "Technical Marketing Engineer, Cisco"
+  avatar      : "phbedard.jpg"
+
+Derek Tay:
+  name        : "Derek Tay"
+  github      : "derektay"
+  bio         : "ex-Cisco"
+  avatar      : "derekta.png"
+
+Josh Peters:
+  name        : "Josh Peters"
+  github      : "jpeters1"
+  bio         : "ex-Cisco"
+  avatar      : "jpeters.png"
+
+Nicolas Fevrier:
+  name        : "Nicolas Fevrier"
+  github      : "nfevrier"
+  avatar      : "nfevrier_bio.jpeg"
+  bio         : "ex-Cisco"
+  twitter     : "c1sc0kid"
+  linkedin    : "nfevrier"
+
+Viktor Osipchuk:
+  name        : "Viktor Osipchuk"
+  github      : "vosipchu"
+  bio         : "ex-Cisco"
+  avatar      : "vosipchu.jpeg"
+  
+Jiri Chaloupka:
+  name        : "Jiri Chaloupka"
+  github      : "jichalou"
+  email       : "jichalou@cisco.com"
+  bio         : "Technical Marketing Engineer, Cisco. CCIE#39800"
+  avatar      : "jichalou.jpg"
+  linkedin    : "jiri-chaloupka"
+  
+Lane Wigley:
+  name        : "Lane Wigley"
+  email       : "lwigley@cisco.com"
+  bio         : "Technical Marketing Engineer, Cisco."
+  avatar      : "lwigley.jpg"
+
+Xander Thuijs:
+  name        : "Xander Thuijs"
+  email       : "xthuijs@cisco.com"
+  bio         : "ex-Cisco"
+  avatar      : "xander-thuijs.png"
+  linkedin    : "xander-thuijs-886a00"
+
+Thomas Wang:
+  name        : "Thomas Wang"
+  email       : "pewang@cisco.com"
+  bio         : "Technical Marketing Engineer, Cisco."
+  avatar      : "pewang.png"    
+
+Cristina Precup:
+  name        : "Cristina Precup"
+  email       : "cprecup@cisco.com"
+  bio         : "Was in search for 42 - the answer to life, the universe and everything; found it in Informatics. Systems Engineer at Cisco."
+  avatar      : "cprecup.jpg"
+
+Ahmad Bilal Siddiqui:
+  name        : "Ahmad Bilal Siddiqui"
+  email       : "ahsiddiq@cisco.com"
+  bio         : "Technical Marketing Engineer, Cisco."
+  avatar      : "ahsiddiq.jpg"
+  
+Dan Backman:
+  name        : "Dan Backman"
+  twitter     : "jonahsfo"
+  github      : "dbackmancsco"
+  email       : "dbackman@cisco.com"
+  bio         : "Technical Marketing Engineer, Cisco."
+  avatar      : "dbackman.jpg"
+   
+Jag Tangirala:
+  name        : "Jag Tangirala"
+  email       : "tangiral@cisco.com"
+  bio         : "Distinguished Engineer, Cisco."
+  avatar      : "jag.jpeg"
+
+Ianik Semco:
+  name        : "Ianik Semco"
+  email       : "isemco@cisco.com"
+  bio         : "Product Manager, Cisco."
+  avatar      : "isemco_latest.jpg"
+
+Tejas Lad:
+  name        : "Tejas Lad"
+  email       : "telad@cisco.com"
+  bio         : "Technical Marketing Engineer, Cisco."
+  avatar      : "telad.jpg"   
+
+
+Vincent Ng:
+  name        : "Vincent Ng"
+  email       : "vinng@cisco.com"
+  bio         : "Technical Marketing Engineer, Cisco."
+  avatar      : "vinng.jpg"
+
+Sonia Ben Ayed:
+  name        : "Sonia Ben Ayed"
+  email       : "sbenayed@cisco.com"
+  bio         : "Collge Intern, Cisco."
+  avatar      : "sbenayed.jpg"
+   
+Frederic Cuiller:
+  name        : "Frederic Cuiller"
+  email       : "fcuiller@cisco.com"
+  bio         : "Architect, Cisco."
+  avatar      : "fcuiller.jpg"
+  twitter     : "fcuiller"
+  linkedin    : "fcuiller"
+ 
+Aleksandar Vidakovic:
+  name        : "Aleksandar Vidakovic"
+  email       : "avidakov@cisco.com"
+  bio         : "Tech Lead, Cisco."
+  avatar      : "avidakov.jpg"
+  
+Nikolay Karpyshev:
+  name        : "Nikolay Karpyshev"
+  email       : "nkarpysh@cisco.com"
+  bio         : "Software Engineer, Cisco."
+  avatar      : "nkarpysh.jpg"
+  
+Paban Sarma:
+  name        : "Paban Sarma"
+  email       : "pasarma@cisco.com"
+  bio         : "Technical Marketing Engineer, Cisco."
+  avatar      : "pasarma.jpg"
+
+Jasmine Joyce Kalaiselvan:
+  name        : "Jasmine Joyce Kalaiselvan"
+  bio         : "ex-Cisco"
+  avatar      : "jkalaise.jpg"
+  twitter     : "jkalaise"
+
+Avinash Pathak:
+  name        : "Avinash Pathak"
+  email       : "avpathak@cisco.com"
+  bio         : "Software Engineer, Cisco."
+  avatar      : "avpathak.jpg"
+
+Lampros Gkavogiannis:
+  name        : "Lampros Gkavogiannis"
+  email       : "lgkavogi@cisco.com"
+  bio         : "Technical Marketing Engineer,  Cisco."
+  avatar      : "lgkavogi.jpg"
+  linkedin    : "lgkavogi"
+  github      : "lambros90"
+
+Santosh Sharma:
+  name        : "Santosh Sharma"
+  github      : "santsha2"
+  email       : “santsha2@cisco.com”
+  bio         : "Tech lead, S/W Engineering, Cisco."
+  avatar      : "santsha2_bio.jpg"
+  twitter     : "santsha2"
+
+Antoine Orsoni:
+  name        : "Antoine Orsoni"
+  github      : "AntoineOrsoni"
+  email       : “anorsoni@cisco.com”
+  bio         : "Programmability enthusiast and Systems Engineer, Cisco"
+  avatar      : "anorsoni.png"
+
+Neelima Parakala:
+  name        : "Neelima Parakala"
+  email       : "neparaka@cisco.com"
+  bio         : "Technical Marketing Engineer, Cisco."
+  avatar      : "neparaka.jpg"
+  github      : "neelimapp"
+  twitter     : "neelima_p_"
+
+Jakub Horn:
+  name        : "Jakub Horn"
+  email       : "jhorn@cisco.com"
+  avatar      : "jakubhorn.jpg"
+  github      : "jakuhorn"
+
+Gurpreet Dhaliwal:
+  name        : "Gurpreet S"
+  bio         : "TME MIG"
+  avatar      : "bio_gurpreets.JPG"
+  
+Sounak Mukherjee:
+  name        : "Sounak Mukherjee"
+  email       : "sounmukh@cisco.com"
+  bio         : "Technical Marketing Engineer, Cisco."
+  avatar      : "sounmukh.jpg"
+  
+Chethan KS:
+  name        : "Chethan K S"
+  email       : "ches@cisco.com"
+  bio         : "Software Test Lead, Cisco."
+  avatar      : "ches.jpeg"
+  
+Fung Lim:
+  name        : "Fung Lim"
+  email       : "flim@cisco.com"
+  bio         : "Technical Marketing Engineer, Cisco."
+  github      : "flim226"
+  avatar	    : "cloud-scale-networking-team.png"
+  
+Akshaya Kumar Sankaran:
+  name        : "Akshaya Kumar Sankaran"
+  email       : "sakskuma@cisco.com"
+  bio         : "Technical Marketing Engineer, Cisco"
+  twitter     : "broadbandtme"
+  github      : "akshaycisco"
+  linkedin    : "akshayakumar"
+  avatar      : "akshay.jpg"
+
+Chang Soo Lee:
+  name        : "Chang Soo Lee"
+  email       : "cslee@cisco.com"
+  bio         : "Technical Marketing Engineer, Cisco."
+  github      : "bluecslee"
+  avatar      : "CSLee.png"
+
+Alain Nicolas:
+  name        : "Alain Nicolas"
+  email       : "alnicola@cisco.com"
+  bio         : "Network Consulting Engineer, Cisco."
+  twitter     : "alainicolas"
+  linkedin    : "alainicolas"
+  avatar      : "alnicola.jpg"
+  
+Vladimir Deviatkin:
+  name        : "Vladimir Deviatkin"
+  email       : "vdeviatk@cisco.com"
+  bio         : "Technical Consulting Engineer, Cisco."
+  avatar      : "vdeviatk.jpg"
+
+LJ Wobker:
+  name        : "LJ Wobker"
+  email       : "lwobker@cisco.com"
+  bio         : "Principal Technical Consulting Engineer, Cisco."
+  avatar      : "lwobker.jpg"
+
+Rakesh Kandula:
+  name        : "Rakesh Kandula"
+  github      : "rrkandula"
+  email       : "krreddy@cisco.com"
+  avatar      : "rakesh_kandula.jpg"
+  bio         : "Technical Marketing Engineer"
+
+Adam Horton:
+  name        : "Adam Horton"
+  email       : "adhorton@cisco.com"
+  bio         : "Technical Marketing Engineer, Cisco"
+  github      : "adhorton-cisco"
+  linkedin    : "adam-hort"
+  avatar      : "adamhorton.jpeg"
+
+Eliot Pickhardt:
+  name        : "Eliot Pickhardt"
+  email       : "epickhar@cisco.com"
+  bio         : "Technical Marketing Engineer, Cisco"
+  twitter     : "emanpik"
+  github      : "epickhardt"
+  linkedin    : "eliot-pickhardt"
+  avatar      : "eliot_pickhardt.jpg"
+
+Rahul Sharma:
+  name        : "Rahul SHarma"
+  email       : "rahusha7@cisco.com"
+  bio         : "Technical Marketing Engineer, Cisco"
+  github      : "rahusha7"
+  linkedin    : "rahul07sharmaa"
+  avatar      : "rahul.jpeg"
+
+Suhaib Ahmad:
+  name        : "Suhaib Ahmad"
+  email       : "suhahmad@cisco.com"
+  bio         : "Technical Marketing Engineer, Cisco"
+  github      : "suhaib-ahmd"
+  linkedin    : "suhaib-ahmad19"
+  avatar      : "suhaib.jpg"
+
+Akhil Sehgal:
+  name        : "Akhil Sehgal"
+  email       : "akhsehga@cisco.com"
+  bio         : "Product Management Intern, Cisco"
+  github      : "akhsehga"
+  linkedin    : "akhilsehgal"
+  avatar      : "akhsehga.jpg"
+
+Vitha Anumolu:
+  name        : "Vitha Anumolu"
+  email       : "vianumol@cisco.com"
+  bio         : "Technical Marketing Engineer Intern, Cisco MIG"
+  linkedin    : "Anvitha Anumolu"
+  avatar      : "vitha.jpg"
+
+Taran Deshpande:
+  name        : "Taran Deshpande"
+  email       : "tadeshpa@cisco.com"
+  bio         : "Technical Marketing Engineer, Cisco"
+  linkedin    : "taran-desh"
+  avatar      : "taran.jpg"
+
+Annapoorani G:
+  name        : "Annapoorani G"
+  email       : "annag@cisco.com"
+  # github      : "annag"
+  bio         : "Technical Writer, Cisco"
+  avatar      : "annapoorani.jpg"
+
+Sarah Samuel:
+  name        : "Sarah Samuel"
+  email       : "sasamuel@cisco.com"
+  # github      : "sasamuel"
+  bio         : "Technical Writer, Cisco"
+  avatar      : "sasamuel.jpg"
+
+Pradeep Sosale:
+  name        : "Pradeep Sosale"
+  email       : "psosale@cisco.com"
+  # github      : "annagg"
+  bio         : "Technical Writer, Cisco"
+  avatar      : "psosale.jpg"
+
+Cisco MIG Notebooks Team:
+  name        : "Cisco MIG Notebooks Team"
+  email       : "mig-notebooks@cisco.com"
+  # github      : "ios-xr"
+  bio         : "A Team of Cisco technical writers"
+  avatar      : "cloud-scale-networking-team.png"
+  # twitter     : "xrdocs"
