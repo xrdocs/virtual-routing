@@ -1,0 +1,1591 @@
+<!-- HTML header for doxygen 1.8.8-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- For Mobile Devices -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+        <meta name="generator" content="Doxygen 1.8.11"/>
+<meta charset="utf-8">
+<!-- begin SEO -->
+<title>            Blogs and Events      IOS XR Documentation @xrdocs      </title>
+<meta property="og:locale" content="en-US">
+<meta property="og:site_name" content="IOS XR Documentation @xrdocs">
+<meta property="og:title" content="Blogs and Events">
+  <link rel="canonical" href="https://xrdocs.github.io/cisco-service-layer/apidocs/">
+  <meta property="og:url" content="/cisco-service-layer/apidocs/">
+  <meta name="twitter:site" content="@xrdocs">
+  <meta name="twitter:title" content="Blogs and Events">
+  <meta name="twitter:description" content="Documentation, Blogs and Tutorials on the IOS-XR software">
+  <meta name="twitter:url" content="https://xrdocs.github.io/cisco-service-layer/apidocs/">
+    <meta name="twitter:card" content="summary">
+      <meta name="twitter:image" content="https://xrdocs.github.io/cisco-service-layer/images/service-layer-icon-xrdocs.png">
+    <meta name="twitter:creator" content="@xrdocs">
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "url": "https://xrdocs.github.io/cisco-service-layer",
+      "logo": "https://xrdocs.github.io/images/service-layer-icon-xrdocs.png"
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "person",
+      "name" : "Cisco Systems Inc",
+      "url" : "https://xrdocs.github.io/cisco-service-layer",
+      "sameAs" : ["https://twitter.com/xrdocs"]
+    }
+  </script>
+<!-- end SEO -->
+<link href="https://xrdocs.github.io/cisco-service-layer/feed.xml" type="application/atom+xml" rel="alternate" title="IOS XR Documentation @xrdocs Feed">
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="jgRKKm6B9FwJJPXxpmc0-EP3D0Mh8JHXaJqoYIGj1ek" />
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+<script>
+if (!(window.location.host.startsWith("127.0.0.1") || window.location.host.startsWith("localhost")) && (window.location.host.substr(-10) == '.github.io') && (window.location.protocol != "https:"))
+    window.location.protocol = "https";
+</script>
+<!-- For all browsers -->
+        <link href="customdoxygen.css" rel="stylesheet" type="text/css" />
+        <link href="doxyboot.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="/assets/css/main.css">
+<meta http-equiv="cleartype" content="on">
+<style>
+.underline-on-hover:hover {
+    text-decoration: underline;
+}
+.searchForm{
+      border-radius:5px;
+      -moz-border-radius:5px;
+      -webkit-border-radius:5px;
+      width: 900px;
+   }
+#search_results{
+      display: table; margin:0 auto;
+   }
+</style>
+</style>
+<!-- start custom head snippets -->
+<link href="https://xrdocs.github.io/cisco-service-layer/assets/css/lity.min.css" rel="stylesheet">
+<link href="https://xrdocs.github.io/cisco-service-layer/assets/css/cisco-sans.min.css" rel="stylesheet">
+<link href="https://xrdocs.github.io/cisco-service-layer/assets/css/material-scrolltop.css" rel="stylesheet">
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://xrdocs.github.io/cisco-service-layer/images/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://xrdocs.github.io/cisco-service-layer/images/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://xrdocs.github.io/cisco-service-layer/images/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://xrdocs.github.io/cisco-service-layer/images/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://xrdocs.github.io/cisco-service-layer/images/apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://xrdocs.github.io/cisco-service-layer/images/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://xrdocs.github.io/cisco-service-layer/images/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://xrdocs.github.io/cisco-service-layer/images/apple-touch-icon-152x152.png" />
+<link rel="icon" type="image/png" href="https://xrdocs.github.io/cisco-service-layer/images/favicon-196x196.png" sizes="196x196" />
+<link rel="icon" type="image/png" href="https://xrdocs.github.io/cisco-service-layer/images/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="https://xrdocs.github.io/cisco-service-layer/images/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="https://xrdocs.github.io/cisco-service-layer/images/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="https://xrdocs.github.io/cisco-service-layer/images/favicon-128.png" sizes="128x128" />
+<link rel="shortcut icon" href="https://xrdocs.github.io/cisco-service-layer/images/favicon_cisco.ico" />
+<meta name="application-name" content="&nbsp;"/>
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="https://xrdocs.github.io/cisco-service-layer/images/mstile-144x144.png" />
+<meta name="msapplication-square70x70logo" content="https://xrdocs.github.io/cisco-service-layer/images/mstile-70x70.png" />
+<meta name="msapplication-square150x150logo" content="https://xrdocs.github.io/cisco-service-layer/images/mstile-150x150.png" />
+<meta name="msapplication-wide310x150logo" content="https://xrdocs.github.io/cisco-service-layer/images/mstile-310x150.png" />
+<meta name="msapplication-square310x310logo" content="https://xrdocs.github.io/cisco-service-layer/images/mstile-310x310.png" />
+<!-- end custom head snippets -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="dynsections.js"></script>
+        <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="doxy-boot.js"></script>
+    </head>
+<body style="overflow-x: visible;">
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu" style="padding-left: 0;">
+      <nav id="site-nav" class="greedy-nav">
+        <button><div class="navicon"></div></button>
+        <ul class="visible-links">
+          <img src="https://xrdocs.github.io/images/xrdocs_logo.png" width="45px" height="45px" alt="xrdocs logo" style="float:left;">
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="https://xrdocs.github.io/">@xrdocs</a></li>
+          <li class="masthead__menu-item masthead__menu-item"><a href="https://xrdocs.github.io/cisco-service-layer/">Cisco Service Layer</a></li>
+                    <li class="masthead__menu-item greedy-nav-active"><a href="https://xrdocs.github.io/cisco-service-layer/apidocs/">Apidocs</a></li>
+                    <li class="masthead__menu-item"><a href="https://xrdocs.github.io/cisco-service-layer/blogs/">Blogs</a></li>
+                    <li class="masthead__menu-item"><a href="https://xrdocs.github.io/cisco-service-layer/tutorials/">Tutorials</a></li>
+                    <li class="masthead__menu-item"><a href="https://xrdocs.github.io/cisco-service-layer/search">Search <i class="fa fa-search" aria-hidden="true"></i></a></li>
+                    <li class="masthead__menu-item"><a href="https://xrdocs.github.io/cisco-service-layer/tags/">Tags</a></li>
+                    <li class="masthead__menu-item"><a href="https://xrdocs.github.io/cisco-service-layer/collection-archive/">Archive</a></li>
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+        <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+          <div id="apititle_div"><h1 class="apititle"><span>Cisco Service Layer API Documentation</span></h1></div>
+            <div class="content" id="content_tabs">
+<!-- Generated by Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Quick&#160;Start</span></a></li>
+      <li class="current"><a href="modules.html"><span>Services</span></a></li>
+      <li><a href="annotated.html"><span>Messages</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">RPC Calls</a> &#124;
+<a href="#nested-classes">Messages</a> &#124;
+<a href="#enum-members">Enumerations</a>  </div>
+  <div class="headertitle">
+<div class="title">SLRouteL2Oper</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Service Description</h2>
+<p>This service declares calls for adding, deleting, updating and getting L2 routes. </p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+RPC Calls</h2></td></tr>
+<tr class="memitem:ga97b51908bde1f3344a89e56679fcf226"><td class="memItemLeft" align="right" valign="top">rpc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#ga97b51908bde1f3344a89e56679fcf226">SLL2Oper::SLL2GlobalsGet</a> (<a class="el" href="group__SLRouteL2Oper.html#structSLL2GlobalsGetMsg">SLL2GlobalsGetMsg</a>) returns(<a class="el" href="group__SLRouteL2Oper.html#structSLL2GlobalsGetMsgRsp">SLL2GlobalsGetMsgRsp</a>)</td></tr>
+<tr class="memdesc:ga97b51908bde1f3344a89e56679fcf226"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global L2 route operations.  <a href="group__SLRouteL2Oper.html#ga97b51908bde1f3344a89e56679fcf226">More...</a><br /></td></tr>
+<tr class="separator:ga97b51908bde1f3344a89e56679fcf226"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga08e1cc0ab6a154af34536077c28e8bd1"><td class="memItemLeft" align="right" valign="top">rpc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#ga08e1cc0ab6a154af34536077c28e8bd1">SLL2Oper::SLL2RegOp</a> (<a class="el" href="group__SLRouteL2Oper.html#structSLL2RegMsg">SLL2RegMsg</a>) returns(<a class="el" href="group__SLRouteL2Oper.html#structSLL2RegMsgRsp">SLL2RegMsgRsp</a>)</td></tr>
+<tr class="memdesc:ga08e1cc0ab6a154af34536077c28e8bd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">L2 Registration Operations.  <a href="group__SLRouteL2Oper.html#ga08e1cc0ab6a154af34536077c28e8bd1">More...</a><br /></td></tr>
+<tr class="separator:ga08e1cc0ab6a154af34536077c28e8bd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab016417c3ebddb141f4482bbcf6e18a0"><td class="memItemLeft" align="right" valign="top">rpc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#gab016417c3ebddb141f4482bbcf6e18a0">SLL2Oper::SLL2BdRegOp</a> (<a class="el" href="group__SLRouteL2Oper.html#structSLL2BdRegMsg">SLL2BdRegMsg</a>) returns(<a class="el" href="group__SLRouteL2Oper.html#structSLL2BdRegMsgRsp">SLL2BdRegMsgRsp</a>)</td></tr>
+<tr class="memdesc:gab016417c3ebddb141f4482bbcf6e18a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">L2 Bridge-Domain (BD) Registration Operations.  <a href="group__SLRouteL2Oper.html#gab016417c3ebddb141f4482bbcf6e18a0">More...</a><br /></td></tr>
+<tr class="separator:gab016417c3ebddb141f4482bbcf6e18a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga38a6bbf60f0d0aa04fa98ba963d3a4e4"><td class="memItemLeft" align="right" valign="top">rpc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#ga38a6bbf60f0d0aa04fa98ba963d3a4e4">SLL2Oper::SLL2RouteOp</a> (<a class="el" href="group__SLRouteL2Oper.html#structSLL2RouteMsg">SLL2RouteMsg</a>) returns(<a class="el" href="group__SLRouteL2Oper.html#structSLL2RouteMsgRsp">SLL2RouteMsgRsp</a>)</td></tr>
+<tr class="memdesc:ga38a6bbf60f0d0aa04fa98ba963d3a4e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">L2 Route Operations.  <a href="group__SLRouteL2Oper.html#ga38a6bbf60f0d0aa04fa98ba963d3a4e4">More...</a><br /></td></tr>
+<tr class="separator:ga38a6bbf60f0d0aa04fa98ba963d3a4e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga90c5431c7a86d5d42db7eb2dd4416411"><td class="memItemLeft" align="right" valign="top">rpc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#ga90c5431c7a86d5d42db7eb2dd4416411">SLL2Oper::SLL2RouteOpStream</a> (stream <a class="el" href="group__SLRouteL2Oper.html#structSLL2RouteMsg">SLL2RouteMsg</a>) returns(stream <a class="el" href="group__SLRouteL2Oper.html#structSLL2RouteMsgRsp">SLL2RouteMsgRsp</a>)</td></tr>
+<tr class="memdesc:ga90c5431c7a86d5d42db7eb2dd4416411"><td class="mdescLeft">&#160;</td><td class="mdescRight">L2 Stream Route Operations.  <a href="group__SLRouteL2Oper.html#ga90c5431c7a86d5d42db7eb2dd4416411">More...</a><br /></td></tr>
+<tr class="separator:ga90c5431c7a86d5d42db7eb2dd4416411"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab25f5158aed7a52952ad112388146ac9"><td class="memItemLeft" align="right" valign="top">rpc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#gab25f5158aed7a52952ad112388146ac9">SLL2Oper::SLL2GetNotifStream</a> (stream <a class="el" href="group__SLRouteL2Oper.html#structSLL2GetNotifMsg">SLL2GetNotifMsg</a>) returns(stream <a class="el" href="group__SLRouteL2Oper.html#structSLL2Notif">SLL2Notif</a>)</td></tr>
+<tr class="memdesc:gab25f5158aed7a52952ad112388146ac9"><td class="mdescLeft">&#160;</td><td class="mdescRight">L2 Route Redistribution Operations.  <a href="group__SLRouteL2Oper.html#gab25f5158aed7a52952ad112388146ac9">More...</a><br /></td></tr>
+<tr class="separator:gab25f5158aed7a52952ad112388146ac9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Messages</h2></td></tr>
+<tr class="memitem:structSLL2GlobalsGetMsg"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#structSLL2GlobalsGetMsg">SLL2GlobalsGetMsg</a></td></tr>
+<tr class="memdesc:structSLL2GlobalsGetMsg"><td class="mdescLeft">&#160;</td><td class="mdescRight">L2 Route Globals Get Message.  <a href="group__SLRouteL2Oper.html#structSLL2GlobalsGetMsg">More...</a><br /></td></tr>
+<tr class="separator:structSLL2GlobalsGetMsg"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLL2GlobalsGetMsgRsp"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#structSLL2GlobalsGetMsgRsp">SLL2GlobalsGetMsgRsp</a></td></tr>
+<tr class="memdesc:structSLL2GlobalsGetMsgRsp"><td class="mdescLeft">&#160;</td><td class="mdescRight">L2 Route Globals Get Message Response.  <a href="group__SLRouteL2Oper.html#structSLL2GlobalsGetMsgRsp">More...</a><br /></td></tr>
+<tr class="separator:structSLL2GlobalsGetMsgRsp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLL2RegMsg"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#structSLL2RegMsg">SLL2RegMsg</a></td></tr>
+<tr class="memdesc:structSLL2RegMsg"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global L2 Registration Message.  <a href="group__SLRouteL2Oper.html#structSLL2RegMsg">More...</a><br /></td></tr>
+<tr class="separator:structSLL2RegMsg"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLL2RegMsgRsp"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#structSLL2RegMsgRsp">SLL2RegMsgRsp</a></td></tr>
+<tr class="memdesc:structSLL2RegMsgRsp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global L2 Registration message Response.  <a href="group__SLRouteL2Oper.html#structSLL2RegMsgRsp">More...</a><br /></td></tr>
+<tr class="separator:structSLL2RegMsgRsp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLL2BdRegMsg"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#structSLL2BdRegMsg">SLL2BdRegMsg</a></td></tr>
+<tr class="memdesc:structSLL2BdRegMsg"><td class="mdescLeft">&#160;</td><td class="mdescRight">L2 Bridge-Domain (BD) Registration Messages.  <a href="group__SLRouteL2Oper.html#structSLL2BdRegMsg">More...</a><br /></td></tr>
+<tr class="separator:structSLL2BdRegMsg"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLL2BdRegRes"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#structSLL2BdRegRes">SLL2BdRegRes</a></td></tr>
+<tr class="memdesc:structSLL2BdRegRes"><td class="mdescLeft">&#160;</td><td class="mdescRight">BD Registration message Result.  <a href="group__SLRouteL2Oper.html#structSLL2BdRegRes">More...</a><br /></td></tr>
+<tr class="separator:structSLL2BdRegRes"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLL2BdRegMsgRsp"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#structSLL2BdRegMsgRsp">SLL2BdRegMsgRsp</a></td></tr>
+<tr class="memdesc:structSLL2BdRegMsgRsp"><td class="mdescLeft">&#160;</td><td class="mdescRight">BD Registration message Response.  <a href="group__SLRouteL2Oper.html#structSLL2BdRegMsgRsp">More...</a><br /></td></tr>
+<tr class="separator:structSLL2BdRegMsgRsp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLL2RouteEsi"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#structSLL2RouteEsi">SLL2RouteEsi</a></td></tr>
+<tr class="memdesc:structSLL2RouteEsi"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ethernet Segment Identifier (ESI)  <a href="group__SLRouteL2Oper.html#structSLL2RouteEsi">More...</a><br /></td></tr>
+<tr class="separator:structSLL2RouteEsi"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLL2RouteNh"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#structSLL2RouteNh">SLL2RouteNh</a></td></tr>
+<tr class="memdesc:structSLL2RouteNh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nexthop info.  <a href="group__SLRouteL2Oper.html#structSLL2RouteNh">More...</a><br /></td></tr>
+<tr class="separator:structSLL2RouteNh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLL2OverlayNh"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#structSLL2OverlayNh">SLL2OverlayNh</a></td></tr>
+<tr class="memdesc:structSLL2OverlayNh"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overlay nexthop info.  <a href="group__SLRouteL2Oper.html#structSLL2OverlayNh">More...</a><br /></td></tr>
+<tr class="separator:structSLL2OverlayNh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLL2MacRouteKey"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#structSLL2MacRouteKey">SLL2MacRouteKey</a></td></tr>
+<tr class="memdesc:structSLL2MacRouteKey"><td class="mdescLeft">&#160;</td><td class="mdescRight">MAC route key.  <a href="group__SLRouteL2Oper.html#structSLL2MacRouteKey">More...</a><br /></td></tr>
+<tr class="separator:structSLL2MacRouteKey"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLL2MacRoute"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#structSLL2MacRoute">SLL2MacRoute</a></td></tr>
+<tr class="memdesc:structSLL2MacRoute"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type 2 EVPN MAC route.  <a href="group__SLRouteL2Oper.html#structSLL2MacRoute">More...</a><br /></td></tr>
+<tr class="separator:structSLL2MacRoute"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLL2ImetRouteKey"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#structSLL2ImetRouteKey">SLL2ImetRouteKey</a></td></tr>
+<tr class="memdesc:structSLL2ImetRouteKey"><td class="mdescLeft">&#160;</td><td class="mdescRight">IMET route key.  <a href="group__SLRouteL2Oper.html#structSLL2ImetRouteKey">More...</a><br /></td></tr>
+<tr class="separator:structSLL2ImetRouteKey"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLL2ImetRoute"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#structSLL2ImetRoute">SLL2ImetRoute</a></td></tr>
+<tr class="memdesc:structSLL2ImetRoute"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type-3 EVPN IMET Route.  <a href="group__SLRouteL2Oper.html#structSLL2ImetRoute">More...</a><br /></td></tr>
+<tr class="separator:structSLL2ImetRoute"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLL2RouteKey"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#structSLL2RouteKey">SLL2RouteKey</a></td></tr>
+<tr class="memdesc:structSLL2RouteKey"><td class="mdescLeft">&#160;</td><td class="mdescRight">L2 route key.  <a href="group__SLRouteL2Oper.html#structSLL2RouteKey">More...</a><br /></td></tr>
+<tr class="separator:structSLL2RouteKey"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLL2Route"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#structSLL2Route">SLL2Route</a></td></tr>
+<tr class="memdesc:structSLL2Route"><td class="mdescLeft">&#160;</td><td class="mdescRight">L2 route.  <a href="group__SLRouteL2Oper.html#structSLL2Route">More...</a><br /></td></tr>
+<tr class="separator:structSLL2Route"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLL2RouteMsg"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#structSLL2RouteMsg">SLL2RouteMsg</a></td></tr>
+<tr class="memdesc:structSLL2RouteMsg"><td class="mdescLeft">&#160;</td><td class="mdescRight">Batch of L2 Routes for bulk download.  <a href="group__SLRouteL2Oper.html#structSLL2RouteMsg">More...</a><br /></td></tr>
+<tr class="separator:structSLL2RouteMsg"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLL2RouteRes"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#structSLL2RouteRes">SLL2RouteRes</a></td></tr>
+<tr class="memdesc:structSLL2RouteRes"><td class="mdescLeft">&#160;</td><td class="mdescRight">L2 route result, uniquely identified by BD + L2 route key.  <a href="group__SLRouteL2Oper.html#structSLL2RouteRes">More...</a><br /></td></tr>
+<tr class="separator:structSLL2RouteRes"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLL2RouteMsgRsp"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#structSLL2RouteMsgRsp">SLL2RouteMsgRsp</a></td></tr>
+<tr class="memdesc:structSLL2RouteMsgRsp"><td class="mdescLeft">&#160;</td><td class="mdescRight">L2 bulk download response.  <a href="group__SLRouteL2Oper.html#structSLL2RouteMsgRsp">More...</a><br /></td></tr>
+<tr class="separator:structSLL2RouteMsgRsp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLL2GetNotifMsg"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#structSLL2GetNotifMsg">SLL2GetNotifMsg</a></td></tr>
+<tr class="memdesc:structSLL2GetNotifMsg"><td class="mdescLeft">&#160;</td><td class="mdescRight">L2 Get Notifications message.  <a href="group__SLRouteL2Oper.html#structSLL2GetNotifMsg">More...</a><br /></td></tr>
+<tr class="separator:structSLL2GetNotifMsg"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLL2RouteNotif"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#structSLL2RouteNotif">SLL2RouteNotif</a></td></tr>
+<tr class="memdesc:structSLL2RouteNotif"><td class="mdescLeft">&#160;</td><td class="mdescRight">L2 Route notification.  <a href="group__SLRouteL2Oper.html#structSLL2RouteNotif">More...</a><br /></td></tr>
+<tr class="separator:structSLL2RouteNotif"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLL2BdStateInfo"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#structSLL2BdStateInfo">SLL2BdStateInfo</a></td></tr>
+<tr class="memdesc:structSLL2BdStateInfo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bridge-Domain (BD) state info.  <a href="group__SLRouteL2Oper.html#structSLL2BdStateInfo">More...</a><br /></td></tr>
+<tr class="separator:structSLL2BdStateInfo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLL2NotifStatusMsg"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#structSLL2NotifStatusMsg">SLL2NotifStatusMsg</a></td></tr>
+<tr class="memdesc:structSLL2NotifStatusMsg"><td class="mdescLeft">&#160;</td><td class="mdescRight">L2 Notification Status message.  <a href="group__SLRouteL2Oper.html#structSLL2NotifStatusMsg">More...</a><br /></td></tr>
+<tr class="separator:structSLL2NotifStatusMsg"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLL2Notif"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#structSLL2Notif">SLL2Notif</a></td></tr>
+<tr class="memdesc:structSLL2Notif"><td class="mdescLeft">&#160;</td><td class="mdescRight">L2 Notification.  <a href="group__SLRouteL2Oper.html#structSLL2Notif">More...</a><br /></td></tr>
+<tr class="separator:structSLL2Notif"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ga2f0939a4e5f971205f3adf56fac4f121"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#ga2f0939a4e5f971205f3adf56fac4f121">SLL2RouteType</a> { <a class="el" href="group__SLRouteL2Oper.html#gga2f0939a4e5f971205f3adf56fac4f121aa676700a19bd5e74ec58d4df82af3cf7">SL_L2_ROUTE_RESERVED</a> = 0x0, 
+<a class="el" href="group__SLRouteL2Oper.html#gga2f0939a4e5f971205f3adf56fac4f121ae0099a8a19c444583171d2f8f1e35484">SL_L2_ROUTE_MAC</a> = 0x1, 
+<a class="el" href="group__SLRouteL2Oper.html#gga2f0939a4e5f971205f3adf56fac4f121a2ef7e92865f6885cb232048b47001284">SL_L2_ROUTE_IMET</a> = 0x2
+ }<tr class="memdesc:ga2f0939a4e5f971205f3adf56fac4f121"><td class="mdescLeft">&#160;</td><td class="mdescRight">L2 Route Types that can be programmed by client.  <a href="group__SLRouteL2Oper.html#ga2f0939a4e5f971205f3adf56fac4f121">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:ga2f0939a4e5f971205f3adf56fac4f121"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabd997cb91e2148302e6fc2749e951cef"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#gabd997cb91e2148302e6fc2749e951cef">SLL2NotifType</a> { <br />
+&#160;&#160;<a class="el" href="group__SLRouteL2Oper.html#ggabd997cb91e2148302e6fc2749e951cefacefd8f8099cf66a3f366411eef700df4">SL_L2_EVENT_TYPE_RESERVED</a> = 0x0, 
+<a class="el" href="group__SLRouteL2Oper.html#ggabd997cb91e2148302e6fc2749e951cefa1f03ee38decf6748c6262340796dea4a">SL_L2_EVENT_TYPE_ERROR</a> = 0x1, 
+<a class="el" href="group__SLRouteL2Oper.html#ggabd997cb91e2148302e6fc2749e951cefa728689b7690fa8d2f08d02caa8822f3e">SL_L2_EVENT_TYPE_STATUS</a> = 0x2, 
+<a class="el" href="group__SLRouteL2Oper.html#ggabd997cb91e2148302e6fc2749e951cefa03e2e9a0d360c0e54cbd41d3c6f0e18b">SL_L2_EVENT_TYPE_START_MARKER</a> = 0x3, 
+<br />
+&#160;&#160;<a class="el" href="group__SLRouteL2Oper.html#ggabd997cb91e2148302e6fc2749e951cefafe7306656a9c8edbc4b77cf36e464d1d">SL_L2_EVENT_TYPE_BD_STATE</a> = 0x4, 
+<a class="el" href="group__SLRouteL2Oper.html#ggabd997cb91e2148302e6fc2749e951cefa17667a98e66afbfd03c913b620d96426">SL_L2_EVENT_TYPE_BD_STATE_END_MARKER</a> = 0x5, 
+<a class="el" href="group__SLRouteL2Oper.html#ggabd997cb91e2148302e6fc2749e951cefa0e515ca32a87233ce2003d5cde32c68a">SL_L2_EVENT_TYPE_ROUTE</a> = 0x6, 
+<a class="el" href="group__SLRouteL2Oper.html#ggabd997cb91e2148302e6fc2749e951cefad21cb3ee89d91353dfa8191445fbfcde">SL_L2_EVENT_TYPE_ROUTE_END_MARKER</a> = 0x7
+<br />
+ }<tr class="memdesc:gabd997cb91e2148302e6fc2749e951cef"><td class="mdescLeft">&#160;</td><td class="mdescRight">L2 Notification types.  <a href="group__SLRouteL2Oper.html#gabd997cb91e2148302e6fc2749e951cef">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:gabd997cb91e2148302e6fc2749e951cef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">RPC Documentation</h2>
+<a class="anchor" id="gab016417c3ebddb141f4482bbcf6e18a0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rpc SLL2Oper::SLL2BdRegOp </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__SLRouteL2Oper.html#structSLL2BdRegMsg">SLL2BdRegMsg</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="group__SLRouteL2Oper.html#a83210d5c2380b55f748ae0df1fb2add3" title="Registration Operation. ">SLL2BdRegMsg.Oper</a> = SL_REGOP_REGISTER: BD registration: Sends a list of BD registration messages and expects a list of registration responses. A client Must Register a BD BEFORE L2 Routes can be added/modified in that BD.</p>
+<p><a class="el" href="group__SLRouteL2Oper.html#a83210d5c2380b55f748ae0df1fb2add3" title="Registration Operation. ">SLL2BdRegMsg.Oper</a> = SL_REGOP_UNREGISTER: BD un-registration: Sends a list of BD un-registration messages and expects a list of un-registration responses. This can be used to convey that the client is no longer interested in programming routes in this BD. All installed L2 routes will be lost.</p>
+<p><a class="el" href="group__SLRouteL2Oper.html#a83210d5c2380b55f748ae0df1fb2add3" title="Registration Operation. ">SLL2BdRegMsg.Oper</a> = SL_REGOP_EOF: BD End Of File message. After Registration, the client is expected to send an EOF message to convey the end of replay of the client's known objects in that BD. This is especially useful under certain restart scenarios when the client and the server are trying to synchronize their routes. </p>
+
+</div>
+</div>
+<a class="anchor" id="gab25f5158aed7a52952ad112388146ac9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rpc SLL2Oper::SLL2GetNotifStream </td>
+          <td>(</td>
+          <td class="paramtype">stream&#160;</td>
+          <td class="paramname"><em>SLL2GetNotifMsg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This call is used to get a stream of BD state and route notifications. It can be used to get "push" notifications for route adds/updates/deletes. The caller must maintain the GRPC channel as long as there is interest in route notifications.</p>
+<p>The call takes 3 types of notification requests:</p><ol type="1">
+<li>Request for BD state notifications only (pass only Oper and Correlator).</li>
+<li>Request for BD state and Route notifications in all BDs.</li>
+<li>Request for Route notifications per-BD. This should be sent after requesting for BD state notifications and after receiving BD-ready notification.</li>
+</ol>
+<p>The success/failure of the notification request is relayed in the <a class="el" href="group__SLRouteL2Oper.html#structSLL2NotifStatusMsg" title="L2 Notification Status message. ">SLL2NotifStatusMsg</a> followed by a Start marker, any routes if present, and an End Marker.</p>
+<p>After all requests are sent, client should send GetNotifEof = TRUE. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga97b51908bde1f3344a89e56679fcf226"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rpc SLL2Oper::SLL2GlobalsGet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__SLRouteL2Oper.html#structSLL2GlobalsGetMsg">SLL2GlobalsGetMsg</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Used to retrieve global L2 info from the server. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga08e1cc0ab6a154af34536077c28e8bd1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rpc SLL2Oper::SLL2RegOp </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__SLRouteL2Oper.html#structSLL2RegMsg">SLL2RegMsg</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="group__SLRouteL2Oper.html#a2fff103acb65bd4089ed88094f53c0f9" title="Registration Operation. ">SLL2RegMsg.Oper</a> = SL_REGOP_REGISTER: Global L2 registration. A client Must Register BEFORE sending BD registration messages (to add/update/delete routes) or BEFORE requesting for L2 route notifications.</p>
+<p><a class="el" href="group__SLRouteL2Oper.html#a2fff103acb65bd4089ed88094f53c0f9" title="Registration Operation. ">SLL2RegMsg.Oper</a> = SL_REGOP_UNREGISTER: Global L2 un-registration. This call is used to convey that the client is no longer interested in programming L2 routes and in receiving L2 route notifications. All programmed L2 routes will be deleted on the server and the server will stop sending L2 route notifications.</p>
+<p><a class="el" href="group__SLRouteL2Oper.html#a2fff103acb65bd4089ed88094f53c0f9" title="Registration Operation. ">SLL2RegMsg.Oper</a> = SL_REGOP_EOF: Global L2 End Of File message. After Registration, the client is expected to send an EOF message to convey the end of replay of the client's known objects and to convey the end of requests for L2 route notifications. This is especially useful under certain restart scenarios when the client and the server are trying to synchronize their routes. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga38a6bbf60f0d0aa04fa98ba963d3a4e4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rpc SLL2Oper::SLL2RouteOp </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__SLRouteL2Oper.html#structSLL2RouteMsg">SLL2RouteMsg</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="group__SLRouteL2Oper.html#a143513ab9f8f67c58c9d69eb3cef859b" title="Route Object Operations. ">SLL2RouteMsg.Oper</a> = SL_OBJOP_ADD: Route add. Fails if the route already exists.</p>
+<p><a class="el" href="group__SLRouteL2Oper.html#a143513ab9f8f67c58c9d69eb3cef859b" title="Route Object Operations. ">SLL2RouteMsg.Oper</a> = SL_OBJOP_UPDATE: Route update. Creates or updates the route.</p>
+<p><a class="el" href="group__SLRouteL2Oper.html#a143513ab9f8f67c58c9d69eb3cef859b" title="Route Object Operations. ">SLL2RouteMsg.Oper</a> = SL_OBJOP_DELETE: Route delete. The route path is not necessary to delete the route. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga90c5431c7a86d5d42db7eb2dd4416411"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rpc SLL2Oper::SLL2RouteOpStream </td>
+          <td>(</td>
+          <td class="paramtype">stream&#160;</td>
+          <td class="paramname"><em>SLL2RouteMsg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Stream adds/updates/deletes of L2 Routes. </p>
+
+</div>
+</div>
+<hr/><h2 class="groupheader">Message Documentation</h2>
+<a name="structSLL2GlobalsGetMsg" id="structSLL2GlobalsGetMsg"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLL2GlobalsGetMsg</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div>
+</div>
+</div>
+<a name="structSLL2GlobalsGetMsgRsp" id="structSLL2GlobalsGetMsgRsp"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLL2GlobalsGetMsgRsp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:a6b5ab4241fb1a9236654e874cc0eb79d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6b5ab4241fb1a9236654e874cc0eb79d"></a>
+<a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a6b5ab4241fb1a9236654e874cc0eb79d">ErrStatus</a> = 1</td></tr>
+<tr class="memdesc:a6b5ab4241fb1a9236654e874cc0eb79d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Corresponding error code. <br /></td></tr>
+<tr class="separator:a6b5ab4241fb1a9236654e874cc0eb79d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac49f85ccb6e93b09a93d8c4ca522ec00"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac49f85ccb6e93b09a93d8c4ca522ec00"></a>
+uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#ac49f85ccb6e93b09a93d8c4ca522ec00">MaxBdRegPerBdRegmsg</a> = 2</td></tr>
+<tr class="memdesc:ac49f85ccb6e93b09a93d8c4ca522ec00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max BD registration objects within a single BdRegMsg. <br /></td></tr>
+<tr class="separator:ac49f85ccb6e93b09a93d8c4ca522ec00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a948e44366214f47a356a4b8b7efbe531"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a948e44366214f47a356a4b8b7efbe531"></a>
+uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a948e44366214f47a356a4b8b7efbe531">MaxRoutePerRoutemsg</a> = 3</td></tr>
+<tr class="memdesc:a948e44366214f47a356a4b8b7efbe531"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max Route objects within a single RouteMsg. <br /></td></tr>
+<tr class="separator:a948e44366214f47a356a4b8b7efbe531"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+
+</div>
+</div>
+<a name="structSLL2RegMsg" id="structSLL2RegMsg"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLL2RegMsg</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:a2fff103acb65bd4089ed88094f53c0f9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2fff103acb65bd4089ed88094f53c0f9"></a>
+<a class="el" href="group__SLCommonTypes.html#gabcd5b7bdb1e75e62f586e079e924f896">SLRegOp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a2fff103acb65bd4089ed88094f53c0f9">Oper</a> = 1</td></tr>
+<tr class="memdesc:a2fff103acb65bd4089ed88094f53c0f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registration Operation. <br /></td></tr>
+<tr class="separator:a2fff103acb65bd4089ed88094f53c0f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a432acc0468b51f4eb144d48bbc8bba3e"><td class="memItemLeft" align="right" valign="top">uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a432acc0468b51f4eb144d48bbc8bba3e">AdminDistance</a> = 2</td></tr>
+<tr class="memdesc:a432acc0468b51f4eb144d48bbc8bba3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Admin distance for routes programmed by this application.  <a href="#a432acc0468b51f4eb144d48bbc8bba3e">More...</a><br /></td></tr>
+<tr class="separator:a432acc0468b51f4eb144d48bbc8bba3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2de7c6f564c62ae7ce7cc195d463668d"><td class="memItemLeft" align="right" valign="top">uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a2de7c6f564c62ae7ce7cc195d463668d">PurgeIntervalSeconds</a> = 3</td></tr>
+<tr class="memdesc:a2de7c6f564c62ae7ce7cc195d463668d"><td class="mdescLeft">&#160;</td><td class="mdescRight">In case Service Layer -&gt; L2RIB connection is lost, this specifies the timeout period after which L2RIB will automatically purge the installed routes, unless the service layer:  <a href="#a2de7c6f564c62ae7ce7cc195d463668d">More...</a><br /></td></tr>
+<tr class="separator:a2de7c6f564c62ae7ce7cc195d463668d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h4 class="groupheader">Member Data Documentation</h4>
+<a class="anchor" id="a432acc0468b51f4eb144d48bbc8bba3e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32 SLL2RegMsg::AdminDistance = 2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Range [0-255]. If the client does not need to program routes, set this value to 0. </p>
+
+</div>
+</div>
+<a class="anchor" id="a2de7c6f564c62ae7ce7cc195d463668d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32 SLL2RegMsg::PurgeIntervalSeconds = 3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<ol type="1">
+<li>Re-registers.</li>
+<li>Replay all routes.</li>
+<li>And send EOF, before the purge timeout. If the client does not need to program routes, set this value to 0. </li>
+</ol>
+
+</div>
+</div>
+
+</div>
+</div>
+<a name="structSLL2RegMsgRsp" id="structSLL2RegMsgRsp"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLL2RegMsgRsp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:a4c1698bbe5dcf1606d9905735f9d4392"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4c1698bbe5dcf1606d9905735f9d4392"></a>
+<a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a4c1698bbe5dcf1606d9905735f9d4392">RegStatus</a> = 1</td></tr>
+<tr class="memdesc:a4c1698bbe5dcf1606d9905735f9d4392"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error code. <br /></td></tr>
+<tr class="separator:a4c1698bbe5dcf1606d9905735f9d4392"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+
+</div>
+</div>
+<a name="structSLL2BdRegMsg" id="structSLL2BdRegMsg"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLL2BdRegMsg</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:a83210d5c2380b55f748ae0df1fb2add3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a83210d5c2380b55f748ae0df1fb2add3"></a>
+<a class="el" href="group__SLCommonTypes.html#gabcd5b7bdb1e75e62f586e079e924f896">SLRegOp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a83210d5c2380b55f748ae0df1fb2add3">Oper</a> = 1</td></tr>
+<tr class="memdesc:a83210d5c2380b55f748ae0df1fb2add3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registration Operation. <br /></td></tr>
+<tr class="separator:a83210d5c2380b55f748ae0df1fb2add3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e87592be3461e64dc392f4079e36a6c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8e87592be3461e64dc392f4079e36a6c"></a>
+repeated string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a8e87592be3461e64dc392f4079e36a6c">BdRegName</a> = 2</td></tr>
+<tr class="memdesc:a8e87592be3461e64dc392f4079e36a6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of BD names that client wants to register for. <br /></td></tr>
+<tr class="separator:a8e87592be3461e64dc392f4079e36a6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+
+</div>
+</div>
+<a name="structSLL2BdRegRes" id="structSLL2BdRegRes"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLL2BdRegRes</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:a2ca7d95024caeddfa5c67fae5524eb5c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2ca7d95024caeddfa5c67fae5524eb5c"></a>
+<a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a2ca7d95024caeddfa5c67fae5524eb5c">ErrStatus</a> = 1</td></tr>
+<tr class="memdesc:a2ca7d95024caeddfa5c67fae5524eb5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Corresponding error code. <br /></td></tr>
+<tr class="separator:a2ca7d95024caeddfa5c67fae5524eb5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4370c0ab84b746b3197f7a6e5294aa56"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4370c0ab84b746b3197f7a6e5294aa56"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a4370c0ab84b746b3197f7a6e5294aa56">BdName</a> = 2</td></tr>
+<tr class="memdesc:a4370c0ab84b746b3197f7a6e5294aa56"><td class="mdescLeft">&#160;</td><td class="mdescRight">BD Name. <br /></td></tr>
+<tr class="separator:a4370c0ab84b746b3197f7a6e5294aa56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+
+</div>
+</div>
+<a name="structSLL2BdRegMsgRsp" id="structSLL2BdRegMsgRsp"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLL2BdRegMsgRsp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:ad6c114ba3e9e459938a7310ce8c6fbdf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#ad6c114ba3e9e459938a7310ce8c6fbdf">StatusSummary</a> = 1</td></tr>
+<tr class="memdesc:ad6c114ba3e9e459938a7310ce8c6fbdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Summary result of the bulk operation (refer to enum <a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>) In general, the StatusSummary implies one of 3 things:  <a href="#ad6c114ba3e9e459938a7310ce8c6fbdf">More...</a><br /></td></tr>
+<tr class="separator:ad6c114ba3e9e459938a7310ce8c6fbdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad255c971a6276b8b9e0e76bdaa43fda6"><td class="memItemLeft" align="right" valign="top">repeated <a class="el" href="group__SLRouteL2Oper.html#structSLL2BdRegRes">SLL2BdRegRes</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#ad255c971a6276b8b9e0e76bdaa43fda6">Results</a> = 2</td></tr>
+<tr class="memdesc:ad255c971a6276b8b9e0e76bdaa43fda6"><td class="mdescLeft">&#160;</td><td class="mdescRight">In case of errors, this field indicates which entry in the bulk was erroneous.  <a href="#ad255c971a6276b8b9e0e76bdaa43fda6">More...</a><br /></td></tr>
+<tr class="separator:ad255c971a6276b8b9e0e76bdaa43fda6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h4 class="groupheader">Member Data Documentation</h4>
+<a class="anchor" id="ad255c971a6276b8b9e0e76bdaa43fda6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">repeated <a class="el" href="group__SLRouteL2Oper.html#structSLL2BdRegRes">SLL2BdRegRes</a> SLL2BdRegMsgRsp::Results = 2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad6c114ba3e9e459938a7310ce8c6fbdf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a> SLL2BdRegMsgRsp::StatusSummary = 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<ol type="1">
+<li>SL_SUCCESS: signifies that the entire bulk operation was successful. In this case, the Results list is empty.</li>
+<li>SL_SOME_ERR: signifies that the operation failed for one or more entries. In this case, Results holds the result for each individual entry in the bulk.</li>
+<li>SL_RPC_XXX: signifies that the entire bulk operation failed. In this case, the Results list is empty. </li>
+</ol>
+
+</div>
+</div>
+
+</div>
+</div>
+<a name="structSLL2RouteEsi" id="structSLL2RouteEsi"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLL2RouteEsi</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:a9c77b70e8ecb675038e713b4b1cc7c54"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9c77b70e8ecb675038e713b4b1cc7c54"></a>
+bytes&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a9c77b70e8ecb675038e713b4b1cc7c54">Esi</a> = 1</td></tr>
+<tr class="memdesc:a9c77b70e8ecb675038e713b4b1cc7c54"><td class="mdescLeft">&#160;</td><td class="mdescRight">10-bytes long ESI value <br /></td></tr>
+<tr class="separator:a9c77b70e8ecb675038e713b4b1cc7c54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+
+</div>
+</div>
+<a name="structSLL2RouteNh" id="structSLL2RouteNh"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLL2RouteNh</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Public Types</h3></td></tr>
+<tr class="memitem:a190329ef5994fc11444ad9ad28ec57e7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a190329ef5994fc11444ad9ad28ec57e7">SLL2RouteNhType</a> { <a class="el" href="group__SLRouteL2Oper.html#a190329ef5994fc11444ad9ad28ec57e7a96edb877b07e4243ae9ede19b11c69c9">SL_L2_NH_RESERVED</a> = 0x0, 
+<a class="el" href="group__SLRouteL2Oper.html#a190329ef5994fc11444ad9ad28ec57e7a217afe7ef93a7398cb1faf64a46905b8">SL_L2_NH_INTERFACE</a> = 0x1, 
+<a class="el" href="group__SLRouteL2Oper.html#a190329ef5994fc11444ad9ad28ec57e7a7fa37a8a8a6edf10f5ca3cfd95334304">SL_L2_NH_OVERLAY</a> = 0x2
+ }<tr class="memdesc:a190329ef5994fc11444ad9ad28ec57e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Next Hop types.  <a href="group__SLRouteL2Oper.html#a190329ef5994fc11444ad9ad28ec57e7">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:a190329ef5994fc11444ad9ad28ec57e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:a5b797a25520fe0561a925c890a30125c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5b797a25520fe0561a925c890a30125c"></a>
+<a class="el" href="group__SLRouteL2Oper.html#a190329ef5994fc11444ad9ad28ec57e7">SLL2RouteNhType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>NhType</b> = 1</td></tr>
+<tr class="separator:a5b797a25520fe0561a925c890a30125c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb0706a652f17be7f242f5840488a55b"><td class="memItemLeft" align="right" valign="top">oneof&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#acb0706a652f17be7f242f5840488a55b">NhData</a></td></tr>
+<tr class="memdesc:acb0706a652f17be7f242f5840488a55b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Next Hop data based on type.  <a href="#acb0706a652f17be7f242f5840488a55b">More...</a><br /></td></tr>
+<tr class="separator:acb0706a652f17be7f242f5840488a55b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2be9910ca699e716a2eb0b8962edcb9f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__SLRouteL2Oper.html#structSLL2OverlayNh">SLL2OverlayNh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a2be9910ca699e716a2eb0b8962edcb9f">NhOverlay</a> = 3</td></tr>
+<tr class="memdesc:a2be9910ca699e716a2eb0b8962edcb9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">case NhType == SL_L2_NH_OVERLAY =&gt; This field carries the overlay nexthop.  <a href="#a2be9910ca699e716a2eb0b8962edcb9f">More...</a><br /></td></tr>
+<tr class="separator:a2be9910ca699e716a2eb0b8962edcb9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h4 class="groupheader">Member Enumeration Documentation</h4>
+<a class="anchor" id="a190329ef5994fc11444ad9ad28ec57e7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__SLRouteL2Oper.html#a190329ef5994fc11444ad9ad28ec57e7">SLL2RouteNh::SLL2RouteNhType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a190329ef5994fc11444ad9ad28ec57e7a96edb877b07e4243ae9ede19b11c69c9"></a>SL_L2_NH_RESERVED&#160;</td><td class="fielddoc">
+<p>Reserved. 0x0. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a190329ef5994fc11444ad9ad28ec57e7a217afe7ef93a7398cb1faf64a46905b8"></a>SL_L2_NH_INTERFACE&#160;</td><td class="fielddoc">
+<p>Interface nexthop. 0x1. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a190329ef5994fc11444ad9ad28ec57e7a7fa37a8a8a6edf10f5ca3cfd95334304"></a>SL_L2_NH_OVERLAY&#160;</td><td class="fielddoc">
+<p>Overlay nexthop. 0x2. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h4 class="groupheader">Member Data Documentation</h4>
+<a class="anchor" id="acb0706a652f17be7f242f5840488a55b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">oneof SLL2RouteNh::NhData</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">{</div><div class="line">        </div><div class="line">        <a class="code" href="group__SLCommonTypes.html#structSLInterface">SLInterface</a> NhInterface = 2</div></div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a2be9910ca699e716a2eb0b8962edcb9f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__SLRouteL2Oper.html#structSLL2OverlayNh">SLL2OverlayNh</a> SLL2RouteNh::NhOverlay = 3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+
+</div>
+</div>
+<a name="structSLL2OverlayNh" id="structSLL2OverlayNh"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLL2OverlayNh</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:a53dca4d04392632c9c93aa7a335355c8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a53dca4d04392632c9c93aa7a335355c8"></a>
+<a class="el" href="group__SLCommonTypes.html#structSLIpAddress">SLIpAddress</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a53dca4d04392632c9c93aa7a335355c8">OverlayNhIp</a> = 1</td></tr>
+<tr class="memdesc:a53dca4d04392632c9c93aa7a335355c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">IPv4 or IPv6 address. <br /></td></tr>
+<tr class="separator:a53dca4d04392632c9c93aa7a335355c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad011ee40cc951debcf9af3cbdec97345"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad011ee40cc951debcf9af3cbdec97345"></a>
+<a class="el" href="group__SLCommonTypes.html#gacf9698e39f1da873424b2a44dee2b741">SLEncapType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#ad011ee40cc951debcf9af3cbdec97345">OverlayNhEncap</a> = 2</td></tr>
+<tr class="memdesc:ad011ee40cc951debcf9af3cbdec97345"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encap type. <br /></td></tr>
+<tr class="separator:ad011ee40cc951debcf9af3cbdec97345"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae67fc2c96373e6887b00dc64d2bcc408"><td class="memItemLeft" align="right" valign="top">uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#ae67fc2c96373e6887b00dc64d2bcc408">OverlayNhLabel</a> = 3</td></tr>
+<tr class="memdesc:ae67fc2c96373e6887b00dc64d2bcc408"><td class="mdescLeft">&#160;</td><td class="mdescRight">L2 label for encap type MPLS, this will be remote MPLS label for encap type VXLAN, this will be L2 VNI.  <a href="#ae67fc2c96373e6887b00dc64d2bcc408">More...</a><br /></td></tr>
+<tr class="separator:ae67fc2c96373e6887b00dc64d2bcc408"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c31d31d6fbcdcaa48ac1e728f2497a1"><td class="memItemLeft" align="right" valign="top">repeated uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a7c31d31d6fbcdcaa48ac1e728f2497a1">OverlayNhL3Label</a> = 4</td></tr>
+<tr class="memdesc:a7c31d31d6fbcdcaa48ac1e728f2497a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">L3 label for encap type MPLS, this will be a stack of MPLS labels.  <a href="#a7c31d31d6fbcdcaa48ac1e728f2497a1">More...</a><br /></td></tr>
+<tr class="separator:a7c31d31d6fbcdcaa48ac1e728f2497a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace775fac29902f76c4980aad287deb7c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ace775fac29902f76c4980aad287deb7c"></a>
+bytes&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#ace775fac29902f76c4980aad287deb7c">OverlayNhRouterMac</a> = 5</td></tr>
+<tr class="memdesc:ace775fac29902f76c4980aad287deb7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Router MAC. <br /></td></tr>
+<tr class="separator:ace775fac29902f76c4980aad287deb7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h4 class="groupheader">Member Data Documentation</h4>
+<a class="anchor" id="a7c31d31d6fbcdcaa48ac1e728f2497a1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">repeated uint32 SLL2OverlayNh::OverlayNhL3Label = 4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>for encap type VXLAN, this will be L3 VNI. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae67fc2c96373e6887b00dc64d2bcc408"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32 SLL2OverlayNh::OverlayNhLabel = 3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+
+</div>
+</div>
+<a name="structSLL2MacRouteKey" id="structSLL2MacRouteKey"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLL2MacRouteKey</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:a64be560f9fe7224d7200b86846d5e4d4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a64be560f9fe7224d7200b86846d5e4d4"></a>
+bytes&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a64be560f9fe7224d7200b86846d5e4d4">MacAddress</a> = 1</td></tr>
+<tr class="memdesc:a64be560f9fe7224d7200b86846d5e4d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mac address. <br /></td></tr>
+<tr class="separator:a64be560f9fe7224d7200b86846d5e4d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af39a0be21ce6459e8b2d9ff60d92548c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af39a0be21ce6459e8b2d9ff60d92548c"></a>
+<a class="el" href="group__SLCommonTypes.html#structSLIpAddress">SLIpAddress</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#af39a0be21ce6459e8b2d9ff60d92548c">IpAddress</a> = 2</td></tr>
+<tr class="memdesc:af39a0be21ce6459e8b2d9ff60d92548c"><td class="mdescLeft">&#160;</td><td class="mdescRight">IP address. <br /></td></tr>
+<tr class="separator:af39a0be21ce6459e8b2d9ff60d92548c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+
+</div>
+</div>
+<a name="structSLL2MacRoute" id="structSLL2MacRoute"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLL2MacRoute</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:a4898720823b80da7049831ebd80ad682"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4898720823b80da7049831ebd80ad682"></a>
+<a class="el" href="group__SLRouteL2Oper.html#structSLL2MacRouteKey">SLL2MacRouteKey</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a4898720823b80da7049831ebd80ad682">RouteKey</a> = 1</td></tr>
+<tr class="memdesc:a4898720823b80da7049831ebd80ad682"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mac route key. <br /></td></tr>
+<tr class="separator:a4898720823b80da7049831ebd80ad682"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02e3d893042090b4e2c7bf403c6c26ed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a02e3d893042090b4e2c7bf403c6c26ed"></a>
+uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a02e3d893042090b4e2c7bf403c6c26ed">SequenceNum</a> = 2</td></tr>
+<tr class="memdesc:a02e3d893042090b4e2c7bf403c6c26ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sequence number. <br /></td></tr>
+<tr class="separator:a02e3d893042090b4e2c7bf403c6c26ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf607506f92e9d795f7bd82d7f269883"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acf607506f92e9d795f7bd82d7f269883"></a>
+<a class="el" href="group__SLRouteL2Oper.html#structSLL2RouteEsi">SLL2RouteEsi</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#acf607506f92e9d795f7bd82d7f269883">MacEsi</a> = 3</td></tr>
+<tr class="memdesc:acf607506f92e9d795f7bd82d7f269883"><td class="mdescLeft">&#160;</td><td class="mdescRight">ESI. <br /></td></tr>
+<tr class="separator:acf607506f92e9d795f7bd82d7f269883"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50b6ec975e954f3ce2d1e157303cf869"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a50b6ec975e954f3ce2d1e157303cf869"></a>
+repeated <a class="el" href="group__SLRouteL2Oper.html#structSLL2RouteNh">SLL2RouteNh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a50b6ec975e954f3ce2d1e157303cf869">NextHopList</a> = 4</td></tr>
+<tr class="memdesc:a50b6ec975e954f3ce2d1e157303cf869"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of NHs for this host. <br /></td></tr>
+<tr class="separator:a50b6ec975e954f3ce2d1e157303cf869"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+
+</div>
+</div>
+<a name="structSLL2ImetRouteKey" id="structSLL2ImetRouteKey"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLL2ImetRouteKey</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:a891f74834bf08d6785ae12907f01335e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a891f74834bf08d6785ae12907f01335e"></a>
+uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a891f74834bf08d6785ae12907f01335e">EthTagId</a> = 1</td></tr>
+<tr class="memdesc:a891f74834bf08d6785ae12907f01335e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ethernet Tag ID. <br /></td></tr>
+<tr class="separator:a891f74834bf08d6785ae12907f01335e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11fa905678a52436f6f800afea27e15d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11fa905678a52436f6f800afea27e15d"></a>
+<a class="el" href="group__SLCommonTypes.html#structSLIpAddress">SLIpAddress</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a11fa905678a52436f6f800afea27e15d">IpAddress</a> = 2</td></tr>
+<tr class="memdesc:a11fa905678a52436f6f800afea27e15d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ipv4 or Ipv6 address. <br /></td></tr>
+<tr class="separator:a11fa905678a52436f6f800afea27e15d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+
+</div>
+</div>
+<a name="structSLL2ImetRoute" id="structSLL2ImetRoute"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLL2ImetRoute</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Public Types</h3></td></tr>
+<tr class="memitem:a092aa6dea2261d9ebdf1ce47be06cbe3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a092aa6dea2261d9ebdf1ce47be06cbe3">PMSITunnelType</a> { <br />
+&#160;&#160;<a class="el" href="group__SLRouteL2Oper.html#a092aa6dea2261d9ebdf1ce47be06cbe3a7cb8e3fa035b8a9bcb0922131692b514">PMSI_NO_TUNNEL</a> = 0, 
+<a class="el" href="group__SLRouteL2Oper.html#a092aa6dea2261d9ebdf1ce47be06cbe3a4943e45696e1a1699d88f369ab2a2ecb">PMSI_RSVPP2MP_TUNNEL</a> = 1, 
+<a class="el" href="group__SLRouteL2Oper.html#a092aa6dea2261d9ebdf1ce47be06cbe3a831ffca324d8e2ec205e5537c47c69ef">PMSI_MLDPP2MP_TUNNEL</a> = 2, 
+<a class="el" href="group__SLRouteL2Oper.html#a092aa6dea2261d9ebdf1ce47be06cbe3aade23c958804bf652b30481885bd973c">PMSI_PIMSSM_TUNNEL</a> = 3, 
+<br />
+&#160;&#160;<a class="el" href="group__SLRouteL2Oper.html#a092aa6dea2261d9ebdf1ce47be06cbe3a3a45fe1a74ef656eef465f33ca78c176">PMSI_PIMSM_TUNNEL</a> = 4, 
+<a class="el" href="group__SLRouteL2Oper.html#a092aa6dea2261d9ebdf1ce47be06cbe3ab2541e9377980ca5d4f5c5bef6e102fa">PMSI_PIMBIDIR_TUNNEL</a> = 5, 
+<a class="el" href="group__SLRouteL2Oper.html#a092aa6dea2261d9ebdf1ce47be06cbe3a1bf469ffa50af586d90ab84966844001">PMSI_INGREP_TUNNEL</a> = 6, 
+<a class="el" href="group__SLRouteL2Oper.html#a092aa6dea2261d9ebdf1ce47be06cbe3a5942dd5a37626657a74701e2bc8f6c3d">PMSI_MLDPMP2MP_TUNNEL</a> = 7
+<br />
+ }<tr class="memdesc:a092aa6dea2261d9ebdf1ce47be06cbe3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provider Multicast Service Interface (PMSI) tunnel type.  <a href="group__SLRouteL2Oper.html#a092aa6dea2261d9ebdf1ce47be06cbe3">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:a092aa6dea2261d9ebdf1ce47be06cbe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:a7b898e7f8ede4721a127b96213cc71e1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7b898e7f8ede4721a127b96213cc71e1"></a>
+<a class="el" href="group__SLRouteL2Oper.html#structSLL2ImetRouteKey">SLL2ImetRouteKey</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a7b898e7f8ede4721a127b96213cc71e1">RouteKey</a> = 1</td></tr>
+<tr class="memdesc:a7b898e7f8ede4721a127b96213cc71e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">IMET Route Key. <br /></td></tr>
+<tr class="separator:a7b898e7f8ede4721a127b96213cc71e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e60021df74a181cfdee7978b77153d3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7e60021df74a181cfdee7978b77153d3"></a>
+<a class="el" href="group__SLCommonTypes.html#gacf9698e39f1da873424b2a44dee2b741">SLEncapType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a7e60021df74a181cfdee7978b77153d3">EncapType</a> = 2</td></tr>
+<tr class="memdesc:a7e60021df74a181cfdee7978b77153d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encapsulation type (VXLAN or MPLS) <br /></td></tr>
+<tr class="separator:a7e60021df74a181cfdee7978b77153d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d22d5ed412b0349171c86bc34a0e62a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d22d5ed412b0349171c86bc34a0e62a"></a>
+uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a6d22d5ed412b0349171c86bc34a0e62a">Label</a> = 3</td></tr>
+<tr class="memdesc:a6d22d5ed412b0349171c86bc34a0e62a"><td class="mdescLeft">&#160;</td><td class="mdescRight">For ENCAP_VXLAN, this field will specify the L2 Virtual Network Identifier (VNI) <br /></td></tr>
+<tr class="separator:a6d22d5ed412b0349171c86bc34a0e62a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1235bca6215d371a8efd3f4208bdb55"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1235bca6215d371a8efd3f4208bdb55"></a>
+<a class="el" href="group__SLRouteL2Oper.html#a092aa6dea2261d9ebdf1ce47be06cbe3">PMSITunnelType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>TunnelType</b> = 4</td></tr>
+<tr class="separator:aa1235bca6215d371a8efd3f4208bdb55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad04556c027282fe4e55dc604d2348829"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad04556c027282fe4e55dc604d2348829"></a>
+uint32&#160;</td><td class="memItemRight" valign="bottom"><b>TunnelIdLength</b> = 5</td></tr>
+<tr class="separator:ad04556c027282fe4e55dc604d2348829"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b47a94bdf6106ec07cea83387317191"><td class="memItemLeft" align="right" valign="top">bytes&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a3b47a94bdf6106ec07cea83387317191">TunnelIdValue</a> = 6</td></tr>
+<tr class="memdesc:a3b47a94bdf6106ec07cea83387317191"><td class="mdescLeft">&#160;</td><td class="mdescRight">When the type is set to Ingress Replication the Tunnel Identifier carries the unicast tunnel endpoint IP address of the local PE that is to be this PE's receiving endpoint address for the tunnel.  <a href="#a3b47a94bdf6106ec07cea83387317191">More...</a><br /></td></tr>
+<tr class="separator:a3b47a94bdf6106ec07cea83387317191"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h4 class="groupheader">Member Enumeration Documentation</h4>
+<a class="anchor" id="a092aa6dea2261d9ebdf1ce47be06cbe3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__SLRouteL2Oper.html#a092aa6dea2261d9ebdf1ce47be06cbe3">SLL2ImetRoute::PMSITunnelType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a092aa6dea2261d9ebdf1ce47be06cbe3a7cb8e3fa035b8a9bcb0922131692b514"></a>PMSI_NO_TUNNEL&#160;</td><td class="fielddoc">
+<p>No tunnel information present. 0x0. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a092aa6dea2261d9ebdf1ce47be06cbe3a4943e45696e1a1699d88f369ab2a2ecb"></a>PMSI_RSVPP2MP_TUNNEL&#160;</td><td class="fielddoc">
+<p>RSVP-TE P2MP LSP. 0x1. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a092aa6dea2261d9ebdf1ce47be06cbe3a831ffca324d8e2ec205e5537c47c69ef"></a>PMSI_MLDPP2MP_TUNNEL&#160;</td><td class="fielddoc">
+<p>mLDP P2MP LSP. 0x2 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a092aa6dea2261d9ebdf1ce47be06cbe3aade23c958804bf652b30481885bd973c"></a>PMSI_PIMSSM_TUNNEL&#160;</td><td class="fielddoc">
+<p>PIM-SSM Tree. 0x3. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a092aa6dea2261d9ebdf1ce47be06cbe3a3a45fe1a74ef656eef465f33ca78c176"></a>PMSI_PIMSM_TUNNEL&#160;</td><td class="fielddoc">
+<p>PIM-SM Tree. 0x4. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a092aa6dea2261d9ebdf1ce47be06cbe3ab2541e9377980ca5d4f5c5bef6e102fa"></a>PMSI_PIMBIDIR_TUNNEL&#160;</td><td class="fielddoc">
+<p>BIDIR-PIM Tree. 0x5. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a092aa6dea2261d9ebdf1ce47be06cbe3a1bf469ffa50af586d90ab84966844001"></a>PMSI_INGREP_TUNNEL&#160;</td><td class="fielddoc">
+<p>Ingress Replication. 0x6. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a092aa6dea2261d9ebdf1ce47be06cbe3a5942dd5a37626657a74701e2bc8f6c3d"></a>PMSI_MLDPMP2MP_TUNNEL&#160;</td><td class="fielddoc">
+<p>mLDP MP2MP LSP. 0x7 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h4 class="groupheader">Member Data Documentation</h4>
+<a class="anchor" id="a3b47a94bdf6106ec07cea83387317191"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bytes SLL2ImetRoute::TunnelIdValue = 6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+
+</div>
+</div>
+<a name="structSLL2RouteKey" id="structSLL2RouteKey"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLL2RouteKey</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:a269b1b3651247eb9f2f9f54024267cc1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a269b1b3651247eb9f2f9f54024267cc1"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a269b1b3651247eb9f2f9f54024267cc1">BdName</a> = 1</td></tr>
+<tr class="memdesc:a269b1b3651247eb9f2f9f54024267cc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">BD name. <br /></td></tr>
+<tr class="separator:a269b1b3651247eb9f2f9f54024267cc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77d27de75fb26a56195c20370cc78bf5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a77d27de75fb26a56195c20370cc78bf5"></a>
+<a class="el" href="group__SLRouteL2Oper.html#ga2f0939a4e5f971205f3adf56fac4f121">SLL2RouteType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a77d27de75fb26a56195c20370cc78bf5">Type</a> = 2</td></tr>
+<tr class="memdesc:a77d27de75fb26a56195c20370cc78bf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">L2 Route Type. <br /></td></tr>
+<tr class="separator:a77d27de75fb26a56195c20370cc78bf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7612f6df361016f9c1553a87bb4f50c9"><td class="memItemLeft" align="right" valign="top">oneof&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a7612f6df361016f9c1553a87bb4f50c9">Event</a></td></tr>
+<tr class="memdesc:a7612f6df361016f9c1553a87bb4f50c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Further info based on Route Type.  <a href="#a7612f6df361016f9c1553a87bb4f50c9">More...</a><br /></td></tr>
+<tr class="separator:a7612f6df361016f9c1553a87bb4f50c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc2c4b30a1b893c59843c71e369ef91b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adc2c4b30a1b893c59843c71e369ef91b"></a>
+<a class="el" href="group__SLRouteL2Oper.html#structSLL2ImetRouteKey">SLL2ImetRouteKey</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#adc2c4b30a1b893c59843c71e369ef91b">ImetKey</a> = 4</td></tr>
+<tr class="memdesc:adc2c4b30a1b893c59843c71e369ef91b"><td class="mdescLeft">&#160;</td><td class="mdescRight">case Type == SL_L2_ROUTE_IMET: =&gt; Carries the IMET Route Key <br /></td></tr>
+<tr class="separator:adc2c4b30a1b893c59843c71e369ef91b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h4 class="groupheader">Member Data Documentation</h4>
+<a class="anchor" id="a7612f6df361016f9c1553a87bb4f50c9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">oneof SLL2RouteKey::Event</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">{</div><div class="line">        </div><div class="line">        <a class="code" href="group__SLRouteL2Oper.html#structSLL2MacRouteKey">SLL2MacRouteKey</a> MacKey = 3</div></div><!-- fragment -->
+</div>
+</div>
+
+</div>
+</div>
+<a name="structSLL2Route" id="structSLL2Route"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLL2Route</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:aec473fc59205739256342177631589b0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aec473fc59205739256342177631589b0"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#aec473fc59205739256342177631589b0">BdName</a> = 1</td></tr>
+<tr class="memdesc:aec473fc59205739256342177631589b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">BD name. <br /></td></tr>
+<tr class="separator:aec473fc59205739256342177631589b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b780880e742d6137f32a383113a5340"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b780880e742d6137f32a383113a5340"></a>
+<a class="el" href="group__SLRouteL2Oper.html#ga2f0939a4e5f971205f3adf56fac4f121">SLL2RouteType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a3b780880e742d6137f32a383113a5340">Type</a> = 2</td></tr>
+<tr class="memdesc:a3b780880e742d6137f32a383113a5340"><td class="mdescLeft">&#160;</td><td class="mdescRight">L2 Route Type to be programmed. <br /></td></tr>
+<tr class="separator:a3b780880e742d6137f32a383113a5340"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3727096afe555ce4f59ff6f35e4aaf0"><td class="memItemLeft" align="right" valign="top">oneof&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#aa3727096afe555ce4f59ff6f35e4aaf0">Event</a></td></tr>
+<tr class="memdesc:aa3727096afe555ce4f59ff6f35e4aaf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Further info based on Route Type.  <a href="#aa3727096afe555ce4f59ff6f35e4aaf0">More...</a><br /></td></tr>
+<tr class="separator:aa3727096afe555ce4f59ff6f35e4aaf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68960c7cab6ce50239aee6118f8c70a7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a68960c7cab6ce50239aee6118f8c70a7"></a>
+<a class="el" href="group__SLRouteL2Oper.html#structSLL2ImetRoute">SLL2ImetRoute</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a68960c7cab6ce50239aee6118f8c70a7">ImetRoute</a> = 4</td></tr>
+<tr class="memdesc:a68960c7cab6ce50239aee6118f8c70a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">case Type == SL_L2_ROUTE_IMET: =&gt; Carries the IMET route details <br /></td></tr>
+<tr class="separator:a68960c7cab6ce50239aee6118f8c70a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h4 class="groupheader">Member Data Documentation</h4>
+<a class="anchor" id="aa3727096afe555ce4f59ff6f35e4aaf0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">oneof SLL2Route::Event</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">{</div><div class="line">        </div><div class="line">        <a class="code" href="group__SLRouteL2Oper.html#structSLL2MacRoute">SLL2MacRoute</a> MacRoute = 3</div></div><!-- fragment -->
+</div>
+</div>
+
+</div>
+</div>
+<a name="structSLL2RouteMsg" id="structSLL2RouteMsg"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLL2RouteMsg</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:af78a462ff6a69cbdb91e1f662acb7d7d"><td class="memItemLeft" align="right" valign="top">uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#af78a462ff6a69cbdb91e1f662acb7d7d">Correlator</a> = 1</td></tr>
+<tr class="memdesc:af78a462ff6a69cbdb91e1f662acb7d7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Correlator.  <a href="#af78a462ff6a69cbdb91e1f662acb7d7d">More...</a><br /></td></tr>
+<tr class="separator:af78a462ff6a69cbdb91e1f662acb7d7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a143513ab9f8f67c58c9d69eb3cef859b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a143513ab9f8f67c58c9d69eb3cef859b"></a>
+<a class="el" href="group__SLCommonTypes.html#ga0b166605b901d6e5ad5f7706ac60baf1">SLObjectOp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a143513ab9f8f67c58c9d69eb3cef859b">Oper</a> = 2</td></tr>
+<tr class="memdesc:a143513ab9f8f67c58c9d69eb3cef859b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Route Object Operations. <br /></td></tr>
+<tr class="separator:a143513ab9f8f67c58c9d69eb3cef859b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cdf79cfbfba8c37b14f718f898c8557"><td class="memItemLeft" align="right" valign="top">repeated <a class="el" href="group__SLRouteL2Oper.html#structSLL2Route">SLL2Route</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a5cdf79cfbfba8c37b14f718f898c8557">Routes</a> = 3</td></tr>
+<tr class="memdesc:a5cdf79cfbfba8c37b14f718f898c8557"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of L2 Routes The list may contain routes from different BDs.  <a href="#a5cdf79cfbfba8c37b14f718f898c8557">More...</a><br /></td></tr>
+<tr class="separator:a5cdf79cfbfba8c37b14f718f898c8557"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h4 class="groupheader">Member Data Documentation</h4>
+<a class="anchor" id="af78a462ff6a69cbdb91e1f662acb7d7d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64 SLL2RouteMsg::Correlator = 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This can be used to correlate replies with requests. The Server simply reflects this field back in the reply. </p>
+
+</div>
+</div>
+<a class="anchor" id="a5cdf79cfbfba8c37b14f718f898c8557"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">repeated <a class="el" href="group__SLRouteL2Oper.html#structSLL2Route">SLL2Route</a> SLL2RouteMsg::Routes = 3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+
+</div>
+</div>
+<a name="structSLL2RouteRes" id="structSLL2RouteRes"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLL2RouteRes</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:ab8a7e179ac884452c5e511757fde963a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab8a7e179ac884452c5e511757fde963a"></a>
+<a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#ab8a7e179ac884452c5e511757fde963a">ErrStatus</a> = 1</td></tr>
+<tr class="memdesc:ab8a7e179ac884452c5e511757fde963a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Corresponding error code. <br /></td></tr>
+<tr class="separator:ab8a7e179ac884452c5e511757fde963a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8c7fee4e1865abc5b20e0b9cb60bcf1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae8c7fee4e1865abc5b20e0b9cb60bcf1"></a>
+<a class="el" href="group__SLRouteL2Oper.html#structSLL2RouteKey">SLL2RouteKey</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#ae8c7fee4e1865abc5b20e0b9cb60bcf1">RouteKey</a> = 2</td></tr>
+<tr class="memdesc:ae8c7fee4e1865abc5b20e0b9cb60bcf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">L2 Route Key. <br /></td></tr>
+<tr class="separator:ae8c7fee4e1865abc5b20e0b9cb60bcf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+
+</div>
+</div>
+<a name="structSLL2RouteMsgRsp" id="structSLL2RouteMsgRsp"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLL2RouteMsgRsp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:a0ecdcefb4240df8fe0b579861f374be4"><td class="memItemLeft" align="right" valign="top">uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a0ecdcefb4240df8fe0b579861f374be4">Correlator</a> = 1</td></tr>
+<tr class="memdesc:a0ecdcefb4240df8fe0b579861f374be4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Correlator.  <a href="#a0ecdcefb4240df8fe0b579861f374be4">More...</a><br /></td></tr>
+<tr class="separator:a0ecdcefb4240df8fe0b579861f374be4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99acc8e421969ca6bb6dfbf66d0ad033"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a99acc8e421969ca6bb6dfbf66d0ad033">StatusSummary</a> = 2</td></tr>
+<tr class="memdesc:a99acc8e421969ca6bb6dfbf66d0ad033"><td class="mdescLeft">&#160;</td><td class="mdescRight">Summary result of the bulk operation (refer to enum <a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>) In general, the StatusSummary implies one of 3 things:  <a href="#a99acc8e421969ca6bb6dfbf66d0ad033">More...</a><br /></td></tr>
+<tr class="separator:a99acc8e421969ca6bb6dfbf66d0ad033"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07b2fb5de0b61306ccc407ecf54e44f8"><td class="memItemLeft" align="right" valign="top">repeated <a class="el" href="group__SLRouteL2Oper.html#structSLL2RouteRes">SLL2RouteRes</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a07b2fb5de0b61306ccc407ecf54e44f8">Results</a> = 3</td></tr>
+<tr class="memdesc:a07b2fb5de0b61306ccc407ecf54e44f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">In case of errors, this field indicates which entry in the bulk was erroneous.  <a href="#a07b2fb5de0b61306ccc407ecf54e44f8">More...</a><br /></td></tr>
+<tr class="separator:a07b2fb5de0b61306ccc407ecf54e44f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h4 class="groupheader">Member Data Documentation</h4>
+<a class="anchor" id="a0ecdcefb4240df8fe0b579861f374be4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64 SLL2RouteMsgRsp::Correlator = 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This can be used to correlate replies with requests. The Server simply reflects this field back in the reply. </p>
+
+</div>
+</div>
+<a class="anchor" id="a07b2fb5de0b61306ccc407ecf54e44f8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">repeated <a class="el" href="group__SLRouteL2Oper.html#structSLL2RouteRes">SLL2RouteRes</a> SLL2RouteMsgRsp::Results = 3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a99acc8e421969ca6bb6dfbf66d0ad033"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a> SLL2RouteMsgRsp::StatusSummary = 2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<ol type="1">
+<li>SL_SUCCESS: signifies that the entire bulk operation was successful. In this case, the Results list is empty.</li>
+<li>SL_SOME_ERR: signifies that the operation failed for one or more entries. In this case, Results holds the result for each individual entry in the bulk.</li>
+<li>SL_RPC_XXX: signifies that the entire bulk operation failed. In this case, the Results list is empty. </li>
+</ol>
+
+</div>
+</div>
+
+</div>
+</div>
+<a name="structSLL2GetNotifMsg" id="structSLL2GetNotifMsg"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLL2GetNotifMsg</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:a4800a439ac5e777d9a0a891f2267e659"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4800a439ac5e777d9a0a891f2267e659"></a>
+<a class="el" href="group__SLCommonTypes.html#gaa809068894b7bf3fab0314dff50bd02d">SLNotifOp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a4800a439ac5e777d9a0a891f2267e659">Oper</a> = 1</td></tr>
+<tr class="memdesc:a4800a439ac5e777d9a0a891f2267e659"><td class="mdescLeft">&#160;</td><td class="mdescRight">Oper = SL_NOTIFOP_ENABLE This is to enable route notifications Oper = SL_NOTIFOP_DISABLE This is to disable route notifications. <br /></td></tr>
+<tr class="separator:a4800a439ac5e777d9a0a891f2267e659"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af122dbeb62757fb2096bcac2c3b809ec"><td class="memItemLeft" align="right" valign="top">uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#af122dbeb62757fb2096bcac2c3b809ec">Correlator</a> = 2</td></tr>
+<tr class="memdesc:af122dbeb62757fb2096bcac2c3b809ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Correlator.  <a href="#af122dbeb62757fb2096bcac2c3b809ec">More...</a><br /></td></tr>
+<tr class="separator:af122dbeb62757fb2096bcac2c3b809ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7344a3fe3747d72cea1af01d62dd4325"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a7344a3fe3747d72cea1af01d62dd4325">GetNotifEof</a> = 3</td></tr>
+<tr class="memdesc:a7344a3fe3747d72cea1af01d62dd4325"><td class="mdescLeft">&#160;</td><td class="mdescRight">End of file.  <a href="#a7344a3fe3747d72cea1af01d62dd4325">More...</a><br /></td></tr>
+<tr class="separator:a7344a3fe3747d72cea1af01d62dd4325"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a028208fa17fd613038cc2da0990f5e29"><td class="memItemLeft" align="right" valign="top">oneof&#160;</td><td class="memItemRight" valign="bottom"><b>Request</b></td></tr>
+<tr class="separator:a028208fa17fd613038cc2da0990f5e29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a057ecbc957532c691fd8fdce344ab3a0"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a057ecbc957532c691fd8fdce344ab3a0">BdName</a> = 5</td></tr>
+<tr class="memdesc:a057ecbc957532c691fd8fdce344ab3a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the notification request is for routes in a specific BD, pass the name.  <a href="#a057ecbc957532c691fd8fdce344ab3a0">More...</a><br /></td></tr>
+<tr class="separator:a057ecbc957532c691fd8fdce344ab3a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h4 class="groupheader">Member Data Documentation</h4>
+<a class="anchor" id="a057ecbc957532c691fd8fdce344ab3a0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string SLL2GetNotifMsg::BdName = 5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af122dbeb62757fb2096bcac2c3b809ec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64 SLL2GetNotifMsg::Correlator = 2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This is used to correlate GetNotifMsg with NotifMsgStatus. The server reflects this field in the reply. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7344a3fe3747d72cea1af01d62dd4325"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SLL2GetNotifMsg::GetNotifEof = 3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>When set to True, it indicates that the client is done with sending requests for notifications.</p>
+<p>It is useful when client is sending per-BD notification requests. The client can send this after receiving SL_L2_EVENT_TYPE_BD_STATE_END_MARKER. </p>
+
+</div>
+</div>
+<a class="anchor" id="a028208fa17fd613038cc2da0990f5e29"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">oneof SLL2GetNotifMsg::Request</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">{</div><div class="line">        </div><div class="line">        <span class="keywordtype">bool</span> BdAll = 4</div></div><!-- fragment -->
+</div>
+</div>
+
+</div>
+</div>
+<a name="structSLL2RouteNotif" id="structSLL2RouteNotif"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLL2RouteNotif</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:a7a76284d06b901325447d380e7584e94"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7a76284d06b901325447d380e7584e94"></a>
+<a class="el" href="group__SLCommonTypes.html#ga0b166605b901d6e5ad5f7706ac60baf1">SLObjectOp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a7a76284d06b901325447d380e7584e94">Oper</a> = 1</td></tr>
+<tr class="memdesc:a7a76284d06b901325447d380e7584e94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Route Object Operations. <br /></td></tr>
+<tr class="separator:a7a76284d06b901325447d380e7584e94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93cc4d0f82d81ad2227eaf5b72ba4486"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a93cc4d0f82d81ad2227eaf5b72ba4486"></a>
+<a class="el" href="group__SLRouteL2Oper.html#structSLL2Route">SLL2Route</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a93cc4d0f82d81ad2227eaf5b72ba4486">Routes</a> = 2</td></tr>
+<tr class="memdesc:a93cc4d0f82d81ad2227eaf5b72ba4486"><td class="mdescLeft">&#160;</td><td class="mdescRight">L2 route. <br /></td></tr>
+<tr class="separator:a93cc4d0f82d81ad2227eaf5b72ba4486"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+
+</div>
+</div>
+<a name="structSLL2BdStateInfo" id="structSLL2BdStateInfo"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLL2BdStateInfo</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Public Types</h3></td></tr>
+<tr class="memitem:a8408a88ee80e1b2448fb3d8e9fcc3a92"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a8408a88ee80e1b2448fb3d8e9fcc3a92">SLL2BdState</a> { <a class="el" href="group__SLRouteL2Oper.html#a8408a88ee80e1b2448fb3d8e9fcc3a92acdd4b26ee79cfda45775de53514dc499">SL_L2_BD_STATE_RESERVED</a> = 0x0, 
+<a class="el" href="group__SLRouteL2Oper.html#a8408a88ee80e1b2448fb3d8e9fcc3a92ac3494904c8472d7eff3576bd6aab4294">SL_L2_BD_STATE_ADDED</a> = 0x1, 
+<a class="el" href="group__SLRouteL2Oper.html#a8408a88ee80e1b2448fb3d8e9fcc3a92a4d51575cd4d7ca99ed5c6a8cb837d541">SL_L2_BD_STATE_DELETED</a> = 0x2, 
+<a class="el" href="group__SLRouteL2Oper.html#a8408a88ee80e1b2448fb3d8e9fcc3a92a2620e8a665685b62e7c1e125e1f28046">SL_L2_BD_STATE_REPLAY_NEEDED</a> = 0x3
+ }<tr class="memdesc:a8408a88ee80e1b2448fb3d8e9fcc3a92"><td class="mdescLeft">&#160;</td><td class="mdescRight">BD states.  <a href="group__SLRouteL2Oper.html#a8408a88ee80e1b2448fb3d8e9fcc3a92">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:a8408a88ee80e1b2448fb3d8e9fcc3a92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:aa0eee7f10001a872294d98f88c32c5ab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa0eee7f10001a872294d98f88c32c5ab"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#aa0eee7f10001a872294d98f88c32c5ab">BdName</a> = 1</td></tr>
+<tr class="memdesc:aa0eee7f10001a872294d98f88c32c5ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">BD name. <br /></td></tr>
+<tr class="separator:aa0eee7f10001a872294d98f88c32c5ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7732bcefd765d9049b5ec863a91befc9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7732bcefd765d9049b5ec863a91befc9"></a>
+<a class="el" href="group__SLRouteL2Oper.html#a8408a88ee80e1b2448fb3d8e9fcc3a92">SLL2BdState</a>&#160;</td><td class="memItemRight" valign="bottom"><b>BdState</b> = 2</td></tr>
+<tr class="separator:a7732bcefd765d9049b5ec863a91befc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h4 class="groupheader">Member Enumeration Documentation</h4>
+<a class="anchor" id="a8408a88ee80e1b2448fb3d8e9fcc3a92"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__SLRouteL2Oper.html#a8408a88ee80e1b2448fb3d8e9fcc3a92">SLL2BdStateInfo::SLL2BdState</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a8408a88ee80e1b2448fb3d8e9fcc3a92acdd4b26ee79cfda45775de53514dc499"></a>SL_L2_BD_STATE_RESERVED&#160;</td><td class="fielddoc">
+<p>Reserved. 0x0. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a8408a88ee80e1b2448fb3d8e9fcc3a92ac3494904c8472d7eff3576bd6aab4294"></a>SL_L2_BD_STATE_ADDED&#160;</td><td class="fielddoc">
+<p>BD Added State. </p>
+<p>Implies BD is ready for programming and notification request. 0x1 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a8408a88ee80e1b2448fb3d8e9fcc3a92a4d51575cd4d7ca99ed5c6a8cb837d541"></a>SL_L2_BD_STATE_DELETED&#160;</td><td class="fielddoc">
+<p>BD Deleted State. </p>
+<p>Implies BD has been deleted, all installed routes will be deleted and no further notifications will be sent. 0x2 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a8408a88ee80e1b2448fb3d8e9fcc3a92a2620e8a665685b62e7c1e125e1f28046"></a>SL_L2_BD_STATE_REPLAY_NEEDED&#160;</td><td class="fielddoc">
+<p>BD Replay Needed. </p>
+<p>Implies the routes in this BD could not be recovered and the client has to replay the routes. 0x3 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+
+</div>
+</div>
+<a name="structSLL2NotifStatusMsg" id="structSLL2NotifStatusMsg"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLL2NotifStatusMsg</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:aea3d51e2a0e609586d44f4d614af89f3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea3d51e2a0e609586d44f4d614af89f3"></a>
+<a class="el" href="group__SLCommonTypes.html#gaa809068894b7bf3fab0314dff50bd02d">SLNotifOp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#aea3d51e2a0e609586d44f4d614af89f3">Oper</a> = 1</td></tr>
+<tr class="memdesc:aea3d51e2a0e609586d44f4d614af89f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notification Operation in the request. <br /></td></tr>
+<tr class="separator:aea3d51e2a0e609586d44f4d614af89f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7804d88d50ad969b0a9b95c6448380d9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7804d88d50ad969b0a9b95c6448380d9"></a>
+uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a7804d88d50ad969b0a9b95c6448380d9">Correlator</a> = 2</td></tr>
+<tr class="memdesc:a7804d88d50ad969b0a9b95c6448380d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Correlator in the request. <br /></td></tr>
+<tr class="separator:a7804d88d50ad969b0a9b95c6448380d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac848fccfe97e1b653f2942df3eaca8c9"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#ac848fccfe97e1b653f2942df3eaca8c9">BdName</a> = 3</td></tr>
+<tr class="memdesc:ac848fccfe97e1b653f2942df3eaca8c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">BD in the request.  <a href="#ac848fccfe97e1b653f2942df3eaca8c9">More...</a><br /></td></tr>
+<tr class="separator:ac848fccfe97e1b653f2942df3eaca8c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa658e82953fc94cb3ffd9554b15ba5e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#aa658e82953fc94cb3ffd9554b15ba5e5">NotifStatus</a> = 4</td></tr>
+<tr class="memdesc:aa658e82953fc94cb3ffd9554b15ba5e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The NotifStatus implies one of 2 things: SL_SUCCESS: signifies that the notification request was successful SL_XXX: signifies an error in setting up a notification.  <a href="#aa658e82953fc94cb3ffd9554b15ba5e5">More...</a><br /></td></tr>
+<tr class="separator:aa658e82953fc94cb3ffd9554b15ba5e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h4 class="groupheader">Member Data Documentation</h4>
+<a class="anchor" id="ac848fccfe97e1b653f2942df3eaca8c9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string SLL2NotifStatusMsg::BdName = 3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This is not set if the request was for all BDs </p>
+
+</div>
+</div>
+<a class="anchor" id="aa658e82953fc94cb3ffd9554b15ba5e5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a> SLL2NotifStatusMsg::NotifStatus = 4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>If BdName is passed, it implies that notifications for the BD will not be sent. </p>
+
+</div>
+</div>
+
+</div>
+</div>
+<a name="structSLL2Notif" id="structSLL2Notif"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLL2Notif</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:acc66b5a54ce8ca5d9efceb1122619729"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acc66b5a54ce8ca5d9efceb1122619729"></a>
+<a class="el" href="group__SLRouteL2Oper.html#gabd997cb91e2148302e6fc2749e951cef">SLL2NotifType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#acc66b5a54ce8ca5d9efceb1122619729">EventType</a> = 1</td></tr>
+<tr class="memdesc:acc66b5a54ce8ca5d9efceb1122619729"><td class="mdescLeft">&#160;</td><td class="mdescRight">L2 Notification type. <br /></td></tr>
+<tr class="separator:acc66b5a54ce8ca5d9efceb1122619729"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a1a26d32161db6c48c95251577b397c"><td class="memItemLeft" align="right" valign="top">oneof&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a2a1a26d32161db6c48c95251577b397c">Event</a></td></tr>
+<tr class="memdesc:a2a1a26d32161db6c48c95251577b397c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Further info based on EventType.  <a href="#a2a1a26d32161db6c48c95251577b397c">More...</a><br /></td></tr>
+<tr class="separator:a2a1a26d32161db6c48c95251577b397c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae17f72ecf1bc345f3a888a0cda3e5bc0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__SLRouteL2Oper.html#structSLL2NotifStatusMsg">SLL2NotifStatusMsg</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#ae17f72ecf1bc345f3a888a0cda3e5bc0">NotifStatus</a> = 3</td></tr>
+<tr class="memdesc:ae17f72ecf1bc345f3a888a0cda3e5bc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">case EventType == SL_L2_EVENT_TYPE_STATUS: =&gt; This field carries the status of the GetNotifMsg request.  <a href="#ae17f72ecf1bc345f3a888a0cda3e5bc0">More...</a><br /></td></tr>
+<tr class="separator:ae17f72ecf1bc345f3a888a0cda3e5bc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af602304cf74590c74b29a5f5158d6365"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af602304cf74590c74b29a5f5158d6365"></a>
+<a class="el" href="group__SLRouteL2Oper.html#structSLL2BdStateInfo">SLL2BdStateInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#af602304cf74590c74b29a5f5158d6365">BdStateInfo</a> = 4</td></tr>
+<tr class="memdesc:af602304cf74590c74b29a5f5158d6365"><td class="mdescLeft">&#160;</td><td class="mdescRight">case EventType == SL_L2_EVENT_TYPE_BD_STATE: =&gt; This field carries the BD state notification <br /></td></tr>
+<tr class="separator:af602304cf74590c74b29a5f5158d6365"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8247c362ef8f7858ef47ff6ece9d30cb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8247c362ef8f7858ef47ff6ece9d30cb"></a>
+<a class="el" href="group__SLRouteL2Oper.html#structSLL2RouteNotif">SLL2RouteNotif</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteL2Oper.html#a8247c362ef8f7858ef47ff6ece9d30cb">Route</a> = 5</td></tr>
+<tr class="memdesc:a8247c362ef8f7858ef47ff6ece9d30cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">case EventType == SL_L2_EVENT_TYPE_ROUTE: =&gt; This field carries the L2 route <br /></td></tr>
+<tr class="separator:a8247c362ef8f7858ef47ff6ece9d30cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h4 class="groupheader">Member Data Documentation</h4>
+<a class="anchor" id="a2a1a26d32161db6c48c95251577b397c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">oneof SLL2Notif::Event</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">{</div><div class="line">        </div><div class="line">        <a class="code" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a> ErrStatus = 2</div></div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ae17f72ecf1bc345f3a888a0cda3e5bc0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__SLRouteL2Oper.html#structSLL2NotifStatusMsg">SLL2NotifStatusMsg</a> SLL2Notif::NotifStatus = 3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="gabd997cb91e2148302e6fc2749e951cef"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__SLRouteL2Oper.html#gabd997cb91e2148302e6fc2749e951cef">SLL2NotifType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ggabd997cb91e2148302e6fc2749e951cefacefd8f8099cf66a3f366411eef700df4"></a>SL_L2_EVENT_TYPE_RESERVED&#160;</td><td class="fielddoc">
+<p>Reserved. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggabd997cb91e2148302e6fc2749e951cefa1f03ee38decf6748c6262340796dea4a"></a>SL_L2_EVENT_TYPE_ERROR&#160;</td><td class="fielddoc">
+<p>Error - ErrStatus field elaborates on the error. </p>
+<p>The client can decide to close the stream based on the error. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggabd997cb91e2148302e6fc2749e951cefa728689b7690fa8d2f08d02caa8822f3e"></a>SL_L2_EVENT_TYPE_STATUS&#160;</td><td class="fielddoc">
+<p>Status of GetNotifMsg. </p>
+<p>NotifStatus field elaborates on the result If the GetNotifMsg is per-BD and there was an error, only the notification for the BD in the status message is not setup. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggabd997cb91e2148302e6fc2749e951cefa03e2e9a0d360c0e54cbd41d3c6f0e18b"></a>SL_L2_EVENT_TYPE_START_MARKER&#160;</td><td class="fielddoc">
+<p>Start marker - sent before any notification is sent. </p>
+<p>This is an indication to stale any objects received until now. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggabd997cb91e2148302e6fc2749e951cefafe7306656a9c8edbc4b77cf36e464d1d"></a>SL_L2_EVENT_TYPE_BD_STATE&#160;</td><td class="fielddoc">
+<p>BD configuration notification. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggabd997cb91e2148302e6fc2749e951cefa17667a98e66afbfd03c913b620d96426"></a>SL_L2_EVENT_TYPE_BD_STATE_END_MARKER&#160;</td><td class="fielddoc">
+<p>End marker for BD configuration notifications. </p>
+<p>This is an indication to sweep any staled BD states if present. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggabd997cb91e2148302e6fc2749e951cefa0e515ca32a87233ce2003d5cde32c68a"></a>SL_L2_EVENT_TYPE_ROUTE&#160;</td><td class="fielddoc">
+<p>L2 route. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggabd997cb91e2148302e6fc2749e951cefad21cb3ee89d91353dfa8191445fbfcde"></a>SL_L2_EVENT_TYPE_ROUTE_END_MARKER&#160;</td><td class="fielddoc">
+<p>End marker for Route notifications. </p>
+<p>This is an indication to sweep any staled routes if present. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="ga2f0939a4e5f971205f3adf56fac4f121"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__SLRouteL2Oper.html#ga2f0939a4e5f971205f3adf56fac4f121">SLL2RouteType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="gga2f0939a4e5f971205f3adf56fac4f121aa676700a19bd5e74ec58d4df82af3cf7"></a>SL_L2_ROUTE_RESERVED&#160;</td><td class="fielddoc">
+<p>Reserved. 0x0. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga2f0939a4e5f971205f3adf56fac4f121ae0099a8a19c444583171d2f8f1e35484"></a>SL_L2_ROUTE_MAC&#160;</td><td class="fielddoc">
+<p>Mac-IP route. 0x1. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga2f0939a4e5f971205f3adf56fac4f121a2ef7e92865f6885cb232048b47001284"></a>SL_L2_ROUTE_IMET&#160;</td><td class="fielddoc">
+<p>Inclusive Multicast Ethernet Tag (IMET) route. 0x2. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.8-->
+<!-- start footer part -->
+</div>
+</div>
+</div>
+</div>
+</div>
+    <div class="page__footer" style="position: relative;">
+      <footer>
+<div class="page__footer-follow">
+  <ul class="social-icons">
+      <li><strong>Follow:</strong></li>
+      <li><a href="https://twitter.com/xrdocs"><i class="fa fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+      <li><a href="http://github.com/xrdocs"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    <li><a href="https://xrdocs.github.io/cisco-service-layer/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+<div class="page__footer-copyright">&copy; 2017 Cisco Systems Inc. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+      </footer>
+    </div>
+    <script src="https://xrdocs.github.io/cisco-service-layer/assets/js/main.min.js"></script>
+<script src="https://xrdocs.github.io/cisco-service-layer/assets/js/scrollmenu.js"></script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-78256516-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- material-scrolltop button -->
+<button class="material-scrolltop" type="button"></button>
+<!-- material-scrolltop plugin -->
+<script src="https://xrdocs.github.io/cisco-service-layer/assets/js/material-scrolltop.js"></script>
+<!-- Initialize material-scrolltop with (minimal) -->
+<script>
+    $('body').materialScrollTop();
+</script>
+</body>
+</html>

@@ -1,0 +1,809 @@
+<!-- HTML header for doxygen 1.8.8-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- For Mobile Devices -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+        <meta name="generator" content="Doxygen 1.8.11"/>
+<meta charset="utf-8">
+<!-- begin SEO -->
+<title>            Blogs and Events      IOS XR Documentation @xrdocs      </title>
+<meta property="og:locale" content="en-US">
+<meta property="og:site_name" content="IOS XR Documentation @xrdocs">
+<meta property="og:title" content="Blogs and Events">
+  <link rel="canonical" href="https://xrdocs.github.io/cisco-service-layer/apidocs/">
+  <meta property="og:url" content="/cisco-service-layer/apidocs/">
+  <meta name="twitter:site" content="@xrdocs">
+  <meta name="twitter:title" content="Blogs and Events">
+  <meta name="twitter:description" content="Documentation, Blogs and Tutorials on the IOS-XR software">
+  <meta name="twitter:url" content="https://xrdocs.github.io/cisco-service-layer/apidocs/">
+    <meta name="twitter:card" content="summary">
+      <meta name="twitter:image" content="https://xrdocs.github.io/cisco-service-layer/images/service-layer-icon-xrdocs.png">
+    <meta name="twitter:creator" content="@xrdocs">
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "url": "https://xrdocs.github.io/cisco-service-layer",
+      "logo": "https://xrdocs.github.io/images/service-layer-icon-xrdocs.png"
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "person",
+      "name" : "Cisco Systems Inc",
+      "url" : "https://xrdocs.github.io/cisco-service-layer",
+      "sameAs" : ["https://twitter.com/xrdocs"]
+    }
+  </script>
+<!-- end SEO -->
+<link href="https://xrdocs.github.io/cisco-service-layer/feed.xml" type="application/atom+xml" rel="alternate" title="IOS XR Documentation @xrdocs Feed">
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="jgRKKm6B9FwJJPXxpmc0-EP3D0Mh8JHXaJqoYIGj1ek" />
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+<script>
+if (!(window.location.host.startsWith("127.0.0.1") || window.location.host.startsWith("localhost")) && (window.location.host.substr(-10) == '.github.io') && (window.location.protocol != "https:"))
+    window.location.protocol = "https";
+</script>
+<!-- For all browsers -->
+        <link href="customdoxygen.css" rel="stylesheet" type="text/css" />
+        <link href="doxyboot.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="/assets/css/main.css">
+<meta http-equiv="cleartype" content="on">
+<style>
+.underline-on-hover:hover {
+    text-decoration: underline;
+}
+.searchForm{
+      border-radius:5px;
+      -moz-border-radius:5px;
+      -webkit-border-radius:5px;
+      width: 900px;
+   }
+#search_results{
+      display: table; margin:0 auto;
+   }
+</style>
+</style>
+<!-- start custom head snippets -->
+<link href="https://xrdocs.github.io/cisco-service-layer/assets/css/lity.min.css" rel="stylesheet">
+<link href="https://xrdocs.github.io/cisco-service-layer/assets/css/cisco-sans.min.css" rel="stylesheet">
+<link href="https://xrdocs.github.io/cisco-service-layer/assets/css/material-scrolltop.css" rel="stylesheet">
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://xrdocs.github.io/cisco-service-layer/images/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://xrdocs.github.io/cisco-service-layer/images/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://xrdocs.github.io/cisco-service-layer/images/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://xrdocs.github.io/cisco-service-layer/images/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://xrdocs.github.io/cisco-service-layer/images/apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://xrdocs.github.io/cisco-service-layer/images/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://xrdocs.github.io/cisco-service-layer/images/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://xrdocs.github.io/cisco-service-layer/images/apple-touch-icon-152x152.png" />
+<link rel="icon" type="image/png" href="https://xrdocs.github.io/cisco-service-layer/images/favicon-196x196.png" sizes="196x196" />
+<link rel="icon" type="image/png" href="https://xrdocs.github.io/cisco-service-layer/images/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="https://xrdocs.github.io/cisco-service-layer/images/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="https://xrdocs.github.io/cisco-service-layer/images/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="https://xrdocs.github.io/cisco-service-layer/images/favicon-128.png" sizes="128x128" />
+<link rel="shortcut icon" href="https://xrdocs.github.io/cisco-service-layer/images/favicon_cisco.ico" />
+<meta name="application-name" content="&nbsp;"/>
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="https://xrdocs.github.io/cisco-service-layer/images/mstile-144x144.png" />
+<meta name="msapplication-square70x70logo" content="https://xrdocs.github.io/cisco-service-layer/images/mstile-70x70.png" />
+<meta name="msapplication-square150x150logo" content="https://xrdocs.github.io/cisco-service-layer/images/mstile-150x150.png" />
+<meta name="msapplication-wide310x150logo" content="https://xrdocs.github.io/cisco-service-layer/images/mstile-310x150.png" />
+<meta name="msapplication-square310x310logo" content="https://xrdocs.github.io/cisco-service-layer/images/mstile-310x310.png" />
+<!-- end custom head snippets -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="dynsections.js"></script>
+        <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="doxy-boot.js"></script>
+    </head>
+<body style="overflow-x: visible;">
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu" style="padding-left: 0;">
+      <nav id="site-nav" class="greedy-nav">
+        <button><div class="navicon"></div></button>
+        <ul class="visible-links">
+          <img src="https://xrdocs.github.io/images/xrdocs_logo.png" width="45px" height="45px" alt="xrdocs logo" style="float:left;">
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="https://xrdocs.github.io/">@xrdocs</a></li>
+          <li class="masthead__menu-item masthead__menu-item"><a href="https://xrdocs.github.io/cisco-service-layer/">Cisco Service Layer</a></li>
+                    <li class="masthead__menu-item greedy-nav-active"><a href="https://xrdocs.github.io/cisco-service-layer/apidocs/">Apidocs</a></li>
+                    <li class="masthead__menu-item"><a href="https://xrdocs.github.io/cisco-service-layer/blogs/">Blogs</a></li>
+                    <li class="masthead__menu-item"><a href="https://xrdocs.github.io/cisco-service-layer/tutorials/">Tutorials</a></li>
+                    <li class="masthead__menu-item"><a href="https://xrdocs.github.io/cisco-service-layer/search">Search <i class="fa fa-search" aria-hidden="true"></i></a></li>
+                    <li class="masthead__menu-item"><a href="https://xrdocs.github.io/cisco-service-layer/tags/">Tags</a></li>
+                    <li class="masthead__menu-item"><a href="https://xrdocs.github.io/cisco-service-layer/collection-archive/">Archive</a></li>
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+        <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+          <div id="apititle_div"><h1 class="apititle"><span>Cisco Service Layer API Documentation</span></h1></div>
+            <div class="content" id="content_tabs">
+<!-- Generated by Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Quick&#160;Start</span></a></li>
+      <li class="current"><a href="modules.html"><span>Services</span></a></li>
+      <li><a href="annotated.html"><span>Messages</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">RPC Calls</a> &#124;
+<a href="#nested-classes">Messages</a>  </div>
+  <div class="headertitle">
+<div class="title">SLRouteIPv4Oper<div class="ingroups"><a class="el" href="group__Route.html">Route</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Service Description</h2>
+<p>This service declares both the Vrf Registration, as well as adding, deleting and getting IPv4 routes. </p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+RPC Calls</h2></td></tr>
+<tr class="memitem:gab68aec7539b4bbb28a7e284dbc18a46f"><td class="memItemLeft" align="right" valign="top">rpc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#gab68aec7539b4bbb28a7e284dbc18a46f">SLRoutev4Oper::SLRoutev4GlobalsGet</a> (<a class="el" href="group__SLRouteCommon.html#structSLRouteGlobalsGetMsg">SLRouteGlobalsGetMsg</a>) returns(<a class="el" href="group__SLRouteCommon.html#structSLRouteGlobalsGetMsgRsp">SLRouteGlobalsGetMsgRsp</a>)</td></tr>
+<tr class="memdesc:gab68aec7539b4bbb28a7e284dbc18a46f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global Route operations.  <a href="group__SLRouteIPv4Oper.html#gab68aec7539b4bbb28a7e284dbc18a46f">More...</a><br /></td></tr>
+<tr class="separator:gab68aec7539b4bbb28a7e284dbc18a46f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafd0731ae5836a4c9e1d59c820ca1a34c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gafd0731ae5836a4c9e1d59c820ca1a34c"></a>
+rpc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#gafd0731ae5836a4c9e1d59c820ca1a34c">SLRoutev4Oper::SLRoutev4GlobalStatsGet</a> (<a class="el" href="group__SLRouteCommon.html#structSLRouteGlobalStatsGetMsg">SLRouteGlobalStatsGetMsg</a>) returns(<a class="el" href="group__SLRouteCommon.html#structSLRouteGlobalStatsGetMsgRsp">SLRouteGlobalStatsGetMsgRsp</a>)</td></tr>
+<tr class="memdesc:gafd0731ae5836a4c9e1d59c820ca1a34c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to retrieve Global Route Stats. <br /></td></tr>
+<tr class="separator:gafd0731ae5836a4c9e1d59c820ca1a34c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga67a891660cfd5b51e993dcd3a0674023"><td class="memItemLeft" align="right" valign="top">rpc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#ga67a891660cfd5b51e993dcd3a0674023">SLRoutev4Oper::SLRoutev4VrfRegOp</a> (<a class="el" href="group__SLRouteCommon.html#structSLVrfRegMsg">SLVrfRegMsg</a>) returns(<a class="el" href="group__SLRouteCommon.html#structSLVrfRegMsgRsp">SLVrfRegMsgRsp</a>)</td></tr>
+<tr class="memdesc:ga67a891660cfd5b51e993dcd3a0674023"><td class="mdescLeft">&#160;</td><td class="mdescRight">VRF registration operations.  <a href="group__SLRouteIPv4Oper.html#ga67a891660cfd5b51e993dcd3a0674023">More...</a><br /></td></tr>
+<tr class="separator:ga67a891660cfd5b51e993dcd3a0674023"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4dd74c2083dcc5960a9cf8ae46815fce"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga4dd74c2083dcc5960a9cf8ae46815fce"></a>
+rpc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#ga4dd74c2083dcc5960a9cf8ae46815fce">SLRoutev4Oper::SLRoutev4VrfRegGet</a> (<a class="el" href="group__SLRouteCommon.html#structSLVrfRegGetMsg">SLVrfRegGetMsg</a>) returns(<a class="el" href="group__SLRouteCommon.html#structSLVrfRegGetMsgRsp">SLVrfRegGetMsgRsp</a>)</td></tr>
+<tr class="memdesc:ga4dd74c2083dcc5960a9cf8ae46815fce"><td class="mdescLeft">&#160;</td><td class="mdescRight">VRF get. Used to retrieve VRF attributes from the server. <br /></td></tr>
+<tr class="separator:ga4dd74c2083dcc5960a9cf8ae46815fce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0ba79416b427604ca9904ce474e6f5c9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga0ba79416b427604ca9904ce474e6f5c9"></a>
+rpc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#ga0ba79416b427604ca9904ce474e6f5c9">SLRoutev4Oper::SLRoutev4VrfGetStats</a> (<a class="el" href="group__SLRouteCommon.html#structSLVrfRegGetMsg">SLVrfRegGetMsg</a>) returns(<a class="el" href="group__SLRouteCommon.html#structSLVRFGetStatsMsgRsp">SLVRFGetStatsMsgRsp</a>)</td></tr>
+<tr class="memdesc:ga0ba79416b427604ca9904ce474e6f5c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to retrieve VRF Stats from the server. <br /></td></tr>
+<tr class="separator:ga0ba79416b427604ca9904ce474e6f5c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga59b16475f0c334eb1463ee85956ebb24"><td class="memItemLeft" align="right" valign="top">rpc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#ga59b16475f0c334eb1463ee85956ebb24">SLRoutev4Oper::SLRoutev4Op</a> (<a class="el" href="group__SLRouteIPv4Oper.html#structSLRoutev4Msg">SLRoutev4Msg</a>) returns(<a class="el" href="group__SLRouteIPv4Oper.html#structSLRoutev4MsgRsp">SLRoutev4MsgRsp</a>)</td></tr>
+<tr class="memdesc:ga59b16475f0c334eb1463ee85956ebb24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Route operations.  <a href="group__SLRouteIPv4Oper.html#ga59b16475f0c334eb1463ee85956ebb24">More...</a><br /></td></tr>
+<tr class="separator:ga59b16475f0c334eb1463ee85956ebb24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga46c7d6ff6c494509c9f97c003e84ff62"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga46c7d6ff6c494509c9f97c003e84ff62"></a>
+rpc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#ga46c7d6ff6c494509c9f97c003e84ff62">SLRoutev4Oper::SLRoutev4Get</a> (<a class="el" href="group__SLRouteIPv4Oper.html#structSLRoutev4GetMsg">SLRoutev4GetMsg</a>) returns(<a class="el" href="group__SLRouteIPv4Oper.html#structSLRoutev4GetMsgRsp">SLRoutev4GetMsgRsp</a>)</td></tr>
+<tr class="memdesc:ga46c7d6ff6c494509c9f97c003e84ff62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves route attributes. <br /></td></tr>
+<tr class="separator:ga46c7d6ff6c494509c9f97c003e84ff62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga615993c637c42ed9b65bd7b1bfc09b74"><td class="memItemLeft" align="right" valign="top">rpc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#ga615993c637c42ed9b65bd7b1bfc09b74">SLRoutev4Oper::SLRoutev4OpStream</a> (stream <a class="el" href="group__SLRouteIPv4Oper.html#structSLRoutev4Msg">SLRoutev4Msg</a>) returns(stream <a class="el" href="group__SLRouteIPv4Oper.html#structSLRoutev4MsgRsp">SLRoutev4MsgRsp</a>)</td></tr>
+<tr class="memdesc:ga615993c637c42ed9b65bd7b1bfc09b74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stream Route operations.  <a href="group__SLRouteIPv4Oper.html#ga615993c637c42ed9b65bd7b1bfc09b74">More...</a><br /></td></tr>
+<tr class="separator:ga615993c637c42ed9b65bd7b1bfc09b74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5ff6c135e5d22539eb16080e79e8d66b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga5ff6c135e5d22539eb16080e79e8d66b"></a>
+rpc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#ga5ff6c135e5d22539eb16080e79e8d66b">SLRoutev4Oper::SLRoutev4GetStream</a> (stream <a class="el" href="group__SLRouteIPv4Oper.html#structSLRoutev4GetMsg">SLRoutev4GetMsg</a>) returns(stream <a class="el" href="group__SLRouteIPv4Oper.html#structSLRoutev4GetMsgRsp">SLRoutev4GetMsgRsp</a>)</td></tr>
+<tr class="memdesc:ga5ff6c135e5d22539eb16080e79e8d66b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves route attributes. <br /></td></tr>
+<tr class="separator:ga5ff6c135e5d22539eb16080e79e8d66b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf248fb2c08e64c817bd3ed2509eadd64"><td class="memItemLeft" align="right" valign="top">rpc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#gaf248fb2c08e64c817bd3ed2509eadd64">SLRoutev4Oper::SLRoutev4GetNotifStream</a> (stream <a class="el" href="group__SLRouteCommon.html#structSLRouteGetNotifMsg">SLRouteGetNotifMsg</a>) returns(stream <a class="el" href="group__SLRouteIPv4Oper.html#structSLRoutev4Notif">SLRoutev4Notif</a>)</td></tr>
+<tr class="memdesc:gaf248fb2c08e64c817bd3ed2509eadd64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Route Redistribution Operations.  <a href="group__SLRouteIPv4Oper.html#gaf248fb2c08e64c817bd3ed2509eadd64">More...</a><br /></td></tr>
+<tr class="separator:gaf248fb2c08e64c817bd3ed2509eadd64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Messages</h2></td></tr>
+<tr class="memitem:structSLRoutev4"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#structSLRoutev4">SLRoutev4</a></td></tr>
+<tr class="memdesc:structSLRoutev4"><td class="mdescLeft">&#160;</td><td class="mdescRight">IPv4 route.  <a href="group__SLRouteIPv4Oper.html#structSLRoutev4">More...</a><br /></td></tr>
+<tr class="separator:structSLRoutev4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLRoutev4Msg"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#structSLRoutev4Msg">SLRoutev4Msg</a></td></tr>
+<tr class="memdesc:structSLRoutev4Msg"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of routes for bulk download.  <a href="group__SLRouteIPv4Oper.html#structSLRoutev4Msg">More...</a><br /></td></tr>
+<tr class="separator:structSLRoutev4Msg"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLRoutev4Res"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#structSLRoutev4Res">SLRoutev4Res</a></td></tr>
+<tr class="memdesc:structSLRoutev4Res"><td class="mdescLeft">&#160;</td><td class="mdescRight">IPv4 route result, uniquely identified by the Prefix/PrefixLen pair.  <a href="group__SLRouteIPv4Oper.html#structSLRoutev4Res">More...</a><br /></td></tr>
+<tr class="separator:structSLRoutev4Res"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLRoutev4MsgRsp"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#structSLRoutev4MsgRsp">SLRoutev4MsgRsp</a></td></tr>
+<tr class="memdesc:structSLRoutev4MsgRsp"><td class="mdescLeft">&#160;</td><td class="mdescRight">IPv4 bulk route result status.  <a href="group__SLRouteIPv4Oper.html#structSLRoutev4MsgRsp">More...</a><br /></td></tr>
+<tr class="separator:structSLRoutev4MsgRsp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLRoutev4GetMsg"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#structSLRoutev4GetMsg">SLRoutev4GetMsg</a></td></tr>
+<tr class="memdesc:structSLRoutev4GetMsg"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to retrieve route attributes.  <a href="group__SLRouteIPv4Oper.html#structSLRoutev4GetMsg">More...</a><br /></td></tr>
+<tr class="separator:structSLRoutev4GetMsg"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLRoutev4GetMsgRsp"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#structSLRoutev4GetMsgRsp">SLRoutev4GetMsgRsp</a></td></tr>
+<tr class="memdesc:structSLRoutev4GetMsgRsp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gt Route message response.  <a href="group__SLRouteIPv4Oper.html#structSLRoutev4GetMsgRsp">More...</a><br /></td></tr>
+<tr class="separator:structSLRoutev4GetMsgRsp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLRoutev4NotifRoute"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#structSLRoutev4NotifRoute">SLRoutev4NotifRoute</a></td></tr>
+<tr class="memdesc:structSLRoutev4NotifRoute"><td class="mdescLeft">&#160;</td><td class="mdescRight">IPv4 Route notification.  <a href="group__SLRouteIPv4Oper.html#structSLRoutev4NotifRoute">More...</a><br /></td></tr>
+<tr class="separator:structSLRoutev4NotifRoute"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLRoutev4Notif"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#structSLRoutev4Notif">SLRoutev4Notif</a></td></tr>
+<tr class="memdesc:structSLRoutev4Notif"><td class="mdescLeft">&#160;</td><td class="mdescRight">IPv4 notification message.  <a href="group__SLRouteIPv4Oper.html#structSLRoutev4Notif">More...</a><br /></td></tr>
+<tr class="separator:structSLRoutev4Notif"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">RPC Documentation</h2>
+<a class="anchor" id="gaf248fb2c08e64c817bd3ed2509eadd64"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rpc SLRoutev4Oper::SLRoutev4GetNotifStream </td>
+          <td>(</td>
+          <td class="paramtype">stream&#160;</td>
+          <td class="paramname"><em>SLRouteGetNotifMsg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This call is used to get a stream of route notifications. It can be used to get "push" notifications for route adds/updates/deletes. The caller must maintain the GRPC channel as long as there is interest in route notifications.</p>
+<p>The call takes a stream of per-VRF notification requests. The success/failure of the notification request is relayed in the <a class="el" href="group__SLRouteCommon.html#structSLRouteNotifStatus" title="Common Route Notification Status message. ">SLRouteNotifStatus</a> followed by a Start marker, any routes if present, and an End Marker. </p>
+
+</div>
+</div>
+<a class="anchor" id="gab68aec7539b4bbb28a7e284dbc18a46f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rpc SLRoutev4Oper::SLRoutev4GlobalsGet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__SLRouteCommon.html#structSLRouteGlobalsGetMsg">SLRouteGlobalsGetMsg</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Used to retrieve Global Route information </p>
+
+</div>
+</div>
+<a class="anchor" id="ga59b16475f0c334eb1463ee85956ebb24"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rpc SLRoutev4Oper::SLRoutev4Op </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__SLRouteIPv4Oper.html#structSLRoutev4Msg">SLRoutev4Msg</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="group__SLRouteIPv4Oper.html#a183e55cf2ed1f3e6be439b5eb62acbaf" title="Route Object Operations. ">SLRoutev4Msg.Oper</a> = SL_OBJOP_ADD: Route add. Fails if the route already exists.</p>
+<p><a class="el" href="group__SLRouteIPv4Oper.html#a183e55cf2ed1f3e6be439b5eb62acbaf" title="Route Object Operations. ">SLRoutev4Msg.Oper</a> = SL_OBJOP_UPDATE: Route update. Creates or updates the route.</p>
+<p><a class="el" href="group__SLRouteIPv4Oper.html#a183e55cf2ed1f3e6be439b5eb62acbaf" title="Route Object Operations. ">SLRoutev4Msg.Oper</a> = SL_OBJOP_DELETE: Route delete. The route path is not necessary to delete the route. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga615993c637c42ed9b65bd7b1bfc09b74"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rpc SLRoutev4Oper::SLRoutev4OpStream </td>
+          <td>(</td>
+          <td class="paramtype">stream&#160;</td>
+          <td class="paramname"><em>SLRoutev4Msg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="group__SLRouteIPv4Oper.html#a183e55cf2ed1f3e6be439b5eb62acbaf" title="Route Object Operations. ">SLRoutev4Msg.Oper</a> = SL_OBJOP_ADD: Route add. Fails if the route already exists.</p>
+<p><a class="el" href="group__SLRouteIPv4Oper.html#a183e55cf2ed1f3e6be439b5eb62acbaf" title="Route Object Operations. ">SLRoutev4Msg.Oper</a> = SL_OBJOP_UPDATE: Route update. Creates or updates the route.</p>
+<p><a class="el" href="group__SLRouteIPv4Oper.html#a183e55cf2ed1f3e6be439b5eb62acbaf" title="Route Object Operations. ">SLRoutev4Msg.Oper</a> = SL_OBJOP_DELETE: Route delete. The route path is not necessary to delete the route. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga67a891660cfd5b51e993dcd3a0674023"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rpc SLRoutev4Oper::SLRoutev4VrfRegOp </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__SLRouteCommon.html#structSLVrfRegMsg">SLVrfRegMsg</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="group__SLRouteCommon.html#a177c43ef7fd6f54f9efe2c34f83e2133" title="Registration Operation. ">SLVrfRegMsg.Oper</a> = SL_REGOP_REGISTER: VRF registration: Sends a list of VRF registration messages and expects a list of registration responses. A client Must Register a VRF BEFORE routes can be added/modified in the associated VRF.</p>
+<p><a class="el" href="group__SLRouteCommon.html#a177c43ef7fd6f54f9efe2c34f83e2133" title="Registration Operation. ">SLVrfRegMsg.Oper</a> = SL_REGOP_UNREGISTER: VRF Un-registeration: Sends a list of VRF un-registration messages and expects a list of un-registration responses. This can be used to convey that the client is no longer interested in this VRF. All previously installed routes would be lost.</p>
+<p><a class="el" href="group__SLRouteCommon.html#a177c43ef7fd6f54f9efe2c34f83e2133" title="Registration Operation. ">SLVrfRegMsg.Oper</a> = SL_REGOP_EOF: VRF End Of File message. After Registration, the client is expected to send an EOF message to convey the end of replay of the client's known objects. This is especially useful under certain restart scenarios when the client and the server are trying to synchronize their Routes. </p>
+
+</div>
+</div>
+<hr/><h2 class="groupheader">Message Documentation</h2>
+<a name="structSLRoutev4" id="structSLRoutev4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLRoutev4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:af3be501ca2908eb0330565e5075bf2c9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af3be501ca2908eb0330565e5075bf2c9"></a>
+uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#af3be501ca2908eb0330565e5075bf2c9">Prefix</a> = 1</td></tr>
+<tr class="memdesc:af3be501ca2908eb0330565e5075bf2c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">IPv4 Prefix Valid addresses: 0.0.0.0 1.0.0.0 - 223.255.255.255. <br /></td></tr>
+<tr class="separator:af3be501ca2908eb0330565e5075bf2c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a1c50dc6ff3f57c210de31f030c51d6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a1c50dc6ff3f57c210de31f030c51d6"></a>
+uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#a1a1c50dc6ff3f57c210de31f030c51d6">PrefixLen</a> = 2</td></tr>
+<tr class="memdesc:a1a1c50dc6ff3f57c210de31f030c51d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">IPv4 prefix length, [0-32]. <br /></td></tr>
+<tr class="separator:a1a1c50dc6ff3f57c210de31f030c51d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addb4f81fb67ca4bdd99cfc5c0fe70155"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="addb4f81fb67ca4bdd99cfc5c0fe70155"></a>
+<a class="el" href="group__SLRouteCommon.html#structSLRouteCommon">SLRouteCommon</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#addb4f81fb67ca4bdd99cfc5c0fe70155">RouteCommon</a> = 3</td></tr>
+<tr class="memdesc:addb4f81fb67ca4bdd99cfc5c0fe70155"><td class="mdescLeft">&#160;</td><td class="mdescRight">Common route attributes. <br /></td></tr>
+<tr class="separator:addb4f81fb67ca4bdd99cfc5c0fe70155"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac13fd9824382cab85a14a5553ff34c54"><td class="memItemLeft" align="right" valign="top">repeated <a class="el" href="group__SLRouteCommon.html#structSLRoutePath">SLRoutePath</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#ac13fd9824382cab85a14a5553ff34c54">PathList</a> = 4</td></tr>
+<tr class="memdesc:ac13fd9824382cab85a14a5553ff34c54"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of route paths for a particular route.  <a href="#ac13fd9824382cab85a14a5553ff34c54">More...</a><br /></td></tr>
+<tr class="separator:ac13fd9824382cab85a14a5553ff34c54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h4 class="groupheader">Member Data Documentation</h4>
+<a class="anchor" id="ac13fd9824382cab85a14a5553ff34c54"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">repeated <a class="el" href="group__SLRouteCommon.html#structSLRoutePath">SLRoutePath</a> SLRoutev4::PathList = 4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Specifying more than one path is allowed for ECMP/UCMP cases </p>
+
+</div>
+</div>
+
+</div>
+</div>
+<a name="structSLRoutev4Msg" id="structSLRoutev4Msg"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLRoutev4Msg</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:a183e55cf2ed1f3e6be439b5eb62acbaf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a183e55cf2ed1f3e6be439b5eb62acbaf"></a>
+<a class="el" href="group__SLCommonTypes.html#ga0b166605b901d6e5ad5f7706ac60baf1">SLObjectOp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#a183e55cf2ed1f3e6be439b5eb62acbaf">Oper</a> = 1</td></tr>
+<tr class="memdesc:a183e55cf2ed1f3e6be439b5eb62acbaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Route Object Operations. <br /></td></tr>
+<tr class="separator:a183e55cf2ed1f3e6be439b5eb62acbaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65fc2b2d79b65733d444a4b19fe1c78a"><td class="memItemLeft" align="right" valign="top">uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#a65fc2b2d79b65733d444a4b19fe1c78a">Correlator</a> = 2</td></tr>
+<tr class="memdesc:a65fc2b2d79b65733d444a4b19fe1c78a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Correlator.  <a href="#a65fc2b2d79b65733d444a4b19fe1c78a">More...</a><br /></td></tr>
+<tr class="separator:a65fc2b2d79b65733d444a4b19fe1c78a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2559f2173723972ffbc5aa4b32b7618c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2559f2173723972ffbc5aa4b32b7618c"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#a2559f2173723972ffbc5aa4b32b7618c">VrfName</a> = 3</td></tr>
+<tr class="memdesc:a2559f2173723972ffbc5aa4b32b7618c"><td class="mdescLeft">&#160;</td><td class="mdescRight">VRF name. <br /></td></tr>
+<tr class="separator:a2559f2173723972ffbc5aa4b32b7618c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa63b61e64138478beddc75820afe1959"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa63b61e64138478beddc75820afe1959"></a>
+repeated <a class="el" href="group__SLRouteIPv4Oper.html#structSLRoutev4">SLRoutev4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#aa63b61e64138478beddc75820afe1959">Routes</a> = 4</td></tr>
+<tr class="memdesc:aa63b61e64138478beddc75820afe1959"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of routes for the VRF specified above. <br /></td></tr>
+<tr class="separator:aa63b61e64138478beddc75820afe1959"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h4 class="groupheader">Member Data Documentation</h4>
+<a class="anchor" id="a65fc2b2d79b65733d444a4b19fe1c78a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64 SLRoutev4Msg::Correlator = 2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This can be used to correlate replies with requests. The Server simply reflects this field back in the reply. </p>
+
+</div>
+</div>
+
+</div>
+</div>
+<a name="structSLRoutev4Res" id="structSLRoutev4Res"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLRoutev4Res</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:aa799a449c41c06b72b3248ee8da9d007"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa799a449c41c06b72b3248ee8da9d007"></a>
+<a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#aa799a449c41c06b72b3248ee8da9d007">ErrStatus</a> = 1</td></tr>
+<tr class="memdesc:aa799a449c41c06b72b3248ee8da9d007"><td class="mdescLeft">&#160;</td><td class="mdescRight">Corresponding error code. <br /></td></tr>
+<tr class="separator:aa799a449c41c06b72b3248ee8da9d007"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad228662f6bb0967a70e57ca78835db05"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad228662f6bb0967a70e57ca78835db05"></a>
+uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#ad228662f6bb0967a70e57ca78835db05">Prefix</a> = 2</td></tr>
+<tr class="memdesc:ad228662f6bb0967a70e57ca78835db05"><td class="mdescLeft">&#160;</td><td class="mdescRight">IPv4 Prefix. <br /></td></tr>
+<tr class="separator:ad228662f6bb0967a70e57ca78835db05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64dde6feeedbfee7878c77dea7f4bc8d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a64dde6feeedbfee7878c77dea7f4bc8d"></a>
+uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#a64dde6feeedbfee7878c77dea7f4bc8d">PrefixLen</a> = 3</td></tr>
+<tr class="memdesc:a64dde6feeedbfee7878c77dea7f4bc8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">IPv4 prefix length, [0-32]. <br /></td></tr>
+<tr class="separator:a64dde6feeedbfee7878c77dea7f4bc8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+
+</div>
+</div>
+<a name="structSLRoutev4MsgRsp" id="structSLRoutev4MsgRsp"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLRoutev4MsgRsp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:ad03a6dada8156a0933066390d23b9661"><td class="memItemLeft" align="right" valign="top">uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#ad03a6dada8156a0933066390d23b9661">Correlator</a> = 1</td></tr>
+<tr class="memdesc:ad03a6dada8156a0933066390d23b9661"><td class="mdescLeft">&#160;</td><td class="mdescRight">Correlator.  <a href="#ad03a6dada8156a0933066390d23b9661">More...</a><br /></td></tr>
+<tr class="separator:ad03a6dada8156a0933066390d23b9661"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad86a5fae489da27a5abb09755e8b98ff"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad86a5fae489da27a5abb09755e8b98ff"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#ad86a5fae489da27a5abb09755e8b98ff">VrfName</a> = 2</td></tr>
+<tr class="memdesc:ad86a5fae489da27a5abb09755e8b98ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">VRF name (matches the VRF name of the original operation) <br /></td></tr>
+<tr class="separator:ad86a5fae489da27a5abb09755e8b98ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e66651f14af46a3cee8a6e57cd1e601"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#a8e66651f14af46a3cee8a6e57cd1e601">StatusSummary</a> = 3</td></tr>
+<tr class="memdesc:a8e66651f14af46a3cee8a6e57cd1e601"><td class="mdescLeft">&#160;</td><td class="mdescRight">Summary result of the bulk operation (refer to enum <a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>) In general, the StatusSummary implies one of 3 things:  <a href="#a8e66651f14af46a3cee8a6e57cd1e601">More...</a><br /></td></tr>
+<tr class="separator:a8e66651f14af46a3cee8a6e57cd1e601"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ffcf33875e347fcd13307f80398d23c"><td class="memItemLeft" align="right" valign="top">repeated <a class="el" href="group__SLRouteIPv4Oper.html#structSLRoutev4Res">SLRoutev4Res</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#a3ffcf33875e347fcd13307f80398d23c">Results</a> = 4</td></tr>
+<tr class="memdesc:a3ffcf33875e347fcd13307f80398d23c"><td class="mdescLeft">&#160;</td><td class="mdescRight">In case of errors, this field indicates which entry in the bulk was erroneous.  <a href="#a3ffcf33875e347fcd13307f80398d23c">More...</a><br /></td></tr>
+<tr class="separator:a3ffcf33875e347fcd13307f80398d23c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h4 class="groupheader">Member Data Documentation</h4>
+<a class="anchor" id="ad03a6dada8156a0933066390d23b9661"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64 SLRoutev4MsgRsp::Correlator = 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This can be used to correlate replies with requests. The Server simply reflects this field back in the reply. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3ffcf33875e347fcd13307f80398d23c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">repeated <a class="el" href="group__SLRouteIPv4Oper.html#structSLRoutev4Res">SLRoutev4Res</a> SLRoutev4MsgRsp::Results = 4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8e66651f14af46a3cee8a6e57cd1e601"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a> SLRoutev4MsgRsp::StatusSummary = 3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<ol type="1">
+<li>SL_SUCCESS: signifies that the entire bulk operation was successful. In this case, the Results list is empty.</li>
+<li>SL_SOME_ERR: signifies that the operation failed for one or more entries. In this case, Results holds the result for each individual entry in the bulk.</li>
+<li>SL_RPC_XXX: signifies that the entire bulk operation failed. In this case, the Results list is empty. </li>
+</ol>
+
+</div>
+</div>
+
+</div>
+</div>
+<a name="structSLRoutev4GetMsg" id="structSLRoutev4GetMsg"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLRoutev4GetMsg</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:a7e0e1730de2caa4e798c793c727803ff"><td class="memItemLeft" align="right" valign="top">uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#a7e0e1730de2caa4e798c793c727803ff">Correlator</a> = 1</td></tr>
+<tr class="memdesc:a7e0e1730de2caa4e798c793c727803ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Correlator.  <a href="#a7e0e1730de2caa4e798c793c727803ff">More...</a><br /></td></tr>
+<tr class="separator:a7e0e1730de2caa4e798c793c727803ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a550de36635a8ab76da35d2f3638fe774"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#a550de36635a8ab76da35d2f3638fe774">VrfName</a> = 2</td></tr>
+<tr class="memdesc:a550de36635a8ab76da35d2f3638fe774"><td class="mdescLeft">&#160;</td><td class="mdescRight">VRF name.  <a href="#a550de36635a8ab76da35d2f3638fe774">More...</a><br /></td></tr>
+<tr class="separator:a550de36635a8ab76da35d2f3638fe774"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeab77c4ee88fbd860bdebb863edf3749"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeab77c4ee88fbd860bdebb863edf3749"></a>
+uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#aeab77c4ee88fbd860bdebb863edf3749">Prefix</a> = 3</td></tr>
+<tr class="memdesc:aeab77c4ee88fbd860bdebb863edf3749"><td class="mdescLeft">&#160;</td><td class="mdescRight">IPv4 Prefix. <br /></td></tr>
+<tr class="separator:aeab77c4ee88fbd860bdebb863edf3749"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77c885675a6765d2e9384c06e7670ad7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a77c885675a6765d2e9384c06e7670ad7"></a>
+uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#a77c885675a6765d2e9384c06e7670ad7">PrefixLen</a> = 4</td></tr>
+<tr class="memdesc:a77c885675a6765d2e9384c06e7670ad7"><td class="mdescLeft">&#160;</td><td class="mdescRight">IPv4 prefix length, [0-32]. <br /></td></tr>
+<tr class="separator:a77c885675a6765d2e9384c06e7670ad7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d2a37656dbe81dff64c49cda3a0933e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3d2a37656dbe81dff64c49cda3a0933e"></a>
+uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#a3d2a37656dbe81dff64c49cda3a0933e">EntriesCount</a> = 5</td></tr>
+<tr class="memdesc:a3d2a37656dbe81dff64c49cda3a0933e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of entries requested. <br /></td></tr>
+<tr class="separator:a3d2a37656dbe81dff64c49cda3a0933e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0359a73d3bb7e82b88853ccc411a7a60"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0359a73d3bb7e82b88853ccc411a7a60"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#a0359a73d3bb7e82b88853ccc411a7a60">GetNext</a> = 6</td></tr>
+<tr class="memdesc:a0359a73d3bb7e82b88853ccc411a7a60"><td class="mdescLeft">&#160;</td><td class="mdescRight">if GetNext is FALSE: request up to 'EntriesCount' entries starting from the key If GetNext is TRUE, or if the key exact match is not found: request up to 'EntriesCount' entries starting from the key's next <br /></td></tr>
+<tr class="separator:a0359a73d3bb7e82b88853ccc411a7a60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h4 class="groupheader">Member Data Documentation</h4>
+<a class="anchor" id="a7e0e1730de2caa4e798c793c727803ff"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64 SLRoutev4GetMsg::Correlator = 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This can be used to correlate stream replies with requests. The Server simply reflects this field back in the reply. </p>
+
+</div>
+</div>
+<a class="anchor" id="a550de36635a8ab76da35d2f3638fe774"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string SLRoutev4GetMsg::VrfName = 2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>If the Key is not specified, then request up to the first 'EntriesCount' entries. </p>
+
+</div>
+</div>
+
+</div>
+</div>
+<a name="structSLRoutev4GetMsgRsp" id="structSLRoutev4GetMsgRsp"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLRoutev4GetMsgRsp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:a0634506e966c7f83f11cfca4f999a62c"><td class="memItemLeft" align="right" valign="top">uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#a0634506e966c7f83f11cfca4f999a62c">Correlator</a> = 1</td></tr>
+<tr class="memdesc:a0634506e966c7f83f11cfca4f999a62c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Correlator.  <a href="#a0634506e966c7f83f11cfca4f999a62c">More...</a><br /></td></tr>
+<tr class="separator:a0634506e966c7f83f11cfca4f999a62c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cd370f15cf95bc56e11b22bb4aed470"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#a1cd370f15cf95bc56e11b22bb4aed470">Eof</a> = 2</td></tr>
+<tr class="memdesc:a1cd370f15cf95bc56e11b22bb4aed470"><td class="mdescLeft">&#160;</td><td class="mdescRight">End Of File.  <a href="#a1cd370f15cf95bc56e11b22bb4aed470">More...</a><br /></td></tr>
+<tr class="separator:a1cd370f15cf95bc56e11b22bb4aed470"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af892ede66f69d54e3d7d7ad9ef2894d5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af892ede66f69d54e3d7d7ad9ef2894d5"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#af892ede66f69d54e3d7d7ad9ef2894d5">VrfName</a> = 3</td></tr>
+<tr class="memdesc:af892ede66f69d54e3d7d7ad9ef2894d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">VRF name. <br /></td></tr>
+<tr class="separator:af892ede66f69d54e3d7d7ad9ef2894d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b6223722c7a13679cb3edeb77f2309a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b6223722c7a13679cb3edeb77f2309a"></a>
+<a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#a3b6223722c7a13679cb3edeb77f2309a">ErrStatus</a> = 4</td></tr>
+<tr class="memdesc:a3b6223722c7a13679cb3edeb77f2309a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status of the Get operation. <br /></td></tr>
+<tr class="separator:a3b6223722c7a13679cb3edeb77f2309a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a790bf833b988778a8a2f72beb632aa88"><td class="memItemLeft" align="right" valign="top">repeated <a class="el" href="group__SLRouteIPv4Oper.html#structSLRoutev4">SLRoutev4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#a790bf833b988778a8a2f72beb632aa88">Entries</a> = 5</td></tr>
+<tr class="memdesc:a790bf833b988778a8a2f72beb632aa88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returned entries as requested in the Get operation.  <a href="#a790bf833b988778a8a2f72beb632aa88">More...</a><br /></td></tr>
+<tr class="separator:a790bf833b988778a8a2f72beb632aa88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h4 class="groupheader">Member Data Documentation</h4>
+<a class="anchor" id="a0634506e966c7f83f11cfca4f999a62c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64 SLRoutev4GetMsgRsp::Correlator = 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This can be used to correlate replies with requests. The Server simply reflects this field back in the reply. </p>
+
+</div>
+</div>
+<a class="anchor" id="a790bf833b988778a8a2f72beb632aa88"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">repeated <a class="el" href="group__SLRouteIPv4Oper.html#structSLRoutev4">SLRoutev4</a> SLRoutev4GetMsgRsp::Entries = 5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>if ErrStatus is SL_SUCCESS, Entries contains the info requested </p>
+
+</div>
+</div>
+<a class="anchor" id="a1cd370f15cf95bc56e11b22bb4aed470"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SLRoutev4GetMsgRsp::Eof = 2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>When set to True, it indicates that the server has returned M, where M &lt; N, of the original N requested Entries. </p>
+
+</div>
+</div>
+
+</div>
+</div>
+<a name="structSLRoutev4NotifRoute" id="structSLRoutev4NotifRoute"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLRoutev4NotifRoute</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:a3b6cfe78e39acfc57e10397fc027d1c4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b6cfe78e39acfc57e10397fc027d1c4"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#a3b6cfe78e39acfc57e10397fc027d1c4">VrfName</a> = 1</td></tr>
+<tr class="memdesc:a3b6cfe78e39acfc57e10397fc027d1c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">VRF name. <br /></td></tr>
+<tr class="separator:a3b6cfe78e39acfc57e10397fc027d1c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaf74e1eeaa2f7d839b68f4b022b15fe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adaf74e1eeaa2f7d839b68f4b022b15fe"></a>
+repeated <a class="el" href="group__SLRouteIPv4Oper.html#structSLRoutev4">SLRoutev4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#adaf74e1eeaa2f7d839b68f4b022b15fe">Entries</a> = 2</td></tr>
+<tr class="memdesc:adaf74e1eeaa2f7d839b68f4b022b15fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">IPv4 routes. <br /></td></tr>
+<tr class="separator:adaf74e1eeaa2f7d839b68f4b022b15fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+
+</div>
+</div>
+<a name="structSLRoutev4Notif" id="structSLRoutev4Notif"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLRoutev4Notif</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:a26af213400459603bcac13d2ad73a718"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a26af213400459603bcac13d2ad73a718"></a>
+<a class="el" href="group__SLRouteCommon.html#gad630c2e5490e88b889ccd79ace15005b">SLNotifType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#a26af213400459603bcac13d2ad73a718">EventType</a> = 1</td></tr>
+<tr class="memdesc:a26af213400459603bcac13d2ad73a718"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event Type. <br /></td></tr>
+<tr class="separator:a26af213400459603bcac13d2ad73a718"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77059a898185d4c30311a9891683b759"><td class="memItemLeft" align="right" valign="top">oneof&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#a77059a898185d4c30311a9891683b759">Event</a></td></tr>
+<tr class="memdesc:a77059a898185d4c30311a9891683b759"><td class="mdescLeft">&#160;</td><td class="mdescRight">Further info based on EventType.  <a href="#a77059a898185d4c30311a9891683b759">More...</a><br /></td></tr>
+<tr class="separator:a77059a898185d4c30311a9891683b759"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40690a17d72133ec316f5eebefedff6d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__SLRouteCommon.html#structSLRouteNotifStatus">SLRouteNotifStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#a40690a17d72133ec316f5eebefedff6d">NotifStatus</a> = 3</td></tr>
+<tr class="memdesc:a40690a17d72133ec316f5eebefedff6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">case EventType == SL_EVENT_TYPE_STATUS: =&gt; This field carries the status of the GetNotifMsg request.  <a href="#a40690a17d72133ec316f5eebefedff6d">More...</a><br /></td></tr>
+<tr class="separator:a40690a17d72133ec316f5eebefedff6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9251655a6c99ea17c74dde923d4a79a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa9251655a6c99ea17c74dde923d4a79a"></a>
+<a class="el" href="group__SLRouteIPv4Oper.html#structSLRoutev4NotifRoute">SLRoutev4NotifRoute</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#aa9251655a6c99ea17c74dde923d4a79a">Route</a> = 4</td></tr>
+<tr class="memdesc:aa9251655a6c99ea17c74dde923d4a79a"><td class="mdescLeft">&#160;</td><td class="mdescRight">case EventType == SL_EVENT_TYPE_ROUTE: =&gt; This field carries the v4 route <br /></td></tr>
+<tr class="separator:aa9251655a6c99ea17c74dde923d4a79a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac76bc66b4f2f51fca7d40d833d6755af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__SLRouteCommon.html#structSLRouteNotifMarker">SLRouteNotifMarker</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#ac76bc66b4f2f51fca7d40d833d6755af">Marker</a> = 5</td></tr>
+<tr class="memdesc:ac76bc66b4f2f51fca7d40d833d6755af"><td class="mdescLeft">&#160;</td><td class="mdescRight">case EventType == SL_EVENT_TYPE_START_MARKER: case EventType == SL_EVENT_TYPE_END_MARKER: =&gt; This field carries the start marker and end marker per-VRF.  <a href="#ac76bc66b4f2f51fca7d40d833d6755af">More...</a><br /></td></tr>
+<tr class="separator:ac76bc66b4f2f51fca7d40d833d6755af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd0dcd1edbbaeee26a5cae44cf75ebcf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acd0dcd1edbbaeee26a5cae44cf75ebcf"></a>
+<a class="el" href="group__SLRouteCommon.html#structSLVrfNotif">SLVrfNotif</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteIPv4Oper.html#acd0dcd1edbbaeee26a5cae44cf75ebcf">Vrf</a> = 6</td></tr>
+<tr class="memdesc:acd0dcd1edbbaeee26a5cae44cf75ebcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">case EventType == SL_EVENT_TYPE_VRF: <br /></td></tr>
+<tr class="separator:acd0dcd1edbbaeee26a5cae44cf75ebcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h4 class="groupheader">Member Data Documentation</h4>
+<a class="anchor" id="a77059a898185d4c30311a9891683b759"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">oneof SLRoutev4Notif::Event</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">{</div><div class="line">        </div><div class="line">        <a class="code" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a> ErrStatus = 2</div></div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ac76bc66b4f2f51fca7d40d833d6755af"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__SLRouteCommon.html#structSLRouteNotifMarker">SLRouteNotifMarker</a> SLRoutev4Notif::Marker = 5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a40690a17d72133ec316f5eebefedff6d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__SLRouteCommon.html#structSLRouteNotifStatus">SLRouteNotifStatus</a> SLRoutev4Notif::NotifStatus = 3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.8-->
+<!-- start footer part -->
+</div>
+</div>
+</div>
+</div>
+</div>
+    <div class="page__footer" style="position: relative;">
+      <footer>
+<div class="page__footer-follow">
+  <ul class="social-icons">
+      <li><strong>Follow:</strong></li>
+      <li><a href="https://twitter.com/xrdocs"><i class="fa fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+      <li><a href="http://github.com/xrdocs"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    <li><a href="https://xrdocs.github.io/cisco-service-layer/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+<div class="page__footer-copyright">&copy; 2017 Cisco Systems Inc. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+      </footer>
+    </div>
+    <script src="https://xrdocs.github.io/cisco-service-layer/assets/js/main.min.js"></script>
+<script src="https://xrdocs.github.io/cisco-service-layer/assets/js/scrollmenu.js"></script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-78256516-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- material-scrolltop button -->
+<button class="material-scrolltop" type="button"></button>
+<!-- material-scrolltop plugin -->
+<script src="https://xrdocs.github.io/cisco-service-layer/assets/js/material-scrolltop.js"></script>
+<!-- Initialize material-scrolltop with (minimal) -->
+<script>
+    $('body').materialScrollTop();
+</script>
+</body>
+</html>

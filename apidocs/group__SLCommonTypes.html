@@ -1,0 +1,1563 @@
+<!-- HTML header for doxygen 1.8.8-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- For Mobile Devices -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+        <meta name="generator" content="Doxygen 1.8.11"/>
+<meta charset="utf-8">
+<!-- begin SEO -->
+<title>            Blogs and Events      IOS XR Documentation @xrdocs      </title>
+<meta property="og:locale" content="en-US">
+<meta property="og:site_name" content="IOS XR Documentation @xrdocs">
+<meta property="og:title" content="Blogs and Events">
+  <link rel="canonical" href="https://xrdocs.github.io/cisco-service-layer/apidocs/">
+  <meta property="og:url" content="/cisco-service-layer/apidocs/">
+  <meta name="twitter:site" content="@xrdocs">
+  <meta name="twitter:title" content="Blogs and Events">
+  <meta name="twitter:description" content="Documentation, Blogs and Tutorials on the IOS-XR software">
+  <meta name="twitter:url" content="https://xrdocs.github.io/cisco-service-layer/apidocs/">
+    <meta name="twitter:card" content="summary">
+      <meta name="twitter:image" content="https://xrdocs.github.io/cisco-service-layer/images/service-layer-icon-xrdocs.png">
+    <meta name="twitter:creator" content="@xrdocs">
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "url": "https://xrdocs.github.io/cisco-service-layer",
+      "logo": "https://xrdocs.github.io/images/service-layer-icon-xrdocs.png"
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "person",
+      "name" : "Cisco Systems Inc",
+      "url" : "https://xrdocs.github.io/cisco-service-layer",
+      "sameAs" : ["https://twitter.com/xrdocs"]
+    }
+  </script>
+<!-- end SEO -->
+<link href="https://xrdocs.github.io/cisco-service-layer/feed.xml" type="application/atom+xml" rel="alternate" title="IOS XR Documentation @xrdocs Feed">
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="jgRKKm6B9FwJJPXxpmc0-EP3D0Mh8JHXaJqoYIGj1ek" />
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+<script>
+if (!(window.location.host.startsWith("127.0.0.1") || window.location.host.startsWith("localhost")) && (window.location.host.substr(-10) == '.github.io') && (window.location.protocol != "https:"))
+    window.location.protocol = "https";
+</script>
+<!-- For all browsers -->
+        <link href="customdoxygen.css" rel="stylesheet" type="text/css" />
+        <link href="doxyboot.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="/assets/css/main.css">
+<meta http-equiv="cleartype" content="on">
+<style>
+.underline-on-hover:hover {
+    text-decoration: underline;
+}
+.searchForm{
+      border-radius:5px;
+      -moz-border-radius:5px;
+      -webkit-border-radius:5px;
+      width: 900px;
+   }
+#search_results{
+      display: table; margin:0 auto;
+   }
+</style>
+</style>
+<!-- start custom head snippets -->
+<link href="https://xrdocs.github.io/cisco-service-layer/assets/css/lity.min.css" rel="stylesheet">
+<link href="https://xrdocs.github.io/cisco-service-layer/assets/css/cisco-sans.min.css" rel="stylesheet">
+<link href="https://xrdocs.github.io/cisco-service-layer/assets/css/material-scrolltop.css" rel="stylesheet">
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://xrdocs.github.io/cisco-service-layer/images/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://xrdocs.github.io/cisco-service-layer/images/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://xrdocs.github.io/cisco-service-layer/images/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://xrdocs.github.io/cisco-service-layer/images/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://xrdocs.github.io/cisco-service-layer/images/apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://xrdocs.github.io/cisco-service-layer/images/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://xrdocs.github.io/cisco-service-layer/images/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://xrdocs.github.io/cisco-service-layer/images/apple-touch-icon-152x152.png" />
+<link rel="icon" type="image/png" href="https://xrdocs.github.io/cisco-service-layer/images/favicon-196x196.png" sizes="196x196" />
+<link rel="icon" type="image/png" href="https://xrdocs.github.io/cisco-service-layer/images/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="https://xrdocs.github.io/cisco-service-layer/images/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="https://xrdocs.github.io/cisco-service-layer/images/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="https://xrdocs.github.io/cisco-service-layer/images/favicon-128.png" sizes="128x128" />
+<link rel="shortcut icon" href="https://xrdocs.github.io/cisco-service-layer/images/favicon_cisco.ico" />
+<meta name="application-name" content="&nbsp;"/>
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="https://xrdocs.github.io/cisco-service-layer/images/mstile-144x144.png" />
+<meta name="msapplication-square70x70logo" content="https://xrdocs.github.io/cisco-service-layer/images/mstile-70x70.png" />
+<meta name="msapplication-square150x150logo" content="https://xrdocs.github.io/cisco-service-layer/images/mstile-150x150.png" />
+<meta name="msapplication-wide310x150logo" content="https://xrdocs.github.io/cisco-service-layer/images/mstile-310x150.png" />
+<meta name="msapplication-square310x310logo" content="https://xrdocs.github.io/cisco-service-layer/images/mstile-310x310.png" />
+<!-- end custom head snippets -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="dynsections.js"></script>
+        <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="doxy-boot.js"></script>
+    </head>
+<body style="overflow-x: visible;">
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu" style="padding-left: 0;">
+      <nav id="site-nav" class="greedy-nav">
+        <button><div class="navicon"></div></button>
+        <ul class="visible-links">
+          <img src="https://xrdocs.github.io/images/xrdocs_logo.png" width="45px" height="45px" alt="xrdocs logo" style="float:left;">
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="https://xrdocs.github.io/">@xrdocs</a></li>
+          <li class="masthead__menu-item masthead__menu-item"><a href="https://xrdocs.github.io/cisco-service-layer/">Cisco Service Layer</a></li>
+                    <li class="masthead__menu-item greedy-nav-active"><a href="https://xrdocs.github.io/cisco-service-layer/apidocs/">Apidocs</a></li>
+                    <li class="masthead__menu-item"><a href="https://xrdocs.github.io/cisco-service-layer/blogs/">Blogs</a></li>
+                    <li class="masthead__menu-item"><a href="https://xrdocs.github.io/cisco-service-layer/tutorials/">Tutorials</a></li>
+                    <li class="masthead__menu-item"><a href="https://xrdocs.github.io/cisco-service-layer/search">Search <i class="fa fa-search" aria-hidden="true"></i></a></li>
+                    <li class="masthead__menu-item"><a href="https://xrdocs.github.io/cisco-service-layer/tags/">Tags</a></li>
+                    <li class="masthead__menu-item"><a href="https://xrdocs.github.io/cisco-service-layer/collection-archive/">Archive</a></li>
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+        <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+          <div id="apititle_div"><h1 class="apititle"><span>Cisco Service Layer API Documentation</span></h1></div>
+            <div class="content" id="content_tabs">
+<!-- Generated by Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Quick&#160;Start</span></a></li>
+      <li class="current"><a href="modules.html"><span>Services</span></a></li>
+      <li><a href="annotated.html"><span>Messages</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Messages</a> &#124;
+<a href="#enum-members">Enumerations</a>  </div>
+  <div class="headertitle">
+<div class="title">SLCommonTypes<div class="ingroups"><a class="el" href="group__Common.html">Common</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Service Description</h2>
+<p>The following messages are used as common Service Layer types.</p>
+<p>Status codes, including errors and success codes. All service layer errors are defined below. </p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Messages</h2></td></tr>
+<tr class="memitem:structSLErrorStatus"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a></td></tr>
+<tr class="separator:structSLErrorStatus"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLInterface"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLCommonTypes.html#structSLInterface">SLInterface</a></td></tr>
+<tr class="memdesc:structSLInterface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface info.  <a href="group__SLCommonTypes.html#structSLInterface">More...</a><br /></td></tr>
+<tr class="separator:structSLInterface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLIpAddress"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLCommonTypes.html#structSLIpAddress">SLIpAddress</a></td></tr>
+<tr class="memdesc:structSLIpAddress"><td class="mdescLeft">&#160;</td><td class="mdescRight">One of IPv4 or IPv6 addresses.  <a href="group__SLCommonTypes.html#structSLIpAddress">More...</a><br /></td></tr>
+<tr class="separator:structSLIpAddress"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:gabcd5b7bdb1e75e62f586e079e924f896"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLCommonTypes.html#gabcd5b7bdb1e75e62f586e079e924f896">SLRegOp</a> { <a class="el" href="group__SLCommonTypes.html#ggabcd5b7bdb1e75e62f586e079e924f896a6694a0eae600d09bd3681a33405cbf74">SL_REGOP_RESERVED</a> = 0x0, 
+<a class="el" href="group__SLCommonTypes.html#ggabcd5b7bdb1e75e62f586e079e924f896acb136cb13568920f79fc4d884f98d43b">SL_REGOP_REGISTER</a> = 0x1, 
+<a class="el" href="group__SLCommonTypes.html#ggabcd5b7bdb1e75e62f586e079e924f896ad7b9822009609319928a67114f345000">SL_REGOP_UNREGISTER</a> = 0x2, 
+<a class="el" href="group__SLCommonTypes.html#ggabcd5b7bdb1e75e62f586e079e924f896a86e778b0d022e94f0daf8a6beb91223b">SL_REGOP_EOF</a> = 0x3
+ }<tr class="memdesc:gabcd5b7bdb1e75e62f586e079e924f896"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registration Operations.  <a href="group__SLCommonTypes.html#gabcd5b7bdb1e75e62f586e079e924f896">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:gabcd5b7bdb1e75e62f586e079e924f896"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0b166605b901d6e5ad5f7706ac60baf1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLCommonTypes.html#ga0b166605b901d6e5ad5f7706ac60baf1">SLObjectOp</a> { <a class="el" href="group__SLCommonTypes.html#gga0b166605b901d6e5ad5f7706ac60baf1a63f1cbeea5670122533aa7a68e6ef2ac">SL_OBJOP_RESERVED</a> = 0x0, 
+<a class="el" href="group__SLCommonTypes.html#gga0b166605b901d6e5ad5f7706ac60baf1a95923dd57d55f57cc402b0b27ddbb54b">SL_OBJOP_ADD</a> = 0x1, 
+<a class="el" href="group__SLCommonTypes.html#gga0b166605b901d6e5ad5f7706ac60baf1a621f4066640fe76fa12beb9230afce92">SL_OBJOP_UPDATE</a> = 0x2, 
+<a class="el" href="group__SLCommonTypes.html#gga0b166605b901d6e5ad5f7706ac60baf1a3c29c36af0dce3a6365871553243edcc">SL_OBJOP_DELETE</a> = 0x3
+ }<tr class="memdesc:ga0b166605b901d6e5ad5f7706ac60baf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Object Operations.  <a href="group__SLCommonTypes.html#ga0b166605b901d6e5ad5f7706ac60baf1">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:ga0b166605b901d6e5ad5f7706ac60baf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa809068894b7bf3fab0314dff50bd02d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLCommonTypes.html#gaa809068894b7bf3fab0314dff50bd02d">SLNotifOp</a> { <a class="el" href="group__SLCommonTypes.html#ggaa809068894b7bf3fab0314dff50bd02daf4d927c974e5c78ae73d685fd1eb3f16">SL_NOTIFOP_RESERVED</a> = 0x0, 
+<a class="el" href="group__SLCommonTypes.html#ggaa809068894b7bf3fab0314dff50bd02da18427e154b9b6da28c1c5cf8ef84b755">SL_NOTIFOP_ENABLE</a> = 0x1, 
+<a class="el" href="group__SLCommonTypes.html#ggaa809068894b7bf3fab0314dff50bd02da1f91e51fafec9eb3eb7ec8b17b3ebd16">SL_NOTIFOP_DISABLE</a> = 0x2
+ }<tr class="memdesc:gaa809068894b7bf3fab0314dff50bd02d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notification Operations.  <a href="group__SLCommonTypes.html#gaa809068894b7bf3fab0314dff50bd02d">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:gaa809068894b7bf3fab0314dff50bd02d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacf9698e39f1da873424b2a44dee2b741"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLCommonTypes.html#gacf9698e39f1da873424b2a44dee2b741">SLEncapType</a> { <a class="el" href="group__SLCommonTypes.html#ggacf9698e39f1da873424b2a44dee2b741a06c75d5a40735271614a18ed211ab489">SL_ENCAP_RESERVED</a> = 0x0, 
+<a class="el" href="group__SLCommonTypes.html#ggacf9698e39f1da873424b2a44dee2b741a4e9001f1e0017b22a59fb46a95789433">SL_ENCAP_VXLAN</a> = 0x1, 
+<a class="el" href="group__SLCommonTypes.html#ggacf9698e39f1da873424b2a44dee2b741a5488dd4c4fabcb156abb6e87070b1143">SL_ENCAP_MPLS</a> = 0x2
+ }<tr class="memdesc:gacf9698e39f1da873424b2a44dee2b741"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encapsulation Types.  <a href="group__SLCommonTypes.html#gacf9698e39f1da873424b2a44dee2b741">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:gacf9698e39f1da873424b2a44dee2b741"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<hr/><h2 class="groupheader">Message Documentation</h2>
+<a name="structSLErrorStatus" id="structSLErrorStatus"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLErrorStatus</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Public Types</h3></td></tr>
+<tr class="memitem:a004d5ee5e7c7f26018bac9a4e5254579"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579">SLErrno</a> { <br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579ad647be1437cc207bf8d18325cf7c7253">SL_SUCCESS</a> = 0x0, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a47e7adfb02164ad072d186062fd935eb">SL_NOT_CONNECTED</a> = 0x1, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a11bd2c39aff07d478976e5d7f29b93bf">SL_EAGAIN</a> = 0x2, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579ac9c350b4409f82df3287d6b471cb32bf">SL_ENOMEM</a> = 0x3, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a850811d68b10d0f2be982ef3552b58cd">SL_EBUSY</a> = 0x4, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a2992960285a54d864b5ba8c62e860d2b">SL_EINVAL</a> = 0x5, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a5355231922b893af2e27bea619df5cf8">SL_UNSUPPORTED_VER</a> = 0x6, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a4fb2d464b8debeb66f4168422b1b6a45">SL_NOT_AVAILABLE</a> = 0x7, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a7ccb352ab805a07860c3fbc092b94e03">SL_STREAM_NOT_SUPPORTED</a> = 0x8, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a2e643aa8b8be0aa69ac0d9b2dfa33ddc">SL_ENOTSUP</a> = 0x9, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a1ba3aae88ebbc0776caa2c3b7cd9c670">SL_SOME_ERR</a> = 0xa, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579ad5448ca610aff6bf4b3cb1f890b501a3">SL_TIMEOUT</a> = 0xb, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a9e6fc1c9cce92d38704031aedb65b1d9">SL_NOTIF_TERM</a> = 0xc, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579afbaac817e2f51ba3bf53c3e64804aa23">SL_AUTH_FAIL</a> = 0xd, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579ac1ec72306a5b453c1c4086b208f0d5ad">SL_INIT_START_OFFSET</a> = 0x500, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a5023528258de7ce3ab291c40ac548ac6">SL_INIT_STATE_CLEAR</a> = 0x501, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a6c29b9ae42648e69d769075c5904a8ff">SL_INIT_STATE_READY</a> = 0x502, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a3149589cfa363fded681a520334c3b99">SL_INIT_UNSUPPORTED_VER</a> = 0x503, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579ab826956557011398c62805272fa57581">SL_INIT_SERVER_NOT_INITIALIZED</a> = 0x504, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a2a61c5389159f20750ee8642cf9f0737">SL_INIT_SERVER_MODE_CHANGE_FAILED</a> = 0x505, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a4783a3d33f872d11d4f4e2cfe0dc9445">SL_RPC_VRF_START_OFFSET</a> = 0x1000, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579ac1ee05166a4be8012abc7a5e078fde8c">SL_RPC_VRF_TOO_MANY_VRF_REG_MSGS</a> = 0x1001, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579afc13900ba8195f52973242fd62d60e4f">SL_RPC_VRF_SERVER_NOT_INITIALIZED</a> = 0x1002, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a4c9d9419bdf94a500223502a8e20f372">SL_VRF_START_OFFSET</a> = 0x2000, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579aa137b507f71873dc2a8344aae4e6c333">SL_VRF_NAME_TOOLONG</a> = 0x2001, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a573ab9c4192766fc247d0ac018f0937b">SL_VRF_NOT_FOUND</a> = 0x2002, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579af159b8f11902cc34e2efd6bacd0033e4">SL_VRF_NO_TABLE_ID</a> = 0x2003, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a1d2b0f7f212bd6ac600fca07fe80c776">SL_VRF_REG_INVALID_ADMIN_DISTANCE</a> = 0x2004, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a442825994e09971e90a4f023dd41e240">SL_VRF_TABLE_ADD_ERR</a> = 0x2005, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579aa54038004909ee937c7c7801e63f254d">SL_VRF_TABLE_REGISTRATION_ERR</a> = 0x2006, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a34f9cc5347f4ab96666bf36647cb52d4">SL_VRF_TABLE_UNREGISTRATION_ERR</a> = 0x2007, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579aa9bdad935eda224ba392b1af8293e5ad">SL_VRF_TABLE_EOF_ERR</a> = 0x2008, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579aba5180820d8f50b1f91555f30a3e3e55">SL_VRF_REG_VRF_NAME_MISSING</a> = 0x2009, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a8873ac7342d1306b63989fa470999d00">SL_VRF_V4_ROUTE_REPLAY_FATAL_ERROR</a> = 0x2010, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a7135aeb127f643b4ca237a66b3dde5b1">SL_VRF_V6_ROUTE_REPLAY_FATAL_ERROR</a> = 0x2011, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a2e3290e8eb88cf919d1de2ce7f52466a">SL_VRF_V4_ROUTE_REPLAY_OK</a> = 0x2012, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a4ce40a76e3de3d5bcf1726646f91760b">SL_VRF_V6_ROUTE_REPLAY_OK</a> = 0x2013, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a8f17f5c77e8b30b62c72ba85286bc8e4">SL_RPC_ROUTE_START_OFFSET</a> = 0x3000, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a6bea2ab1bac328a37992aa6077821449">SL_RPC_ROUTE_TOO_MANY_ROUTES</a> = 0x3001, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579ac5fc7867528cd4169b33bc8b240fe228">SL_RPC_ROUTE_VRF_NAME_TOOLONG</a> = 0x3002, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579ad3915bddd3488dc1b0de90cf0b0c760a">SL_RPC_ROUTE_VRF_NOT_FOUND</a> = 0x3003, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a046b62e1b4ab1a1f9a9082c71d1c1bd7">SL_RPC_ROUTE_VRF_NO_TABLE</a> = 0x3004, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a19915a968786033cf09717d96c523e61">SL_RPC_ROUTE_VRF_TABLE_NOT_REGISTERED</a> = 0x3005, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579aba0283d83ccee8921d15d08442ed8413">SL_RPC_ROUTE_VRF_NAME_MISSING</a> = 0x3006, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a56145032626a236b4c90ed40bd6150fd">SL_RPC_ROUTE_INIT_MODE_INCOMPATIBLE</a> = 0x3007, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579ab69a0ec993c1dfffa1d8d3e55e0b8909">SL_RPC_ROUTE_SERVER_NOT_INITIALIZED</a> = 0x3008, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a8f4a2246d401a7e607f195a9c6e6fb8b">SL_RPC_ROUTE_NOTIF_SRC_PROTO_TOOLONG</a> = 0x3009, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a9aeeaddb56132a0908d3238b80c01149">SL_RPC_ROUTE_NOTIF_SRC_PROTO_TAG_TOOLONG</a> = 0x300a, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579aac6370c91eb8617f76272a8e0740ddc2">SL_ROUTE_START_OFFSET</a> = 0x4000, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a526fca43f7640af52fa84dbf12ee1050">SL_ROUTE_ADD_NO_PATHS</a> = 0x4001, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a712c485f8b0e240c12285ec53239fea5">SL_ROUTE_UPDATE_NO_PATHS</a> = 0x4002, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a343361bb8d57ae81b07357d1ec959fdd">SL_ROUTE_INVALID_PREFIX_LEN</a> = 0x4003, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a9fee025296b9a0bede3da88613f954c9">SL_ROUTE_INVALID_ADMIN_DISTANCE</a> = 0x4004, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a27ea00d0965bc11f699614c91bf38889">SL_ROUTE_INVALID_NUM_PATHS</a> = 0x4005, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a387caea34a0f3682a4a6e5c9f7ec41da">SL_ROUTE_INVALID_PREFIX_SZ</a> = 0x4006, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579afa0ff2b3335ccd184f502ad1a64fd929">SL_ROUTE_INVALID_PREFIX</a> = 0x4007, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579aa9175bc8b1b1c94b4581832cc400105a">SL_ROUTE_ERR_RIB_TABLE_LIMIT_REACHED</a> = 0x4008, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a264192783e708b569c97186cc73d9219">SL_ROUTE_ERR_RIB_INVALID_ARGS</a> = 0x4009, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579ac6bef250fd0ea33119f6aef553b70fc2">SL_ROUTE_ERR_RIB_PATH_TABLE_LIMIT</a> = 0x400a, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579ac9ad067094a52e779b6734a3a1318a77">SL_ROUTE_ERR_RIB_TOOMANYPATHS</a> = 0x400b, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a4c29402ee7e089b5bdf0e3c9c727f02b">SL_ROUTE_EEXIST</a> = 0x400c, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a477823b22581fdd2a572b25b8277bf98">SL_ROUTE_HOST_BITS_SET</a> = 0x400d, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a1dbb5339a896ff17f458280966c820e9">SL_ROUTE_INVALID_PREFIX_MCAST</a> = 0x400e, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579af31d3f1fee1bfb9862dfbe95c99c0e44">SL_ROUTE_PATH_AFI_MISMATCH</a> = 0x400f, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a4974f081ec5411c115a41d3634355718">SL_ROUTE_TOOMANY_PRIMARY_PATHS</a> = 0x4010, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579ac2c46c78e4333dcb36bb40d596c4fcfc">SL_ROUTE_TOOMANY_BACKUP_PATHS</a> = 0x4011, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579aa548ae7672f6a96423fe5dc2d7bd7107">SL_ROUTE_DB_NOMEM</a> = 0x4012, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579ad2517e34eb4a95a624ff18db14fe2f3c">SL_ROUTE_INVALID_LOCAL_LABEL</a> = 0x4013, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a01a065cc7cbecd3e6d70a113e006a618">SL_PATH_START_OFFSET</a> = 0x5000, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a0ac660396a8e4cffc0f5a524de8bd8cb">SL_PATH_NH_NO_TABLE</a> = 0x5001, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a6f609075d386458e09be93d91f6a51c0">SL_PATH_NH_INTF_NOT_FOUND</a> = 0x5002, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a4b200859ac592fd3ec3442235c23f553">SL_PATH_INVALID_LABEL_COUNT</a> = 0x5003, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a8597c975893816f10a6a1395ab0ff848">SL_PATH_INVALID_ID</a> = 0x5004, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a4a1f5ad75129786a6b53bda2eddbcda8">SL_PATH_VRF_NAME_TOOLONG</a> = 0x5005, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a97f2d650f051bfb3082ac478a6679a61">SL_PATH_NH_INTF_NAME_TOOLONG</a> = 0x5006, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a6816eff49a8e75dbe8b5c561e7d402ff">SL_PATH_NH_INVALID_ADDR_SZ</a> = 0x5007, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a2d6700c993f61aa5e66bdb16876f1f61">SL_PATH_NH_INF_NAME_MISSING</a> = 0x5008, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a42012e7eeef66ee98e40fbee53001b8b">SL_PATH_INVALID_NEXT_HOP_ADDR</a> = 0x5009, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579aac54e52b50ad2fe737f9f5517ae5112b">SL_PATH_INVALID_REMOTE_ADDR_COUNT</a> = 0x500a, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579ae5d03a0bca17ebee0377b4567a9c3b3b">SL_PATH_REMOTE_ADDR_INVALID_SZ</a> = 0x500b, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a71c9493c69dd6af6082541fbbee812ac">SL_PATH_REMOTE_ADDR_AFI_MISMATCH</a> = 0x500c, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579abd66a4116517028325a7d084ac7d1b6d">SL_PATH_INVALID_PROTECTED_BITMAP</a> = 0x500d, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a6a725da357e8565d9c2f37b9138b0bb2">SL_PATH_BACKUP_MISSING_PRIMARY_PATH</a> = 0x500e, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a2a4fa4724cdde516243a48f7bb623178">SL_PATH_PRIMARY_ID_REPEATED</a> = 0x500f, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579ae79f776aea2e5102040110f6a2c16075">SL_PATH_BACKUP_ID_REPEATED</a> = 0x5010, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a74330cdd39d4cfe382deee565ce2d360">SL_PATH_PRIMARY_TOOMANY_BACKUP_PATHS</a> = 0x5011, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a3d003f19e02a3fe91f8b6dbfe942fb0b">SL_PATH_PRIMARY_TOOMANY_LABELS</a> = 0x5012, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579accadf13e414cc8c7f83dc3d10b38bfc1">SL_PATH_PRIMARY_TOOMANY_REMOTE_ADDR</a> = 0x5013, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579ac51e3ccbcf2759839e74294914ffa711">SL_PATH_REMOTE_ADDR_INVALID</a> = 0x5014, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a8ba0a3f2634529d613d25f22b0bba6ef">SL_PATH_INVALID_LABEL</a> = 0x5015, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a02aae6b37b77133d3e0c0cbd728ff013">SL_PATH_ROUTER_MAC_ADDR_INVALID_SZ</a> = 0x5016, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a3ca097210b46f63b5d201b0815198f00">SL_RPC_BFD_START_OFFSET</a> = 0x6000, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579adc7bdfa4deb80379fb5668c3fdd59e60">SL_RPC_BFD_TOO_MANY_BFD_SESSIONS</a> = 0x6001, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a4b4b3767773bdb110beb47fdadb905d2">SL_RPC_BFD_API_BAD_PARAMETER</a> = 0x6002, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a6abf1aa4dc10195f5b3703f216005286">SL_RPC_BFD_API_CLIENT_NOT_REGISTERED</a> = 0x6003, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a62edec6de16fad17d51903058e7cc226">SL_RPC_BFD_API_INTERNAL_ERROR</a> = 0x6004, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a31cf3d15563a694725df91a70116d8e7">SL_RPC_BFD_SERVER_NOT_INITIALIZED</a> = 0x6005, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579ac786575f8a084de9f2e319b375845d9c">SL_RPC_BFD_V4_NOT_REGISTERED</a> = 0x6006, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a3da36d4d92134786fffb8dc7d3e5fa5e">SL_RPC_BFD_V6_NOT_REGISTERED</a> = 0x6007, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a9241c3c6afdd6ccc8714fb85cf1db103">SL_BFD_START_OFFSET</a> = 0x7000, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a5af2ef13066f2293b368fb62669758e4">SL_BFD_INTF_NAME_TOOLONG</a> = 0x7001, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a9b7864ddfe26c2b59810bb6c1e5dd4f4">SL_BFD_INTF_NOT_FOUND</a> = 0x7002, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a0fd1b735c82ff88848723654846f9666">SL_BFD_INVALID_ATTRIBUTE</a> = 0x7003, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579aa09a52128d8be61988a850dbebf4e632">SL_BFD_INTF_NAME_MISSING</a> = 0x7004, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579ae41339796e9a34d452cde90592ace21c">SL_BFD_INVALID_NBR_MCAST</a> = 0x7005, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a47295e9e38882ae2b99b9bb377fcb739">SL_BFD_INVALID_NBR</a> = 0x7006, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579ad888134a71df2e514d1363572969ed36">SL_BFD_VRF_NAME_TOOLONG</a> = 0x7007, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a1966cc2ab0c192add182cd4050b5f5b4">SL_BFD_BAD_PARAMETER</a> = 0x7008, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a545a5bc49e05ad0bc6f485670c262cc3">SL_BFD_API_INTERNAL_ERROR</a> = 0x7009, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a79bd33f0afab47d330d2144fc77bec73">SL_BFD_VRF_NOT_FOUND</a> = 0x700a, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a43f2579cd0366672a6f50ef7f6fd08c3">SL_BFD_INVALID_PREFIX_SIZE</a> = 0x700b, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579afaac038b7dcd7cd3170196e582fd04eb">SL_BFD_INVALID_SESSION_TYPE</a> = 0x700c, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a06d1bd5c25487c2e01dff23b44ebfc66">SL_BFD_INVALID_VRF</a> = 0x700d, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579abbc255e5ea1de6ae8878742f8c10705e">SL_BFD_SESSION_NOT_FOUND</a> = 0x700e, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a95178ba36fe1b687d086de07757105c9">SL_BFD_SESSION_EXISTS</a> = 0x700f, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579acd26d85161bccebe14812c661231134d">SL_BFD_INTERNAL_DB_ERROR</a> = 0x7010, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579aa27d287042d52c0ef009ba1cebc4b06a">SL_BFD_RECOVERY_ERROR</a> = 0x7011, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a085d9e06035cec218618c623d8aa730b">SL_RPC_MPLS_START_OFFSET</a> = 0x8000, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a522a57b5ea3e5d178bde5dbf4f914eb2">SL_RPC_MPLS_ILM_TOO_MANY_ILMS</a> = 0x8001, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a587c05c762089aa616058aae78746b99">SL_RPC_MPLS_SERVER_NOT_INITIALIZED</a> = 0x8002, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a4b5ad9f4a0fae6667ef02d40515ab3cf">SL_RPC_MPLS_INIT_MODE_INCOMPATIBLE</a> = 0x8003, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a981be225603857dd57ab2917ea993504">SL_RPC_MPLS_LABEL_BLK_TOO_MANY_LABEL_BLKS</a> = 0x8004, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579afa2d4c32551b98e551a476cfd6817280">SL_RPC_MPLS_NOT_REGISTERED</a> = 0x8005, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a0235a69a0b45e63799032a88393bbd58">SL_ILM_ERR_OFFSET</a> = 0x9000, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a655b43ec37f5b94a2f3752df53860268">SL_ILM_ADD_FAILED</a> = 0x9001, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a58d4e89b7891173ed2525157da7d970a">SL_ILM_LSD_ADD_FAILED</a> = 0x9002, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a0ad84f867d60a07b5c52b63de4637d90">SL_ILM_INVALID_NUM_NHLFE</a> = 0x9003, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a09403b877b38536a9c149a6c4778ca89">SL_ILM_INVALID_LABEL</a> = 0x9004, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a297658650eea91876cec8f7e30d56f00">SL_ILM_DELETE_FAILED</a> = 0x9005, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a4d5d49a37c5ddd8738b2f01fd8c42ccd">SL_ILM_LSD_DELETE_FAILED</a> = 0x9006, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579aad99a5db11df97c5cdf3b31801748cd3">SL_ILM_TOOMANY_PRIMARY_NHLFES</a> = 0x9007, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a5f37d21a3bd3c944ce0990252a73d6d5">SL_ILM_TOOMANY_BACKUP_NHLFES</a> = 0x9008, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a16d26b4cc21ed1c1f03b47a817e01070">SL_ILM_LSD_ADD_LABEL_ALLOC_FAILED</a> = 0x9009, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a649c94983fdd274cb14a31c9016a31e1">SL_ILM_LSD_NHLFE_INVALID_ATTRIB</a> = 0x900a, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a89ea1d0e87c39db0195c66f3614767ea">SL_ILM_EEXIST</a> = 0x900b, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a2440492455fb2b27811a78102d9cf649">SL_ILM_DB_NOMEM</a> = 0x900c, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a8a722dc4ff8467d36cabe3d25b63d3c7">SL_ILM_INVALID_ELSP_EXP</a> = 0x900d, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a17d8c7b229422a6db1c9b531b99d6f82">SL_ILM_ELSP_EXP_OR_DFLT_ALREADY_SET</a> = 0x900e, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a3b8081e11b4866cf5be66fff0a49a3da">SL_ILM_ADD_NO_PATHS</a> = 0x900f, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579aeef510023ca07f02c7e5e77fd6f4425f">SL_ILM_UPDATE_NO_PATHS</a> = 0x9010, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a6b6548f9643196a71dedd80b26b5f71b">SL_ILM_UNSUPPORTED_ELSP</a> = 0x9011, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579ae1d9f71b32bf45663ea08362386e9856">SL_ILM_LABEL_TOOMANY_EXP_CLASSES</a> = 0x9012, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a945f157c25011986629246de153e30e6">SL_ILM_REPLAY_FATAL_ERROR</a> = 0x9013, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579ac7a8e627742e90f2cc75b719f981d3bf">SL_ILM_REPLAY_OK</a> = 0x9014, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579afba8f9d54658e7dd457287f86c143dc2">SL_NHLFE_ERR_OFFSET</a> = 0xa000, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579ade7c9cf8b35f8092a47504fbf4954842">SL_NHLFE_NH_NO_TABLE</a> = 0xa001, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a9cadaf7746f419d078d3124b33826a78">SL_NHLFE_NH_INVALID_ADDR_SZ</a> = 0xa002, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a78abf6e9a4e892673d3675e3390a52dd">SL_NHLFE_INVALID_NEXT_HOP_ADDR</a> = 0xa003, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579aa8406270bcd64924696c5097d451e2cb">SL_NHLFE_VRF_NAME_TOOLONG</a> = 0xa004, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a093a1a0e39d50c9dd23d32d33d526a7f">SL_NHLFE_NH_INF_NAME_MISSING</a> = 0xa005, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a2284af379b0f9d80cfbe96f798dc7b8f">SL_NHLFE_NH_INTF_NAME_TOOLONG</a> = 0xa006, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579ac44ce5b12a1388299c28e330f35dea17">SL_NHLFE_INVALID_LABEL_COUNT</a> = 0xa007, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a582682da82d5fde44394c83f7e89a94d">SL_NHLFE_INVALID_PATH_ID</a> = 0xa008, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a71f5b1f2c39b7f12a070190c4c4c9f74">SL_NHLFE_INVALID_LABEL</a> = 0xa009, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a5e238c7efccc7529dfe03dfdc7c4da1f">SL_NHLFE_INVALID_PROTECTED_BITMAP</a> = 0xa00a, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579ac66232ceb04d92b70325bad67500a461">SL_NHLFE_INVALID_REMOTE_ADDR_COUNT</a> = 0xa00b, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a0d8bb5ee7cc3da299c0ec9e168418533">SL_NHLFE_REMOTE_ADDR_INVALID_SZ</a> = 0xa00c, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a856bc58b3502b8def62e67b59bfa8338">SL_NHLFE_PRIMARY_TOOMANY_LABELS</a> = 0xa00d, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a40e9ed23de98e32a03186cb4ef68023f">SL_NHLFE_PRIMARY_TOOMANY_REMOTE_ADDR</a> = 0xa00e, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579aa79c7903e426734e0ceed43528a86dbf">SL_NHLFE_BACKUP_ID_REPEATED</a> = 0xa00f, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a94230d21043610065c271c3673935278">SL_NHLFE_PRIMARY_ID_REPEATED</a> = 0xa010, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579ad274148c4865850cfc7fe6624a7e397f">SL_NHLFE_BACKUP_PROTECTED_BITMAP_EMPTY</a> = 0xa011, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a868432da43f65d03e8d1f0feb1c9f4dc">SL_NHLFE_PRIMARY_TOOMANY_BACKUP_PATHS</a> = 0xa012, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a458bde7025a4bdac96a240a234c87f4b">SL_NHLFE_REMOTE_ADDR_INVALID</a> = 0xa013, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a54a6752d2adf54ea6d48333df393c92e">SL_NHLFE_BACKUP_MISSING_PRIMARY_PATH</a> = 0xa014, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a801eb5172052de1a3b4e8cb3ce5703aa">SL_NHLFE_NEXT_HOP_MISSING</a> = 0xa015, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a4b90569e361124c71678960038de255c">SL_NHLFE_LABEL_ACTION_INVALID</a> = 0xa016, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579ac68871430be534c0fce66236fe8d9d96">SL_NHLFE_NH_INTF_NOT_FOUND</a> = 0xa017, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a32ee45740f78e58bd1263777dea24728">SL_NHLFE_OPER_FAILED</a> = 0xa018, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579ae4c96dd93dbc810a72264d44255bacaa">SL_NHLFE_LABEL_ACTION_MISSING</a> = 0xa019, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a0c04994bdf49a409a69449ed787362a1">SL_NHLFE_EXP_SET_FAILED</a> = 0xa01a, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a7f489dc2f32e1f586a4de0873d594a4f">SL_NHLFE_ELSP_PROTECTION_UNSUPPORTED</a> = 0xa01b, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579ae92035d89716f34f968a7da67304671b">SL_LABEL_BLK_ERR_OFFSET</a> = 0xb000, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579ae83d92790055466c7118d610ccedb8f6">SL_LABEL_BLK_LSD_ADD_FAILED</a> = 0xb001, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a2c07be9aeaa2325f1986fe0659aadb4f">SL_LABEL_BLK_LSD_DELETE_FAILED</a> = 0xb002, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579ad0419e6c0da5d029c777c345769bac50">SL_LABEL_BLK_LSD_LABEL_BLK_NOT_FOUND</a> = 0xb003, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a3e8313878500fe1362497cf1a7e817c4">SL_LABEL_BLK_LSD_LABEL_BLK_IN_USE</a> = 0xb004, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a031e39634d4b098c48b7ec9d42a45e46">SL_LABEL_BLK_LSD_INVALID_ATTRIB</a> = 0xb005, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a00667a61d0d5a95bae9a9d57d8a6a696">SL_LABEL_BLK_INVALID_BLOCK_SIZE</a> = 0xb006, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a2a6b6f403db0856e4e4457704c8878c9">SL_LABEL_BLK_INVALID_START_LABEL</a> = 0xb007, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a0209ebd2d59628ca2450a264a1b8a2c6">SL_LABEL_BLK_EEXIST</a> = 0xb008, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a5fe84c055f86ec7ab637ea4408f0c198">SL_LABEL_BLK_DB_NOMEM</a> = 0xb009, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a3f99e39cfb4cd3d44bf8ffaf346c3c21">SL_LABEL_BLK_TYPE_INVALID</a> = 0xb00a, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a5e9d5c98108cf25f64524e73d89cd661">SL_LABEL_BLK_CLIENT_NAME_TOOLONG</a> = 0xb00b, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579ae60e378bfb1db44c64f745fea2f4aa3d">SL_MPLS_REG_ERR_OFFSET</a> = 0xc000, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a4d8b2aae80ae187456e83657b690dcd5">SL_MPLS_REG_ERR</a> = 0xc001, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a5590c08adff88c5f2dc3db15f0b0e745">SL_MPLS_UNREG_ERR</a> = 0xc002, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579ac527267f9595f2446c990cdc5c97be83">SL_MPLS_EOF_ERR</a> = 0xc003, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a01e8ad692efc84ada8e8b8da23b3d8ae">SL_RPC_INTF_START_OFFSET</a> = 0xd000, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a766c42496025171495d6f49297c387f3">SL_RPC_INTF_TOO_MANY_INTERFACES</a> = 0xd001, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a433d57cd00bd8a7c2cd8a476210a268f">SL_RPC_INTF_SERVER_NOT_INITIALIZED</a> = 0xd002, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579aec65caa05d50d0962c3d03766fafdb2e">SL_RPC_INTF_API_CLIENT_NOT_REGISTERED</a> = 0xd003, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a294b8b2afcca2da8e4190af023990d76">SL_INTF_START_OFFSET</a> = 0xe000, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579aea60b029b289319da1ba32e1148b4300">SL_INTF_INTERFACE_NAME_MISSING</a> = 0xe001, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a06cdce2b37c6b97f5a6c1105dd7d3449">SL_INTF_INTERFACE_NAME_TOOLONG</a> = 0xe002, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579acece7a90aada6260718b99da8434d96a">SL_INTF_INTERFACE_REG_ERR</a> = 0xe003, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a5bb19f8f128bccdff1adc9a5f27c599e">SL_INTF_INTERNAL_DB_ERROR</a> = 0xe004, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a4c7b1424ae0a0060820df5a34bdf17f3">SL_INTF_RECOVERY_ERROR</a> = 0xe005, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579aa5d14e4c9d9272767f6c91906b1b47c9">SL_INTF_INTERFACE_EXISTS</a> = 0xe006, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a0227b20ab58a342c811dd2958ea39026">SL_INTF_INTERFACE_NOT_FOUND</a> = 0xe007, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a1f717cce1a2510b2da37e52a2b300721">SL_L2_REG_START_OFFSET</a> = 0xf000, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579af64e6b3cc54a68c3a963347a9becf29b">SL_L2_REGISTRATION_ERR</a> = 0xf001, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a78a20d4a04cdab9cb83d670f0bc853f9">SL_L2_UNREGISTRATION_ERR</a> = 0xf002, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a7ead4ba6620ec11305b639a8e8015597">SL_L2_EOF_ERR</a> = 0xf003, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579abfda256926091283d8c05a1ef5468d0e">SL_L2_REG_INVALID_ADMIN_DISTANCE</a> = 0xf004, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a8aea8938c1c56e9c8913248cd310793a">SL_L2_REG_IS_DUPLICATE</a> = 0xf005, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a620f6ea9330c904fca75661ede851929">SL_L2_REG_SERVER_NOT_INITIALIZED</a> = 0xf006, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a989f8ed02fd85547f655c219759fdee7">SL_RPC_L2_BD_REG_START_OFFSET</a> = 0x10000, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a5a123e2776d3db1e7ac56dd7bd5bad4d">SL_RPC_L2_BD_REG_NAME_MISSING</a> = 0x10001, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579aba60197122d931e93feb2a872a20bb50">SL_RPC_L2_BD_REG_TOO_MANY_MSGS</a> = 0x10002, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a94847370011df6634bf620b310dd33ae">SL_RPC_L2_BD_REG_SERVER_NOT_INITIALIZED</a> = 0x10003, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a69233466d5e5b0141ef1647bada2c9e2">SL_RPC_L2_BD_REG_CLIENT_NOT_REGISTERED</a> = 0x10004, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a3d716342d892e6a504360f31b0025aa0">SL_L2_BD_REG_START_OFFSET</a> = 0x11000, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a9c32722ce50fcabbce841c1a3cce76c9">SL_L2_BD_REGISTRATION_ERR</a> = 0x11001, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579ad17ac11012dbf17db5fe80b44f89efd0">SL_L2_BD_UNREGISTRATION_ERR</a> = 0x11002, 
+<b>x11003</b>, 
+<br />
+&#160;&#160;<b>SL_L2_BD_EOF_ERR</b> = 0x11003, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579ac79351924272d5a4877324a258a9fd4e">SL_L2_BD_REG_NAME_TOO_LONG</a> = 0x11004, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a8cd248163dd172021b8cb2086c2185a6">SL_L2_BD_REG_BD_NOT_FOUND</a> = 0x11005, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a4f5fafd268f0a4019c7661fd07f28c71">SL_RPC_L2_ROUTE_START_OFFSET</a> = 0x12000, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a8c7abe0c4d66fc1f22d215fa150de2a9">SL_RPC_L2_ROUTE_TOO_MANY_MSGS</a> = 0x12001, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a4190e98fa5fe405cbeaf6d9d4d839847">SL_RPC_L2_ROUTE_SERVER_NOT_INITIALIZED</a> = 0x12002, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579aec8a60fa10fc4b43a2c57af510a657e2">SL_RPC_L2_ROUTE_CLIENT_NOT_REGISTERED</a> = 0x12003, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a35337fbbc47aaca919651edf469092d7">SL_L2_ROUTE_START_OFFSET</a> = 0x13000, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579ae9cb835bd007b722a4600a687f0af95b">SL_L2_ROUTE_BD_NAME_MISSING</a> = 0x13001, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579aeded3e1c0acedc005e20b909f7cf8745">SL_L2_ROUTE_BD_NAME_TOOLONG</a> = 0x13002, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a1227ac82054b6a90a94f808712e6b1e2">SL_L2_ROUTE_BD_NOT_FOUND</a> = 0x13003, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a92f8ecad666562805923aaacb1f1cb90">SL_L2_ROUTE_BD_NOT_REGISTERED</a> = 0x13004, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a7f9b40306e496d6e35b01af41791a5e6">SL_L2_ROUTE_INVALID_ARGS</a> = 0x13005, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579ac8fae9ecee09a67b0107af4661438ecf">SL_RPC_L2_NOTIF_START_OFFSET</a> = 0x14001, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a75a295dde34ab2b2ea02ccffb01db9bb">SL_RPC_L2_NOTIF_SERVER_NOT_INITIALIZED</a> = 0x14002, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a8f2055bcd436572e1bd6b29f4ff6ed1b">SL_RPC_L2_NOTIF_CLIENT_NOT_REGISTERED</a> = 0x14003, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579acd456627178eaa5108f64502ac260acd">SL_RPC_L2_NOTIF_ENABLE_ERR</a> = 0x14004, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a20afbc959cba8e47ff0607f601296462">SL_RPC_L2_NOTIF_DISABLE_ERR</a> = 0x14005, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a4750561a9f1fc4fbf1ade1a96ec07212">SL_RPC_L2_NOTIF_EOF_ERR</a> = 0x14006, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a75ad944258b3c4d0869e4995dbea5123">SL_RPC_L2_NOTIF_BD_NAME_MISSING</a> = 0x14007, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579ab9a35b40b5fcabd207d6755ccca64f38">SL_RPC_L2_NOTIF_BD_NAME_TOOLONG</a> = 0x14008, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a4ab6947807bbec688f255fa09dff3025">SL_RPC_L2_NOTIF_BD_NOT_FOUND</a> = 0x14009, 
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579a0bb764a961407fc4f2685fd4f3174ef9">SL_INTERNAL_START_OFFSET</a> = 0x100000
+<br />
+ }</td></tr>
+<tr class="separator:a004d5ee5e7c7f26018bac9a4e5254579"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:a9c465a274ab77b2f99d316750cc3443e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9c465a274ab77b2f99d316750cc3443e"></a>
+<a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579">SLErrno</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Status</b> = 1</td></tr>
+<tr class="separator:a9c465a274ab77b2f99d316750cc3443e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h4 class="groupheader">Member Enumeration Documentation</h4>
+<a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__SLCommonTypes.html#a004d5ee5e7c7f26018bac9a4e5254579">SLErrorStatus::SLErrno</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579ad647be1437cc207bf8d18325cf7c7253"></a>SL_SUCCESS&#160;</td><td class="fielddoc">
+<p>!!! Common error codes for all RPCs and objects Success, no errors detected. </p>
+<p>0x0. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a47e7adfb02164ad072d186062fd935eb"></a>SL_NOT_CONNECTED&#160;</td><td class="fielddoc">
+<p>Client is not connected. </p>
+<p>The client is expected to remain connected after init and version validation, RPC calls can fail with this error code otherwise. Refer to RPC SLGlobalInitNotif. 0x1 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a11bd2c39aff07d478976e5d7f29b93bf"></a>SL_EAGAIN&#160;</td><td class="fielddoc">
+<p>Operation must be retried. 0x2. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579ac9c350b4409f82df3287d6b471cb32bf"></a>SL_ENOMEM&#160;</td><td class="fielddoc">
+<p>One or more components does not have sufficient memory. 0x3. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a850811d68b10d0f2be982ef3552b58cd"></a>SL_EBUSY&#160;</td><td class="fielddoc">
+<p>Too many outstanding requests. 0x4. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a2992960285a54d864b5ba8c62e860d2b"></a>SL_EINVAL&#160;</td><td class="fielddoc">
+<p>One or more arguments are invalid. 0x5. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a5355231922b893af2e27bea619df5cf8"></a>SL_UNSUPPORTED_VER&#160;</td><td class="fielddoc">
+<p>Unsupported version. 0x6. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a4fb2d464b8debeb66f4168422b1b6a45"></a>SL_NOT_AVAILABLE&#160;</td><td class="fielddoc">
+<p>Not Available. 0x7. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a7ccb352ab805a07860c3fbc092b94e03"></a>SL_STREAM_NOT_SUPPORTED&#160;</td><td class="fielddoc">
+<p>Stream mode not supported. 0x8. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a2e643aa8b8be0aa69ac0d9b2dfa33ddc"></a>SL_ENOTSUP&#160;</td><td class="fielddoc">
+<p>Operation not supported. 0x9. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a1ba3aae88ebbc0776caa2c3b7cd9c670"></a>SL_SOME_ERR&#160;</td><td class="fielddoc">
+<p>One or more objects is errored: Each object must be individually examined. </p>
+<p>0xa </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579ad5448ca610aff6bf4b3cb1f890b501a3"></a>SL_TIMEOUT&#160;</td><td class="fielddoc">
+<p>Operation Timed out. </p>
+<p>The result of the operation is undeterministic (success or fail). 0xb </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a9e6fc1c9cce92d38704031aedb65b1d9"></a>SL_NOTIF_TERM&#160;</td><td class="fielddoc">
+<p>Due to some event, the client will no longer receive notification events on this channel. </p>
+<p>0xc Such events include:</p><ul>
+<li>Notification Session was hijacked by another client. </li>
+</ul>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579afbaac817e2f51ba3bf53c3e64804aa23"></a>SL_AUTH_FAIL&#160;</td><td class="fielddoc">
+<p>Authentication failure. </p>
+<p>Incorrect credentials passed in by RPC. 0xd </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579ac1ec72306a5b453c1c4086b208f0d5ad"></a>SL_INIT_START_OFFSET&#160;</td><td class="fielddoc">
+<p>!!! Error codes for Client INIT operations. </p>
+<p>Offset for INIT errors. 0x500 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a5023528258de7ce3ab291c40ac548ac6"></a>SL_INIT_STATE_CLEAR&#160;</td><td class="fielddoc">
+<p>Success, no errors detected - clear state. </p>
+<p>This error is returned on the first-ever initialization, or, when a fatal event has occured and all previous state was lost. 0x501 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a6c29b9ae42648e69d769075c5904a8ff"></a>SL_INIT_STATE_READY&#160;</td><td class="fielddoc">
+<p>Success, no errors detected - previous state is recovered. </p>
+<p>This error is returned on a client re-initialization with successful recovery of state. Note that any unacknowledged data previously sent should be considered lost. 0x502 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a3149589cfa363fded681a520334c3b99"></a>SL_INIT_UNSUPPORTED_VER&#160;</td><td class="fielddoc">
+<p>Server software incompatible with client software version. 0x503. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579ab826956557011398c62805272fa57581"></a>SL_INIT_SERVER_NOT_INITIALIZED&#160;</td><td class="fielddoc">
+<p>Initialization request received while server is not ready. 0x504. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a2a61c5389159f20750ee8642cf9f0737"></a>SL_INIT_SERVER_MODE_CHANGE_FAILED&#160;</td><td class="fielddoc">
+<p>Server operational mode change from stream to non-stream or vice-versa failed. </p>
+<p>0x505 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a4783a3d33f872d11d4f4e2cfe0dc9445"></a>SL_RPC_VRF_START_OFFSET&#160;</td><td class="fielddoc">
+<p>!!! Error codes for VRF operations. </p>
+<p>Offset for VRF errors. 0x1000 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579ac1ee05166a4be8012abc7a5e078fde8c"></a>SL_RPC_VRF_TOO_MANY_VRF_REG_MSGS&#160;</td><td class="fielddoc">
+<p>Operation rejected for ALL VRFs due to too many VRF registration messages in the request. </p>
+<p>0x1001 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579afc13900ba8195f52973242fd62d60e4f"></a>SL_RPC_VRF_SERVER_NOT_INITIALIZED&#160;</td><td class="fielddoc">
+<p>Operation rejected for all VRFs as server is not initialized. 0x1002. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a4c9d9419bdf94a500223502a8e20f372"></a>SL_VRF_START_OFFSET&#160;</td><td class="fielddoc">
+<p>!!! Error codes for VRF objects. </p>
+<p>Offset for VRF errors. 0x2000 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579aa137b507f71873dc2a8344aae4e6c333"></a>SL_VRF_NAME_TOOLONG&#160;</td><td class="fielddoc">
+<p>VRF name in the VRF registration message is too long. 0x2001. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a573ab9c4192766fc247d0ac018f0937b"></a>SL_VRF_NOT_FOUND&#160;</td><td class="fielddoc">
+<p>VRF not found during a unregister or EOF. 0x2002. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579af159b8f11902cc34e2efd6bacd0033e4"></a>SL_VRF_NO_TABLE_ID&#160;</td><td class="fielddoc">
+<p>On a VRF registration, Table ID for the VRF is not found. 0x2003. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a1d2b0f7f212bd6ac600fca07fe80c776"></a>SL_VRF_REG_INVALID_ADMIN_DISTANCE&#160;</td><td class="fielddoc">
+<p>VRF add registration message with invalid administrative distance. 0x2004. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a442825994e09971e90a4f023dd41e240"></a>SL_VRF_TABLE_ADD_ERR&#160;</td><td class="fielddoc">
+<p>On a VRF registration, Table cannot be added to persistent memory. 0x2005. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579aa54038004909ee937c7c7801e63f254d"></a>SL_VRF_TABLE_REGISTRATION_ERR&#160;</td><td class="fielddoc">
+<p>VRF table cannot be registered with RIB. 0x2006. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a34f9cc5347f4ab96666bf36647cb52d4"></a>SL_VRF_TABLE_UNREGISTRATION_ERR&#160;</td><td class="fielddoc">
+<p>VRF table cannot be unregistered with RIB. 0x2007. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579aa9bdad935eda224ba392b1af8293e5ad"></a>SL_VRF_TABLE_EOF_ERR&#160;</td><td class="fielddoc">
+<p>VRF table RIB EOF operation error. 0x2008. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579aba5180820d8f50b1f91555f30a3e3e55"></a>SL_VRF_REG_VRF_NAME_MISSING&#160;</td><td class="fielddoc">
+<p>VRF registration message does not have a VRF name. 0x2009. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a8873ac7342d1306b63989fa470999d00"></a>SL_VRF_V4_ROUTE_REPLAY_FATAL_ERROR&#160;</td><td class="fielddoc">
+<p>IPv4 routes in VRF cannot be played to Routing Information Base on a process restart or connection re-establishment. </p>
+<p>The Forwarding Information Base can can be inconsistent. Agent/Controller should initiate a recovery action by reloading the device. 0x2010 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a7135aeb127f643b4ca237a66b3dde5b1"></a>SL_VRF_V6_ROUTE_REPLAY_FATAL_ERROR&#160;</td><td class="fielddoc">
+<p>IPv6 routes in VRF cannot be played to Routing Information Base on a process restart or connection re-establishment. </p>
+<p>The Forwarding Information Base can can be inconsistent. Agent/Controller should initiate a recovery action by reloading the device. 0x2011 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a2e3290e8eb88cf919d1de2ce7f52466a"></a>SL_VRF_V4_ROUTE_REPLAY_OK&#160;</td><td class="fielddoc">
+<p>IPv4 routes in VRF were played to Routing Information Base on a process restart or connection re-establishment. </p>
+<p>0x2012 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a4ce40a76e3de3d5bcf1726646f91760b"></a>SL_VRF_V6_ROUTE_REPLAY_OK&#160;</td><td class="fielddoc">
+<p>IPv6 routes in VRF were played to Routing Information Base on a process restart or connection re-establishment. </p>
+<p>0x2013 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a8f17f5c77e8b30b62c72ba85286bc8e4"></a>SL_RPC_ROUTE_START_OFFSET&#160;</td><td class="fielddoc">
+<p>!!! Error codes for Route operations. </p>
+<p>Offset for Route operation errors. 0x3000 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a6bea2ab1bac328a37992aa6077821449"></a>SL_RPC_ROUTE_TOO_MANY_ROUTES&#160;</td><td class="fielddoc">
+<p>Operation rejected for ALL routes due to too many routes in the request. </p>
+<p>0x3001 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579ac5fc7867528cd4169b33bc8b240fe228"></a>SL_RPC_ROUTE_VRF_NAME_TOOLONG&#160;</td><td class="fielddoc">
+<p>Operation rejected for ALL routes as the request's VRF name is too long. </p>
+<p>0x3002 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579ad3915bddd3488dc1b0de90cf0b0c760a"></a>SL_RPC_ROUTE_VRF_NOT_FOUND&#160;</td><td class="fielddoc">
+<p>Operation rejected for ALL routes as VRF for the given name is not found. </p>
+<p>0x3003 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a046b62e1b4ab1a1f9a9082c71d1c1bd7"></a>SL_RPC_ROUTE_VRF_NO_TABLE&#160;</td><td class="fielddoc">
+<p>Operation rejected for ALL routes as VRF's Table ID is not found. </p>
+<p>0x3004 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a19915a968786033cf09717d96c523e61"></a>SL_RPC_ROUTE_VRF_TABLE_NOT_REGISTERED&#160;</td><td class="fielddoc">
+<p>Operation rejected for ALL routes as VRF is not registered with RIB. </p>
+<p>0x3005 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579aba0283d83ccee8921d15d08442ed8413"></a>SL_RPC_ROUTE_VRF_NAME_MISSING&#160;</td><td class="fielddoc">
+<p>Route Operation rejected for ALL objects as VRF name is missing. </p>
+<p>0x3006 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a56145032626a236b4c90ed40bd6150fd"></a>SL_RPC_ROUTE_INIT_MODE_INCOMPATIBLE&#160;</td><td class="fielddoc">
+<p>Operation rejected for all routes as the RPC request is not supported for the library's initialization mode. </p>
+<p>0x3007 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579ab69a0ec993c1dfffa1d8d3e55e0b8909"></a>SL_RPC_ROUTE_SERVER_NOT_INITIALIZED&#160;</td><td class="fielddoc">
+<p>Operation rejected for all routes as server is not initialized. </p>
+<p>0x3008 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a8f4a2246d401a7e607f195a9c6e6fb8b"></a>SL_RPC_ROUTE_NOTIF_SRC_PROTO_TOOLONG&#160;</td><td class="fielddoc">
+<p>Operation rejected as the request's SrcProto is too long. 0x3009. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a9aeeaddb56132a0908d3238b80c01149"></a>SL_RPC_ROUTE_NOTIF_SRC_PROTO_TAG_TOOLONG&#160;</td><td class="fielddoc">
+<p>Operation rejected as the request's SrcProtoTag is too long. 0x300a. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579aac6370c91eb8617f76272a8e0740ddc2"></a>SL_ROUTE_START_OFFSET&#160;</td><td class="fielddoc">
+<p>!!! Error codes for Route objects. </p>
+<p>Offset for route errors. 0x4000 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a526fca43f7640af52fa84dbf12ee1050"></a>SL_ROUTE_ADD_NO_PATHS&#160;</td><td class="fielddoc">
+<p>Route add operation requested but no paths were provided. 0x4001. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a712c485f8b0e240c12285ec53239fea5"></a>SL_ROUTE_UPDATE_NO_PATHS&#160;</td><td class="fielddoc">
+<p>Route update operation requested but no paths were provided. 0x4002. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a343361bb8d57ae81b07357d1ec959fdd"></a>SL_ROUTE_INVALID_PREFIX_LEN&#160;</td><td class="fielddoc">
+<p>Route's prefix length is invalid. 0x4003. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a9fee025296b9a0bede3da88613f954c9"></a>SL_ROUTE_INVALID_ADMIN_DISTANCE&#160;</td><td class="fielddoc">
+<p>Route's admininstrative distance is invalid. 0x4004. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a27ea00d0965bc11f699614c91bf38889"></a>SL_ROUTE_INVALID_NUM_PATHS&#160;</td><td class="fielddoc">
+<p>Route's number of paths exceeds system capabilities. 0x4005. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a387caea34a0f3682a4a6e5c9f7ec41da"></a>SL_ROUTE_INVALID_PREFIX_SZ&#160;</td><td class="fielddoc">
+<p>Size of IPv6 prefix is invalid. 0x4006. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579afa0ff2b3335ccd184f502ad1a64fd929"></a>SL_ROUTE_INVALID_PREFIX&#160;</td><td class="fielddoc">
+<p>Route's prefix is invalid. 0x4007. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579aa9175bc8b1b1c94b4581832cc400105a"></a>SL_ROUTE_ERR_RIB_TABLE_LIMIT_REACHED&#160;</td><td class="fielddoc">
+<p>Route programming failed in RIB as VRF table limit reached. 0x4008. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a264192783e708b569c97186cc73d9219"></a>SL_ROUTE_ERR_RIB_INVALID_ARGS&#160;</td><td class="fielddoc">
+<p>RIB route programming failed in RIB due to invalid arguments. 0x4009. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579ac6bef250fd0ea33119f6aef553b70fc2"></a>SL_ROUTE_ERR_RIB_PATH_TABLE_LIMIT&#160;</td><td class="fielddoc">
+<p>One or more paths could not be programmed in RIB as VRF table limit reached. </p>
+<p>0x400a </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579ac9ad067094a52e779b6734a3a1318a77"></a>SL_ROUTE_ERR_RIB_TOOMANYPATHS&#160;</td><td class="fielddoc">
+<p>One or more paths could not be programmed in RIB as number of paths reached system limit. </p>
+<p>0x400b </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a4c29402ee7e089b5bdf0e3c9c727f02b"></a>SL_ROUTE_EEXIST&#160;</td><td class="fielddoc">
+<p>This route already exists in the database. 0x400c. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a477823b22581fdd2a572b25b8277bf98"></a>SL_ROUTE_HOST_BITS_SET&#160;</td><td class="fielddoc">
+<p>Route prefix has host bits set. 0x400d. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a1dbb5339a896ff17f458280966c820e9"></a>SL_ROUTE_INVALID_PREFIX_MCAST&#160;</td><td class="fielddoc">
+<p>IPv4 Route prefix is a multicast address. 0x400e. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579af31d3f1fee1bfb9862dfbe95c99c0e44"></a>SL_ROUTE_PATH_AFI_MISMATCH&#160;</td><td class="fielddoc">
+<p>Route and Path AFI does not match. 0x400f. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a4974f081ec5411c115a41d3634355718"></a>SL_ROUTE_TOOMANY_PRIMARY_PATHS&#160;</td><td class="fielddoc">
+<p>Number of primary paths exceeds system capabilities. 0x4010. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579ac2c46c78e4333dcb36bb40d596c4fcfc"></a>SL_ROUTE_TOOMANY_BACKUP_PATHS&#160;</td><td class="fielddoc">
+<p>Number of backup paths exceeds system capabilities. 0x4011. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579aa548ae7672f6a96423fe5dc2d7bd7107"></a>SL_ROUTE_DB_NOMEM&#160;</td><td class="fielddoc">
+<p>The route database is out of memory. 0x4012. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579ad2517e34eb4a95a624ff18db14fe2f3c"></a>SL_ROUTE_INVALID_LOCAL_LABEL&#160;</td><td class="fielddoc">
+<p>The route has an invalid local label. 0x4013. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a01a065cc7cbecd3e6d70a113e006a618"></a>SL_PATH_START_OFFSET&#160;</td><td class="fielddoc">
+<p>!!! Error codes for route path objects. </p>
+<p>Offset for route path errors. 0x5000 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a0ac660396a8e4cffc0f5a524de8bd8cb"></a>SL_PATH_NH_NO_TABLE&#160;</td><td class="fielddoc">
+<p>VRF table for the path could not be determined. 0x5001. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a6f609075d386458e09be93d91f6a51c0"></a>SL_PATH_NH_INTF_NOT_FOUND&#160;</td><td class="fielddoc">
+<p>Path next hop interface not found. 0x5002. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a4b200859ac592fd3ec3442235c23f553"></a>SL_PATH_INVALID_LABEL_COUNT&#160;</td><td class="fielddoc">
+<p>Number of labels in the path exceeds system capabilities. 0x5003. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a8597c975893816f10a6a1395ab0ff848"></a>SL_PATH_INVALID_ID&#160;</td><td class="fielddoc">
+<p>Path ID assigned to the path falls outside the supported range. 0x5004. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a4a1f5ad75129786a6b53bda2eddbcda8"></a>SL_PATH_VRF_NAME_TOOLONG&#160;</td><td class="fielddoc">
+<p>Path VRF name exceeds supported length. 0x5005. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a97f2d650f051bfb3082ac478a6679a61"></a>SL_PATH_NH_INTF_NAME_TOOLONG&#160;</td><td class="fielddoc">
+<p>Path next hop interface name exceeds supported length. 0x5006. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a6816eff49a8e75dbe8b5c561e7d402ff"></a>SL_PATH_NH_INVALID_ADDR_SZ&#160;</td><td class="fielddoc">
+<p>Size of next hop IPv6 address is invalid. 0x5007. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a2d6700c993f61aa5e66bdb16876f1f61"></a>SL_PATH_NH_INF_NAME_MISSING&#160;</td><td class="fielddoc">
+<p>Next hop interface name is missing from path. 0x5008. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a42012e7eeef66ee98e40fbee53001b8b"></a>SL_PATH_INVALID_NEXT_HOP_ADDR&#160;</td><td class="fielddoc">
+<p>Path has an invalid next hop address. 0x5009. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579aac54e52b50ad2fe737f9f5517ae5112b"></a>SL_PATH_INVALID_REMOTE_ADDR_COUNT&#160;</td><td class="fielddoc">
+<p>Number of remote backup addresses in the path exceeds system capabilities. </p>
+<p>0x500a </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579ae5d03a0bca17ebee0377b4567a9c3b3b"></a>SL_PATH_REMOTE_ADDR_INVALID_SZ&#160;</td><td class="fielddoc">
+<p>Size of IPv6 remote backup address is invalid. 0x500b. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a71c9493c69dd6af6082541fbbee812ac"></a>SL_PATH_REMOTE_ADDR_AFI_MISMATCH&#160;</td><td class="fielddoc">
+<p>Route and Path remote backup address AFI does not match. 0x500c. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579abd66a4116517028325a7d084ac7d1b6d"></a>SL_PATH_INVALID_PROTECTED_BITMAP&#160;</td><td class="fielddoc">
+<p>Path has an invalid protection bitmap. 0x500d. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a6a725da357e8565d9c2f37b9138b0bb2"></a>SL_PATH_BACKUP_MISSING_PRIMARY_PATH&#160;</td><td class="fielddoc">
+<p>Protection bitmap of a backup path refers to a missing path. 0x500e. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a2a4fa4724cdde516243a48f7bb623178"></a>SL_PATH_PRIMARY_ID_REPEATED&#160;</td><td class="fielddoc">
+<p>Too many primary paths with same Path ID. 0x500f. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579ae79f776aea2e5102040110f6a2c16075"></a>SL_PATH_BACKUP_ID_REPEATED&#160;</td><td class="fielddoc">
+<p>Too many pure backup paths with same Path ID. 0x5010. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a74330cdd39d4cfe382deee565ce2d360"></a>SL_PATH_PRIMARY_TOOMANY_BACKUP_PATHS&#160;</td><td class="fielddoc">
+<p>A primary path has too many backup paths. 0x5011. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a3d003f19e02a3fe91f8b6dbfe942fb0b"></a>SL_PATH_PRIMARY_TOOMANY_LABELS&#160;</td><td class="fielddoc">
+<p>A primary path has too many labels. 0x5012. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579accadf13e414cc8c7f83dc3d10b38bfc1"></a>SL_PATH_PRIMARY_TOOMANY_REMOTE_ADDR&#160;</td><td class="fielddoc">
+<p>A primary path has too many remote addresses. 0x5013. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579ac51e3ccbcf2759839e74294914ffa711"></a>SL_PATH_REMOTE_ADDR_INVALID&#160;</td><td class="fielddoc">
+<p>A pure backup remote address is invalid. 0x5014. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a8ba0a3f2634529d613d25f22b0bba6ef"></a>SL_PATH_INVALID_LABEL&#160;</td><td class="fielddoc">
+<p>Path has an invalid label. 0x5015. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a02aae6b37b77133d3e0c0cbd728ff013"></a>SL_PATH_ROUTER_MAC_ADDR_INVALID_SZ&#160;</td><td class="fielddoc">
+<p>Size of router mac address is invalid. 0x5016. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a3ca097210b46f63b5d201b0815198f00"></a>SL_RPC_BFD_START_OFFSET&#160;</td><td class="fielddoc">
+<p>!!! Error codes for BFD opertations. </p>
+<p>Offset for BFD operation errors. 0x6000 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579adc7bdfa4deb80379fb5668c3fdd59e60"></a>SL_RPC_BFD_TOO_MANY_BFD_SESSIONS&#160;</td><td class="fielddoc">
+<p>BFD Operation rejected for ALL Sessions as the BFD Session count is beyond supported limit. </p>
+<p>0x6001 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a4b4b3767773bdb110beb47fdadb905d2"></a>SL_RPC_BFD_API_BAD_PARAMETER&#160;</td><td class="fielddoc">
+<p>BFD Operation rejected due to one or many invalid parameters. 0x6002. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a6abf1aa4dc10195f5b3703f216005286"></a>SL_RPC_BFD_API_CLIENT_NOT_REGISTERED&#160;</td><td class="fielddoc">
+<p>BFD Operation failed as server is not registered with BFD. 0x6003. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a62edec6de16fad17d51903058e7cc226"></a>SL_RPC_BFD_API_INTERNAL_ERROR&#160;</td><td class="fielddoc">
+<p>BFD Operation failed with internal error. 0x6004. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a31cf3d15563a694725df91a70116d8e7"></a>SL_RPC_BFD_SERVER_NOT_INITIALIZED&#160;</td><td class="fielddoc">
+<p>BFD Operation rejected as server is not initialized. 0x6005. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579ac786575f8a084de9f2e319b375845d9c"></a>SL_RPC_BFD_V4_NOT_REGISTERED&#160;</td><td class="fielddoc">
+<p>BFD IPv4 not registered. 0x6006. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a3da36d4d92134786fffb8dc7d3e5fa5e"></a>SL_RPC_BFD_V6_NOT_REGISTERED&#160;</td><td class="fielddoc">
+<p>BFD IPv6 not registered. 0x6007. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a9241c3c6afdd6ccc8714fb85cf1db103"></a>SL_BFD_START_OFFSET&#160;</td><td class="fielddoc">
+<p>!!! Error codes for BFD Session objects. </p>
+<p>Offset for BFD errors. 0x7000 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a5af2ef13066f2293b368fb62669758e4"></a>SL_BFD_INTF_NAME_TOOLONG&#160;</td><td class="fielddoc">
+<p>BFD Session's interface name exceeds supported length. 0x7001. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a9b7864ddfe26c2b59810bb6c1e5dd4f4"></a>SL_BFD_INTF_NOT_FOUND&#160;</td><td class="fielddoc">
+<p>BFD Session's interface not found. 0x7002. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a0fd1b735c82ff88848723654846f9666"></a>SL_BFD_INVALID_ATTRIBUTE&#160;</td><td class="fielddoc">
+<p>BFD Session's tx interval or multiplier are beyond the supported range. </p>
+<p>0x7003 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579aa09a52128d8be61988a850dbebf4e632"></a>SL_BFD_INTF_NAME_MISSING&#160;</td><td class="fielddoc">
+<p>BFD Session's interface name is missing. 0x7004. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579ae41339796e9a34d452cde90592ace21c"></a>SL_BFD_INVALID_NBR_MCAST&#160;</td><td class="fielddoc">
+<p>BFD Session's neighbor is mcast address. 0x7005. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a47295e9e38882ae2b99b9bb377fcb739"></a>SL_BFD_INVALID_NBR&#160;</td><td class="fielddoc">
+<p>BFD Session's neighbor address is invalid. 0x7006. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579ad888134a71df2e514d1363572969ed36"></a>SL_BFD_VRF_NAME_TOOLONG&#160;</td><td class="fielddoc">
+<p>BFD Session's VRF Name is too long. 0x7007. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a1966cc2ab0c192add182cd4050b5f5b4"></a>SL_BFD_BAD_PARAMETER&#160;</td><td class="fielddoc">
+<p>BFD Session's one or more parameters are invalid. </p>
+<p>For example, Multihop BFD can not have the interface name set. 0x7008 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a545a5bc49e05ad0bc6f485670c262cc3"></a>SL_BFD_API_INTERNAL_ERROR&#160;</td><td class="fielddoc">
+<p>BFD Session failed with internal error. 0x7009. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a79bd33f0afab47d330d2144fc77bec73"></a>SL_BFD_VRF_NOT_FOUND&#160;</td><td class="fielddoc">
+<p>BFD Session's VRF not found. 0x700a. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a43f2579cd0366672a6f50ef7f6fd08c3"></a>SL_BFD_INVALID_PREFIX_SIZE&#160;</td><td class="fielddoc">
+<p>BFD Session's neighbor IPv6 prefix size is invalid. 0x700b. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579afaac038b7dcd7cd3170196e582fd04eb"></a>SL_BFD_INVALID_SESSION_TYPE&#160;</td><td class="fielddoc">
+<p>BFD Session type invalid. 0x700c. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a06d1bd5c25487c2e01dff23b44ebfc66"></a>SL_BFD_INVALID_VRF&#160;</td><td class="fielddoc">
+<p>BFD Session's VRF is Invalid. 0x700d. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579abbc255e5ea1de6ae8878742f8c10705e"></a>SL_BFD_SESSION_NOT_FOUND&#160;</td><td class="fielddoc">
+<p>BFD Session not found. 0x700e. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a95178ba36fe1b687d086de07757105c9"></a>SL_BFD_SESSION_EXISTS&#160;</td><td class="fielddoc">
+<p>BFD Session exists. 0x700f. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579acd26d85161bccebe14812c661231134d"></a>SL_BFD_INTERNAL_DB_ERROR&#160;</td><td class="fielddoc">
+<p>BFD Internal database error. 0x7010. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579aa27d287042d52c0ef009ba1cebc4b06a"></a>SL_BFD_RECOVERY_ERROR&#160;</td><td class="fielddoc">
+<p>BFD Recovery error. 0x7011. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a085d9e06035cec218618c623d8aa730b"></a>SL_RPC_MPLS_START_OFFSET&#160;</td><td class="fielddoc">
+<p>!!! Error codes for MPLS opertations. </p>
+<p>Offset for MPLS operation errors. 0x8000 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a522a57b5ea3e5d178bde5dbf4f914eb2"></a>SL_RPC_MPLS_ILM_TOO_MANY_ILMS&#160;</td><td class="fielddoc">
+<p>Operation rejected for ALL ILMS due to too many ILMS in the request. </p>
+<p>0x8001 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a587c05c762089aa616058aae78746b99"></a>SL_RPC_MPLS_SERVER_NOT_INITIALIZED&#160;</td><td class="fielddoc">
+<p>Operation rejected for all ILMs as server is not initialized. </p>
+<p>0x0x8002 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a4b5ad9f4a0fae6667ef02d40515ab3cf"></a>SL_RPC_MPLS_INIT_MODE_INCOMPATIBLE&#160;</td><td class="fielddoc">
+<p>Operation rejected for all ILMs as the RPC request is not supported for the library's initialization mode. </p>
+<p>0x8003 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a981be225603857dd57ab2917ea993504"></a>SL_RPC_MPLS_LABEL_BLK_TOO_MANY_LABEL_BLKS&#160;</td><td class="fielddoc">
+<p>Operation rejected for ALL label blocks due to too many label blocks in the request. </p>
+<p>0x8004 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579afa2d4c32551b98e551a476cfd6817280"></a>SL_RPC_MPLS_NOT_REGISTERED&#160;</td><td class="fielddoc">
+<p>Operation rejected for ALL ILMs as MPLS layer is not registered. </p>
+<p>0x8005 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a0235a69a0b45e63799032a88393bbd58"></a>SL_ILM_ERR_OFFSET&#160;</td><td class="fielddoc">
+<p>!!! MPLS ILM Error codes Offset for MPLS ILM errors. </p>
+<p>0x9000 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a655b43ec37f5b94a2f3752df53860268"></a>SL_ILM_ADD_FAILED&#160;</td><td class="fielddoc">
+<p>MPLS ILM add to service layer failed. 0x9001. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a58d4e89b7891173ed2525157da7d970a"></a>SL_ILM_LSD_ADD_FAILED&#160;</td><td class="fielddoc">
+<p>MPLS ILM add to Label Switching Database failed. 0x9002. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a0ad84f867d60a07b5c52b63de4637d90"></a>SL_ILM_INVALID_NUM_NHLFE&#160;</td><td class="fielddoc">
+<p>MPLS ILM NHLFE count exceeded max supported number. 0x9003. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a09403b877b38536a9c149a6c4778ca89"></a>SL_ILM_INVALID_LABEL&#160;</td><td class="fielddoc">
+<p>MPLS ILM label value out of range. 0x9004. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a297658650eea91876cec8f7e30d56f00"></a>SL_ILM_DELETE_FAILED&#160;</td><td class="fielddoc">
+<p>MPLS ILM delete from service layer failed. 0x9005. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a4d5d49a37c5ddd8738b2f01fd8c42ccd"></a>SL_ILM_LSD_DELETE_FAILED&#160;</td><td class="fielddoc">
+<p>MPLS ILM delete from Label Switching Database failed. 0x9006. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579aad99a5db11df97c5cdf3b31801748cd3"></a>SL_ILM_TOOMANY_PRIMARY_NHLFES&#160;</td><td class="fielddoc">
+<p>Number of primary NHLFEs exceeds system capabilities. 0x9007. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a5f37d21a3bd3c944ce0990252a73d6d5"></a>SL_ILM_TOOMANY_BACKUP_NHLFES&#160;</td><td class="fielddoc">
+<p>Number of backup NHLFEs exceeds system capabilities. 0x9008. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a16d26b4cc21ed1c1f03b47a817e01070"></a>SL_ILM_LSD_ADD_LABEL_ALLOC_FAILED&#160;</td><td class="fielddoc">
+<p>MPLS ILM label alloc failed in Label switching database. 0x9009. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a649c94983fdd274cb14a31c9016a31e1"></a>SL_ILM_LSD_NHLFE_INVALID_ATTRIB&#160;</td><td class="fielddoc">
+<p>MPLS ILM NHLFE attribute invalid. 0x900a. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a89ea1d0e87c39db0195c66f3614767ea"></a>SL_ILM_EEXIST&#160;</td><td class="fielddoc">
+<p>MPLS ILM already exists in the database. 0x900b. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a2440492455fb2b27811a78102d9cf649"></a>SL_ILM_DB_NOMEM&#160;</td><td class="fielddoc">
+<p>The ILM database is out of memory. 0x900c. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a8a722dc4ff8467d36cabe3d25b63d3c7"></a>SL_ILM_INVALID_ELSP_EXP&#160;</td><td class="fielddoc">
+<p>EXP value is outside of the valid range of &lt;0-7&gt;. 0x900d. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a17d8c7b229422a6db1c9b531b99d6f82"></a>SL_ILM_ELSP_EXP_OR_DFLT_ALREADY_SET&#160;</td><td class="fielddoc">
+<p>EXP value or Default already set. 0x900e. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a3b8081e11b4866cf5be66fff0a49a3da"></a>SL_ILM_ADD_NO_PATHS&#160;</td><td class="fielddoc">
+<p>MPLS ILM add operation requested but no paths were provided. 0x900f. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579aeef510023ca07f02c7e5e77fd6f4425f"></a>SL_ILM_UPDATE_NO_PATHS&#160;</td><td class="fielddoc">
+<p>MPLS ILM update operation requested but no paths were provided. 0x9010. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a6b6548f9643196a71dedd80b26b5f71b"></a>SL_ILM_UNSUPPORTED_ELSP&#160;</td><td class="fielddoc">
+<p>LSP and ELSP on the same label not supported. 0x9011. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579ae1d9f71b32bf45663ea08362386e9856"></a>SL_ILM_LABEL_TOOMANY_EXP_CLASSES&#160;</td><td class="fielddoc">
+<p>Number of EXP classes on the label exceed system capabilities. 0x9012. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a945f157c25011986629246de153e30e6"></a>SL_ILM_REPLAY_FATAL_ERROR&#160;</td><td class="fielddoc">
+<p>MPLS ILMs cannot be played to Label Switching Database on a process restart or connection re-establishment. </p>
+<p>The Forwarding Information Base can can be inconsistent. Agent/Controller should initiate a recovery action by reloading the device. 0x9013 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579ac7a8e627742e90f2cc75b719f981d3bf"></a>SL_ILM_REPLAY_OK&#160;</td><td class="fielddoc">
+<p>MPLS ILMs were played to Label Switching Database on a process restart or connection re-establishment. </p>
+<p>0x9014 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579afba8f9d54658e7dd457287f86c143dc2"></a>SL_NHLFE_ERR_OFFSET&#160;</td><td class="fielddoc">
+<p>!!! MPLS NHLFE Error codes Offset for MPLS NHLFE errors. </p>
+<p>0xa000 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579ade7c9cf8b35f8092a47504fbf4954842"></a>SL_NHLFE_NH_NO_TABLE&#160;</td><td class="fielddoc">
+<p>MPLS NHLFE vrf table could not be determined. 0xa001. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a9cadaf7746f419d078d3124b33826a78"></a>SL_NHLFE_NH_INVALID_ADDR_SZ&#160;</td><td class="fielddoc">
+<p>Size of next hop IPv6 address is invalid. 0xa002. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a78abf6e9a4e892673d3675e3390a52dd"></a>SL_NHLFE_INVALID_NEXT_HOP_ADDR&#160;</td><td class="fielddoc">
+<p>NHLFE has an invalid next hop address. 0xa003. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579aa8406270bcd64924696c5097d451e2cb"></a>SL_NHLFE_VRF_NAME_TOOLONG&#160;</td><td class="fielddoc">
+<p>Path VRF name exceeds supported length. 0xa004. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a093a1a0e39d50c9dd23d32d33d526a7f"></a>SL_NHLFE_NH_INF_NAME_MISSING&#160;</td><td class="fielddoc">
+<p>Next hop interface name is missing from path. 0xa005. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a2284af379b0f9d80cfbe96f798dc7b8f"></a>SL_NHLFE_NH_INTF_NAME_TOOLONG&#160;</td><td class="fielddoc">
+<p>Interface name exceeds supported length. 0xa006. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579ac44ce5b12a1388299c28e330f35dea17"></a>SL_NHLFE_INVALID_LABEL_COUNT&#160;</td><td class="fielddoc">
+<p>Number of labels in the path incompatible with system capabilities for the given label action. </p>
+<p>0xa007 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a582682da82d5fde44394c83f7e89a94d"></a>SL_NHLFE_INVALID_PATH_ID&#160;</td><td class="fielddoc">
+<p>Path id is invalid in NHLFE. 0xa008. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a71f5b1f2c39b7f12a070190c4c4c9f74"></a>SL_NHLFE_INVALID_LABEL&#160;</td><td class="fielddoc">
+<p>MPLS NHLFE label value out of range. 0xa009. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a5e238c7efccc7529dfe03dfdc7c4da1f"></a>SL_NHLFE_INVALID_PROTECTED_BITMAP&#160;</td><td class="fielddoc">
+<p>NHLFE has an invalid protection bitmap. 0xa00a. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579ac66232ceb04d92b70325bad67500a461"></a>SL_NHLFE_INVALID_REMOTE_ADDR_COUNT&#160;</td><td class="fielddoc">
+<p>Number of remote backup addresses in the NHLFE exceeds system capabilities. </p>
+<p>0xa00b </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a0d8bb5ee7cc3da299c0ec9e168418533"></a>SL_NHLFE_REMOTE_ADDR_INVALID_SZ&#160;</td><td class="fielddoc">
+<p>Size of IPv6 remote backup address is invalid. 0xa00c. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a856bc58b3502b8def62e67b59bfa8338"></a>SL_NHLFE_PRIMARY_TOOMANY_LABELS&#160;</td><td class="fielddoc">
+<p>A primary NHLFE has too many labels. 0xa00d. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a40e9ed23de98e32a03186cb4ef68023f"></a>SL_NHLFE_PRIMARY_TOOMANY_REMOTE_ADDR&#160;</td><td class="fielddoc">
+<p>A primary NHLFE has too many remote addresses. 0xa00e. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579aa79c7903e426734e0ceed43528a86dbf"></a>SL_NHLFE_BACKUP_ID_REPEATED&#160;</td><td class="fielddoc">
+<p>Too many pure backup NHLFE with same Path ID. 0xa00f. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a94230d21043610065c271c3673935278"></a>SL_NHLFE_PRIMARY_ID_REPEATED&#160;</td><td class="fielddoc">
+<p>Too many primary NHLFE with same Path ID. 0xa010. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579ad274148c4865850cfc7fe6624a7e397f"></a>SL_NHLFE_BACKUP_PROTECTED_BITMAP_EMPTY&#160;</td><td class="fielddoc">
+<p>Pure backup NHLFE has a empty protected bitmap. 0xa011. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a868432da43f65d03e8d1f0feb1c9f4dc"></a>SL_NHLFE_PRIMARY_TOOMANY_BACKUP_PATHS&#160;</td><td class="fielddoc">
+<p>A primary NHLFE has too many backup paths. 0xa012. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a458bde7025a4bdac96a240a234c87f4b"></a>SL_NHLFE_REMOTE_ADDR_INVALID&#160;</td><td class="fielddoc">
+<p>A pure backup remote address is invalid. 0xa013. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a54a6752d2adf54ea6d48333df393c92e"></a>SL_NHLFE_BACKUP_MISSING_PRIMARY_PATH&#160;</td><td class="fielddoc">
+<p>Protection bitmap of a backup NHLFE refers to a missing path. 0xa014. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a801eb5172052de1a3b4e8cb3ce5703aa"></a>SL_NHLFE_NEXT_HOP_MISSING&#160;</td><td class="fielddoc">
+<p>NHLFE next-hop missing. 0xa015. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a4b90569e361124c71678960038de255c"></a>SL_NHLFE_LABEL_ACTION_INVALID&#160;</td><td class="fielddoc">
+<p>Label action specified is invalid. 0xa016. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579ac68871430be534c0fce66236fe8d9d96"></a>SL_NHLFE_NH_INTF_NOT_FOUND&#160;</td><td class="fielddoc">
+<p>NHLFE next hop interface not found. 0xa017. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a32ee45740f78e58bd1263777dea24728"></a>SL_NHLFE_OPER_FAILED&#160;</td><td class="fielddoc">
+<p>MPLS NHLFE operation failed. 0xa018. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579ae4c96dd93dbc810a72264d44255bacaa"></a>SL_NHLFE_LABEL_ACTION_MISSING&#160;</td><td class="fielddoc">
+<p>MPLS NHLFE label action missing. 0xa019. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a0c04994bdf49a409a69449ed787362a1"></a>SL_NHLFE_EXP_SET_FAILED&#160;</td><td class="fielddoc">
+<p>Setting EXP value failed. 0xa01a. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a7f489dc2f32e1f586a4de0873d594a4f"></a>SL_NHLFE_ELSP_PROTECTION_UNSUPPORTED&#160;</td><td class="fielddoc">
+<p>ELSP protection is unsupported. 0xa01b. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579ae92035d89716f34f968a7da67304671b"></a>SL_LABEL_BLK_ERR_OFFSET&#160;</td><td class="fielddoc">
+<p>!!! MPLS Label block Error codes Offset for label block errors. </p>
+<p>0xb000 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579ae83d92790055466c7118d610ccedb8f6"></a>SL_LABEL_BLK_LSD_ADD_FAILED&#160;</td><td class="fielddoc">
+<p>MPLS label block add from Label Switching Database failed. 0xb001. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a2c07be9aeaa2325f1986fe0659aadb4f"></a>SL_LABEL_BLK_LSD_DELETE_FAILED&#160;</td><td class="fielddoc">
+<p>MPLS label block delete from Label Switching Database failed. 0xb002. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579ad0419e6c0da5d029c777c345769bac50"></a>SL_LABEL_BLK_LSD_LABEL_BLK_NOT_FOUND&#160;</td><td class="fielddoc">
+<p>MPLS label block not found. 0xb003. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a3e8313878500fe1362497cf1a7e817c4"></a>SL_LABEL_BLK_LSD_LABEL_BLK_IN_USE&#160;</td><td class="fielddoc">
+<p>MPLS label block in use. 0xb004. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a031e39634d4b098c48b7ec9d42a45e46"></a>SL_LABEL_BLK_LSD_INVALID_ATTRIB&#160;</td><td class="fielddoc">
+<p>MPLS label block attribute invalid. 0xb005. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a00667a61d0d5a95bae9a9d57d8a6a696"></a>SL_LABEL_BLK_INVALID_BLOCK_SIZE&#160;</td><td class="fielddoc">
+<p>MPLS label block size &gt; max size per block. 0xb006. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a2a6b6f403db0856e4e4457704c8878c9"></a>SL_LABEL_BLK_INVALID_START_LABEL&#160;</td><td class="fielddoc">
+<p>MPLS label start_label &lt; min label for platform . 0xb007. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a0209ebd2d59628ca2450a264a1b8a2c6"></a>SL_LABEL_BLK_EEXIST&#160;</td><td class="fielddoc">
+<p>MPLS label block already exists in the database. 0xb008. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a5fe84c055f86ec7ab637ea4408f0c198"></a>SL_LABEL_BLK_DB_NOMEM&#160;</td><td class="fielddoc">
+<p>MPLS label database is out of memory. 0xb009. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a3f99e39cfb4cd3d44bf8ffaf346c3c21"></a>SL_LABEL_BLK_TYPE_INVALID&#160;</td><td class="fielddoc">
+<p>MPLS label block type invalid. 0xb00a. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a5e9d5c98108cf25f64524e73d89cd661"></a>SL_LABEL_BLK_CLIENT_NAME_TOOLONG&#160;</td><td class="fielddoc">
+<p>MPLS label block client name exceeds max length. 0xb00b. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579ae60e378bfb1db44c64f745fea2f4aa3d"></a>SL_MPLS_REG_ERR_OFFSET&#160;</td><td class="fielddoc">
+<p>!!! MPLS Reg error codes Offset for MPLS registration errors. </p>
+<p>0xc000 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a4d8b2aae80ae187456e83657b690dcd5"></a>SL_MPLS_REG_ERR&#160;</td><td class="fielddoc">
+<p>MPLS registration error. 0xc001. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a5590c08adff88c5f2dc3db15f0b0e745"></a>SL_MPLS_UNREG_ERR&#160;</td><td class="fielddoc">
+<p>MPLS unregistration error. 0xc002. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579ac527267f9595f2446c990cdc5c97be83"></a>SL_MPLS_EOF_ERR&#160;</td><td class="fielddoc">
+<p>MPLS EOF error. 0xc003. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a01e8ad692efc84ada8e8b8da23b3d8ae"></a>SL_RPC_INTF_START_OFFSET&#160;</td><td class="fielddoc">
+<p>!!! Error codes for Interface operations. </p>
+<p>Offset for Interface operation errors. 0xd000 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a766c42496025171495d6f49297c387f3"></a>SL_RPC_INTF_TOO_MANY_INTERFACES&#160;</td><td class="fielddoc">
+<p>Interface Operation rejected for ALL Sessions as the Interface Session count is beyond supported limit. </p>
+<p>0xd001 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a433d57cd00bd8a7c2cd8a476210a268f"></a>SL_RPC_INTF_SERVER_NOT_INITIALIZED&#160;</td><td class="fielddoc">
+<p>Interface Operation rejected as server is not initialized. 0xd002. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579aec65caa05d50d0962c3d03766fafdb2e"></a>SL_RPC_INTF_API_CLIENT_NOT_REGISTERED&#160;</td><td class="fielddoc">
+<p>Interface Operation failed as server is not registered with interface manager. </p>
+<p>0xd003 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a294b8b2afcca2da8e4190af023990d76"></a>SL_INTF_START_OFFSET&#160;</td><td class="fielddoc">
+<p>!!! Error codes for Interface objects. </p>
+<p>Offset for Interface object errors. 0xe000 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579aea60b029b289319da1ba32e1148b4300"></a>SL_INTF_INTERFACE_NAME_MISSING&#160;</td><td class="fielddoc">
+<p>Interface object's interface name missing. 0xe001. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a06cdce2b37c6b97f5a6c1105dd7d3449"></a>SL_INTF_INTERFACE_NAME_TOOLONG&#160;</td><td class="fielddoc">
+<p>Interface object's interface name exceeds supported length. 0xe002. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579acece7a90aada6260718b99da8434d96a"></a>SL_INTF_INTERFACE_REG_ERR&#160;</td><td class="fielddoc">
+<p>Interface internal registration error. 0xe003. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a5bb19f8f128bccdff1adc9a5f27c599e"></a>SL_INTF_INTERNAL_DB_ERROR&#160;</td><td class="fielddoc">
+<p>Internal database error. 0xe004. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a4c7b1424ae0a0060820df5a34bdf17f3"></a>SL_INTF_RECOVERY_ERROR&#160;</td><td class="fielddoc">
+<p>Interface Recovery error. 0xe005. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579aa5d14e4c9d9272767f6c91906b1b47c9"></a>SL_INTF_INTERFACE_EXISTS&#160;</td><td class="fielddoc">
+<p>Interface exists. 0xe006. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a0227b20ab58a342c811dd2958ea39026"></a>SL_INTF_INTERFACE_NOT_FOUND&#160;</td><td class="fielddoc">
+<p>Interface not found. 0xe007. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a1f717cce1a2510b2da37e52a2b300721"></a>SL_L2_REG_START_OFFSET&#160;</td><td class="fielddoc">
+<p>!!! Error codes for Global L2 operations. </p>
+<p>Offset for Global L2 operation errors. 0xf000 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579af64e6b3cc54a68c3a963347a9becf29b"></a>SL_L2_REGISTRATION_ERR&#160;</td><td class="fielddoc">
+<p>Client cannot be registered with Layer-2 RIB. 0xf001. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a78a20d4a04cdab9cb83d670f0bc853f9"></a>SL_L2_UNREGISTRATION_ERR&#160;</td><td class="fielddoc">
+<p>Client cannot be unregistered with Layer-2 RIB. 0xf002. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a7ead4ba6620ec11305b639a8e8015597"></a>SL_L2_EOF_ERR&#160;</td><td class="fielddoc">
+<p>EOF Operation error. 0xf003. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579abfda256926091283d8c05a1ef5468d0e"></a>SL_L2_REG_INVALID_ADMIN_DISTANCE&#160;</td><td class="fielddoc">
+<p>L2 registration message with invalid admin distance. 0xf004. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a8aea8938c1c56e9c8913248cd310793a"></a>SL_L2_REG_IS_DUPLICATE&#160;</td><td class="fielddoc">
+<p>Duplicate L2 registration message. 0xf005. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a620f6ea9330c904fca75661ede851929"></a>SL_L2_REG_SERVER_NOT_INITIALIZED&#160;</td><td class="fielddoc">
+<p>L2 registration rejected as server is not initialized. 0xf006. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a989f8ed02fd85547f655c219759fdee7"></a>SL_RPC_L2_BD_REG_START_OFFSET&#160;</td><td class="fielddoc">
+<p>!!! Error codes for L2 Bridge-Domain (BD) Operations. </p>
+<p>Offset for L2 BD operation errors. 0x10000 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a5a123e2776d3db1e7ac56dd7bd5bad4d"></a>SL_RPC_L2_BD_REG_NAME_MISSING&#160;</td><td class="fielddoc">
+<p>Operation is rejected for all BDs as name is missing. 0x10001. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579aba60197122d931e93feb2a872a20bb50"></a>SL_RPC_L2_BD_REG_TOO_MANY_MSGS&#160;</td><td class="fielddoc">
+<p>Operation rejected for all BDs due to too many BD registration messages in the request. </p>
+<p>0x10002 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a94847370011df6634bf620b310dd33ae"></a>SL_RPC_L2_BD_REG_SERVER_NOT_INITIALIZED&#160;</td><td class="fielddoc">
+<p>Operation rejected for all BDs as server is not initialized. </p>
+<p>0x10003 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a69233466d5e5b0141ef1647bada2c9e2"></a>SL_RPC_L2_BD_REG_CLIENT_NOT_REGISTERED&#160;</td><td class="fielddoc">
+<p>Operation rejected for all BDs as client is not registered. </p>
+<p>0x10004 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a3d716342d892e6a504360f31b0025aa0"></a>SL_L2_BD_REG_START_OFFSET&#160;</td><td class="fielddoc">
+<p>!!! Error codes for L2 Bridge-Domain (BD) Objects. </p>
+<p>Offset for L2 BD object errors. 0x11000 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a9c32722ce50fcabbce841c1a3cce76c9"></a>SL_L2_BD_REGISTRATION_ERR&#160;</td><td class="fielddoc">
+<p>BD cannot be registered with Layer-2 RIB. 0x11001. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579ad17ac11012dbf17db5fe80b44f89efd0"></a>SL_L2_BD_UNREGISTRATION_ERR&#160;</td><td class="fielddoc">
+<p>BD cannot be unregistered with Layer-2 RIB. 0x11002. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579ac79351924272d5a4877324a258a9fd4e"></a>SL_L2_BD_REG_NAME_TOO_LONG&#160;</td><td class="fielddoc">
+<p>Name is too long in BD registration message. 0x11004. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a8cd248163dd172021b8cb2086c2185a6"></a>SL_L2_BD_REG_BD_NOT_FOUND&#160;</td><td class="fielddoc">
+<p>BD not found in BD registration message. 0x11005. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a4f5fafd268f0a4019c7661fd07f28c71"></a>SL_RPC_L2_ROUTE_START_OFFSET&#160;</td><td class="fielddoc">
+<p>!!! Error codes for L2 Route operations. </p>
+<p>Offset for L2 Route Operation errors. 0x12000 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a8c7abe0c4d66fc1f22d215fa150de2a9"></a>SL_RPC_L2_ROUTE_TOO_MANY_MSGS&#160;</td><td class="fielddoc">
+<p>Operation rejected for all L2 routes due to too many messages in the request. </p>
+<p>0x12001 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a4190e98fa5fe405cbeaf6d9d4d839847"></a>SL_RPC_L2_ROUTE_SERVER_NOT_INITIALIZED&#160;</td><td class="fielddoc">
+<p>Operation rejected for all L2 routes as server is not initialized. </p>
+<p>0x12002 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579aec8a60fa10fc4b43a2c57af510a657e2"></a>SL_RPC_L2_ROUTE_CLIENT_NOT_REGISTERED&#160;</td><td class="fielddoc">
+<p>Operation rejected for all L2 routes as client is not registered. </p>
+<p>0x12003 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a35337fbbc47aaca919651edf469092d7"></a>SL_L2_ROUTE_START_OFFSET&#160;</td><td class="fielddoc">
+<p>!!! Error codes for L2 Objects. </p>
+<p>Offset for L2 object errors. 0x13000 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579ae9cb835bd007b722a4600a687f0af95b"></a>SL_L2_ROUTE_BD_NAME_MISSING&#160;</td><td class="fielddoc">
+<p>L2 route operation rejected as BD name is missing. 0x13001. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579aeded3e1c0acedc005e20b909f7cf8745"></a>SL_L2_ROUTE_BD_NAME_TOOLONG&#160;</td><td class="fielddoc">
+<p>L2 route operation rejected as BD name is too long. 0x13002. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a1227ac82054b6a90a94f808712e6b1e2"></a>SL_L2_ROUTE_BD_NOT_FOUND&#160;</td><td class="fielddoc">
+<p>L2 route operation rejected as BD not found. 0x13003. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a92f8ecad666562805923aaacb1f1cb90"></a>SL_L2_ROUTE_BD_NOT_REGISTERED&#160;</td><td class="fielddoc">
+<p>L2 route operation rejected as BD is not registered. 0x13004. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a7f9b40306e496d6e35b01af41791a5e6"></a>SL_L2_ROUTE_INVALID_ARGS&#160;</td><td class="fielddoc">
+<p>L2 route operation rejected due to one or more invalid arguments. </p>
+<p>0x13005 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579ac8fae9ecee09a67b0107af4661438ecf"></a>SL_RPC_L2_NOTIF_START_OFFSET&#160;</td><td class="fielddoc">
+<p>!!! Error codes for L2 Get Notification operations. </p>
+<p>Offset for L2 Get Notification Operation errors. 0x14000 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a75a295dde34ab2b2ea02ccffb01db9bb"></a>SL_RPC_L2_NOTIF_SERVER_NOT_INITIALIZED&#160;</td><td class="fielddoc">
+<p>L2 notification request rejected as server is not initialized. </p>
+<p>0x14002 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a8f2055bcd436572e1bd6b29f4ff6ed1b"></a>SL_RPC_L2_NOTIF_CLIENT_NOT_REGISTERED&#160;</td><td class="fielddoc">
+<p>L2 notification request rejected as client is not registered. </p>
+<p>0x14003 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579acd456627178eaa5108f64502ac260acd"></a>SL_RPC_L2_NOTIF_ENABLE_ERR&#160;</td><td class="fielddoc">
+<p>L2 notification enable error. 0x14004. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a20afbc959cba8e47ff0607f601296462"></a>SL_RPC_L2_NOTIF_DISABLE_ERR&#160;</td><td class="fielddoc">
+<p>L2 notification disable error. 0x14005. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a4750561a9f1fc4fbf1ade1a96ec07212"></a>SL_RPC_L2_NOTIF_EOF_ERR&#160;</td><td class="fielddoc">
+<p>L2 notification EOF error. 0x14006. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a75ad944258b3c4d0869e4995dbea5123"></a>SL_RPC_L2_NOTIF_BD_NAME_MISSING&#160;</td><td class="fielddoc">
+<p>L2 notification request rejected as BD name is missing. 0x14007. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579ab9a35b40b5fcabd207d6755ccca64f38"></a>SL_RPC_L2_NOTIF_BD_NAME_TOOLONG&#160;</td><td class="fielddoc">
+<p>L2 notification request rejected as BD name is too long. </p>
+<p>0x14008 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a4ab6947807bbec688f255fa09dff3025"></a>SL_RPC_L2_NOTIF_BD_NOT_FOUND&#160;</td><td class="fielddoc">
+<p>L2 notification request rejected as BD not found. 0x14009. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a004d5ee5e7c7f26018bac9a4e5254579a0bb764a961407fc4f2685fd4f3174ef9"></a>SL_INTERNAL_START_OFFSET&#160;</td><td class="fielddoc">
+<p>!!! Error codes Reserved for internal errors. </p>
+<p>Offset for Internal errors. 0x100000 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+
+</div>
+</div>
+<a name="structSLInterface" id="structSLInterface"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLInterface</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:afd3e2656c6bd90085fe4e06ab1ed04a6"><td class="memItemLeft" align="right" valign="top">oneof&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLCommonTypes.html#afd3e2656c6bd90085fe4e06ab1ed04a6">Interface</a></td></tr>
+<tr class="memdesc:afd3e2656c6bd90085fe4e06ab1ed04a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">One of Interface name or handle.  <a href="#afd3e2656c6bd90085fe4e06ab1ed04a6">More...</a><br /></td></tr>
+<tr class="separator:afd3e2656c6bd90085fe4e06ab1ed04a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6526d1e61cf41eabf087e1ddfafe3f99"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6526d1e61cf41eabf087e1ddfafe3f99"></a>
+uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLCommonTypes.html#a6526d1e61cf41eabf087e1ddfafe3f99">Handle</a> = 2</td></tr>
+<tr class="memdesc:a6526d1e61cf41eabf087e1ddfafe3f99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface handle. Can be retrieved from Interface API. <br /></td></tr>
+<tr class="separator:a6526d1e61cf41eabf087e1ddfafe3f99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h4 class="groupheader">Member Data Documentation</h4>
+<a class="anchor" id="afd3e2656c6bd90085fe4e06ab1ed04a6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">oneof SLInterface::Interface</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">{</div><div class="line">        </div><div class="line">        <span class="keywordtype">string</span> Name = 1</div></div><!-- fragment -->
+</div>
+</div>
+
+</div>
+</div>
+<a name="structSLIpAddress" id="structSLIpAddress"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLIpAddress</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:a44f92d5e82bed87dbdf9c2dfdc8ce777"><td class="memItemLeft" align="right" valign="top">oneof&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLCommonTypes.html#a44f92d5e82bed87dbdf9c2dfdc8ce777">Address</a></td></tr>
+<tr class="memdesc:a44f92d5e82bed87dbdf9c2dfdc8ce777"><td class="mdescLeft">&#160;</td><td class="mdescRight">One of IPv4 or IPv6 address.  <a href="#a44f92d5e82bed87dbdf9c2dfdc8ce777">More...</a><br /></td></tr>
+<tr class="separator:a44f92d5e82bed87dbdf9c2dfdc8ce777"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06ed65c5902a035b9bb0f12bd450a8dc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a06ed65c5902a035b9bb0f12bd450a8dc"></a>
+bytes&#160;</td><td class="memItemRight" valign="bottom"><b>V6Address</b> = 2</td></tr>
+<tr class="separator:a06ed65c5902a035b9bb0f12bd450a8dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h4 class="groupheader">Member Data Documentation</h4>
+<a class="anchor" id="a44f92d5e82bed87dbdf9c2dfdc8ce777"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">oneof SLIpAddress::Address</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">{</div><div class="line">        uint32  V4Address = 1</div></div><!-- fragment -->
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="gacf9698e39f1da873424b2a44dee2b741"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__SLCommonTypes.html#gacf9698e39f1da873424b2a44dee2b741">SLEncapType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Specify tunnel encapsulation types: VXLAN or MPLS. This will determine the interpretation of some fields VrfName and LabelStack in <a class="el" href="group__SLRouteCommon.html#structSLRoutePath" title="Route Path attributes. ">SLRoutePath</a>. It will mandate the presence of certain fields. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ggacf9698e39f1da873424b2a44dee2b741a06c75d5a40735271614a18ed211ab489"></a>SL_ENCAP_RESERVED&#160;</td><td class="fielddoc">
+<p>Reserved. 0x0. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggacf9698e39f1da873424b2a44dee2b741a4e9001f1e0017b22a59fb46a95789433"></a>SL_ENCAP_VXLAN&#160;</td><td class="fielddoc">
+<p>Vxlan encap. 0x1. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggacf9698e39f1da873424b2a44dee2b741a5488dd4c4fabcb156abb6e87070b1143"></a>SL_ENCAP_MPLS&#160;</td><td class="fielddoc">
+<p>Mpls encap. 0x2. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="gaa809068894b7bf3fab0314dff50bd02d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__SLCommonTypes.html#gaa809068894b7bf3fab0314dff50bd02d">SLNotifOp</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ggaa809068894b7bf3fab0314dff50bd02daf4d927c974e5c78ae73d685fd1eb3f16"></a>SL_NOTIFOP_RESERVED&#160;</td><td class="fielddoc">
+<p>Reserved. 0x0. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggaa809068894b7bf3fab0314dff50bd02da18427e154b9b6da28c1c5cf8ef84b755"></a>SL_NOTIFOP_ENABLE&#160;</td><td class="fielddoc">
+<p>Enable. 0x1. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggaa809068894b7bf3fab0314dff50bd02da1f91e51fafec9eb3eb7ec8b17b3ebd16"></a>SL_NOTIFOP_DISABLE&#160;</td><td class="fielddoc">
+<p>Disable. 0x2. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="ga0b166605b901d6e5ad5f7706ac60baf1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__SLCommonTypes.html#ga0b166605b901d6e5ad5f7706ac60baf1">SLObjectOp</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="gga0b166605b901d6e5ad5f7706ac60baf1a63f1cbeea5670122533aa7a68e6ef2ac"></a>SL_OBJOP_RESERVED&#160;</td><td class="fielddoc">
+<p>Reserved. 0x0. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga0b166605b901d6e5ad5f7706ac60baf1a95923dd57d55f57cc402b0b27ddbb54b"></a>SL_OBJOP_ADD&#160;</td><td class="fielddoc">
+<p>Add. 0x1. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga0b166605b901d6e5ad5f7706ac60baf1a621f4066640fe76fa12beb9230afce92"></a>SL_OBJOP_UPDATE&#160;</td><td class="fielddoc">
+<p>Update. 0x2. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga0b166605b901d6e5ad5f7706ac60baf1a3c29c36af0dce3a6365871553243edcc"></a>SL_OBJOP_DELETE&#160;</td><td class="fielddoc">
+<p>Delete. 0x3. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="gabcd5b7bdb1e75e62f586e079e924f896"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__SLCommonTypes.html#gabcd5b7bdb1e75e62f586e079e924f896">SLRegOp</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ggabcd5b7bdb1e75e62f586e079e924f896a6694a0eae600d09bd3681a33405cbf74"></a>SL_REGOP_RESERVED&#160;</td><td class="fielddoc">
+<p>Reserved. 0x0. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggabcd5b7bdb1e75e62f586e079e924f896acb136cb13568920f79fc4d884f98d43b"></a>SL_REGOP_REGISTER&#160;</td><td class="fielddoc">
+<p>Register. 0x1. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggabcd5b7bdb1e75e62f586e079e924f896ad7b9822009609319928a67114f345000"></a>SL_REGOP_UNREGISTER&#160;</td><td class="fielddoc">
+<p>Un-Register. 0x2. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggabcd5b7bdb1e75e62f586e079e924f896a86e778b0d022e94f0daf8a6beb91223b"></a>SL_REGOP_EOF&#160;</td><td class="fielddoc">
+<p>End Of File. 0x3. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.8-->
+<!-- start footer part -->
+</div>
+</div>
+</div>
+</div>
+</div>
+    <div class="page__footer" style="position: relative;">
+      <footer>
+<div class="page__footer-follow">
+  <ul class="social-icons">
+      <li><strong>Follow:</strong></li>
+      <li><a href="https://twitter.com/xrdocs"><i class="fa fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+      <li><a href="http://github.com/xrdocs"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    <li><a href="https://xrdocs.github.io/cisco-service-layer/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+<div class="page__footer-copyright">&copy; 2017 Cisco Systems Inc. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+      </footer>
+    </div>
+    <script src="https://xrdocs.github.io/cisco-service-layer/assets/js/main.min.js"></script>
+<script src="https://xrdocs.github.io/cisco-service-layer/assets/js/scrollmenu.js"></script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-78256516-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- material-scrolltop button -->
+<button class="material-scrolltop" type="button"></button>
+<!-- material-scrolltop plugin -->
+<script src="https://xrdocs.github.io/cisco-service-layer/assets/js/material-scrolltop.js"></script>
+<!-- Initialize material-scrolltop with (minimal) -->
+<script>
+    $('body').materialScrollTop();
+</script>
+</body>
+</html>
