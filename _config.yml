@@ -7,8 +7,8 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Cisco Service Layer IOS XR Documentation @xrdocs"
-title_short              : "Cisco Service Layer"
+title                    : "Virtual Routing IOS XR Documentation @xrdocs"
+title_short              : "Virtual Routing xrdocs"
 title_separator          : "|"
 name                     : &name "Cisco Systems Inc"
 description              : &description "Documentation, Blogs and Tutorials for IOS-XR Virtual Routing Platforms"
