@@ -1,7 +1,7 @@
 ---
 published: true
 date: '2022-08-22 18:59 +0530'
-title: 'Setting up Host Environment to run XRd '
+title: 'Setting up the Host Environment to run XRd '
 author: Akshat Sharma
 excerpt: >-
   Learn how to set up the host environment to successfully launch Control-Plane
