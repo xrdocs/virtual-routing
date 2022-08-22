@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 date: '2022-08-22 18:54 +0530'
 title: 'Helper Tools to get started with XRd '
 author: Akshat Sharma
