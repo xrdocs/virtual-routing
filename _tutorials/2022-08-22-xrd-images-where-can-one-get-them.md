@@ -18,6 +18,7 @@ excerpt: Learn how to download the latest XRd images and set them up for further
 ---
 
 {% include base_path %}
+{% include toc %}
 
 This tutorial will help the user learn how to gain access to the latest official XRd images from Cisco and set them up for further use with docker, kubernetes and related tools. In subsequent tutorials, we will dive deeper into the environments and tools needed to run XRd locally and discuss production deployment strategies and techniques.
 
