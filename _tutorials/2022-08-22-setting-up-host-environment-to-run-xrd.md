@@ -358,7 +358,18 @@ cisco@xrdcisco:~$
 </div>
 
 
+Finally, update the grub configuration by running `sudo update-grub`:
 
+```
+cisco@xrdcisco:~/xrd-tools/scripts$ sudo update-grub
+Sourcing file `/etc/default/grub'
+Sourcing file `/etc/default/grub.d/init-select.cfg'
+Generating grub configuration file ...
+Found linux image: /boot/vmlinuz-5.4.0-81-generic
+Found initrd image: /boot/initrd.img-5.4.0-81-generic
+done
+cisco@xrdcisco:~/xrd-tools/scripts$ 
+```
 
 
 
