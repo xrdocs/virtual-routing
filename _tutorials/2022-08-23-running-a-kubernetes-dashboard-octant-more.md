@@ -26,4 +26,5 @@ position: hidden
 {% include toc %}
 
 
-This is Part-8 of the [XRd tutorials Series](). If you'd like to start over, go to part-1, [here](2022-08-22-xrd-images-where-can-one-get-them)
+This is Part-8 of the [XRd tutorials Series](). If you'd like to start over, go to part-1, [here](2022-08-22-xrd-images-where-can-one-get-them).
+
