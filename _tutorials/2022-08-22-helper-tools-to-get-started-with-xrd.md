@@ -22,4 +22,11 @@ position: hidden
 {% include base_path %}
 {% include toc %}
 
-# Introduction
+This is Part-2 of the [XRd tutorials Series](). Skip to Part-3 [here]({{base_path}}/tutorials/2022-08-22-setting-up-host-environment-to-run-xrd). 
+## XRd Helper Tools
+
+In addition
+
+
+
+Part-3 of the XRd tutorials Series: [here]({{base_path}}/tutorials/2022-08-22-setting-up-host-environment-to-run-xrd). 
