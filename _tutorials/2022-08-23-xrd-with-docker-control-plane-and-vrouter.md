@@ -15,6 +15,7 @@ tags:
   - kubernetes
   - xrd
   - xrv9k
+  - xrd-tutorial-series
 ---
 
 {% include base_path %}
@@ -23,8 +24,7 @@ tags:
 This is Part-4 of the [XRd tutorials Series](). Skip to Part-5 [here]({{base_path}}/tutorials/2022-08-23-xrd-with-docker-compose-control-plane-and-vrouter). 
 
 
-In addition
 
 
 
-Part-5 of the XRd tutorials Series: [here]({{base_path}}/tutorials/2022-08-23-xrd-with-docker-compose-control-plane-and-vrouter). 
+Part-5 of the XRd tutorials Series: [here]({{base_path}}/tutorials/2022-08-23-xrd-with-docker-compose-control-plane-and-vrouter).
