@@ -18,6 +18,7 @@ tags:
   - container
   - virtual
   - kubernetes
+  - xrd-tutorial-series
 position: hidden
 ---
 
