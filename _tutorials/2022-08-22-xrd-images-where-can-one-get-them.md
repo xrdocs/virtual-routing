@@ -30,9 +30,9 @@ In our earlier [blog]({{base_path}}/blogs/), we introduced XRd as the latest Vir
 
 XRd has two form factors:
 
-1) XRd Control Plane: As the name suggests, this version of XRd is meant for control-plane only use cases that do not require high-throughput, traffic forwarding capabilities. These use cases include but are not limited to - vRR (virtual Route Reflector), SR-PCE (in tandem with a policy controller such as Cisco Network Controller - CNC).
+1. **XRd Control Plane:** As the name suggests, this version of XRd is meant for control-plane only use cases that do not require high-throughput, traffic forwarding capabilities. These use cases include but are not limited to - vRR (virtual Route Reflector), SR-PCE (in tandem with a policy controller such as Cisco Network Controller - CNC).
 
-2) XRd vRouter: This version of XRd contains a fully-featured and performant software dataplane in addition to the fully-functional XR control-plane, and may be suitable for deployments that require data traffic forwarding such as vPE (virtual Provider Edge), vCSR (virtual Cell Site Router) and Cloud Router (Public Cloud based vRouter).
+2. **XRd vRouter:** This version of XRd contains a fully-featured and performant software dataplane in addition to the fully-functional XR control-plane, and may be suitable for deployments that require data traffic forwarding such as vPE (virtual Provider Edge), vCSR (virtual Cell Site Router) and Cloud Router (Public Cloud based vRouter).
 
 <p class="notice--info">
   <b>Note:</b> The choice between the two variants is hinged on whether a user needs a software data-plane and associated features with traffic-forwarding capabilities or not. 
