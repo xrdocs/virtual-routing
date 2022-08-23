@@ -145,7 +145,7 @@ When using XRd, it is imperative to ensure you have an authentic copy of the ima
 To understand how to verify the signature, first let's untar the downloaded tar ball:
 
 
-```
+```bash
 cisco@xrdcisco:~/images/xrd-control-plane$ tar -xzf xrd-control-plane-container-x64.7.7.1.tgz 
 cisco@xrdcisco:~/images/xrd-control-plane$  tree .
 .
@@ -166,7 +166,7 @@ cisco@xrdcisco:~/images/xrd-control-plane$
 Open up the file `cisco_x509_verify_release.py3.README` which carries instructions to verify the signature for the docker tarball:
 
 
-```
+```bash
 cisco@xrdcisco:~/images/xrd-control-plane$ cat cisco_x509_verify_release.py3.README
 #------------------------------------------------------------------------------
 # cisco_x509_verify_release.py3.README
@@ -283,7 +283,7 @@ cisco@xrdcisco:~/images/xrd-control-plane$
 and similarly for the vRouter docker image tarball:
 
 
-```
+```bash
 cisco@xrdcisco:~/images/xrd-vrouter$ 
 cisco@xrdcisco:~/images/xrd-vrouter$ export VERIFICATION_SCRIPT="cisco_x509_verify_release.py3"
 cisco@xrdcisco:~/images/xrd-vrouter$ export EE_CERTIFICATE="IOS-XR-SW-XRd.crt"
