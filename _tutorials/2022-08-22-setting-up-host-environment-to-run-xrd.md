@@ -261,9 +261,25 @@ For our freshly booted Ubuntu 20.04 Host machine, let's run the `host-check` scr
   cisco@xrdcisco:~/xrd-tools/scripts$ 
 
   ```
+  
+**Note**: The host-check script does not attempt to fix any problems, although it tries to give hints about how they can be addressed. Most of the solutions can be found fairly easily by searching the internet.
+{: .notice--warning}
 
 ### Making Suggested Corrections to the Host Machine
 
+
+Fix the max_user_watches and max_user_instances settings by adding the following two lines to `/etc/sysctl.conf`:
+
+```bash
+cisco@xrdcisco:~$ cat  /etc/sysctl.conf  | tail -2
+fs.inotify.max_user_instances=64000
+fs.inotify.max_user_watches=64000
+cisco@xrdcisco:~$ 
+
+```
+
+
+Next, for XRd vRouter to work, enable iommu and Hugepages
 
 
 
