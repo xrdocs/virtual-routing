@@ -292,6 +292,8 @@ Based on the output of the `host-check` script run for each platform type above,
 
 #### Inotify max user watches and Inotify max user instances settings
 
+These settings are common to both XRd Control-Plane and XRd vRouter platform types.
+
 Fix the max_user_watches and max_user_instances settings by adding the following two lines to `/etc/sysctl.conf`:
 
 ```bash
@@ -301,6 +303,7 @@ fs.inotify.max_user_watches=64000
 cisco@xrdcisco:~$ 
 
 ```
+
 
 Next, for XRd vRouter to work, enable iommu and Hugepages for the Host machine. HugePages of size 1GiB must be enabled with a total of 3GiB of available HugePages RAM for **each** XRd vRouter.
 
