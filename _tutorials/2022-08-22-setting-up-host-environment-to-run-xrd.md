@@ -393,10 +393,101 @@ Connection to x.x.x.x closed.
 
 ```
 
+### Re-Run Host-Check script post Corrections
+
+Once the host machine is back up again, re-run the `host-check` script to make sure it indicates that the host machine is fit for both XRd Control-Plane and XRd vRouter platforms.  
 
 
+For XRd Control-Plane Platform:
 
+<div class="highlighter-rouge">
+<pre class="highlight">
+<code style="white-space: pre;">
+cisco@xrdcisco:~/xrd-tools/scripts$ ./host-check --platform xrd-control-plane
+==============================
+Platform checks - xrd-control-plane
+==============================
+PASS -- CPU architecture (x86_64)
+PASS -- CPU cores (8)
+PASS -- Kernel version (5.4)
+PASS -- Base kernel modules
+        Installed module(s): dummy, nf_tables
+PASS -- Cgroups version (v1)
+PASS -- systemd mounts
+        /sys/fs/cgroup and /sys/fs/cgroup/systemd mounted correctly.
+<mark>PASS -- Inotify max user instances
+        64000 - this is expected to be sufficient for 16 XRd instance(s).
+PASS -- Inotify max user watches
+        64000 - this is expected to be sufficient for 16 XRd instance(s).</mark>
+INFO -- Core pattern (core files managed by the host)
+PASS -- ASLR (full randomization)
+INFO -- Linux Security Modules
+        AppArmor is enabled. XRd is currently unable to run with the
+        default docker profile, but can be run with
+        '--security-opt apparmor=unconfined' or equivalent.
+PASS -- RAM
+        Available RAM is 19.8 GiB.
+        This is estimated to be sufficient for 9 XRd instance(s), although memory
+        usage depends on the running configuration.
+        Note that any swap that may be available is not included.
 
+==================================================================
+<mark>Host environment set up correctly for xrd-control-plane</mark>
+==================================================================
+cisco@xrdcisco:~/xrd-tools/scripts$ 
+</code>
+</pre>
+</div>  
+
+Similarly, for the XRd vRouter platform:  
+
+<div class="highlighter-rouge">
+<pre class="highlight">
+<code style="white-space: pre;">
+cisco@xrdcisco:~/xrd-tools/scripts$ ./host-check --platform xrd-vrouter
+==============================
+Platform checks - xrd-vrouter
+==============================
+PASS -- CPU architecture (x86_64)
+PASS -- CPU cores (8)
+PASS -- Kernel version (5.4)
+PASS -- Base kernel modules
+        Installed module(s): dummy, nf_tables
+PASS -- Cgroups version (v1)
+PASS -- systemd mounts
+        /sys/fs/cgroup and /sys/fs/cgroup/systemd mounted correctly.
+PASS -- Inotify max user instances
+        64000 - this is expected to be sufficient for 16 XRd instance(s).
+PASS -- Inotify max user watches
+        64000 - this is expected to be sufficient for 16 XRd instance(s).
+INFO -- Core pattern (core files managed by the host)
+PASS -- ASLR (full randomization)
+INFO -- Linux Security Modules
+        AppArmor is enabled. XRd is currently unable to run with the
+        default docker profile, but can be run with
+        '--security-opt apparmor=unconfined' or equivalent.
+PASS -- CPU extensions (sse4_1, sse4_2, ssse3)
+PASS -- RAM
+        Available RAM is 19.8 GiB.
+        This is estimated to be sufficient for 3 XRd instance(s), although memory
+        usage depends on the running configuration.
+        Note that any swap that may be available is not included.
+<mark>PASS -- Hugepages (9 x 1GiB)
+PASS -- Interface kernel driver (vfio-pci loaded)
+PASS -- IOMMU
+        IOMMU enabled for vfio-pci with the following PCI device(s):
+        ens33 (0000:02:01.0), ens160 (0000:03:00.0), ens192 (0000:0b:00.0),
+        ens224 (0000:13:00.0), ens256 (0000:1b:00.0)</mark>
+PASS -- Shared memory pages max size (17179869184.0 GiB)
+
+==================================================================
+<mark>Host environment set up correctly for xrd-vrouter </mark>
+==================================================================
+cisco@xrdcisco:~/xrd-tools/scripts$
+
+</code>
+</pre>
+</div>  
 
 
 
