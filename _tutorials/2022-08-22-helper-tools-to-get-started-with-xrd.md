@@ -135,12 +135,42 @@ docker-compose (v1) is available in PATH and the PyYAML python package is instal
 
 ## Exploring the Scripts
 
-We will utilize the following scripts and discuss their nuances in detail in subsequent parts of the [XRd Tutorial Series]({{base_path}}/tags/#xrd-tutorial-series) usage of the scripts by passing --help.
+We will utilize the following scripts and discuss their nuances in detail in subsequent parts of the [XRd Tutorial Series]({{base_path}}/tags/#xrd-tutorial-series).
 
-host-check - Check the host is set up correctly for running XRd containers.
-launch-xrd - Launch a single XRd container, or use --dry-run to see the args required.
-xr-compose - Launch a topology of XRd containers (wraps docker-compose).
-apply-bugfixes - Create a new XRd image with bugfixes installed on top of a base image.
+At a high level, the scripts are described below:
+
+1. **host-check** - Check the host is set up correctly for running XRd containers.
+2. **launch-xrd** - Launch a single XRd container, or use --dry-run to see the args required.
+3. **xr-compose** - Launch a topology of XRd containers (wraps docker-compose).
+4. **apply-bugfixes** - Create a new XRd image with bugfixes installed on top of a base image.
+
+
+
+## Exploring the Samples folder
+
+The `samples/` folder contains sample docker-compose topologies that currently match the following scenarios:
+ 
+1. **bgp-ospf-triangle**: 3 Router (XRd) topology with OSPF and iBGP configurations.
+2. **segment-routing**: 10 node (2 Linux and 8 XRd) topology with SR-MPLS VPN configurations.
+3. **simple-bgp**: 2 node (2 XRd) topology with basic iBGP configuration.
+
+We will try these samples out in subsequent tutorials once we get a hang of building our own docker-compose files. More such samples will be published to the repository in the future.
+
+
+## Exploring the Templates folder
+
+The `templates/` folder contains the following base templates:
+
+1. **docker-compose.template.xr.yml**: sample docker-compose abstraction template XRd with custom XRd specific settings. Such templates gets rendered into a traditional docker-compose file using the `xr-compose` script in `scripts/`.
+2. **launch-xrd-macvlan.template**: contains a set of example steps that form a template for how to run XRd using macvlan interfaces to enable external data and manageability connectivity. We will discuss macvlan interfaces and their usage with XRd networking in subsequent tutorials.
+
+
+
+
+This was a brief introduction to the publicly available `xrd-tools` repository. This sets us up nicely to dive into the set up of a Host machine that can be used to run XRd Control-Plane and XRd vRouter images. `Setting up the host environment to run XRd` - up next!
+{: .notice--success}
+
+
 
 
 
