@@ -125,11 +125,175 @@ cisco@xrdcisco:~/images/xrd-vrouter$
 
 ```
 
-
-## Verify Signatures for XRd images
-
-
-Each XRd image tar ball contains the fo
+As shown above,each downloaded tarball contains the docker image tarball along with a `.signature` file that carries the cisco signature for the docker image.
 
 
+## Verify Signatures
+
+
+When using XRd, it is imperative to ensure you have an authentic copy of the image. Since the image is delivered as a tarball, the signature is carries in a separate `.signature` file.
+
+To understand how to verify the signature, first let's untar the downloaded tar ball:
+
+
+```
+cisco@xrdcisco:~/images/xrd-control-plane$ tar -xzf xrd-control-plane-container-x64.7.7.1.tgz 
+cisco@xrdcisco:~/images/xrd-control-plane$  tree .
+.
+├── IOS-XR-SW-XRd.crt
+├── cisco_x509_verify_release.py3
+├── cisco_x509_verify_release.py3.README
+├── cisco_x509_verify_release.py3.signature
+├── xrd-control-plane-container-x64.7.7.1.tgz
+├── xrd-control-plane-container-x64.dockerv1.tgz
+└── xrd-control-plane-container-x64.dockerv1.tgz.signature
+
+0 directories, 7 files
+cisco@xrdcisco:~/images/xrd-control-plane$ 
+
+
+``
+
+Open up the file `cisco_x509_verify_release.py3.README` which carries the instruction to verify the signature for the docker tarball:
+
+
+```
+cisco@xrdcisco:~/images/xrd-control-plane$ cat cisco_x509_verify_release.py3.README
+#------------------------------------------------------------------------------
+# cisco_x509_verify_release.py3.README
+#
+# Copyright (c) 2021 by Cisco Systems, Inc.
+# All rights reserved.
+#------------------------------------------------------------------------------
+
+Relevant Content
+================
+The following content is used for signature verification:
+ 1. IOS XRd container image archive
+    - Cisco provided image for which signature is to be verified.
+    - e.g. xrd-x64-7.5.1.dockerv1.tgz
+    - In this README this will be referenced as $IMAGE_NAME
+
+ 2. Corresponding IOS XRd container image archive signature
+    - Signature generated for the image
+    - e.g. xrd-x64-7.5.1.dockerv1.tgz.signature
+    - In this README this will be referenced as $IMAGE_SIGNATURE
+
+ 3. IOS-XR-SW-XRd End-entity certificate
+    - Cisco signed x.509 end-entity certificate containing public key that can be used to
+      verify the signature.
+    - e.g. IOS-XR-SW-XRd.crt
+    - This certificate is chained to Cisco rootCA and SubCA posted on
+      - SubCA: http://www.cisco.com/security/pki/certs/xrcrrsca.cer
+      - rootCA: http://www.cisco.com/security/pki/certs/crrca.cer
+    - In this README this will be referenced as $EE_CERTIFICATE
+
+ 4. Cisco x509 verification script
+    - Signature verification program. After downloading image,
+      its digital signature, and the x.509 certificate, this program can be
+      used to verify the 3-tier x.509 certificate chain and signature. Certificate
+      chain validation is done by verifying the authenticity of end-entity
+      certificate, using Cisco-sourced SubCA and root CA (which the script
+      either reads locally or downloads from Cisco). Then this authenticated
+      end-entity certificate is used to verify the signature.
+    - e.g. cisco_x509_verify_release.py3
+    - In this README this will be referenced as $VERIFICATION_SCRIPT
+
+ 5. README
+    - This file.
+
+=============
+Requirements:
+=============
+1. Python 3.4.0 or later
+2. OpenSSL
+
+=========================================
+How to run signature verification program:
+=========================================
++Example 1 command (Cisco rootCA & subCA not local)
++--------------------------------------------------
+python "$VERIFICATION_SCRIPT" -e "$EE_CERTIFICATE" -i "$IMAGE_NAME" -s "$IMAGE_SIGNATURE" -v smime --container xr --sig_type DER
+
+Example 1 output:
+-----------------
+Retrieving CA certificate from http://www.cisco.com/security/pki/certs/crrca.cer ...
+Successfully retrieved and verified crrca.cer.
+Retrieving SubCA certificate from http://www.cisco.com/security/pki/certs/xrcrrsca.cer ...
+Successfully retrieved and verified xrcrrsca.cer.
+Successfully verified root, subca and end-entity certificate chain.
+Successfully verified the signature of xrd-x64-7.5.1.dockerv1.tgz using IOS-XR-SW-XRd.crt
+
++Example 2 command (local Cisco rootCA & subCA)
++----------------------------------------------
+python "$VERIFICATION_SCRIPT" -e "$EE_CERTIFICATE" -i "$IMAGE_NAME" -s "$IMAGE_SIGNATURE" -v smime --container xr --sig_type DER -c /opt/dg/pki
+
+Example 2 output:
+-----------------
+Retrieving local CA certificate
+Successfully retrieved and verified crrca.cer.
+Retrieving local SubCA certificate
+Successfully retrieved and verified xrcrrsca.cer.
+Successfully verified root, subca and end-entity certificate chain.
+Successfully verified the signature of xrd-x64-7.5.1.dockerv1.tgz using IOS-XR-SW-XRd.crt
+cisco@xrdcisco:~/images/xrd-control-plane$ 
+
+
+```
+
+
+Following the above instructions, let's verify the signature on control-plane docker tarball:
+
+
+```bash
+cisco@xrdcisco:~/images/xrd-control-plane$ 
+cisco@xrdcisco:~/images/xrd-control-plane$ python3 --version
+Python 3.8.10
+cisco@xrdcisco:~/images/xrd-control-plane$ 
+cisco@xrdcisco:~/images/xrd-control-plane$ 
+cisco@xrdcisco:~/images/xrd-control-plane$ export VERIFICATION_SCRIPT="cisco_x509_verify_release.py3"
+cisco@xrdcisco:~/images/xrd-control-plane$ export EE_CERTIFICATE="IOS-XR-SW-XRd.crt"
+cisco@xrdcisco:~/images/xrd-control-plane$ export IMAGE_SIGNATURE=xrd-control-plane-container-x64.dockerv1.tgz.signature
+cisco@xrdcisco:~/images/xrd-control-plane$ export IMAGE_NAME=xrd-control-plane-container-x64.dockerv1.tgz
+cisco@xrdcisco:~/images/xrd-control-plane$ 
+cisco@xrdcisco:~/images/xrd-control-plane$ 
+cisco@xrdcisco:~/images/xrd-control-plane$ python3^C$VERIFICATION_SCRIPT" -e "$EE_CERTIFICATE" -i "$IMAGE_NAME" -s "$IMAGE_SIGNATURE" -v smime --container xr --sig_type DER
+cisco@xrdcisco:~/images/xrd-control-plane$ source ~/proxy_setup.sh 
+cisco@xrdcisco:~/images/xrd-control-plane$ python3 "$VERIFICATION_SCRIPT" -e "$EE_CERTIFICATE" -i "$IMAGE_NAME" -s "$IMAGE_SIGNATURE" -v smime --container xr --sig_type DER
+Retrieving CA certificate from http://www.cisco.com/security/pki/certs/crrca.cer ...
+Successfully retrieved and verified crrca.cer.
+Retrieving SubCA certificate from http://www.cisco.com/security/pki/certs/xrcrrsca.cer ...
+Successfully retrieved and verified xrcrrsca.cer.
+Successfully verified root, subca and end-entity certificate chain.
+Successfully verified the signature of xrd-control-plane-container-x64.dockerv1.tgz using IOS-XR-SW-XRd.crt
+cisco@xrdcisco:~/images/xrd-control-plane$ 
+cisco@xrdcisco:~/images/xrd-control-plane$ 
+
+```
+
+and similarly for the vRouter docker image tarball:
+
+
+```
+cisco@xrdcisco:~/images/xrd-vrouter$ 
+cisco@xrdcisco:~/images/xrd-vrouter$ export VERIFICATION_SCRIPT="cisco_x509_verify_release.py3"
+cisco@xrdcisco:~/images/xrd-vrouter$ export EE_CERTIFICATE="IOS-XR-SW-XRd.crt"
+cisco@xrdcisco:~/images/xrd-vrouter$ export IMAGE_SIGNATURE=xrd-vrouter-container-x64.dockerv1.tgz.signature
+cisco@xrdcisco:~/images/xrd-vrouter$ export IMAGE_NAME=xrd-vrouter-container-x64.dockerv1.tgz
+cisco@xrdcisco:~/images/xrd-vrouter$ 
+cisco@xrdcisco:~/images/xrd-vrouter$ python3 "$VERIFICATION_SCRIPT" -e "$EE_CERTIFICATE" -i "$IMAGE_NAME" -s "$IMAGE_SIGNATURE" -v smime --container xr --sig_type DER
+Retrieving CA certificate from http://www.cisco.com/security/pki/certs/crrca.cer ...
+Successfully retrieved and verified crrca.cer.
+Retrieving SubCA certificate from http://www.cisco.com/security/pki/certs/xrcrrsca.cer ...
+Successfully retrieved and verified xrcrrsca.cer.
+Successfully verified root, subca and end-entity certificate chain.
+Successfully verified the signature of xrd-vrouter-container-x64.dockerv1.tgz using IOS-XR-SW-XRd.crt
+cisco@xrdcisco:~/images/xrd-vrouter$ 
+
+
+```
+
+
+There you have it- we've successfully downloaded the XRd images from CCO and verified their authenticity using the packaged signature files.
+{: .notice--success}
 
