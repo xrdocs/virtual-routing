@@ -134,6 +134,18 @@ We'll use this as the upper limit for the number of routers in each topology we 
 
 
 
+## Configuring the Host Machine
+
+### Host-Check script
+
+In the [xrd-tools tutorial]({{base_path}}/tutorials/2022-08-22-helper-tools-to-get-started-with-xrd), we introduced the "host-check" script that is published to github:  
+
+>[https://github.com/ios-xr/xrd-tools/blob/main/scripts/host-check](https://github.com/ios-xr/xrd-tools/blob/main/scripts/host-check)
+
+
+
+
+
 
 
 
