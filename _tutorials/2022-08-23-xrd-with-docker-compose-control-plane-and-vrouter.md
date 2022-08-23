@@ -22,7 +22,7 @@ position: hidden
 {% include base_path %}
 {% include toc %}
 
-This is Part-5 of the [XRd tutorials Series](). Skip to Part-6 [here]({{base_path}}/tutorials/2022-08-23-setting-up-kubernetes-using-kind-for-xrd). 
+This is Part-5 of the [XRd tutorials Series]({{base_path}}/tags/#xrd-tutorial-series). Skip to Part-6 [here]({{base_path}}/tutorials/2022-08-23-setting-up-kubernetes-using-kind-for-xrd). 
 
 
 
