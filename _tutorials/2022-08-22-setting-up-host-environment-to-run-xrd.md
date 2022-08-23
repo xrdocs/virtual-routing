@@ -496,14 +496,4 @@ And that's it for setting up the host environment. The `host-check` script makes
 {: .notice--success}
 
 
-
-
-
-
-
-
-
-
-
-
 Part-4 of the XRd tutorials Series: [here]({{base_path}}/2022-08-23-xrd-with-docker-control-plane-and-vrouter).
