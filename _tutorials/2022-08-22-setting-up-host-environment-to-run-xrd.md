@@ -283,7 +283,7 @@ For our freshly booted Ubuntu 20.04 Host machine, let's run the `host-check` scr
 
 ### Making Suggested Corrections to the Host Machine
 
-**Note**: The changes beind made in this section are relevant to the distribution (Ubuntu 20.04) selected for the host machine in this example. If you have selected some other distribution, then look for **equivalent** solutions for the distribution you're using by searching online.
+**Note**: The changes being made in this section are relevant to the distribution (Ubuntu 20.04) selected for the host machine in this example. If you have selected some other distribution, then look for **equivalent** solutions for the distribution you're using by searching online.
 {: .notice--danger}
 
 
