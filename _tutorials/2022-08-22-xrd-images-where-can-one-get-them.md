@@ -45,8 +45,10 @@ While XRd vRouter could also satisfy the Control-Plane only use cases, it requir
 
 Both these variants of XRd are available on CCO ([https://software.cisco.com/downloads](https://software.cisco.com/downloads)) as tarballs that contain the corresponding docker image along with a signature file. In the subsequent section, we will see how to verify the signature to make sure you have an authentic XRd tarball from Cisco.
 
-Control Plane image: [https://software.cisco.com/download/home/286331236/type/280805694](https://software.cisco.com/download/home/286331236/type/280805694)
-vRouter image: [https://software.cisco.com/download/home/286331238/type/280805694/](https://software.cisco.com/download/home/286331238/type/280805694/)
 
+Control Plane image: [https://software.cisco.com/download/home/286331236/type/280805694](https://software.cisco.com/download/home/286331236/type/280805694)  
+
+vRouter image: [https://software.cisco.com/download/home/286331238/type/280805694/](https://software.cisco.com/download/home/286331238/type/280805694/)
+{: .notice--success}
 
 ## Download
