@@ -98,10 +98,10 @@ There is a known issue with the kernel version used in RHEL/CentOS kernel 8.3 th
 
 The following physical NICs are supported for interface passthrough to XRd vRouter:
 
-Intel i350 Quad Port 1Gb Adapter
-Intel Dual Port 10 GbE Ethernet X520 Server Adapter
-Intel 4 port 10GE Fortville
-Cisco UCS Virtual Interface Card (VIC) 1225
+* Intel i350 Quad Port 1Gb Adapter
+* Intel Dual Port 10 GbE Ethernet X520 Server Adapter
+* Intel 4 port 10GE Fortville
+* Cisco UCS Virtual Interface Card (VIC) 1225
 
 In addition to this virtual NICs such as e1000 or VMXNET3 are supported albeit with much lower throughput than an interface passthrough.
 
