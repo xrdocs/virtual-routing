@@ -17,7 +17,7 @@ tags:
 excerpt: >-
   Helper scripts and tools to launch Cisco XRd platform in containerized network
   environments.
-position: hidden
+position: top
 ---
 
 {% include base_path %}
