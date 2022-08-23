@@ -94,7 +94,10 @@ There is a known issue with the kernel version used in RHEL/CentOS kernel 8.3 th
 {: .notice--danger}
 
 
-With the above requirements in play, we can 
+
+
+
+With the above requirements in play, in this tutorial, we'll select **Ubuntu 20.04 as the underlying distribution for the host machine.**
 
 
 
