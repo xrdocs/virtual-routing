@@ -94,10 +94,18 @@ There is a known issue with the kernel version used in RHEL/CentOS kernel 8.3 th
 {: .notice--danger}
 
 
+### Supported NICs
+
+The following physical NICs are supported for interface passthrough to XRd:
+
+Intel i350 Quad Port 1Gb Adapter
+Intel Dual Port 10 GbE Ethernet X520 Server Adapter
+Intel 4 port 10GE Fortville
+Cisco UCS Virtual Interface Card (VIC) 1225
 
 
 
-With the above requirements in play, in this tutorial, we'll select **Ubuntu 20.04 as the underlying distribution for the host machine.**
+In this tutorial, we select **Ubuntu 20.04** as the underlying distribution for the host machine.
 
 
 
