@@ -18,6 +18,14 @@ tags:
   - docker
 position: hidden
 ---
-## A New Post
+{% include base_path %}
+{% include toc %}
 
-Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
+This is Part-5 of the [XRd tutorials Series](). Skip to Part-6 [here]({{base_path}}/tutorials/2022-08-23-setting-up-kubernetes-using-kind-for-xrd). 
+
+
+In addition
+
+
+
+Part-6 of the XRd tutorials Series: [here]({{base_path}}/2022-08-23-setting-up-kubernetes-using-kind-for-xrd).
