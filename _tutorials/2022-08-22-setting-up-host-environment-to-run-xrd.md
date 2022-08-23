@@ -128,7 +128,7 @@ The specs for the host machine selected are:
 * 8 CPUs
 * 30GiB RAM
 
-With these resources, (allocating about 5GiB RAM along with 3GiB additional HugePages RAM and minimum 2 CPUs for each XRd vRouter), we should be able to easily handle about 3 XRd vRouters.
+With these resources, (allocating about 5GiB RAM along with 3GiB additional HugePages RAM and minimum 2 CPUs for each XRd vRouter), we should be able to easily handle about 3 XRd vRouters and around 7-8 XRd Control-Plane routers.
 We'll use this as the upper limit for the number of routers in each topology we attempt in subsequent tutorials.
 
 
@@ -263,6 +263,8 @@ For our freshly booted Ubuntu 20.04 Host machine, let's run the `host-check` scr
   ```
 
 ### Making Suggested Corrections to the Host Machine
+
+
 
 
 
