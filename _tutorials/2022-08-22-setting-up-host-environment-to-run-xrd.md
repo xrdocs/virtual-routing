@@ -295,7 +295,20 @@ cisco@xrdcisco:~$
 ```
 
 
-Next, for XRd vRouter to work, enable iommu and Hugepages for the Host machine.
+Next, for XRd vRouter to work, enable iommu and Hugepages for the Host machine. HugePages of size 1GiB must be enabled with a total of 3GiB of available HugePages RAM for **each** XRd vRouter.
+
+To enable iommu appropriately, determine the Host machine type first (intel vs AMD):
+
+```
+cisco@xrdcisco:~$ lscpu | grep "Vendor ID:"
+Vendor ID:                       GenuineIntel
+cisco@xrdcisco:~$ 
+```
+
+**Note**: `GenuineIntel` indicates an intel machine while `AuthenticAMD` will indicate an AMD machine.  
+{: .notice--info}. 
+
+
 
 
 
