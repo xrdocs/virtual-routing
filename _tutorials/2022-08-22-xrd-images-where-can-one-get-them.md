@@ -296,5 +296,5 @@ cisco@xrdcisco:~/images/xrd-vrouter$
 ```
 
 
-There you have it- we've successfully downloaded the XRd images from CCO and verified their authenticity using the packaged signature files.
+There you have it- we've successfully downloaded XRd images from CCO and verified their authenticity using the packaged signature files.
 {: .notice--success}
