@@ -294,7 +294,6 @@ cisco@xrdcisco:~$
 
 ```
 
-
 Next, for XRd vRouter to work, enable iommu and Hugepages for the Host machine. HugePages of size 1GiB must be enabled with a total of 3GiB of available HugePages RAM for **each** XRd vRouter.
 
 To enable iommu appropriately, determine the Host machine type first (intel vs AMD):
@@ -306,7 +305,51 @@ cisco@xrdcisco:~$
 ```
 
 **Note**: `GenuineIntel` indicates an intel machine while `AuthenticAMD` will indicate an AMD machine.  
-{: .notice--info}. 
+{: .notice--info}  
+
+
+<div class="highlighter-rouge">
+<pre class="highlight">
+<code style="white-space: pre;">
+cisco@xrdcisco:~$ cat /etc/default/grub
+# If you change this file, run 'update-grub' afterwards to update
+# /boot/grub/grub.cfg.
+# For full documentation of the options in this file, see:
+#   info -f grub -n 'Simple configuration'
+
+GRUB_DEFAULT=0
+GRUB_TIMEOUT_STYLE=hidden
+GRUB_TIMEOUT=0
+GRUB_DISTRIBUTOR=`lsb_release -i -s 2> /dev/null || echo Debian`
+GRUB_CMDLINE_LINUX_DEFAULT="maybe-ubiquity"
+GRUB_CMDLINE_LINUX=<mark>"intel_iommu=on iommu=pt default_hugepagesz=1G hugepagesz=1G hugepages=9"</mark>
+
+# Uncomment to enable BadRAM filtering, modify to suit your needs
+# This works with Linux (no patch required) and with any kernel that obtains
+# the memory map information from GRUB (GNU Mach, kernel of FreeBSD ...)
+#GRUB_BADRAM="0x01234567,0xfefefefe,0x89abcdef,0xefefefef"
+
+# Uncomment to disable graphical terminal (grub-pc only)
+#GRUB_TERMINAL=console
+
+# The resolution used on graphical terminal
+# note that you can use only modes which your graphic card supports via VBE
+# you can see them in real GRUB with the command `vbeinfo'
+#GRUB_GFXMODE=640x480
+
+# Uncomment if you don't want GRUB to pass "root=UUID=xxx" parameter to Linux
+#GRUB_DISABLE_LINUX_UUID=true
+
+# Uncomment to disable generation of recovery mode menu entries
+#GRUB_DISABLE_RECOVERY="true"
+
+# Uncomment to get a beep at grub start
+#GRUB_INIT_TUNE="480 440 1"
+cisco@xrdcisco:~$ 
+</code>
+</pre>
+</div>
+
 
 
 
