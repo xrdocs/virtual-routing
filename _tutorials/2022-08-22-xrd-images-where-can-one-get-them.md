@@ -40,7 +40,10 @@ XRd has two form factors:
 While XRd vRouter could also satisfy the Control-Plane only use cases, it requires more resources (cpu, memory, Huge Pages additional RAM) and specific enablements (IOMMU enabled host devices such as PCI passthrough or e1000/VMXNET3 interfaces). The control-plane only XRd image is comparitively less resource intensive and easier to deploy in existing containerized deployments.
 </p>
 
-Both these variants of XRd are available on CCO (software.cisco.com) as tarballs that contain the corresponding docker image along with a signature file. In the subsequent section, we will see how to verify the signature to make sure you have an authentic XRd tarball from Cisco.
+
+## Download Images from CCO
+
+Both these variants of XRd are available on CCO ([https://software.cisco.com/downloads](https://software.cisco.com/downloads)) as tarballs that contain the corresponding docker image along with a signature file. In the subsequent section, we will see how to verify the signature to make sure you have an authentic XRd tarball from Cisco.
 
 Control Plane image: [https://software.cisco.com/download/home/286331236/type/280805694](https://software.cisco.com/download/home/286331236/type/280805694)
 vRouter image: [https://software.cisco.com/download/home/286331238/type/280805694/](https://software.cisco.com/download/home/286331238/type/280805694/)
