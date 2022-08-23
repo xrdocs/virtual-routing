@@ -21,7 +21,7 @@ tags:
 {% include base_path %}
 {% include toc %}
 
-This is Part-4 of the [XRd tutorials Series](). Skip to Part-5 [here]({{base_path}}/tutorials/2022-08-23-xrd-with-docker-compose-control-plane-and-vrouter). 
+This is Part-4 of the [XRd tutorials Series]({{base_path}}/tags/#xrd-tutorial-series). Skip to Part-5 [here]({{base_path}}/tutorials/2022-08-23-xrd-with-docker-compose-control-plane-and-vrouter). 
 
 
 
