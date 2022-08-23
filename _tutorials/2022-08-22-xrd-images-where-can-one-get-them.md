@@ -26,7 +26,7 @@ This tutorial will help the user learn how to gain access to the latest official
 In our earlier [blog]({{base_path}}/blogs/), we introduced XRd as the latest Virtual Platform offering for the Service-Provider market with its initial focus on Containerized network deployments in on-prem data centers and the public cloud. The obvious question to start with is: How do I get my hands on the image? Read on to find out.
 
 
-## XRd Images Form Factors
+## XRd Form Factors
 
 XRd has two form factors:
 
