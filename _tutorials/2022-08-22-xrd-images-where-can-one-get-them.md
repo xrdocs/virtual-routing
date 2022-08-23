@@ -85,8 +85,10 @@ Assuming your cisco.com account has the required privileges, you will be prompte
 
 [accept_license_agreement.png({{base_path}}/images/accept_license_agreement.png) 
 
+Once you accept the agreement the download should begin.
 
 
 
+## Verify Signatures for XRd images
 
-## Download
+
