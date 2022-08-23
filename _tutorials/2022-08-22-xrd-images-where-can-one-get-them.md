@@ -88,6 +88,48 @@ Once you accept the agreement the download should begin.
 
 
 
+## Verify contents of the downloaded tar balls
+
+You can check the contents of the downloaded tarballs without opening them using the `tar -t`:
+
+```
+cisco@xrdcisco:~/images$ tree .
+.
+├── xrd-control-plane
+│   └── xrd-control-plane-container-x64.7.7.1.tgz
+└── xrd-vrouter
+    └── xrd-vrouter-container-x64.7.7.1.tgz
+
+2 directories, 2 files
+cisco@xrdcisco:~/images$ cd xrd-control-plane/
+cisco@xrdcisco:~/images/xrd-control-plane$ tar -tzf xrd-control-plane-container-x64.7.7.1.tgz 
+cisco_x509_verify_release.py3
+cisco_x509_verify_release.py3.README
+cisco_x509_verify_release.py3.signature
+IOS-XR-SW-XRd.crt
+xrd-control-plane-container-x64.dockerv1.tgz
+xrd-control-plane-container-x64.dockerv1.tgz.signature
+cisco@xrdcisco:~/images/xrd-control-plane$ 
+cisco@xrdcisco:~/images/xrd-control-plane$ 
+cisco@xrdcisco:~/images/xrd-control-plane$ cd ../xrd-vrouter/
+cisco@xrdcisco:~/images/xrd-vrouter$ 
+cisco@xrdcisco:~/images/xrd-vrouter$ tar -tzf xrd-vrouter-container-x64.7.7.1.tgz 
+cisco_x509_verify_release.py3
+cisco_x509_verify_release.py3.README
+cisco_x509_verify_release.py3.signature
+IOS-XR-SW-XRd.crt
+xrd-vrouter-container-x64.dockerv1.tgz
+xrd-vrouter-container-x64.dockerv1.tgz.signature
+cisco@xrdcisco:~/images/xrd-vrouter$ 
+
+
+```
+
+
 ## Verify Signatures for XRd images
+
+
+Each XRd image tar ball contains the fo
+
 
 
