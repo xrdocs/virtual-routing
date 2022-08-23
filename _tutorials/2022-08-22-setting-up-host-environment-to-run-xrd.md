@@ -26,7 +26,7 @@ tags:
 This is Part-3 of the [XRd tutorials Series]({{base_path}}/tags/#xrd-tutorial-series). Skip to Part-4 [here]({{base_path}}/tutorials/2022-08-23-xrd-with-docker-control-plane-and-vrouter). 
 
 
-## Selecting the Host Machine
+## Introduction
 
 XRd is available today as a docker image tarball to be deployed in containerized network deployments. This implies the host machine on which the container is orchestrated must supply the kernel and the necessary host devices and settings (pci passthrough, HugePages etc.) to allow XRd to run smoothly. The host machine could therefore be a baremetal server or a virtual machine as long as it meets certain minimum requirements. What are these requirements ?
 
@@ -96,7 +96,7 @@ There is a known issue with the kernel version used in RHEL/CentOS kernel 8.3 th
 
 ### Supported NICs
 
-The following physical NICs are supported for interface passthrough to XRd:
+The following physical NICs are supported for interface passthrough to XRd vRouter:
 
 Intel i350 Quad Port 1Gb Adapter
 Intel Dual Port 10 GbE Ethernet X520 Server Adapter
@@ -105,7 +105,10 @@ Cisco UCS Virtual Interface Card (VIC) 1225
 
 
 
+
+## S
 In this tutorial, we select **Ubuntu 20.04** as the underlying distribution for the host machine.
+This 
 
 
 
