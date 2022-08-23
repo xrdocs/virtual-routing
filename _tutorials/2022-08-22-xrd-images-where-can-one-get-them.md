@@ -3,7 +3,7 @@ published: true
 date: '2022-08-22 11:27 +0530'
 title: 'XRd images: Where can one get them?'
 author: Akshat Sharma
-position: hidden
+position: top
 tags:
   - iosxr
   - cisco
