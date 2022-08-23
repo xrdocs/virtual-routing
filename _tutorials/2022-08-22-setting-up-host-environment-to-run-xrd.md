@@ -283,6 +283,8 @@ For our freshly booted Ubuntu 20.04 Host machine, let's run the `host-check` scr
 
 ### Making Suggested Corrections to the Host Machine
 
+**Note**: The changes beind made in this section are relevant to the distribution (Ubuntu 20.04) selected for the host machine in this example. If you have selected some other distribution, then look for **equivalent** solutions for the distribution you're using by searching online.
+{: .notice--danger}
 
 Fix the max_user_watches and max_user_instances settings by adding the following two lines to `/etc/sysctl.conf`:
 
@@ -307,7 +309,7 @@ cisco@xrdcisco:~$
 **Note**: `GenuineIntel` indicates an intel machine while `AuthenticAMD` will indicate an AMD machine.  
 {: .notice--info}  
 
-
+Add `intel_iommu=on iommu=pt` to GRUB_CMDLINE_LINUX in /etc/default/grub for the Ubuntu d
 <div class="highlighter-rouge">
 <pre class="highlight">
 <code style="white-space: pre;">
@@ -349,6 +351,8 @@ cisco@xrdcisco:~$
 </code>
 </pre>
 </div>
+
+
 
 
 
