@@ -118,9 +118,9 @@ The host machine selected is a virtual machine hosted on VMWare ESXI.
 <b>Note</b>: The host machine can be a bare-metal server or any other hypervisor such as VMWare fusion, KVM etc. that support exposing IOMMU to the guest OS.  
 <br/>
 For e.g., in case of VMWare ESXI, select "Expose IOMMU to guest OS" under the CPU section for the virtual machine as shown below:
+</p>
 <p class="notice--primary"> 
 <img src="{{base_path}}/images/iommu_enable_esxi.png" alt="IOMMU enable guest OS ESXI"></p>
-</p>
 
 
 
