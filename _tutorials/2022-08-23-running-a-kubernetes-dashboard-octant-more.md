@@ -18,8 +18,12 @@ tags:
   - virtual
   - xrd
   - xrv9k
+  - xrd-tutorial-series
 position: hidden
 ---
 
 {% include base_path %}
 {% include toc %}
+
+
+This is Part-8 of the [XRd tutorials Series](). If you'd like to start over, go to part-1, [here](2022-08-22-xrd-images-where-can-one-get-them)
