@@ -13,6 +13,7 @@ tags:
   - docker
   - container
   - vm
+  - xrd-tutorial-series
 excerpt: >-
   Helper scripts and tools to launch Cisco XRd platform in containerized network
   environments.
@@ -29,4 +30,4 @@ In addition
 
 
 
-Part-3 of the XRd tutorials Series: [here]({{base_path}}/tutorials/2022-08-22-setting-up-host-environment-to-run-xrd). 
+Part-3 of the XRd tutorials Series: [here]({{base_path}}/tutorials/2022-08-22-setting-up-host-environment-to-run-xrd).
