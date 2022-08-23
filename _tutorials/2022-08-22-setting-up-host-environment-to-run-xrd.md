@@ -143,8 +143,61 @@ In the [xrd-tools tutorial]({{base_path}}/tutorials/2022-08-22-helper-tools-to-g
 >[https://github.com/ios-xr/xrd-tools/blob/main/scripts/host-check](https://github.com/ios-xr/xrd-tools/blob/main/scripts/host-check)
 
 
+This script is an extremely handy tool to determine the suitability of the Host machine for either XRd platform - control-plane or vRouter.
 
 
+For our freshly booted Ubuntu 20.04 Host machine, let's run the `host-check` script to check the initial state of the host before we make corrections as needed:
+
+
+* First, for the XRd Control-Plane platform:
+  
+  ```bash
+  cisco@xrdcisco:~/xrd-tools/scripts$ ./host-check --platform xrd-control-plane
+  ==============================
+  Platform checks - xrd-control-plane 
+  ==============================
+  PASS -- CPU architecture (x86_64)
+  PASS -- CPU cores (8)
+  PASS -- Kernel version (5.4)
+  PASS -- Base kernel modules
+          Installed module(s): dummy, nf_tables
+  PASS -- Cgroups version (v1)
+  PASS -- systemd mounts
+          /sys/fs/cgroup and /sys/fs/cgroup/systemd mounted correctly.
+  FAIL -- Inotify max user instances
+          The kernel parameter fs.inotify.max_user_instances is set to 128 but
+          should be at least 4000 (sufficient for a single instance) - the
+          recommended value is 64000.
+          This can be addressed by adding 'fs.inotify.max_user_instances=64000'
+          to /etc/sysctl.conf or in a dedicated conf file under /etc/sysctl.d/.
+          For a temporary fix, run:
+            sysctl -w fs.inotify.max_user_instances=64000
+  WARN -- Inotify max user watches
+          The kernel parameter fs.inotify.max_user_watches is set to 8192 -
+          this is expected to be sufficient for 2 XRd instance(s).
+          The recommended value is 64000.
+          This can be addressed by adding 'fs.inotify.max_user_watches=64000'
+          to /etc/sysctl.conf or in a dedicated conf file under /etc/sysctl.d/.
+          For a temporary fix, run:
+            sysctl -w fs.inotify.max_user_watches=64000
+  INFO -- Core pattern (core files managed by the host)
+  PASS -- ASLR (full randomization)
+  INFO -- Linux Security Modules
+          AppArmor is enabled. XRd is currently unable to run with the
+          default docker profile, but can be run with
+          '--security-opt apparmor=unconfined' or equivalent.
+  PASS -- RAM
+          Available RAM is 28.7 GiB.
+          This is estimated to be sufficient for 14 XRd instance(s), although memory
+          usage depends on the running configuration.
+          Note that any swap that may be available is not included.
+
+  ==================================================================  
+  !! Host NOT set up correctly for xrd-control-plane !!
+  ==================================================================
+  cisco@xrdcisco:~/xrd-tools/scripts$ 
+  
+  ```
 
 
 
