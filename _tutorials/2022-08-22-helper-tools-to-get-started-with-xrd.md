@@ -40,7 +40,7 @@ A set of scripts, samples and templates are published to Github here:
 We will utilize these tools throughout the XRd Tutorials Series as we take our first steps with XRd.
 
 
-## Taking Stock of XRd-Tools
+## Taking Stock of the XRd-Tools repository
 
 Let's clone the git repo:
 
@@ -114,7 +114,33 @@ cisco@xrdcisco:~$
 
 ```
 
+The `scripts/` and `samples/` directories are of particular interest to an end user as they help in setting up the host environment and abstracting out the various knobs required in docker-compose files to spin up working XRd environments.
 
+
+
+
+
+## System Dependencies
+
+XRd is only able to run on Linux, therefore the scripts provided here are also targeting Linux.
+
+The scripts are implemented in bash and python3, which must therefore be found on PATH. All active versions of python3 are supported.
+
+
+The `requirements.txt` file can be used to install the entire set of dependencies required for basic xrd-tools scripts as well as for the py-test scripts to succeed.
+
+However, to enable the use of the scripts in the `scripts/` folder, we must ensure that 
+docker-compose (v1) is available in PATH and the PyYAML python package is installed (e.g. in an active virtual environment).
+
+
+## Exploring the Scripts
+
+We will utilize the following scripts and discuss their nuances in detail in subsequent parts of the [XRd Tutorial Series]({{base_path}}/tags/#xrd-tutorial-series) usage of the scripts by passing --help.
+
+host-check - Check the host is set up correctly for running XRd containers.
+launch-xrd - Launch a single XRd container, or use --dry-run to see the args required.
+xr-compose - Launch a topology of XRd containers (wraps docker-compose).
+apply-bugfixes - Create a new XRd image with bugfixes installed on top of a base image.
 
 
 
