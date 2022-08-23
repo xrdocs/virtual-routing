@@ -87,7 +87,7 @@ Host distributions which have been tested and are supported for use with XRd are
 * CentOS 8.2
 
 **Note**: At times there can be incompatibilities with the default LSM policies (e.g. SELinux under RedHat), and these may need to be disabled to get going
-{: .notice--warning}
+{: .notice--info}
 
 DO NOT USE RHEL/CENTOS 8.3
 There is a known issue with the kernel version used in RHEL/CentOS kernel 8.3 that has been acknowledged by RedHat and fixed in the kernel used for 8.4. Unfortunately, it is not expected that the fix will be backported to 8.3, so this version must be avoided for running all XRd platforms.
