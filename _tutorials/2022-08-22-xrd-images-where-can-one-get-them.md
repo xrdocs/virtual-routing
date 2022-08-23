@@ -97,7 +97,9 @@ Once you accept the agreement the download should begin.
 
 You can check the contents of the downloaded tarballs without opening them using the `tar -t`:
 
-```
+<div class="highlighter-rouge">
+<pre class="highlight">
+<code style="white-space: pre;">
 cisco@xrdcisco:~/images$ tree .
 .
 ├── xrd-control-plane
@@ -106,29 +108,31 @@ cisco@xrdcisco:~/images$ tree .
     └── xrd-vrouter-container-x64.7.7.1.tgz
 
 2 directories, 2 files
-cisco@xrdcisco:~/images$ cd xrd-control-plane/
-cisco@xrdcisco:~/images/xrd-control-plane$ tar -tzf xrd-control-plane-container-x64.7.7.1.tgz 
+cisco@xrdcisco:~/images$ <mark>cd xrd-control-plane/</mark>
+cisco@xrdcisco:~/images/xrd-control-plane$<mark> tar -tzf xrd-control-plane-container-x64.7.7.1.tgz 
 cisco_x509_verify_release.py3
 cisco_x509_verify_release.py3.README
 cisco_x509_verify_release.py3.signature
 IOS-XR-SW-XRd.crt
 xrd-control-plane-container-x64.dockerv1.tgz
-xrd-control-plane-container-x64.dockerv1.tgz.signature
+xrd-control-plane-container-x64.dockerv1.tgz.signature</mark>
 cisco@xrdcisco:~/images/xrd-control-plane$ 
 cisco@xrdcisco:~/images/xrd-control-plane$ 
-cisco@xrdcisco:~/images/xrd-control-plane$ cd ../xrd-vrouter/
+cisco@xrdcisco:~/images/xrd-control-plane$ <mark>cd ../xrd-vrouter/</mark>
 cisco@xrdcisco:~/images/xrd-vrouter$ 
-cisco@xrdcisco:~/images/xrd-vrouter$ tar -tzf xrd-vrouter-container-x64.7.7.1.tgz 
+cisco@xrdcisco:~/images/xrd-vrouter$<mark> tar -tzf xrd-vrouter-container-x64.7.7.1.tgz 
 cisco_x509_verify_release.py3
 cisco_x509_verify_release.py3.README
 cisco_x509_verify_release.py3.signature
 IOS-XR-SW-XRd.crt
 xrd-vrouter-container-x64.dockerv1.tgz
-xrd-vrouter-container-x64.dockerv1.tgz.signature
+xrd-vrouter-container-x64.dockerv1.tgz.signature</mark>
 cisco@xrdcisco:~/images/xrd-vrouter$ 
 
+</code>
+</pre>
+</div>
 
-```
 
 As shown above,each downloaded tarball contains the docker image tarball along with a `.signature` file that carries the cisco signature for the docker image.
 
@@ -247,7 +251,7 @@ cisco@xrdcisco:~/images/xrd-control-plane$
 ```
 
 
-Following the above instructions, let's verify the signature on control-plane docker tarball:
+Following the above instructions, let's verify the signature on the XRd control-plane docker tarball:
 
 
 ```bash
