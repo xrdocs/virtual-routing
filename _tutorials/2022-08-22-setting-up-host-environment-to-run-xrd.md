@@ -146,6 +146,9 @@ In the [xrd-tools tutorial]({{base_path}}/tutorials/2022-08-22-helper-tools-to-g
 This script is an extremely handy tool to determine the suitability of the Host machine for either XRd platform - control-plane or vRouter.
 
 
+
+### Running the Host-Check Script
+
 For our freshly booted Ubuntu 20.04 Host machine, let's run the `host-check` script to check the initial state of the host before we make corrections as needed:
 
 
