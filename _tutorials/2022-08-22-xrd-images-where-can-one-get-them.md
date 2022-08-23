@@ -64,7 +64,7 @@ You will need to login with a valid cisco account that has privileges to downloa
 
 For the Control Plane image, browse to [https://software.cisco.com/download/home/286331236/type/280805694](https://software.cisco.com/download/home/286331236/type/280805694) 
 
-![cco_url.png]({{base_path}}/images/cco_url.png){: .align-center}
+![cco_url.png]({{base_path}}/images/cco_url.png){: .align-center}{: .notice--primary}
 
 
 
@@ -72,22 +72,22 @@ As of August 2022, the lstest XRd release is 7.7.1.
 
 Click on the Download link next to the .tgz artifact:
 
-![cco_url_download.png]({{base_path}}/images/cco_url_download.png){: .align-center}
+![cco_url_download.png]({{base_path}}/images/cco_url_download.png){: .align-center}{: .notice--primary}
 
 
 At this stage you will be prompted to login with a cisco.com account with a valid service account associated:
 
-![login_service_contract_prompt.png]({{base_path}}/images/login_service_contract_prompt.png){: .align-center}  
+![login_service_contract_prompt.png]({{base_path}}/images/login_service_contract_prompt.png){: .align-center}{: .notice--primary}
 
 Click on Login and go through the typical Cisco SSO login flow:
 
 
-![cco_sso_login.png]({{site.baseurl}}/images/cco_sso_login.png){: .align-center}
+![cco_sso_login.png]({{site.baseurl}}/images/cco_sso_login.png){: .align-center}{: .notice--primary}
 
 
 Assuming your cisco.com account has the required privileges, you will be prompted to Accept the License agreement associated with the image:
 
-![accept_license_agreement.png]({{base_path}}/images/accept_license_agreement.png){: .align-center}
+![accept_license_agreement.png]({{base_path}}/images/accept_license_agreement.png){: .align-center}{: .notice--primary}
 
 Once you accept the agreement the download should begin.
 
