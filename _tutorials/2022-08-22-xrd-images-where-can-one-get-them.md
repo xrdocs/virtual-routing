@@ -83,7 +83,7 @@ Click on Login and go through the typical Cisco SSO login flow:
 
 Assuming your cisco.com account has the required privileges, you will be prompted to Accept the License agreement associated with the image:
 
-({{base_path}}/images/login_service_contract_prompt.png) 
+[accept_license_agreement.png({{base_path}}/images/accept_license_agreement.png) 
 
 
 
