@@ -16,6 +16,7 @@ tags:
   - vm
   - kubernetes
   - docker
+  - xrd-tutorial-series
 position: hidden
 ---
 {% include base_path %}
@@ -24,7 +25,7 @@ position: hidden
 This is Part-5 of the [XRd tutorials Series](). Skip to Part-6 [here]({{base_path}}/tutorials/2022-08-23-setting-up-kubernetes-using-kind-for-xrd). 
 
 
-In addition
+
 
 
 
