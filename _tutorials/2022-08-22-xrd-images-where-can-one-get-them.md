@@ -57,6 +57,15 @@ You will need to login with a valid cisco account that has privileges to downloa
 {: .notice--danger}
 
 
+### Browse to the CCO Download URL
+
+For the Control Plane image, browse to [https://software.cisco.com/download/home/286331236/type/280805694](https://software.cisco.com/download/home/286331236/type/280805694) 
+
+![cco_url.png]({{base_path}}/images/cco_url.png)
+
+
+
+
 
 
 
