@@ -262,6 +262,9 @@ For our freshly booted Ubuntu 20.04 Host machine, let's run the `host-check` scr
 
   ```
 
+### Making Suggested Corrections to the Host Machine
+
+
 
 
 
