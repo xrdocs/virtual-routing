@@ -54,7 +54,9 @@ Both these variants of XRd are available on CCO ([https://software.cisco.com/dow
 
 
 You will need to login with a valid cisco account that has privileges to download Cisco software images. If your Cisco account does not have the required privileges to download these images, please contact your Cisco Sales Representative.
-{: .notice--warning}
+{: .notice--danger}
+
+
 
 
 
