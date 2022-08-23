@@ -309,11 +309,16 @@ cisco@xrdcisco:~$
 **Note**: `GenuineIntel` indicates an intel machine while `AuthenticAMD` will indicate an AMD machine.  
 {: .notice--info}  
 
-Add `intel_iommu=on iommu=pt` to GRUB_CMDLINE_LINUX in /etc/default/grub for the Ubuntu d
+Add `intel_iommu=on iommu=pt` to GRUB_CMDLINE_LINUX in /etc/default/grub (relevant to the Ubuntu distribution in use here) to enable IOMMU for any PCI passthrough interfaces we would use later.  
+
+Secondly, to set a total HugePage allocation of 9GiB (3GiB per XRd vRouter with a max of 3 XRd vRouters that we're looking to support here), add `default_hugepagesz=1G hugepagesz=1G hugepages=9` to GRUB_CMDLINE_LINUX in /etc/default/grub as well.
+
+These changes are highlighted below
+
 <div class="highlighter-rouge">
 <pre class="highlight">
 <code style="white-space: pre;">
-cisco@xrdcisco:~$ cat /etc/default/grub
+cisco@xrdcisco:~$ <mark>cat /etc/default/grub</mark>
 # If you change this file, run 'update-grub' afterwards to update
 # /boot/grub/grub.cfg.
 # For full documentation of the options in this file, see:
