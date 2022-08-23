@@ -90,15 +90,6 @@ Further, each XRd vRouter instance running on the host must have the following r
 * 2000 inotify user instances and watches
 
 
-
-
-s (see the User Interface page for more details).
-
-
-
-
-
-
 ### Docker Version
 
 Docker version 18+ is required, along with permissions to run Docker containers
