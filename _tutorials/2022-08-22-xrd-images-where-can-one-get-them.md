@@ -154,7 +154,7 @@ cisco@xrdcisco:~/images/xrd-control-plane$  tree .
 cisco@xrdcisco:~/images/xrd-control-plane$ 
 
 
-``
+```
 
 Open up the file `cisco_x509_verify_release.py3.README` which carries the instruction to verify the signature for the docker tarball:
 
