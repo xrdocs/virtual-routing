@@ -63,14 +63,39 @@ For XRd vRouter, the minimum requirements for the host entail:
   * dummy
   * nf_tables
   * vfio-pci or igb_uio
+  The host must have installed and enabled the vfio-pci and/or igb_uio kernel module(s). When 
+  using vfio-pci it is strongly recommended to use IOMMU to allow safe pass-through of PCI 
+  devices.
+  Additionally, the user must ensure /dev/vfio is mounted in the XRd container.
+
 * Linux cgroups version 1 (unified hierarchy cgroups not yet supported)
+* Security Modules: XRd vRouter does not currently support enforcing security modules such as 
+  AppArmor or SELinux and this must either be disabled on the host or when starting the container.
 
 Further, each XRd vRouter instance running on the host must have the following resources allocated to it:
 
-* 2 isolated* CPUs
+* 2 isolated CPUs
+  There must be at least 2 CPUs available to XRd vRouter. By default XRd vRouter uses a single CPU 
+  core for the dataplane packet thread (the last CPU it is allowed to use). In order for the 
+  dataplane to perform properly it needs dedicated use of this physical CPU core. It is up to the 
+  user to ensure other workloads are not using this CPU.  
+    
+  This is especially important when launching multiple XRd vRouter instances, as by default they 
+  will all use the same CPU. In this scenario one can use the runtime to control the cpuset each 
+  container is allowed to use (e.g. --cpuset-cpus with docker) and/or the XRd environment variable  
 * 5GiB RAM
-* 3GiB additional hugepage RAM
+* 3GiB additional hugepage RAM  
+  Hugepage support must be enabled, with 2MiB or 1GiB hugepage size supported. There must be 3GiB 
+  of available hugepages per XRd vRouter instance.
 * 2000 inotify user instances and watches
+
+
+
+
+s (see the User Interface page for more details).
+
+
+
 
 
 
@@ -279,7 +304,8 @@ cisco@xrdcisco:~$
 ```
 
 
-Next, for XRd vRouter to work, enable iommu and Hugepages
+Next, for XRd vRouter to work, enable iommu and Hugepages for the Host machine.
+
 
 
 
