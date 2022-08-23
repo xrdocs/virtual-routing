@@ -52,4 +52,7 @@ Both these variants of XRd are available on CCO ([https://software.cisco.com/dow
 **XRd vRouter image on CCO:** [https://software.cisco.com/download/home/286331238/type/280805694/](https://software.cisco.com/download/home/286331238/type/280805694/)
 {: .notice--success}
 
+
+You will need to login with a valid cisco account that has privileges to download CCO software
+
 ## Download
