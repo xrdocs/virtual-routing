@@ -265,9 +265,6 @@ cisco@xrdcisco:~/images/xrd-control-plane$ export EE_CERTIFICATE="IOS-XR-SW-XRd.
 cisco@xrdcisco:~/images/xrd-control-plane$ export IMAGE_SIGNATURE=xrd-control-plane-container-x64.dockerv1.tgz.signature
 cisco@xrdcisco:~/images/xrd-control-plane$ export IMAGE_NAME=xrd-control-plane-container-x64.dockerv1.tgz
 cisco@xrdcisco:~/images/xrd-control-plane$ 
-cisco@xrdcisco:~/images/xrd-control-plane$ 
-cisco@xrdcisco:~/images/xrd-control-plane$ python3^C$VERIFICATION_SCRIPT" -e "$EE_CERTIFICATE" -i "$IMAGE_NAME" -s "$IMAGE_SIGNATURE" -v smime --container xr --sig_type DER
-cisco@xrdcisco:~/images/xrd-control-plane$ source ~/proxy_setup.sh 
 cisco@xrdcisco:~/images/xrd-control-plane$ python3 "$VERIFICATION_SCRIPT" -e "$EE_CERTIFICATE" -i "$IMAGE_NAME" -s "$IMAGE_SIGNATURE" -v smime --container xr --sig_type DER
 Retrieving CA certificate from http://www.cisco.com/security/pki/certs/crrca.cer ...
 Successfully retrieved and verified crrca.cer.
