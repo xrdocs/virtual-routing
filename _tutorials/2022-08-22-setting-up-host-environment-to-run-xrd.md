@@ -289,6 +289,9 @@ For our freshly booted Ubuntu 20.04 Host machine, let's run the `host-check` scr
 
 Based on the output of the `host-check` script run for each platform type above, we will focus on all the `FAIL` and `WARN` scenarios and correct them as suggested.  
 
+
+#### Inotify max user watches and Inotify max user instances settings
+
 Fix the max_user_watches and max_user_instances settings by adding the following two lines to `/etc/sysctl.conf`:
 
 ```bash
