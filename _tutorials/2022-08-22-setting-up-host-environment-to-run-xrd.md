@@ -369,7 +369,10 @@ Found linux image: /boot/vmlinuz-5.4.0-81-generic
 Found initrd image: /boot/initrd.img-5.4.0-81-generic
 done
 cisco@xrdcisco:~/xrd-tools/scripts$ 
-```
+```   
+
+
+
 
 
 
