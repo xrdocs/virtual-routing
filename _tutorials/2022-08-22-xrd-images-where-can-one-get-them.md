@@ -68,17 +68,20 @@ As of August 2022, the lstest XRd release is 7.7.1.
 
 Click on the Download link next to the .tgz artifact:
 
-![cco_url_download.png]({{site.baseurl}}/images/cco_url_download.png)
+![cco_url_download.png]({{base_path}}/images/cco_url_download.png)
 
 
 At this stage you will be prompted to login with a cisco.com account with a valid service account associated:
 
-![login_service_contract_prompt.png]({{site.baseurl}}/images/login_service_contract_prompt.png)  
+![login_service_contract_prompt.png]({{base_path}}/images/login_service_contract_prompt.png)  
 
 Click on Login and go through the typical Cisco SSO login flow:
 
 
+![cco_sso_login.png]({{site.baseurl}}/images/cco_sso_login.png)
 
+
+({{base_path}}/images/login_service_contract_prompt.png) 
 
 
 
