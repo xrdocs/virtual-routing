@@ -1,7 +1,7 @@
 ---
 published: true
 date: '2022-08-22 11:27 +0530'
-title: 'Part-1XRd images: Where can one get them?'
+title: 'XRd images: Where can one get them?'
 author: Akshat Sharma
 position: hidden
 tags:
