@@ -75,6 +75,8 @@ At this stage you will be prompted to login with a cisco.com account with a vali
 
 ![login_service_contract_prompt.png]({{site.baseurl}}/images/login_service_contract_prompt.png)  
 
+Click on Login and go through the typical Cisco SSO login flow:
+
 
 
 
