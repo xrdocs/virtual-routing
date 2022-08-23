@@ -384,8 +384,14 @@ cisco@xrdcisco:~/xrd-tools/scripts$
 #### Restart the Host Machine
 
 **Very Important**: Make sure you restart the host machine post any grub config changes to make sure they take effect.  
-{: .notice--warning}
+{: .notice--warning}  
 
+```
+cisco@xrdcisco:~/xrd-tools/scripts$ sudo shutdown -r now
+Connection to x.x.x.x closed by remote host.
+Connection to x.x.x.x closed.
+
+```
 
 
 
