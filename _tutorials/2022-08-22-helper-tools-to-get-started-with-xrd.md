@@ -167,7 +167,7 @@ The `templates/` folder contains the following base templates:
 
 
 
-This was a brief introduction to the publicly available `xrd-tools` repository. This sets us up nicely to dive into the set up of a Host machine that can be used to run XRd Control-Plane and XRd vRouter images. `Setting up the host environment to run XRd` - up next!
+This was a brief introduction to the publicly available `xrd-tools` repository. This sets us up nicely to dive into the creation of a Host machine that can be used to run XRd Control-Plane and XRd vRouter images. `Setting up the host environment to run XRd` - up next!
 {: .notice--success}
 
 
