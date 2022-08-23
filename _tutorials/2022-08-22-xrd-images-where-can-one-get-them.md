@@ -57,6 +57,8 @@ You will need to login with a valid cisco account that has privileges to downloa
 {: .notice--danger}
 
 
+## Sample Download Process for the Control-Plane XRd image
+
 For the Control Plane image, browse to [https://software.cisco.com/download/home/286331236/type/280805694](https://software.cisco.com/download/home/286331236/type/280805694) 
 
 ![cco_url.png]({{base_path}}/images/cco_url.png)
@@ -82,7 +84,7 @@ Click on Login and go through the typical Cisco SSO login flow:
 
 Assuming your cisco.com account has the required privileges, you will be prompted to Accept the License agreement associated with the image:
 
-[accept_license_agreement.png({{base_path}}/images/accept_license_agreement.png) 
+![accept_license_agreement.png({{base_path}}/images/accept_license_agreement.png) 
 
 Once you accept the agreement the download should begin.
 
@@ -296,4 +298,3 @@ cisco@xrdcisco:~/images/xrd-vrouter$
 
 There you have it- we've successfully downloaded the XRd images from CCO and verified their authenticity using the packaged signature files.
 {: .notice--success}
-
