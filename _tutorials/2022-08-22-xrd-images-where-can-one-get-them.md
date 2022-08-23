@@ -20,12 +20,13 @@ excerpt: Learn how to download the latest XRd images and set them up for further
 {% include base_path %}
 {% include toc %}
 
+## Introduction
 This tutorial will help the user learn how to gain access to the latest official XRd images from Cisco and set them up for further use with docker, kubernetes and related tools. In subsequent tutorials, we will dive deeper into the environments and tools needed to run XRd locally and discuss production deployment strategies and techniques.
 
 In our earlier [blog]({{base_path}}/blogs/), we introduced XRd as the latest Virtual Platform offering for the Service-Provider market with its initial focus on Containerized network deployments in on-prem data centers and the public cloud. The obvious question to start with is: How do I get my hands on the image? Read on to find out.
 
 
-## XRd Images on CCO
+## XRd Images Form Factors
 
 XRd has two form factors:
 
@@ -33,9 +34,11 @@ XRd has two form factors:
 
 2) XRd vRouter: This version of XRd contains a fully-featured and performant software dataplane in addition to the fully-functional XR control-plane, and may be suitable for deployments that require data traffic forwarding such as vPE (virtual Provider Edge), vCSR (virtual Cell Site Router) and Cloud Router (Public Cloud based vRouter).
 
-
-The choice between the two variants is hinged on whether a user needs a software data-plane and associated features with traffic-forwarding capabilities or not. While XRd vRouter could also satisfy the Control-Plane only use cases, it requires more resources (cpu, memory, Huge Pages additional RAM) and specific enablements (IOMMU enabled host devices such as PCI passthrough or e1000/VMXNET3 interfaces). The control-plane only XRd image is comparitively less resource intensive and easier to deploy in existing containerized deployments.
-{: .notice--info}
+<p class="notice--info">
+The choice between the two variants is hinged on whether a user needs a software data-plane and associated features with traffic-forwarding capabilities or not. 
+<br\>
+While XRd vRouter could also satisfy the Control-Plane only use cases, it requires more resources (cpu, memory, Huge Pages additional RAM) and specific enablements (IOMMU enabled host devices such as PCI passthrough or e1000/VMXNET3 interfaces). The control-plane only XRd image is comparitively less resource intensive and easier to deploy in existing containerized deployments.
+<\p>
 
 Both these variants of XRd are available on CCO (software.cisco.com) as tarballs that contain the corresponding docker image along with a signature file. In the subsequent section, we will see how to verify the signature to make sure you have an authentic XRd tarball from Cisco.
 
