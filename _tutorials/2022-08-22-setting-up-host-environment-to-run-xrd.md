@@ -122,9 +122,18 @@ For e.g., in case of VMWare ESXI, select "Expose IOMMU to guest OS" under the CP
 <img src="{{base_path}}/images/iommu_enable_esxi.png" alt="IOMMU enable guest OS ESXI"></p>
 </p>
 
+
+
 The specs for the host machine selected are:
 * 8 CPUs
 * 30GiB RAM
+
+With these resources, (allocating about 5GiB RAM along with 3GiB additional HugePages RAM and minimum 2 CPUs for each XRd vRouter), we should be able to easily handle about 3 XRd vRouters.
+We'll use this as the upper limit for the number of routers in each topology we attempt in subsequent tutorials.
+
+
+
+
 
 
 
