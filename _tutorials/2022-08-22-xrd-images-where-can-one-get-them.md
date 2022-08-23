@@ -64,6 +64,16 @@ For the Control Plane image, browse to [https://software.cisco.com/download/home
 ![cco_url.png]({{base_path}}/images/cco_url.png)
 
 
+As of August 2022, the lstest XRd release is 7.7.1.
+
+Click on the Download link next to the .tgz artifact:
+
+![cco_url_download.png]({{site.baseurl}}/images/cco_url_download.png)
+
+
+At this stage you will be prompted to login with a cisco.com account with a valid service account associated:
+
+
 
 
 
