@@ -304,6 +304,7 @@ cisco@xrdcisco:~$
 
 ```
 
+#### IOMMU and HugePages Settings
 
 Next, for XRd vRouter to work, enable iommu and Hugepages for the Host machine. HugePages of size 1GiB must be enabled with a total of 3GiB of available HugePages RAM for **each** XRd vRouter.
 
