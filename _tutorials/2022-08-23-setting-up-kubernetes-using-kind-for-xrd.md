@@ -17,6 +17,7 @@ tags:
   - vm
   - kubernetes
   - docker
+  - xrd-tutorial-series
 position: hidden
 ---
 
@@ -27,7 +28,7 @@ position: hidden
 This is Part-6 of the [XRd tutorials Series](). Skip to Part-7 [here]({{base_path}}/tutorials/2022-08-23-xrd-with-helm-charts-on-k8s-control-plane-and-vrouter). 
 
 
-In addition
+
 
 
 
