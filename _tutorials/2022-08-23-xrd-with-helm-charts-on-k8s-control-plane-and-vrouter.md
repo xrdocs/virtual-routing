@@ -26,7 +26,7 @@ position: hidden
 {% include toc %}
 
 
-This is Part-7 of the [XRd tutorials Series](). Skip to Part-8 [here]({{base_path}}/tutorials/2022-08-23-running-a-kubernetes-dashboard-octant-more). 
+This is Part-7 of the [XRd tutorials Series]({{base_path}}/tags/#xrd-tutorial-series). Skip to Part-8 [here]({{base_path}}/tutorials/2022-08-23-running-a-kubernetes-dashboard-octant-more). 
 
 
 Part-8 of the XRd tutorials Series: [here]({{base_path}}/2022-08-23-running-a-kubernetes-dashboard-octant-more).
