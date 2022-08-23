@@ -492,6 +492,9 @@ cisco@xrdcisco:~/xrd-tools/scripts$
 
 
 
+And that's it for setting up the host environment. The `host-check` script makes it super-easy to keep track of the settings to take care of when running XRd Control-Plane or vRouter variants. Next up - let's try spinning up XRd using docker!  
+{: .notice--success}
+
 
 
 
