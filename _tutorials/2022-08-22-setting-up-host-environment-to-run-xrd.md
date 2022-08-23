@@ -199,6 +199,65 @@ For our freshly booted Ubuntu 20.04 Host machine, let's run the `host-check` scr
   
   ```
 
+* Secondly, for the XRd vRouter Platform:
+
+  ```bash
+  cisco@xrdcisco:~/xrd-tools/scripts$ ./host-check --platform xrd-vrouter
+  ==============================
+  Platform checks - xrd-vrouter
+  ==============================
+  PASS -- CPU architecture (x86_64)  
+  PASS -- CPU cores (8)
+  PASS -- Kernel version (5.4)
+  PASS -- Base kernel modules
+          Installed module(s): dummy, nf_tables
+  PASS -- Cgroups version (v1)
+  PASS -- systemd mounts
+          /sys/fs/cgroup and /sys/fs/cgroup/systemd mounted correctly.
+  FAIL -- Inotify max user instances
+          The kernel parameter fs.inotify.max_user_instances is set to 128 but
+          should be at least 4000 (sufficient for a single instance) - the
+          recommended value is 64000.
+          This can be addressed by adding 'fs.inotify.max_user_instances=64000'
+          to /etc/sysctl.conf or in a dedicated conf file under /etc/sysctl.d/.
+          For a temporary fix, run:
+            sysctl -w fs.inotify.max_user_instances=64000
+  WARN -- Inotify max user watches
+          The kernel parameter fs.inotify.max_user_watches is set to 8192 -
+          this is expected to be sufficient for 2 XRd instance(s).
+          The recommended value is 64000.
+          This can be addressed by adding 'fs.inotify.max_user_watches=64000'
+          to /etc/sysctl.conf or in a dedicated conf file under /etc/sysctl.d/.
+          For a temporary fix, run:
+            sysctl -w fs.inotify.max_user_watches=64000
+  INFO -- Core pattern (core files managed by the host)
+  PASS -- ASLR (full randomization)
+  INFO -- Linux Security Modules
+          AppArmor is enabled. XRd is currently unable to run with the
+          default docker profile, but can be run with
+          '--security-opt apparmor=unconfined' or equivalent.
+  PASS -- CPU extensions (sse4_1, sse4_2, ssse3)
+  PASS -- RAM
+          Available RAM is 28.7 GiB.
+          This is estimated to be sufficient for 5 XRd instance(s), although memory
+          usage depends on the running configuration.
+          Note that any swap that may be available is not included.
+  FAIL -- Hugepages
+          Hugepages are not enabled. These are required for XRd to function correctly.
+          To enable hugepages, see the instructions at:
+          https://www.kernel.org/doc/Documentation/vm/hugetlbpage.txt.
+  PASS -- Interface kernel driver (vfio-pci loaded)
+  FAIL -- IOMMU
+          The kernel module vfio-pci cannot be used, as IOMMU is not enabled.
+          IOMMU is recommended for security when using the vfio-pci kernel driver.
+  PASS -- Shared memory pages max size (17179869184.0 GiB)
+  
+  ==================================================================
+  !! Host NOT set up correctly for xrd-vrouter !!
+  ==================================================================
+  cisco@xrdcisco:~/xrd-tools/scripts$ 
+
+  ```
 
 
 
