@@ -219,7 +219,8 @@ The AWS private interface endpoint must be deployed either manually or using AWS
 
 #### Configuring IAM roles
 
-The second pre-requisite for the HA app is to have the ability to create temporary credentials during its operation. AWS allows applications running on EC2 instances to do this by requesting 
+The second pre-requisite for the HA app is to have the ability to create temporary credentials during its lifecycle without having to package user AWS credentials in each onbox container.  
+
 
 ## Try out the HA App!
 
