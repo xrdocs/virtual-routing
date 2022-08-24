@@ -37,6 +37,8 @@ However, there may be several situations when it might be required to build your
 > [https://github.com/akshshar/xrv9k-amibuilder](https://github.com/akshshar/xrv9k-amibuilder)  
 
 
+The AMI builder can be run from your laptop or any client machine with minimal dependencies - only docker must be installed. The actual build takes place on AWS - a working AWS account with Access+Secret key for automated workflows is therefore required.  
+
 **Important**: The AMIs built using this tool (and not obtained through the Marketplace) do not come with Cisco support.
 For any support expectations for XRv9000 on AWS, always use official AMIs released in the AWS Marketplace: [https://aws.amazon.com/marketplace/pp/prodview-ygifeqmzmkqja](https://aws.amazon.com/marketplace/pp/prodview-ygifeqmzmkqja).
 {: .notice-warning}
