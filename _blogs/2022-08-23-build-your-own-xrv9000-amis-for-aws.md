@@ -230,9 +230,10 @@ Make sure `xr_version` and `xrv9k_iso_name` are properly updated to match the ve
 Also, based on the OS you use for the client machine, you may need to modify the `ssh_key_public` and `ssh_key_private` variables to correctly reflect the path to the key pair files you copied to the `ssh/` directory earlier.
 
 **Note**: All regions and availability zones of AWS do not support all types of instances. As noted in the variables file, we use two types of temporary instances during the build process: `m5zn.metal` and `m4.large`. These are currently supported in the us-west-2 region and us-west-2a availability zone as specified in the default variables.tf file. If you intend to modify the region/az settings, make sure the required instance types are supported there.  
-{: .notice--info}. 
+{: .notice--info}.   
 
-```
+
+```bash
 aks::~/xrv9k-amibuilder$cat variables.tf 
 variable "xr_version" {
   default = "662"
@@ -286,7 +287,7 @@ variable "s3_iso_bucket" {
 The logs thrown on stdout by Terraform are usually good enough to see what's happening with the build process.
 But if you'd like to enable verbose debugging then, set the DEBUG environment variable to a non-zero value before initiating the build:
 
-```
+```bash
 export DEBUG=1
 
 ```
@@ -294,7 +295,7 @@ export DEBUG=1
 
 Set DEBUG to 0 to disable debugs:
 
-```
+```bash
 export DEBUG=0
 
 ```
@@ -303,7 +304,7 @@ export DEBUG=0
 
 Once you have taken care of the requirements and steps listed below, run the builder code using the `amibuilder` executable, as shown below:
 
-```
+```bash
 aks::~/xrv9k-amibuilder$./amibuilder 
 ####################################################
 Initializing the build process ...
