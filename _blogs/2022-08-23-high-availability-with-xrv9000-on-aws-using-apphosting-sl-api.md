@@ -138,7 +138,7 @@ As shown below, the HA app is orchestrated on each router (Active and Standby) a
 ![2_router_ha_app_same_Az.png]({{base_path}}/images/2_router_ha_app_same_Az.png)
 
 
-### Understanding the HA App operation: 
+#### Understanding the HA App operation: 
 
 With both routers in the same Availability zone (AZ) on AWS, each router has a unique primary IP address on the incoming interface (for traffic). However, secondary IP is the same (common) across the two routers. The Application orchestrated as a docker app on each router, initiates a BFD session for each interface pair specified in an App specific configuration (discussed later). The App then monitors all the BFD sessions and waits for any failure to occur causing the BFD neighbor to go down.
 
@@ -158,7 +158,7 @@ When a failure occurs (The current "Active" router goes down or the neighboring 
 
 
 
-### The HA App State Machine, Split-Brain/Active-Active scenarios...
+#### The HA App State Machine, Split-Brain/Active-Active scenarios...
 
 
 While the detection and failover mechanisms have been explained above, an obvious scenario to handle is the split-brain/Active-Active scenario described thus:
@@ -185,16 +185,18 @@ In short, the state machine works as follows:
 
 
 
-## Launch a Test Environment (CloudFormation)  
+## Try out the HA App!
+
+### Launch an Automated Test Environment (CloudFormation)  
 
 
 
-## Manual App Build and Deployment
+### Manual App Build and Deployment
 
 In case you already have a running AWS router setup, the HA App can be built manually and deployed on the routers. The build and deployment process for the App is described below:
 
 
-### Build the Docker image (or Download pre-built latest version)
+#### Build the Docker image (or Download pre-built latest version)
 
 **Note**: Make sure Docker is installed on your build server/laptop - instructions [here](https://docs.docker.com/engine/install/).
 
@@ -279,7 +281,7 @@ d7376ff144fe: Download complete
 
 
 
-### Build the Application RPM from docker image for deployment
+#### Build the Application RPM from docker image for deployment
 
 
 Drop into the app specific folder under `/xr-appmgr/` in the root of the cloned git repository and create a tarball from the Docker image.
@@ -363,7 +365,7 @@ aks::~/ha_app_xrv9k/xr-appmgr$
 ```
 
 
-### Create config.json for each router based on the router configurations
+#### Create config.json for each router based on the router configurations
 
 Sample configuration files are present under `/core/python/src/app/onbox/` for a two router setup:
 
@@ -427,7 +429,7 @@ For the `"action"` field only the `"secondary_ip_shift"` method is currently sup
 
 
 
-### Create hosts file for the router pair
+#### Create hosts file for the router pair
 
 The host files is set up to eliminate the AWS endpoint-URL DNS lookup which would otherwise increase failover time.
 Usually a hosts file would be valid for a HA router pair, but it could be common for all HA router pairs within the same availability zone in the deployment.
@@ -440,7 +442,7 @@ A sample hosts file is present under `/core/python/src/app/onbox/` and also show
 ```
 
 
-## Deploy App
+#### Deploy App
 
 
 #####################################################################################
@@ -461,7 +463,7 @@ lpts pifib hardware police
 
 
 
-### SCP App RPM and router specific config.json + hosts file (for predetermined resolution for ec2 endpoint url) to harddisk: (/misc/disk1)
+##### SCP App RPM and router specific config.json + hosts file (for predetermined resolution for ec2 endpoint url) to harddisk: (/misc/disk1)
 
 ```
 
@@ -477,7 +479,7 @@ scp hosts root@<xrv9k-ip>:/misc/disk1/
 
 #####################################################################################
 
-### XR CLI exec commands:  
+##### XR CLI exec commands:  
 
 ```
 # Install RPM
@@ -499,7 +501,7 @@ copy harddisk:/hosts apphost:/appmgr/config/xrv9k_aws_ha/hosts
 #####################################################################################
 
 
-### XR CLI config 
+##### XR CLI config 
 
 ```
 # Activate App along with grpc server and routes to metadata and endpoint services
@@ -541,12 +543,12 @@ tpa
 
 
 
-## Monitor Application
+#### Monitor Application
 
 Once the application starts running it can be monitored using xr-appmgr commands:
 
 
-### Running Application Info
+##### Running Application Info
 
 ```
 RP/0/RP0/CPU0:rtr2#show appmgr application name xrv9k_aws_ha info detail 
@@ -575,7 +577,7 @@ RP/0/RP0/CPU0:rtr2#
 ```
 
 
-### Running Application Stats
+##### Running Application Stats
 
 
 ```
@@ -593,9 +595,9 @@ RP/0/RP0/CPU0:rtr2#
 ```
 
 
-### Running Application logs
+#### Running Application logs
 
-#### Docker Container logs:
+##### Docker Container logs:
 
 ```
 RP/0/RP0/CPU0:rtr2#show appmgr application name xrv9k_aws_ha  logs 
@@ -622,7 +624,7 @@ RP/0/RP0/CPU0:rtr2#
 
 ```
 
-#### Application Specific logs:
+##### Application Specific logs:
 
 Here the command passed to the docker-exec-command can be used to monitor logs in real time using `tail -f` as shown below or just a dump of the logs using `cat`.
 
@@ -648,14 +650,14 @@ Python: { "loggerName":"SL_HA_APP_LOGGER", "asciTime":"2021-07-06 12:55:20,240",
 
 ```
 
-### Accessing the Application CLI
+#### Accessing the Application CLI
 
 For convenient state verification and troubleshooting purposes, it is possible to utilize an Application specific json-based CLI that utilizes access to the application's Redis database.
 All available cli keys/commands can be checked at any time by running `show redundancy` as an application docker-exec-command as shown below:
 
 
 
-#### View Available keys/commands
+##### View Available keys/commands
 
 ```
 RP/0/RP0/CPU0:rtr2#appmgr application exec name xrv9k_aws_ha docker-exec-cmd show redundancy
@@ -674,7 +676,7 @@ RP/0/RP0/CPU0:rtr2#
 
 ```
 
-#### Access Keys/Commands directly using docker-exec "show"
+##### Access Keys/Commands directly using docker-exec "show"
 
 **Check HA State of the router**
 
