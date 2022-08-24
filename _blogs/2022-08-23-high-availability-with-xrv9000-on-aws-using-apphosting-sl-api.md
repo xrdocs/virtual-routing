@@ -140,9 +140,18 @@ As shown below, the HA app is orchestrated on each router (Active and Standby) a
 
 ### Understanding the HA App operation: 
 
+With both routers in the same Availability zone (AZ) on AWS, each router has a unique primary IP address on the incoming interface (for traffic).   
+
+**Note**: The XRv9000 routers are running as EC2 instances. On AWS EC2, ARP traffic and convergence is handled by the AWS underlay. Since the XR instance does not directly process the ARP traffic, nor does it do duplicate IP detection, we can easily configure the same secondary IP address on each router in the IOS-XR configuration. Of course, on the AWS underlay, an instance can only have a unique primary or secondary IP. This is why, only the Active router has the common secondary IP configured on the AWS underlay for the EC2 instance. In other words, the presence of the secondary IP on an EC2 instance confers the "Active" router status to that EC2 instance, and all traffic destined to the common secondary IP address, will be directed to the Active Router.  
+{: .notice--info}
 ![Single_AZ_HA_App_before_failover.png]({{base_path}}/images/Single_AZ_HA_App_before_failover.png)
 
+
+
+
 ![Single_AZ_HA_App_post_active_failure.png({{base_path}}/images/Single_AZ_HA_App_post_active_failure.png)
+
+
 
 
 
