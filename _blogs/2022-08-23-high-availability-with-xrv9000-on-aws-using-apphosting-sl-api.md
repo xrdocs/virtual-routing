@@ -93,6 +93,7 @@ The solution is an Onbox docker App to enable High-Availability for XRv9k on AWS
 
 >[https://github.com/akshshar/xrv9k-aws-ha](https://github.com/akshshar/xrv9k-aws-ha)
 
+
 ## How does it work?
 
 Check out the solution guide: [HA_redundancy_xrv9k_soln.pdf](/HA_redundancy_xrv9k_soln.pdf) for details on how the application works.
