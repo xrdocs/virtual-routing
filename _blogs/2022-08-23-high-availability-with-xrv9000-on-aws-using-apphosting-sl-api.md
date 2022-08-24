@@ -27,11 +27,22 @@ tags:
 {% include toc %}
 
 
-# Introduction
+# Need for Router HA in the public cloud
 
-The Telco 5G on Public Cloud space has been heating up off late. With the public announcement of the Dish 5G deployment on AWS:  
+The Telco 5G on Public Cloud space has been heating up off-late. With the public announcement of the Dish 5G deployment on AWS:  
 
-> [https://aws.amazon.com/blogs/industries/telco-meets-aws-cloud-deploying-dishs-5g-network-in-aws-cloud/](https://aws.amazon.com/blogs/industries/telco-meets-aws-cloud-deploying-dishs-5g-network-in-aws-cloud/)  
+> [https://aws.amazon.com/blogs/industries/telco-meets-aws-cloud-deploying-dishs-5g-network-in-aws-cloud/](https://aws.amazon.com/blogs/industries/telco-meets-aws-cloud-deploying-dishs-5g-network-in-aws-cloud/)    
+
+
+it is becoming increasingly clear that 5G Networks lend themselves well to the public cloud model-  especially with greater focus on virtualized and containerized network functions (VNFs and CNFs) in the core deployment and technology strategy of 5G in contrast with tradtional mobile network deployments like 4G.  
+
+Let's keep a detailed deep dive on this emerging deployment strategy for another day and focus on a more specific problem 
+
+
+
+
+
+
 
 
 
