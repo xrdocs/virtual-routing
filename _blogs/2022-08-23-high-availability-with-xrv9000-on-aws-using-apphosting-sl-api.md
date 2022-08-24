@@ -263,7 +263,7 @@ Finally, a simple bash script (``) that uses the AWS CLI on your client machine 
 
 ```
 
-These files can be found at the following location in the git repository: 
+These files can be found at the following location in the `xrv9k-aws-ha` git repository: 
 
 >[https://github.com/akshshar/xrv9k-aws-ha/tree/main/aws_iam](https://github.com/akshshar/xrv9k-aws-ha/tree/main/aws_iam)
 
