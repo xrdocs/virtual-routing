@@ -309,6 +309,10 @@ For our freshly booted Ubuntu 20.04 Host machine, let's run the `host-check` scr
 **Note**: The host-check script does not attempt to fix any problems, although it tries to give hints about how they can be addressed. Most of the solutions can be found fairly easily by searching the internet.
 {: .notice--warning}
 
+
+### Running Extra checks for docker and xr-compose. 
+
+
 ### Making Suggested Corrections to the Host Machine
 
 **Note**: The changes being made in this section are relevant to the distribution (Ubuntu 20.04) selected for the host machine in this example. If you have selected some other distribution, then look for **equivalent** solutions for the distribution you're using by searching online.
