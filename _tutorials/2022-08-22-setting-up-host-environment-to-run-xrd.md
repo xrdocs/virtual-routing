@@ -389,7 +389,7 @@ cisco@xrdcisco:~/xrd-tools/scripts$
 
 #### Restart the Host Machine
 
-**Very Important**: Make sure you restart the host machine post any grub config changes to make sure they take effect.  
+**Very Important**: Make sure you restart the host machine post any grub config changes so that they take effect.  
 {: .notice--warning}  
 
 ```
