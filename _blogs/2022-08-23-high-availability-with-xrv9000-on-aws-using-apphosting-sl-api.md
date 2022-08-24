@@ -104,7 +104,7 @@ The third-party app utilizes two key pieces of infrastructure in the IOS-XR stac
 Learn more about IOS-XR Service-Layer API capabilities here: [https://xrdocs.io/cisco-service-layer/](https://xrdocs.io/cisco-service-layer/)
 
 
-The figure below captures the design details:
+The figure below captures the design tenets of the HA application:
 
 ![ha_app_solution_design.png]({{base_path}}/images/ha_app_solution_design.png)
 
