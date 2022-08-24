@@ -21,7 +21,9 @@ excerpt: Learn how to download the latest XRd images and set them up for further
 {% include base_path %}
 {% include toc %}
 
-This is Part-1 of the [XRd tutorials Series]({{base_path}}/tags/#xrd-tutorial-series). Skip to Part-2 [here]({{base_path}}/tutorials/2022-08-22-helper-tools-to-get-started-with-xrd). 
+* This is Part-1 of the [XRd tutorials Series]({{base_path}}/tags/#xrd-tutorial-series)  
+* Skip to Part-2 here: [Helper Tools to get started with XRd]({{base_path}}/tutorials/2022-08-22-helper-tools-to-get-started-with-xrd).     
+
 
 ## Introduction
 This tutorial will help the user learn how to gain access to the latest official XRd images from Cisco and set them up for further use with docker, kubernetes and related tools. In subsequent tutorials, we will dive deeper into the environments and tools needed to run XRd locally and discuss production deployment strategies and techniques.
@@ -303,4 +305,4 @@ cisco@xrdcisco:~/images/xrd-vrouter$
 There you have it- we've successfully downloaded XRd images from CCO and verified their authenticity using the packaged signature files.
 {: .notice--success}
 
-Part-2 of the XRd tutorials Series: [here]({{base_path}}/tutorials/2022-08-22-helper-tools-to-get-started-with-xrd).
+Part-2 of the XRd tutorials Series here: [Helper Tools to get started with XRd]({{base_path}}/tutorials/2022-08-22-helper-tools-to-get-started-with-xrd).
