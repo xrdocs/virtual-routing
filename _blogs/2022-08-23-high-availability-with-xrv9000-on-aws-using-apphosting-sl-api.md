@@ -186,6 +186,16 @@ In short, the state machine works as follows:
 
 
 
+## HA App Pre-requisites
+
+### Using an AWS private-link (Interface Endpoint Service):
+
+Since the HA App has to interact with the AWS EC2 APIs for state maintenance and to trigger failovers, it is important to reduce the round-trip-time from the HA App (router) to the AWS API endpoint.  
+Further, there cannot be any 
+
+
+
+
 ## Try out the HA App!
 
 ### Launch an Automated Test Environment (CloudFormation)  
