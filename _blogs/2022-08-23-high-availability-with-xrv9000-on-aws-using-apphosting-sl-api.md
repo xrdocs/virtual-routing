@@ -27,7 +27,7 @@ tags:
 {% include toc %}
 
 
-# Need for Router HA in the public cloud
+## Need for Router HA in the public cloud
 
 The Telco 5G on Public Cloud space has been heating up off-late. With the public announcement of the Dish 5G deployment on AWS:  
 
@@ -42,7 +42,7 @@ it is becoming increasingly clear that 5G Networks lend themselves well to the p
 The focus of this architecture is to leverage 5G components for services in multiple target environments (Dev/Test/Production/Enterprise) with full automation on the public cloud - so a good mix of native cloud services and telco protocols and technologies.
 
 
-## Challenges with network deployments on Public Cloud
+### Challenges with network deployments on Public Cloud
 There are however limitations to network deployments on the public cloud:  
 
 * **Lack of transport Features in the Cloud (AWS) underlay**: The public-cloud underlay does a great job for traditional application services however is quite limited when it comes to traditional Telco networking requirements such as IGPs, SR-MPLS, EVPN, SRv6 and more. This mean traditional networking vendors can augment the underlay capabilities by providing virtualized versions of their Network OS to bring in the missing features. This is where Cisco virtual platforms such as XRv9000 and XRd play an important role - serving as edge and transport nodes in the 5G core on public cloud while also dabbling as gateways and route-reflectors in other parts of the network.  
@@ -55,7 +55,7 @@ The network in reality becomes a three-layered architecture, with AWS underlay a
 ![P2P_connection_between_routers_on_cloud.png]({{base_path}}/images/P2P_connection_between_routers_on_cloud.png){: .align-center}
 
 
-## The HA problem 
+### The HA problem 
 
 Let's keep a detailed deep dive on this emerging 5G deployment strategy for another day and focus on a more specific problem that arises when traditional network roles like Provider-Edge (PE) that may have been served by modular network devices with multiple Route-Processors are replaced by standalone virtual network hardware like XRv9000:
 
@@ -191,8 +191,9 @@ In short, the state machine works as follows:
 ### Using an AWS private-link (Interface Endpoint Service):
 
 Since the HA App has to interact with the AWS EC2 APIs for state maintenance and to trigger failovers, it is important to reduce the round-trip-time from the HA App (router) to the AWS API endpoint.  
-Further, there cannot be any 
+Further, there cannot be any compulsion to have a public IP associated with the routers, just so that the HA App can communicate with the public AWS EC2 API. For these reasons, it is necessary to deploy an AWS 
 
+![aws_private_link_interface_endpoint.png]({{site.baseurl}}/images/aws_private_link_interface_endpoint.png)
 
 
 
