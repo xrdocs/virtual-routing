@@ -104,7 +104,7 @@ The third-party app utilizes two key pieces of infrastructure in the IOS-XR stac
 Learn more about IOS-XR Service-Layer API capabilities here: [https://xrdocs.io/cisco-service-layer/](https://xrdocs.io/cisco-service-layer/)
   
   
-### High-Level App Interaction with IOS-XR
+### HA App Interaction with IOS-XR
 
 ![onbox_docker_ha_app.png]({{site.baseurl}}/images/onbox_docker_ha_app.png){: .align-left}. 
 
