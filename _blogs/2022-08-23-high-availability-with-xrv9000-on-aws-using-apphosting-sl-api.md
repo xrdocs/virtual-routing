@@ -27,7 +27,16 @@ tags:
 {% include toc %}
 
 
-# xrv9k-aws-ha
+# Introduction
+
+The Telco 5G on Public Cloud space has been heating up off late. With the public announcement of the Dish 5G deployment on AWS:  
+
+> [https://aws.amazon.com/blogs/industries/telco-meets-aws-cloud-deploying-dishs-5g-network-in-aws-cloud/](https://aws.amazon.com/blogs/industries/telco-meets-aws-cloud-deploying-dishs-5g-network-in-aws-cloud/)  
+
+
+
+
+
 Onbox docker App to enable High-Availability for XRv9k on AWS using IOS-XR Service-Layer API and AWS API
 
 ## How does it work?
@@ -668,5 +677,3 @@ Last Created: 2021/07/06 12:11:12.123067
 RP/0/RP0/CPU0:rtr2#
 
 ```
-
-
