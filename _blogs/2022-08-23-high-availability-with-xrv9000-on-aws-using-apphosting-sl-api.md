@@ -87,7 +87,7 @@ This implies we can also target HA deployments where Active/Standby vRouters are
 ## Onbox Apphosting solution for XRv9000 AWS HA
 
 
-The solution described here can be extended in the future to cover the different use cases discussed above. However, for now we focus on the active-standby vRouters in the same Availability zone only. 
+The solution described here can be extended in the future to cover the different use cases discussed above. However, for now, we focus on the active-standby vRouters in the same Availability zone only. 
 The solution is an Onbox docker App to enable High-Availability for XRv9k on AWS using IOS-XR Service-Layer API and AWS APIs:  
 
 >[https://github.com/akshshar/xrv9k-aws-ha](https://github.com/akshshar/xrv9k-aws-ha)
