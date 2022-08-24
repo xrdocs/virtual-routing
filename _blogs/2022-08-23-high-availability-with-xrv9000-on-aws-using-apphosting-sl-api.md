@@ -98,10 +98,10 @@ The solution is an Onbox docker App to enable High-Availability for XRv9k on AWS
 Check out the solution guide: [HA_redundancy_xrv9k_soln.pdf](/HA_redundancy_xrv9k_soln.pdf) for details on how the application works.
 The third-party app utilizes two key pieces of infrastructure in the IOS-XR stack:
 
-1. **Application-Hosting capabilities**: this allows third-party (non-XR) code to run on the router as a docker container, further enhanced by the AppMgr code released in IOS-XR release 7.3.1 to manage onbox docker app lifecycle. Learn more about IOS-XR apphosting here: https://xrdocs.io/application-hosting/  
+1. **Application-Hosting capabilities**: this allows third-party (non-XR) code to run on the router as a docker container, further enhanced by the AppMgr code released in IOS-XR release 7.3.1 to manage onbox docker app lifecycle. Learn more about IOS-XR apphosting here: [https://xrdocs.io/application-hosting/](https://xrdocs.io/application-hosting/)
 
 2. **Service-Layer APIs**: The service-layer API infrastructure in IOS-XR enables high-performance, model-driven access to the service/instructure layer of the IOS-XR stack so that third-party onbox or offbox applications can manipulate IOS-XR RIB, Label-Switch Database (create/delete ILM paths) or create and listen to BFD session events along with interface events.
-Learn more about   
+Learn more about IOS-XR Service-Layer API capabilities here: [https://xrdocs.io/cisco-service-layer/](https://xrdocs.io/cisco-service-layer/)
 
 
 The figure below captures the design details:
