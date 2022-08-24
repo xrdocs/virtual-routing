@@ -366,7 +366,7 @@ xrv9000 IOS-XR releases supported by xrv9k-amibuilder:
   * 6.4.2 
   * 6.5.2
   * 6.6.2
-  * 7.3.1
-  * 7.3.2
+  * 7.3.2  
+  * 7.3.3
 
 The above list will grow as soon as successful builds are verified.
