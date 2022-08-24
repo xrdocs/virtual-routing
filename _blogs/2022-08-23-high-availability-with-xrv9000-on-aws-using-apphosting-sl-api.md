@@ -64,6 +64,7 @@ Let's keep a detailed deep dive on this emerging 5G deployment strategy for anot
 
 * However, deployment on public cloud poses a new challenge: HSRP/VRRP won't work. Since public cloud (AWS) blocks multicast traffic - HSRP/VRRP hellos that are sent to multicast addresses are blocked.  Further HSRP state machine depends on the use of gratuitous ARP packets that are dropped on the public cloud as well.  
 
+![same_AZ_vrouters.png]({{site.baseurl}}/images/same_AZ_vrouters.png)
 
 
 Besides the challenges, there is scope to expand High-availability capabilities by leveraging some concepts from the Public-Cloud. AWS for example structures its infrastructure offerings into regions, availability-zones and more:     
