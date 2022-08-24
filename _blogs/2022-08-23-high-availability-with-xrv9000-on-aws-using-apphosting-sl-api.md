@@ -215,6 +215,7 @@ The AWS private interface endpoint must be deployed either manually or using AWS
 
 >[https://docs.aws.amazon.com/vpc/latest/privatelink/create-interface-endpoint.html#create-interface-endpoint](https://docs.aws.amazon.com/vpc/latest/privatelink/create-interface-endpoint.html#create-interface-endpoint)
 
+
 ## Try out the HA App!
 
 ### Launch an Automated Test Environment (CloudFormation)  
