@@ -41,7 +41,7 @@ The AMI builder can be run from your laptop or any client machine with minimal d
 
 **Important**: The AMIs built using this tool (and not obtained through the Marketplace) do not come with Cisco support.
 For any support expectations for XRv9000 on AWS, always use official AMIs released in the AWS Marketplace: [https://aws.amazon.com/marketplace/pp/prodview-ygifeqmzmkqja](https://aws.amazon.com/marketplace/pp/prodview-ygifeqmzmkqja).
-{: .notice-warning}
+{: .notice--warning}
   
   
 # Building an XRv9000 AMI
