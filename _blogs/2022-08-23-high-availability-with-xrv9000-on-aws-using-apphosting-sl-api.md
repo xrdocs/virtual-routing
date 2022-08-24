@@ -8,7 +8,7 @@ excerpt: >-
   this blog we discuss a solution to achieve HA by building our own third-party
   container application that hooks into IOS-XR Service-layer APIs and can be
   deployed using XR AppMgr
-position: hidden
+position: top
 tags:
   - iosxr
   - linux
