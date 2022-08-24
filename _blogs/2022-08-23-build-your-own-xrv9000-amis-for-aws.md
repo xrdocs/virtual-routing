@@ -38,7 +38,7 @@ However, there may be several situations when it might be required to build your
 
 
 **Important**: The AMIs built using this tool (and not obtained through the Marketplace) do not come with Cisco support.
-For any support expectations for xrv9000 on AWS, please download official AMIs released from the AWS Marketplace: https://aws.amazon.com/marketplace/pp/Cisco-Systems-Inc-Cisco-XRv9000-Virtual-Router/B077GJPZ7H 
+For any support expectations for XRv9000 on AWS, always use official AMIs released in the AWS Marketplace: [https://aws.amazon.com/marketplace/pp/prodview-ygifeqmzmkqja](https://aws.amazon.com/marketplace/pp/prodview-ygifeqmzmkqja)
 {: .notice-warning}
   
   
