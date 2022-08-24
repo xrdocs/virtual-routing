@@ -84,7 +84,7 @@ This implies we can also target HA deployments where Active/Standby vRouters are
 
 
 
-## The Apphosting solution for XRv9000 AWS HA
+## Onbox Apphosting solution for XRv9000 AWS HA
 
 
 The solution described here can be extended in the future to cover the different use cases discussed above. However, for now we focus on the active-standby vRouters in the same Availability zone only. 
