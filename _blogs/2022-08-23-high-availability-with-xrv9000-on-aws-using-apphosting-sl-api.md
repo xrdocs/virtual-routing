@@ -117,7 +117,7 @@ Learn more about IOS-XR Service-Layer API capabilities here: [https://xrdocs.io/
 4. Real-time BFD events are then received over gRPC, allowing the SLAPI client to react to Peer-router unreachable/down events
 
 
-### Design Tenets  
+### Design Tenets for the HA App
 
 The figure below captures the design tenets of the HA application:
 
@@ -131,7 +131,9 @@ The redundancy design is composed of 3 parts:
 
 
 
+### 
 
+![2_router_ha_app_same_Az.png]({{site.baseurl}}/images/2_router_ha_app_same_Az.png)
 
 
 ###  
