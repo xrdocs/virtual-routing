@@ -49,7 +49,8 @@ For any support expectations for XRv9000 on AWS, always use official AMIs releas
 Build a Cisco XRv9000 AMI image from an xrv9k ISO to be able to spin up on AWS EC2.
 The build code utilizes AWS S3 and temporary instances on AWS in tandem to generate the AMI from the ISO.
 
-**Note**: You need a working AWS account to utilize the build code. While the code launches instances on AWS temporarily and also tries to minimize cost by utilizing spot instances where applicable - the user should be aware that each build flow may incur a minor cost, depending on the type of AWS contract the user has.
+**Note**: You need a working AWS account to utilize the build code. While the code launches instances on AWS temporarily and also tries to minimize cost by utilizing spot instances where applicable - the user should be aware that each build flow may incur a minor cost, depending on the type of AWS contract the user has.  
+{: .notice--info}
 
 
 ## Requirements: Setting up the Client Machine (Laptop/Server)
