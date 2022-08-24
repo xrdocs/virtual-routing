@@ -194,7 +194,22 @@ Since the HA App has to interact with the AWS EC2 APIs for state maintenance and
 Further, there cannot be any compulsion to have a public IP associated with the routers, just so that the HA App can communicate with the public AWS EC2 API. For these reasons, it is necessary to deploy an AWS private-link in the form of a private interface endpoint with an attached IP and domain name that is reachable for the HA router pair.
 
 ![aws_private_link_interface_endpoint.png]({{site.baseurl}}/images/aws_private_link_interface_endpoint.png){: .align-left}
+> Private Interface Endpoint Service is created so that routers can access EC2 API without internet access
+>
+>The endpoint URL utilized by the router HA App is obtained from the interface endpoint Service configuration
+>
+>Sample boto3 resource creation for interface endpoint service in python:
 
+    ```python
+    resource = boto3.resource(
+        service_name='ec2',
+        endpoint_url='https://vpce-0786bfdf8aad8840c-vacmlroq-us-west-2a.ec2.us-west-2.vpce.amazonaws.com',
+        aws_access_key_id=ACCESS_KEY,
+        aws_secret_access_key=SECRET_KEY,
+        aws_session_token=SESSION_TOKEN,
+        region_name=REGION_NAME
+        )
+    ```
 
 The AWS private interface endpoint can be deployed either manually or using AWS CLI or AWS Cloudformation. More details on it can be found here: 
 
