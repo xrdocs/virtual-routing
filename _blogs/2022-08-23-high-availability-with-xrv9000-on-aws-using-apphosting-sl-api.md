@@ -295,19 +295,21 @@ Once the IAM role is assigned to each router, the onbox HA Apps can easily fetch
 
 ### Launch an Automated Test Environment (CloudFormation):
 
-The Ansible playbook is set up to launch a cloudformation topology in AWS with hardcoded private IPs.
+If you'd like to try and test the onbox HA application quickly- the best technique is to drop into the `ansible` folder of the `xrv9k-aws-ha` git repository and launch a test topology on AWS using the ansible playbook documented below:   
+
+The Ansible playbook is set up to launch a cloudformation topology in AWS with hardcoded private IPs so that the stack is reproducible.
 View the cloudformation template: `/ansible/cloudformation/xrv9k_aws_ha_topo_basic.yml` from the root of the git repository
 
 #### Cloudformation Topology
 The topology launched by the Ansible playbook + Cloudformation template is shown below:
 
-![](/images/xrv9k_ha_ansible_cf_topo.png)
+![xrv9k_ha_ansible_cf_topo.png]({{base_path}}/images/xrv9k_ha_ansible_cf_topo.png)
 
 This topology includes a VPC endpoint to enable private access to EC2 API services. Further, the IAM role and policy to allow access to the EC2 API (via temporary security credentials) is automatically set up in the cloudformation template as well.
 
 Effectively, this topology can be simplified to:
 
-![](/images/simplified_ansible_cf_topo.png)
+![xrv9k_ha_ansible_cf_topo.png]({{base_path}}/images/simplified_ansible_cf_topo.png)
 
 
 #### Requirements: Setting up the Client Machine (Laptop/Server)
