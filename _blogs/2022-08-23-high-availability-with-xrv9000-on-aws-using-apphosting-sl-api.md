@@ -140,7 +140,7 @@ As shown below, the HA app is orchestrated on each router (Active and Standby) a
 
 ### Understanding the HA App operation: 
 
-With both routers in the same Availability zone (AZ) on AWS, each router has a unique primary IP address on the incoming interface (for traffic).   
+With both routers in the same Availability zone (AZ) on AWS, each router has a unique primary IP address on the incoming interface (for traffic). However, secondary IP is the same (common) across the two routers. The Application orchestrated as a docker app on each router, initiates a BFD session for each interface pair specified in an App specific configuration (discussed later). The App then monitors all the BFD sessions and waits for any failure to occur causing the BFD neighbor to go down.
 
 **Note**: The XRv9000 routers are running as EC2 instances. On AWS EC2, ARP traffic and convergence is handled by the AWS underlay. Since the XR instance does not directly process the ARP traffic, nor does it do duplicate IP detection, we can easily configure the same secondary IP address on each router in the IOS-XR configuration. Of course, on the AWS underlay, an instance can only have a unique primary or secondary IP. This is why, only the Active router has the common secondary IP configured on the AWS underlay for the EC2 instance. In other words, the presence of the secondary IP on an EC2 instance confers the "Active" router status to that EC2 instance, and all traffic destined to the common secondary IP address, will be directed to the Active Router.  
 {: .notice--info}. 
@@ -148,11 +148,25 @@ With both routers in the same Availability zone (AZ) on AWS, each router has a u
 ![Single_AZ_HA_App_before_failover.png]({{base_path}}/images/Single_AZ_HA_App_before_failover.png)
 
 
+When a failure occurs (The current "Active" router goes down or the neighboring BFD interface goes down, causing one or more of the monitored BFD sessions to go down), then the App on the current Standby router will reach out to the AWS API to shift the "common Secondary IP" on the AWS underlay from the current "Active" router to the "Standby" router, making it the new "Active". ARP recovergence will then happen on the AWS underlay for any incoming traffic causing the traffic to failover to the new "Active" router.
 
 
 ![Single_AZ_HA_App_post_active_failure.png({{base_path}}/images/Single_AZ_HA_App_post_active_failure.png)
 
+**Important**: It goes without saying that only a router that is currently "Standby" will react to neighbor down events and trigger a failover through the secondary-ip shift mechanism. A router that is currently "Active" will ignore these events to prevent any unecessary failovers and consequent traffic loss.  
+{: .notice--info}
 
+
+
+### The HA App State Machine, Split-Brain/Active-Active scenarios...
+
+
+
+
+While the detection and failover mechanisms have been explained above, an obvious scenario to handle is the split-brain/Active-Active scenario described thus:
+
+* Current "Active" router goes down
+* 
 
 
 
