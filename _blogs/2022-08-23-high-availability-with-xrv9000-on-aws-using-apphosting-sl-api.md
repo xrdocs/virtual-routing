@@ -151,7 +151,7 @@ With both routers in the same Availability zone (AZ) on AWS, each router has a u
 When a failure occurs (The current "Active" router goes down or the neighboring BFD interface goes down, causing one or more of the monitored BFD sessions to go down), then the App on the current Standby router will reach out to the AWS API to shift the "common Secondary IP" on the AWS underlay from the current "Active" router to the "Standby" router, making it the new "Active". ARP recovergence will then happen on the AWS underlay for any incoming traffic causing the traffic to failover to the new "Active" router.
 
 
-![Single_AZ_HA_App_post_active_failure.png({{base_path}}/images/Single_AZ_HA_App_post_active_failure.png)
+![Single_AZ_HA_App_post_active_failure.png]({{base_path}}/images/Single_AZ_HA_App_post_active_failure.png)
 
 **Important**: It goes without saying that only a router that is currently "Standby" will react to neighbor down events and trigger a failover through the secondary-ip shift mechanism. A router that is currently "Active" will ignore these events to prevent any unecessary failovers and consequent traffic loss.  
 {: .notice--info}
