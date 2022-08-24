@@ -265,6 +265,8 @@ Finally, a simple bash script (``) that uses the AWS CLI on your client machine 
 
 These files can be found at the following location in the git repository: 
 
+>[https://github.com/akshshar/xrv9k-aws-ha/tree/main/aws_iam](https://github.com/akshshar/xrv9k-aws-ha/tree/main/aws_iam)
+
 
 Learn more about associating IAM roles with EC2 instances for EC2 API access, here: 
 
