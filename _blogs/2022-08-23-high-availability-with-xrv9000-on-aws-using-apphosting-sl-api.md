@@ -64,6 +64,8 @@ Let's keep a detailed deep dive on this emerging 5G deployment strategy for anot
 
 * However, deployment on public cloud poses a new challenge: HSRP/VRRP won't work. Since public cloud (AWS) blocks multicast traffic - HSRP/VRRP hellos that are sent to multicast addresses are blocked.  Further HSRP state machine depends on the use of gratuitous ARP packets that are dropped on the public cloud as well.  
 
+A simple HA deployment with vRouters (XRv9000) on AWS would look like the following:  
+
 ![same_AZ_vrouters.png]({{site.baseurl}}/images/same_AZ_vrouters.png)
 
 
