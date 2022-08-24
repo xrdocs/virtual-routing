@@ -25,10 +25,21 @@ position: hidden
 {% include base_path %}
 {% include toc %}
 
+# Introduction
+
+Cisco XRv9000 is available as a public AMI in the AWS marketplace today. More details here:
+
+>[XRv9000 7.3.3 AMI in AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-ygifeqmzmkqja)  
+
+For most exploratory or production use-cases, this is the ideal AMI to utilize and get hands-on with XRv9000 on AWS.
+However, there may be several situations when it might be required to build your own AMI from an available XRv9000 ISO (XRv9k release not yet in the market, private engineering builds meant for future release etc.) This is possible with the help of the automated xrv9k-amibuilder published to Github here:  
+
+> 
+
 
 # Building an XRv9000 AMI
 
-Build a Cisco xrv9000 AMI image from an xrv9k ISO to be able to spin up on AWS EC2.
+Build a Cisco XRv9000 AMI image from an xrv9k ISO to be able to spin up on AWS EC2.
 The build code utilizes AWS S3 and temporary instances on AWS in tandem to generate the AMI from the ISO.
 
 **Note**: You need a working AWS account to utilize the build code. While the code launches instances on AWS temporarily and also tries to minimize cost by utilizing spot instances where applicable - the user should be aware that each build flow may incur a minor cost, depending on the type of AWS contract the user has.
@@ -61,11 +72,13 @@ and keep them ready.
 Typically the xrv9000 ISOs are available for software download on cisco.com here: 
 <https://software.cisco.com/download/home/286288939/type/280805694/release/>
 
-**Note**:  Not all software releases of xrv9000 on cisco.com are guaranteed to work on AWS even if converted properly. Usually, releases go through their own testing process for AWS specific deployment and the tested releases are released on AWS marketplace.  A list of working releases are specified at the end of this README.md. 
+**Note**:  Not all software releases of xrv9000 on cisco.com are guaranteed to work on AWS even if converted properly. Usually, releases go through their own testing process for AWS specific deployment and the tested releases are released on AWS marketplace.  A list of working releases are specified at the end of this README.md.  
+{: .notice--info}
+
 
 **Important**: The AMIs built using this tool (and not obtained through the Marketplace) do not come with Cisco support.
 For any support expectations for xrv9000 on AWS, please download official AMIs released from the AWS Marketplace: https://aws.amazon.com/marketplace/pp/Cisco-Systems-Inc-Cisco-XRv9000-Virtual-Router/B077GJPZ7H 
-
+{: .notice-warning}
 
 
 
@@ -73,7 +86,7 @@ For any support expectations for xrv9000 on AWS, please download official AMIs r
 
 ### Clone the git repo
 
-```
+```bash
 aks::~$git clone https://github.com/akshshar/xrv9k-amibuilder
 Cloning into 'xrv9k-amibuilder'...
 remote: Enumerating objects: 18, done.
@@ -118,16 +131,19 @@ aks::~/xrv9k-amibuilder$
 
 Copy the xrv9000 ISO that you intend to convert into an AMI to the `iso/` directory of the cloned git repo:
 
-For example, I fetched the CCO image from cisco.com for the 6.6.2 release here: 
-```
+For example, I fetched the CCO image from cisco.com for the 6.6.2 release here:   
+
+```bash
 aks::~/Downloads$ls -l xrv9k-fullk9-x.vrr-6.6.2.iso
 -rwxr-x---@ 1 akshshar  staff  1117378560 Apr 27  2019 xrv9k-fullk9-x.vrr-6.6.2.iso
 aks::~/Downloads$
 
-```
-Copy it to the `iso/` directory:
+```  
 
-```
+Copy it to the `iso/` directory:  
+
+
+```bash
 aks::~/Downloads$ls -l xrv9k-fullk9-x.vrr-6.6.2.iso
 -rwxr-x---@ 1 akshshar  staff  1117378560 Apr 27  2019 xrv9k-fullk9-x.vrr-6.6.2.iso
 aks::~/Downloads$
@@ -175,7 +191,7 @@ aks::~/xrv9k-amibuilder$
 
 As explained in the requirements section, once you have the Access Key and Secret Key associated with your account ready, fill out `aws/credentials` file in the git repo:
 
-```
+```bash
 aks::~/xrv9k-amibuilder$  cat aws/credentials 
 [default]
 aws_access_key_id =
@@ -192,7 +208,7 @@ public-key filename: id_rsa.pub
 Follow the instructions relevant to the OS of your client machine to do so.
 Then copy the key files over to the `ssh/` directory of the cloned git repo:
 
-```
+```bash
 aks::~/xrv9k-amibuilder$cp ~/.ssh/id_rsa* ssh/
 aks::~/xrv9k-amibuilder$
 aks::~/xrv9k-amibuilder$tree ./ssh
@@ -213,7 +229,8 @@ Make sure `xr_version` and `xrv9k_iso_name` are properly updated to match the ve
 
 Also, based on the OS you use for the client machine, you may need to modify the `ssh_key_public` and `ssh_key_private` variables to correctly reflect the path to the key pair files you copied to the `ssh/` directory earlier.
 
-**Note**: All regions and availability zones of AWS do not support all types of instances. As noted in the variables file, we use two types of temporary instances during the build process: `m5zn.metal` and `m4.large`. These are currently supported in the us-west-2 region and us-west-2a availability zone as specified in the default variables.tf file. If you intend to modify the region/az settings, make sure the required instance types are supported there.
+**Note**: All regions and availability zones of AWS do not support all types of instances. As noted in the variables file, we use two types of temporary instances during the build process: `m5zn.metal` and `m4.large`. These are currently supported in the us-west-2 region and us-west-2a availability zone as specified in the default variables.tf file. If you intend to modify the region/az settings, make sure the required instance types are supported there.  
+{: .notice--info}. 
 
 ```
 aks::~/xrv9k-amibuilder$cat variables.tf 
@@ -352,9 +369,3 @@ xrv9000 IOS-XR releases supported by xrv9k-amibuilder:
   * 7.3.2
 
 The above list will grow as soon as successful builds are verified.
-
-
-
-
-
-
