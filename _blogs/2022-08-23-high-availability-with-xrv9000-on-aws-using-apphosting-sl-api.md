@@ -174,6 +174,7 @@ In most redundancy solutions such as HSRP, this problem is solved by enabling a 
 
 In this HA app, we implement a keepalive between each router and the AWS API instead. This is shown below:  
 
+![HA_app_State_machine_keepalive.png]({{site.baseurl}}/images/HA_app_State_machine_keepalive.png)
 
 
 
