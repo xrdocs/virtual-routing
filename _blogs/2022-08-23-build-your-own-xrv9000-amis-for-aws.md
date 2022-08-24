@@ -36,7 +36,11 @@ However, there may be several situations when it might be required to build your
 
 > 
 
-
+**Important**: The AMIs built using this tool (and not obtained through the Marketplace) do not come with Cisco support.
+For any support expectations for xrv9000 on AWS, please download official AMIs released from the AWS Marketplace: https://aws.amazon.com/marketplace/pp/Cisco-Systems-Inc-Cisco-XRv9000-Virtual-Router/B077GJPZ7H 
+{: .notice-warning}
+  
+  
 # Building an XRv9000 AMI
 
 Build a Cisco XRv9000 AMI image from an xrv9k ISO to be able to spin up on AWS EC2.
@@ -74,11 +78,6 @@ Typically the xrv9000 ISOs are available for software download on cisco.com here
 
 **Note**:  Not all software releases of xrv9000 on cisco.com are guaranteed to work on AWS even if converted properly. Usually, releases go through their own testing process for AWS specific deployment and the tested releases are released on AWS marketplace.  A list of working releases are specified at the end of this README.md.  
 {: .notice--info}
-
-
-**Important**: The AMIs built using this tool (and not obtained through the Marketplace) do not come with Cisco support.
-For any support expectations for xrv9000 on AWS, please download official AMIs released from the AWS Marketplace: https://aws.amazon.com/marketplace/pp/Cisco-Systems-Inc-Cisco-XRv9000-Virtual-Router/B077GJPZ7H 
-{: .notice-warning}
 
 
 
