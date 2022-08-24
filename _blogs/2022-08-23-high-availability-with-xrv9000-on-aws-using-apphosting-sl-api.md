@@ -37,7 +37,7 @@ The Telco 5G on Public Cloud space has been heating up off-late. With the public
 it is becoming increasingly clear that 5G Networks lend themselves well to the public cloud model-  especially with greater focus on virtualized and containerized network functions (VNFs and CNFs) in the core deployment and technology strategy of 5G as opposed to traditional mobile network deployments like 4G.  
 
 
-![Dish_AWS_5G_cloud_architecture.png]({{site.baseurl}}/images/Dish_AWS_5G_cloud_architecture.png){: .align-center}
+![Dish_AWS_5G_cloud_architecture.png]({{base_path}}/images/Dish_AWS_5G_cloud_architecture.png){: .align-center}
 
 The focus of this architecture is to leverage 5G components for services in multiple target environments (Dev/Test/Production/Enterprise) with full automation on the public cloud - so a good mix of native cloud services and telco protocols and technologies.
 
@@ -67,7 +67,7 @@ Let's keep a detailed deep dive on this emerging 5G deployment strategy for anot
 
 A simple HA deployment with vRouters (XRv9000) on AWS would look like the following:  
 
-![same_AZ_vrouters.png]({{site.baseurl}}/images/same_AZ_vrouters.png){: .align-center}  
+![same_AZ_vrouters.png]({{base_path}}/images/same_AZ_vrouters.png){: .align-center}  
 
 In this example the two vRouters are in the same availability zone (hence interfaces are in the same subnets). This requires no routing to achieve reachability between the Active/Standby routers and hence solutions that mimic HSRP (with the limitations described above) can solve the HA problem.
 
@@ -78,7 +78,7 @@ Besides the challenges, there is also scope to expand High-availability capabili
 This implies we can also target HA deployments where Active/Standby vRouters are in altogether different availability zones with AWS VPC routing-tables to help route between them.  
 
 
-![different_AZ_vrouters.png]({{site.baseurl}}/images/different_AZ_vrouters.png){: .align-center}
+![different_AZ_vrouters.png]({{base_path}}/images/different_AZ_vrouters.png){: .align-center}
 
 
 
@@ -106,7 +106,7 @@ Learn more about IOS-XR Service-Layer API capabilities here: [https://xrdocs.io/
   
 ### HA App Interaction with IOS-XR
 
-![onbox_docker_ha_app.png]({{site.baseurl}}/images/onbox_docker_ha_app.png){: .align-left}. 
+![onbox_docker_ha_app.png]({{base_path}}/images/onbox_docker_ha_app.png){: .align-left}. 
 
 1. Using Xrv9000 Application-hosting capabilities, an SL-API BFD client will be spun up in a Docker container on the vRouter itself.
 
@@ -140,7 +140,7 @@ As shown below, the HA app is orchestrated on each router (Active and Standby) a
 
 ### Understanding the HA App operation: 
 
-![Single_AZ_HA_App_before_failover.png]({{site.baseurl}}/images/Single_AZ_HA_App_before_failover.png)
+![Single_AZ_HA_App_before_failover.png]({{base_path}}/images/Single_AZ_HA_App_before_failover.png)
 
 
 
