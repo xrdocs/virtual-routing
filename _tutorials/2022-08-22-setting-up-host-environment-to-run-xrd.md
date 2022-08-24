@@ -36,6 +36,8 @@ XRd is available today as a docker image tarball to be deployed in containerized
 
 In this tutorial, we will focus on the use of the `host-check` script that we introduced as part of the xrd-tools repository in [Part-2]({{base_path}}/tutorials/2022-08-22-helper-tools-to-get-started-with-xrd/) of the [XRd tutorials Series]({{base_path}}/tags/#xrd-tutorial-series).
 
+**Note**: A general guidance on the use of any xrd-tools script is to utilize the `--help` option to first dump the list of options available for use with each script. In these tutorials, we will attempt to try the most important/common options but the reader is encouraged to follow the help blurbs and try each option for each of the scripts.
+{: .notice--info}  
 
 ## XRd Host Machine Requirements
 
