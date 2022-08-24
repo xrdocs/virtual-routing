@@ -37,7 +37,7 @@ The Telco 5G on Public Cloud space has been heating up off-late. With the public
 it is becoming increasingly clear that 5G Networks lend themselves well to the public cloud model-  especially with greater focus on virtualized and containerized network functions (VNFs and CNFs) in the core deployment and technology strategy of 5G as opposed to traditional mobile network deployments like 4G.  
 
 
-![Dish_AWS_5G_cloud_architecture.png]({{site.baseurl}}/images/Dish_AWS_5G_cloud_architecture.png){: .align-center}{: .notice--primary}
+![Dish_AWS_5G_cloud_architecture.png]({{site.baseurl}}/images/Dish_AWS_5G_cloud_architecture.png){: .align-center}
 
 The focus of this architecture is to leverage 5G components for services in multiple target environments (Dev/Test/Production/Enterprise) with full automation on the public cloud - so a good mix of native cloud services and telco protocols and technologies.
 
@@ -51,7 +51,7 @@ There are however limitations to network deployments on the public cloud:
 
 The network in reality becomes a three-layered architecture, with AWS underlay at the bottom for basic connectivity, P2P tunnels between virtual routers as the second layer to help carry the third-layer of traditional network protocols and traffic like IGPs, BGP, SR-MPLS etc. This is shown below:  
 
-![P2P_connection_between_routers_on_cloud.png]({{base_path}}/images/P2P_connection_between_routers_on_cloud.png){ width=100% }{: .align-center}{: .notice--primary}
+![P2P_connection_between_routers_on_cloud.png]({{base_path}}/images/P2P_connection_between_routers_on_cloud.png){ width=100% }{: .align-center}
 
 
 ## The HA problem 
@@ -66,7 +66,7 @@ Let's keep a detailed deep dive on this emerging 5G deployment strategy for anot
 
 A simple HA deployment with vRouters (XRv9000) on AWS would look like the following:  
 
-![same_AZ_vrouters.png]({{site.baseurl}}/images/same_AZ_vrouters.png){: .align-center}{: .notice--primary}
+![same_AZ_vrouters.png]({{site.baseurl}}/images/same_AZ_vrouters.png){: .align-center}  
 
 In this example the two vRouters are in the same availability zone (hence interfaces are in the same subnets). This requires no routing to achieve reachability between the Active/Standby routers and hence solutions that mimic HSRP (with the limitations described above) can solve the HA problem.
 
@@ -77,7 +77,7 @@ Besides the challenges, there is also scope to expand High-availability capabili
 This implies we can also target HA deployments where Active/Standby vRouters are in altogether different availability zones with AWS VPC routing-tables to help route between them.  
 
 
-![different_AZ_vrouters.png]({{site.baseurl}}/images/different_AZ_vrouters.png){: .align-center}{: .notice--primary}
+![different_AZ_vrouters.png]({{site.baseurl}}/images/different_AZ_vrouters.png){: .align-center}
 
 
 
