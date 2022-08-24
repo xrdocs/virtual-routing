@@ -23,7 +23,9 @@ position: top
 {% include base_path %}
 {% include toc %}
 
-This is Part-2 of the [XRd tutorials Series]({{base_path}}/tags/#xrd-tutorial-series). Skip to Part-3 [here]({{base_path}}/tutorials/2022-08-22-setting-up-host-environment-to-run-xrd).   
+* This is Part-2 of the [XRd tutorials Series]({{base_path}}/tags/#xrd-tutorial-series)  
+* Skip to Part-3 here: []({{base_path}}/tutorials/2022-08-22-setting-up-host-environment-to-run-xrd).   
+* Re-read Part-1 here: [XRd images: Where can one get them?]({{base_path}}/tutorials/2022-08-22-xrd-images-where-can-one-get-them/)
 
 ## XRd Helper Tools
 
