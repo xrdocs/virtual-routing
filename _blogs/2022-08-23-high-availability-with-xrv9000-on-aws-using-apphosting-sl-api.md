@@ -286,6 +286,8 @@ Learn more about associating IAM roles with EC2 instances for EC2 API access, he
 >[https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html)  
 
 
+Once the IAM role is assigned to each router, the onbox HA Apps can easily fetch their temporary security credentials for EC2 API access using the metadata URL 
+`http://169.254.169.254/latest/meta-data/iam/security-credentials/ec2access` where `ec2access` is the name of the IAM role assigned to the routers. 
 
 ## Try out the HA App!
 
