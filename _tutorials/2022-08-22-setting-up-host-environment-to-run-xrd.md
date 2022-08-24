@@ -28,7 +28,7 @@ This is Part-3 of the [XRd tutorials Series]({{base_path}}/tags/#xrd-tutorial-se
 
 ## Introduction
 
-XRd is available today as a docker image tarball to be deployed in containerized network deployments. This implies the host machine on which the container is orchestrated must supply the kernel and the necessary host devices and settings (pci passthrough, HugePages etc.) to allow XRd to run smoothly. The host machine could therefore be a baremetal server or a virtual machine as long as it meets certain minimum requirements. What are these requirements ?
+XRd is available today as a docker image tarball to be deployed in containerized network deployments. This implies the host machine on which the container is orchestrated must supply the kernel, relevant userspace libraries (docker, kubectl etc.) and the necessary host devices and settings (pci passthrough, HugePages etc.) to allow XRd to run smoothly. The host machine could  be a baremetal server or a virtual machine as long as it meets certain minimum requirements. What are these requirements ?
 
 
 ## XRd Host Machine Requirements
