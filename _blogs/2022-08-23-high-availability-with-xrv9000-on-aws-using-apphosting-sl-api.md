@@ -256,7 +256,8 @@ Next, create an access policy with a file named `ec2-role-access-policy.json` wi
 
 Finally, a simple bash script (`setup_iam_role.sh`) that uses the AWS CLI on your client machine is given below which can be used to apply the required IAM role to each of the routers in the HA router pair:  
 
-**Note**: Before running this script, make sure the latest AWS CLI v2 is installed on your client machine: [https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
+**Note**: Before running this script, make sure the latest AWS CLI v2 is installed on your client machine: [https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).  
+{: .notice--info}
 
 ```
 #!/bin/bash
