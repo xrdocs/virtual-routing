@@ -161,12 +161,23 @@ When a failure occurs (The current "Active" router goes down or the neighboring 
 ### The HA App State Machine, Split-Brain/Active-Active scenarios...
 
 
-
-
 While the detection and failover mechanisms have been explained above, an obvious scenario to handle is the split-brain/Active-Active scenario described thus:
 
-* Current "Active" router goes down
-* 
+* Current "Active" router (rtr1) goes down
+* "Standby" router (rtr2) detects the event and triggers failover.
+* rtr2 now becomes the "Active" router.
+* rtr1 comes back up - how does it know it needs to be standby ? Does it assume it is Active again and try to re-instate the secondary-IP on its own EC2 instance ?
+
+To help address the question above, it is important to understand how the routers become Active/Standby and how their state is managed during the lifecycle of the app.
+
+In most redundancy solutions such as HSRP, this problem is solved by enabling a communication channel between the Active and Standby routers and implementing a keep-alive and/or election mechanism to elect the current Active router.
+
+In this HA app, we implement a keepalive between each router and the AWS API instead. This is shown below:  
+
+
+
+
+
 
 
 
