@@ -23,7 +23,9 @@ tags:
 {% include base_path %}
 {% include toc %}
 
-This is Part-3 of the [XRd tutorials Series]({{base_path}}/tags/#xrd-tutorial-series). Skip to Part-4 [here]({{base_path}}/tutorials/2022-08-23-xrd-with-docker-control-plane-and-vrouter). 
+This is Part-3 of the [XRd tutorials Series]({{base_path}}/tags/#xrd-tutorial-series).   
+Skip to Part-4 [here]({{base_path}}/tutorials/2022-08-23-xrd-with-docker-control-plane-and-vrouter). 
+Re-read Part-2 [here]({{base_path}}/tutorials/2022-08-22-helper-tools-to-get-started-with-xrd/)
 
 
 ## Introduction
