@@ -135,10 +135,12 @@ The redundancy design is composed of 3 parts:
 
 As shown below, the HA app is orchestrated on each router (Active and Standby) as an onbox docker app. Each onbox app instance connects to the local router's Service-layer API over gRPC to orchestrate and monitor BFD sessions with the neighboring router
 
-![2_router_ha_app_same_Az.png]({{site.baseurl}}/images/2_router_ha_app_same_Az.png)
+![2_router_ha_app_same_Az.png]({{base_path}}/images/2_router_ha_app_same_Az.png)
 
 
 ### Understanding the HA App operation: 
+
+![Single_AZ_HA_App_before_failover.png]({{site.baseurl}}/images/Single_AZ_HA_App_before_failover.png)
 
 
 
