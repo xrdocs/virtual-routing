@@ -188,7 +188,7 @@ cisco@xrdcisco:~/xrd-tools/scripts$
 
 ```
 
-So, in addition to the platform specific checks with the -p option, we will run the extra checks as well for docker and xr-compose as we prepare the host machine.  
+So, in addition to the platform specific checks with the -p option, we will run the extra checks for docker and xr-compose as we prepare the host machine.  
 
 
 ### Running the Host-Check Script
@@ -199,7 +199,7 @@ For our freshly booted Ubuntu 20.04 Host machine, let's run the `host-check` scr
 * First, for the XRd Control-Plane platform:
   
   ```bash
-  cisco@xrdcisco:~/xrd-tools/scripts$ ./host-check --platform xrd-control-plane
+  cisco@xrdcisco:~/xrd-tools/scripts$ ./host-check -p xrd-vrouter -e docker -e xr-compose
   ==============================
   Platform checks - xrd-control-plane 
   ==============================
@@ -308,9 +308,6 @@ For our freshly booted Ubuntu 20.04 Host machine, let's run the `host-check` scr
   
 **Note**: The host-check script does not attempt to fix any problems, although it tries to give hints about how they can be addressed. Most of the solutions can be found fairly easily by searching the internet.
 {: .notice--warning}
-
-
-### Running Extra checks for docker and xr-compose. 
 
 
 ### Making Suggested Corrections to the Host Machine
