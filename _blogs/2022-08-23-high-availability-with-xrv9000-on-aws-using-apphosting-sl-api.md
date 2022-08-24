@@ -51,7 +51,8 @@ There are however limitations to network deployments on the public cloud:
 
 The network in reality becomes a three-layered architecture, with AWS underlay at the bottom for basic connectivity, P2P tunnels between virtual routers as the second layer to help carry the third-layer of traditional network protocols and traffic like IGPs, BGP, SR-MPLS etc. This is shown below:  
 
-![P2P_connection_between_routers_on_cloud.png]({{base_path}}/images/P2P_connection_between_routers_on_cloud.png){ width=100% }{: .align-center}
+
+![P2P_connection_between_routers_on_cloud.png]({{base_path}}/images/P2P_connection_between_routers_on_cloud.png){: .align-center}
 
 
 ## The HA problem 
