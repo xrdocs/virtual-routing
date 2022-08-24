@@ -193,7 +193,8 @@ In short, the state machine works as follows:
 Since the HA App has to interact with the AWS EC2 APIs for state maintenance and to trigger failovers, it is important to reduce the round-trip-time from the HA App (router) to the AWS API endpoint.  
 Further, there cannot be any compulsion to have a public IP associated with the routers, just so that the HA App can communicate with the public AWS EC2 API. For these reasons, it is necessary to deploy an AWS private-link in the form of a private interface endpoint with an attached IP and domain name that is reachable for the HA router pair.
 
-![aws_private_link_interface_endpoint.png]({{site.baseurl}}/images/aws_private_link_interface_endpoint.png){: .align-left}
+![aws_private_link_interface_endpoint.png]({{site.baseurl}}/images/aws_private_link_interface_endpoint.png){: .align-center}  
+
 > 1. Private Interface Endpoint Service is created so that routers can access EC2 API without internet access
 >
 >2. The endpoint URL utilized by the router HA App is obtained from the interface endpoint Service configuration
