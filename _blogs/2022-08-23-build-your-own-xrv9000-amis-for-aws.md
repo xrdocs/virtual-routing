@@ -19,7 +19,7 @@ tags:
   - image
   - terraform
   - Ansible
-position: hidden
+position: top
 ---
 
 {% include base_path %}
