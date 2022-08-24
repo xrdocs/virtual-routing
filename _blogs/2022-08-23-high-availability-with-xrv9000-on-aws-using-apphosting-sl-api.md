@@ -74,7 +74,7 @@ Besides the challenges, there is also scope to expand High-availability capabili
 
 >[https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html)
 
-This implies we can also target HA deployments where Active/Standby vRouters are in altogether different availability zones with AWS routing-tables to help route between them.  
+This implies we can also target HA deployments where Active/Standby vRouters are in altogether different availability zones with AWS VPC routing-tables to help route between them.  
 
 
 ![different_AZ_vrouters.png]({{site.baseurl}}/images/different_AZ_vrouters.png)
@@ -84,7 +84,7 @@ This implies we can also target HA deployments where Active/Standby vRouters are
 
 
 
-
+## The Apphosting solution for XRv9000 AWS HA
 
 
 
