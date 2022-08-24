@@ -30,6 +30,10 @@ This is Part-3 of the [XRd tutorials Series]({{base_path}}/tags/#xrd-tutorial-se
 
 XRd is available today as a docker image tarball to be deployed in containerized network deployments. This implies the host machine on which the container is orchestrated must supply the kernel, relevant userspace libraries (docker, kubectl etc.) and the necessary host devices and settings (pci passthrough, HugePages etc.) to allow XRd to run smoothly. The host machine could  be a baremetal server or a virtual machine as long as it meets certain minimum requirements. What are these requirements ?
 
+## XRd-Tools Host-Check Script
+
+In this tutorial, we will focus on the use of the `host-check` script that we introduced as part of the xrd-tools repository in [Part-2]({{base_path}}/tutorials/2022-08-22-helper-tools-to-get-started-with-xrd/) of the [XRd tutorials Series]({{base_path}}/tags/#xrd-tutorial-series).
+
 
 ## XRd Host Machine Requirements
 
