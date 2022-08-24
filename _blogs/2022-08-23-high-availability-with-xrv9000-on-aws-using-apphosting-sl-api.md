@@ -274,7 +274,6 @@ aws ec2 associate-iam-instance-profile --instance-id $rtr1_instance_id --iam-ins
 aws ec2 associate-iam-instance-profile --instance-id $rtr2_instance_id --iam-instance-profile Name=ec2access-profile
 aws ec2 describe-iam-instance-profile-associations
 
-
 ```
 
 These files can be found at the following location in the `xrv9k-aws-ha` git repository: 
