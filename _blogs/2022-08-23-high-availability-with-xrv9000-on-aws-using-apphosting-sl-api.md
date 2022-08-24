@@ -68,12 +68,16 @@ A simple HA deployment with vRouters (XRv9000) on AWS would look like the follow
 
 ![same_AZ_vrouters.png]({{site.baseurl}}/images/same_AZ_vrouters.png)
 
+In this example the two vRouters are in the same availability zone (hence interfaces are in the same subnets). This requires no routing to achieve reachability between the Active/Standby routers and hence solutions that mimic HSRP (with the limitations described above) can solve the HA problem.
 
-Besides the challenges, there is scope to expand High-availability capabilities by leveraging some concepts from the Public-Cloud. AWS for example structures its infrastructure offerings into regions, availability-zones and more:     
+Besides the challenges, there is also scope to expand High-availability capabilities by leveraging some concepts from the Public-Cloud. AWS for example structures its infrastructure offerings into regions, availability-zones and more:     
 
 >[https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html)
 
-This requires the need 
+This implies we can also target HA deployments where Active/Standby vRouters are in altogether different availability zones with AWS routing-tables to help route between them.  
+
+
+
 
 
 
