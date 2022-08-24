@@ -103,7 +103,7 @@ The third-party app utilizes two key pieces of infrastructure in the IOS-XR stac
 2. **Service-Layer APIs**: The service-layer API infrastructure in IOS-XR enables high-performance, model-driven access to the service/instructure layer of the IOS-XR stack so that third-party onbox or offbox applications can manipulate IOS-XR RIB, Label-Switch Database (create/delete ILM paths) or create and listen to BFD session events along with interface events.
 Learn more about IOS-XR Service-Layer API capabilities here: [https://xrdocs.io/cisco-service-layer/](https://xrdocs.io/cisco-service-layer/)
 
-### High-Level App Deployment Workflow   
+### High-Level App Interaction
 
 ![onbox_docker_ha_app.png]({{site.baseurl}}/images/onbox_docker_ha_app.png){: .align-left}. 
 
@@ -126,6 +126,8 @@ The redundancy design is composed of 3 parts:
 1) **Trigger**: One or more BFD sessions are initiated between the active and standby routers by the onbox container app using IOS-XR's service-layer API.
 2) **Detection**: When either the active router or the neighboring BFD interface goes down, the BFD event is detected within a few hundred milliseconds based on the BFD settings selected. This BFD event is detected by the application using service-layer API as well.
 3) **Action**: The application then invokes AWS APIs to trigger a failover. If both routers are in the same Availability zone, this is done by shifting the unique secondary IP configured on the active router to the standby router, thereby redirecting traffic destined for the secondary IP. If the routers are in different Availability zones, then the failover happens by shifting the gateway configured in the VPC routing table from the active Router's primary IP to the standby router's primary IP.
+
+
 
 
 
