@@ -131,7 +131,7 @@ The redundancy design is composed of 3 parts:
 
 
 
-### 
+### HA App: Same Availability Zone Deployment Model
 
 ![2_router_ha_app_same_Az.png]({{site.baseurl}}/images/2_router_ha_app_same_Az.png)
 
