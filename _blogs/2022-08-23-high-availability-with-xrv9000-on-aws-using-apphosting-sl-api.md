@@ -62,7 +62,13 @@ Let's keep a detailed deep dive on this emerging 5G deployment strategy for anot
 
 * Virtual Network hardware however does not come with High-Availability features built in - reliance instead is on Network Redundancy features such as HSRP/VRRP combined with BFD for quick failovers. It is far easier and cheaper to spin up separate Active/Standby Virtual Routers with network-level redundancy than to complicate their design with in-built HA capabilities.   
 
-* However, deployment on public cloud poses a new challenge: HSRP/VRRP won't work. Since public cloud (AWS) blocks multicast traffic - HSRP/VRRP hellos that are sent to multicast addresses are blocked.  Further HSRP state machine depends on the use of gratuitous ARP packets that are dropped on the public cloud as well.
+* However, deployment on public cloud poses a new challenge: HSRP/VRRP won't work. Since public cloud (AWS) blocks multicast traffic - HSRP/VRRP hellos that are sent to multicast addresses are blocked.  Further HSRP state machine depends on the use of gratuitous ARP packets that are dropped on the public cloud as well.  
+
+
+
+Besides the challenges, there is scope to expand High-availability capabilities by leveraging some concepts from the Public-Cloud. AWS for example structures its infrastructure offerings into regions, availability-zones and more:     
+
+>[https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html)
 
 This requires the need 
 
