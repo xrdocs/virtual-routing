@@ -96,6 +96,14 @@ The solution is an Onbox docker App to enable High-Availability for XRv9k on AWS
 ## How does it work?
 
 Check out the solution guide: [HA_redundancy_xrv9k_soln.pdf](/HA_redundancy_xrv9k_soln.pdf) for details on how the application works.
+The third-party app utilizes two key pieces of infrastructure in the IOS-XR stack:
+
+1. **Application-Hosting capabilities**: this allows third-party (non-XR) code to run on the router as a docker container, further enhanced by the AppMgr code released in IOS-XR release 7.3.1 to manage onbox docker app lifecycle. Learn more about IOS-XR apphosting here: https://xrdocs.io/application-hosting/  
+
+2. **Service-Layer APIs**: The service-layer API infrastructure in IOS-XR enables high-performance, model-driven access to the service/instructure layer of the IOS-XR stack so that third-party onbox or offbox applications can manipulate IOS-XR RIB, Label-Switch Database (create/delete ILM paths) or create and listen to BFD session events along with interface events.
+Learn more about   
+
+
 The figure below captures the design details:
 
 ![ha_app_solution_design.png]({{base_path}}/images/ha_app_solution_design.png)
@@ -104,9 +112,11 @@ The redundancy design is composed of 3 parts:
 
 1) **Trigger**: One or more BFD sessions are initiated between the active and standby routers by the onbox container app using IOS-XR's service-layer API.
 2) **Detection**: When either the active router or the neighboring BFD interface goes down, the BFD event is detected within a few hundred milliseconds based on the BFD settings selected. This BFD event is detected by the application using service-layer API as well.
-3) **Action**: The application then invokes AWS APIs to trigger a failover. If both routers are in the same Availability zone, this is done by shifting the unique secondary IP configured on the active router to the standby router. If the routers are in different Availability zones, then the failover happens 
+3) **Action**: The application then invokes AWS APIs to trigger a failover. If both routers are in the same Availability zone, this is done by shifting the unique secondary IP configured on the active router to the standby router, thereby redirecting traffic destined for the secondary IP. If the routers are in different Availability zones, then the failover happens by shifting the gateway configured in the VPC routing table from the active Router's primary IP to the standby router's primary IP.
 
 
+
+### 
 ![ha_app_solution_design_secondary_ip.png]({{base_path}}/images/ha_app_solution_design_secondary_ip.png)
 
 
