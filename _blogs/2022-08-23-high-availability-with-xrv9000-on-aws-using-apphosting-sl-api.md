@@ -211,7 +211,9 @@ Further, there cannot be any compulsion to have a public IP associated with the 
         )
     ```
 
-The AWS private interface endpoint can be deployed either manually or using AWS CLI or AWS Cloudformation. More details on it can be found here: 
+The AWS private interface endpoint must be deployed either manually or using AWS CLI or AWS Cloudformation **before** the HA App is deployed so that the `endpoint_url` that the HA App needs to interact with is known before App deployment. More details on it can be found here: 
+
+>[https://docs.aws.amazon.com/vpc/latest/privatelink/create-interface-endpoint.html#create-interface-endpoint](https://docs.aws.amazon.com/vpc/latest/privatelink/create-interface-endpoint.html#create-interface-endpoint)
 
 ## Try out the HA App!
 
