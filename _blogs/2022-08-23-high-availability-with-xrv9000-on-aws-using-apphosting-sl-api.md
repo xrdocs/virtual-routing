@@ -41,7 +41,9 @@ it is becoming increasingly clear that 5G Networks lend themselves well to the p
 
 The focus of this architecture is to leverage 5G components for services in multiple target environments (Dev/Test/Production/Enterprise) with full automation on the public cloud - so a good mix of native cloud services and telco protocols and technologies.
 
-There are of course limitations to network deployments on the public cloud:  
+
+## Challenges with network deployments on Public Cloud
+There are however limitations to network deployments on the public cloud:  
 
 * **Lack of transport Features in the Cloud (AWS) underlay**: The public-cloud underlay does a great job for traditional application services however is quite limited when it comes to traditional Telco networking requirements such as IGPs, SR-MPLS, EVPN, SRv6 and more. This mean traditional networking vendors can augment the underlay capabilities by providing virtualized versions of their Network OS to bring in the missing features. This is where Cisco virtual platforms such as XRv9000 and XRd play an important role - serving as edge and transport nodes in the 5G core on public cloud while also dabbling as gateways and route-reflectors in other parts of the network.  
 
@@ -51,7 +53,20 @@ The network in reality becomes a three-layered architecture, with AWS underlay a
 
 ![P2P_connection_between_routers_on_cloud.png]({{base_path}}/images/P2P_connection_between_routers_on_cloud.png)
 
-Let's keep a detailed deep dive on this emerging 5G deployment strategy for another day and focus on a more specific problem with regards to whole hearted move to the public cloud for edge and transport roles
+
+## The HA problem 
+
+Let's keep a detailed deep dive on this emerging 5G deployment strategy for another day and focus on a more specific problem that arises when traditional network roles like Provider-Edge (PE) that may have been served by modular network devices with multiple Route-Processors are replaced by standalone virtual network hardware like XRv9000:
+
+* Modular Network Hardware such as the ASR9000, Cisco8000, NCS5XX come with (the option of) Active and Standby Route-Processors that provide a great degree of reliability and high-availability (HA) in their network positions/roles.  
+
+* Virtual Network hardware however does not come with High-Availability features built in - reliance instead is on Network Redundancy features such as HSRP/VRRP combined with BFD for quick failovers. It is far easier and cheaper to spin up separate Active/Standby Virtual Routers with network-level redundancy than to complicate their design with in-built HA capabilities.   
+
+* However, deployment on public cloud poses a new challenge: HSRP/VRRP won't work. Since public cloud (AWS) blocks multicast traffic - HSRP/VRRP hellos that are sent to multicast addresses are blocked.  Further HSRP state machine depends on the use of gratuitous ARP packets that are dropped on the public cloud as well.
+
+This requires the need 
+
+
 
 
 
