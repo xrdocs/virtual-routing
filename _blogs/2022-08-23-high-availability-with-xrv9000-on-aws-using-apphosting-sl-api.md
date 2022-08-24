@@ -77,6 +77,7 @@ Besides the challenges, there is also scope to expand High-availability capabili
 This implies we can also target HA deployments where Active/Standby vRouters are in altogether different availability zones with AWS routing-tables to help route between them.  
 
 
+![different_AZ_vrouters.png]({{site.baseurl}}/images/different_AZ_vrouters.png)
 
 
 
