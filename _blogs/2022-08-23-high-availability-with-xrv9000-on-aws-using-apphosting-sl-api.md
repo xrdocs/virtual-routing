@@ -133,11 +133,14 @@ The redundancy design is composed of 3 parts:
 
 ### HA App: Same Availability Zone Deployment Model
 
+As shown below, the HA app is orchestrated on each router (Active and Standby) as an onbox docker app. Each onbox app instance connects to the local router's Service-layer API over gRPC to orchestrate and monitor BFD sessions with the neighboring router
+
 ![2_router_ha_app_same_Az.png]({{site.baseurl}}/images/2_router_ha_app_same_Az.png)
 
 
-###  
-![ha_app_solution_design_secondary_ip.png]({{base_path}}/images/ha_app_solution_design_secondary_ip.png)
+### Understanding the HA App operation: 
+
+
 
 
 
@@ -145,7 +148,9 @@ The redundancy design is composed of 3 parts:
 
 
 
-## Build App
+## Manual App Build and Deployment
+
+In case you already have a running AWS router setup, the HA App can be built manually and deployed on the routers. The build and deployment process for the App is described below:
 
 
 ### Build the Docker image (or Download pre-built latest version)
