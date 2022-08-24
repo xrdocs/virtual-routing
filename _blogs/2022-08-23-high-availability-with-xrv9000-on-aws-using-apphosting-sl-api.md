@@ -200,8 +200,8 @@ Further, there cannot be any compulsion to have a public IP associated with the 
 >
 >3. Sample boto3 resource creation for interface endpoint service in python is shown below. Using this the interface endpoint can be interacted with in the HA App.
 
-    ```python
-    resource = boto3.resource(
+  ```python
+  resource = boto3.resource(
         service_name='ec2',
         endpoint_url='https://vpce-0786bfdf8aad8840c-vacmlroq-us-west-2a.ec2.us-west-2.vpce.amazonaws.com',
         aws_access_key_id=ACCESS_KEY,
@@ -209,12 +209,16 @@ Further, there cannot be any compulsion to have a public IP associated with the 
         aws_session_token=SESSION_TOKEN,
         region_name=REGION_NAME
         )
-    ```
+  ```
 
 The AWS private interface endpoint must be deployed either manually or using AWS CLI or AWS Cloudformation **before** the HA App is deployed so that the `endpoint_url` that the HA App needs to interact with is known before App deployment. More details on it can be found here: 
 
 >[https://docs.aws.amazon.com/vpc/latest/privatelink/create-interface-endpoint.html#create-interface-endpoint](https://docs.aws.amazon.com/vpc/latest/privatelink/create-interface-endpoint.html#create-interface-endpoint)
 
+
+#### Configuring IAM roles
+
+The second pre-requisite for the HA app is to have the ability to create temporary credentials during its operation. AWS allows applications running on EC2 instances to do this by requesting 
 
 ## Try out the HA App!
 
