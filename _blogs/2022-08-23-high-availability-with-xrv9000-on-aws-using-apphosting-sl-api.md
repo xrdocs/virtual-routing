@@ -104,7 +104,7 @@ The third-party app utilizes two key pieces of infrastructure in the IOS-XR stac
 Learn more about IOS-XR Service-Layer API capabilities here: [https://xrdocs.io/cisco-service-layer/](https://xrdocs.io/cisco-service-layer/)
   
   
-### HA App Interaction with IOS-XR
+#### HA App Interaction with IOS-XR
 
 ![onbox_docker_ha_app.png]({{base_path}}/images/onbox_docker_ha_app.png){: .align-left}. 
 
@@ -117,7 +117,7 @@ Learn more about IOS-XR Service-Layer API capabilities here: [https://xrdocs.io/
 4. Real-time BFD events are then received over gRPC, allowing the SLAPI client to react to Peer-router unreachable/down events
 
 
-### Design Tenets for the HA App
+#### Design Tenets for the HA App
 
 The figure below captures the design tenets of the HA application:
 
@@ -131,7 +131,7 @@ The redundancy design is composed of 3 parts:
 
 
 
-### HA App: Same Availability Zone Deployment Model
+#### HA App: Same Availability Zone Deployment Model
 
 As shown below, the HA app is orchestrated on each router (Active and Standby) as an onbox docker app. Each onbox app instance connects to the local router's Service-layer API over gRPC to orchestrate and monitor BFD sessions with the neighboring router
 
