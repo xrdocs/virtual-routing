@@ -256,6 +256,23 @@ Next, create an access policy with a file named `ec2-role-access-policy.json` wi
 }
 ```
 
+Finally, a simple bash script (``) that uses the AWS CLI on your client machine is given below which can be used to apply the required IAM role to each of the routers in the HA router pair:  
+
+
+```
+
+
+
+```
+
+These files can be found at the following location in the git repository: 
+
+
+Learn more about associating IAM roles with EC2 instances for EC2 API access, here: 
+
+>[https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html)  
+
+
 
 ## Try out the HA App!
 
