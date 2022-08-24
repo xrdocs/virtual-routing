@@ -103,7 +103,17 @@ The third-party app utilizes two key pieces of infrastructure in the IOS-XR stac
 2. **Service-Layer APIs**: The service-layer API infrastructure in IOS-XR enables high-performance, model-driven access to the service/instructure layer of the IOS-XR stack so that third-party onbox or offbox applications can manipulate IOS-XR RIB, Label-Switch Database (create/delete ILM paths) or create and listen to BFD session events along with interface events.
 Learn more about IOS-XR Service-Layer API capabilities here: [https://xrdocs.io/cisco-service-layer/](https://xrdocs.io/cisco-service-layer/)
 
-![onbox_docker_ha_app.png]({{site.baseurl}}/images/onbox_docker_ha_app.png){: .align-left}
+### High-Level App Deployment Workflow 
+![onbox_docker_ha_app.png]({{site.baseurl}}/images/onbox_docker_ha_app.png){: .align-left}. 
+
+1. Using Xrv9000 Application-hosting capabilities, an SL-API BFD client will be spun up in a Docker container on the vRouter itself.
+
+2. BFD sessions are normally associated with a Routing Protocol “Client” like  BGP, OSPF, ISIS etc.
+
+3. With Service-layer API– “Service-Layer” acts as client for BFD allowing us to add/modify BFD sessions directly WITHOUT ANY IOS-XR CONFIG. BFD session state is transient/ephemeral – tied to the client.
+
+4. Real-time BFD events are then received over gRPC, allowing the SLAPI client to react to Peer-router unreachable/down events
+
 
 The figure below captures the design tenets of the HA application:
 
