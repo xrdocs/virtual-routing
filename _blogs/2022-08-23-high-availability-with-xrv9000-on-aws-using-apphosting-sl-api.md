@@ -34,11 +34,17 @@ The Telco 5G on Public Cloud space has been heating up off-late. With the public
 > [https://aws.amazon.com/blogs/industries/telco-meets-aws-cloud-deploying-dishs-5g-network-in-aws-cloud/](https://aws.amazon.com/blogs/industries/telco-meets-aws-cloud-deploying-dishs-5g-network-in-aws-cloud/)    
 
 
-it is becoming increasingly clear that 5G Networks lend themselves well to the public cloud model-  especially with greater focus on virtualized and containerized network functions (VNFs and CNFs) in the core deployment and technology strategy of 5G in contrast with tradtional mobile network deployments like 4G.  
-
-Let's keep a detailed deep dive on this emerging deployment strategy for another day and focus on a more specific problem 
+it is becoming increasingly clear that 5G Networks lend themselves well to the public cloud model-  especially with greater focus on virtualized and containerized network functions (VNFs and CNFs) in the core deployment and technology strategy of 5G as opposed to traditional mobile network deployments like 4G.  
 
 
+![Dish_AWS_5G_cloud_architecture.png]({{site.baseurl}}/images/Dish_AWS_5G_cloud_architecture.png)
+
+The focus of this architecture is to leverage 5G components for services in multiple target environments (Dev/Test/Production/Enterprise) with full automation on the public cloud - so a good mix of native cloud services along with telco protocols and technologies.
+
+The reason 
+
+
+Let's keep a detailed deep dive on this emerging deployment strategy for another day and focus on a more specific problem with regards to whole hearted move to the public cloud for edge and transport roles
 
 
 
