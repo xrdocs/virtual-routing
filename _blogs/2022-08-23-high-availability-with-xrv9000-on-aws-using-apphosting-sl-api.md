@@ -238,7 +238,6 @@ First create a file named `ec2-role-trust-policy.json` with the following conten
     }
   ]
 }
-Footer
 
 ```
 
