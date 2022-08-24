@@ -169,6 +169,26 @@ In the [xrd-tools tutorial]({{base_path}}/tutorials/2022-08-22-helper-tools-to-g
 
 This script is an extremely handy tool to determine the suitability of the Host machine for either XRd platform - control-plane or vRouter.
 
+Before we run the script, let's look at all the options available:  
+
+```
+cisco@xrdcisco:~/xrd-tools/scripts$ ./host-check --help
+usage: host-check [-h] [-p {xrd-control-plane,xrd-vrouter}] [-e {docker,xr-compose} [{docker,xr-compose} ...]]
+
+Check that the host is set up correctly for running XRd containers.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -p {xrd-control-plane,xrd-vrouter}, --platform {xrd-control-plane,xrd-vrouter}
+                        specify the XR platform to run host-check for
+  -e {docker,xr-compose} [{docker,xr-compose} ...], --extra-checks {docker,xr-compose} [{docker,xr-compose} ...]
+                        specify any extra checks to run
+cisco@xrdcisco:~/xrd-tools/scripts$ 
+
+
+```
+
+So, in addition to the platform specific checks with the -p option, we will run the extra checks as well for docker and xr-compose as we prepare the host machine.  
 
 
 ### Running the Host-Check Script
