@@ -142,7 +142,7 @@ As shown below, the HA app is orchestrated on each router (Active and Standby) a
 
 ![Single_AZ_HA_App_before_failover.png]({{base_path}}/images/Single_AZ_HA_App_before_failover.png)
 
-
+![Single_AZ_HA_App_post_active_failure.png({{base_path}}/images/Single_AZ_HA_App_post_active_failure.png)
 
 
 
