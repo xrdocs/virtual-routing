@@ -239,6 +239,21 @@ First create a file named `ec2-role-trust-policy.json` with the following conten
   ]
 }
 
+```   
+
+Next, create an access policy with a file named `ec2-role-access-policy.json` with the following contents:  
+
+```
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": ["ec2:*"],
+      "Resource": ["*"]
+    }
+  ]
+}
 ```
 
 
