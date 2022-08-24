@@ -225,6 +225,23 @@ To do this, make sure an IAM role with EC2 access is assigned to each router on 
 
 >[https://github.com/akshshar/xrv9k-aws-ha/tree/main/aws_iam](https://github.com/akshshar/xrv9k-aws-ha/tree/main/aws_iam)
 
+First create a file named `ec2-role-trust-policy.json` with the following contents:  
+
+```
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": { "Service": "ec2.amazonaws.com"},
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+Footer
+
+```
+
 
 ## Try out the HA App!
 
