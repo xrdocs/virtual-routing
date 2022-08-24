@@ -221,9 +221,7 @@ The AWS private interface endpoint must be deployed either manually or using AWS
 
 The second pre-requisite for the HA app is to have the ability to create temporary credentials during its lifecycle without having to package user AWS credentials in each onbox container.  
 
-To do this, make sure an IAM role with EC2 access is assigned to each router on which the HA App is going to run. An example of this using the AWS CLI is published to xrv9k-aws-ha git repository here:  
-
->[https://github.com/akshshar/xrv9k-aws-ha/tree/main/aws_iam](https://github.com/akshshar/xrv9k-aws-ha/tree/main/aws_iam)
+To do this, make sure an IAM role with EC2 access is assigned to each router on which the HA App is going to run.  
 
 First create a file named `ec2-role-trust-policy.json` with the following contents:  
 
