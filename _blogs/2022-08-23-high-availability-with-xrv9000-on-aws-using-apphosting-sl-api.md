@@ -39,12 +39,19 @@ it is becoming increasingly clear that 5G Networks lend themselves well to the p
 
 ![Dish_AWS_5G_cloud_architecture.png]({{site.baseurl}}/images/Dish_AWS_5G_cloud_architecture.png)
 
-The focus of this architecture is to leverage 5G components for services in multiple target environments (Dev/Test/Production/Enterprise) with full automation on the public cloud - so a good mix of native cloud services along with telco protocols and technologies.
+The focus of this architecture is to leverage 5G components for services in multiple target environments (Dev/Test/Production/Enterprise) with full automation on the public cloud - so a good mix of native cloud services and telco protocols and technologies.
 
-The reason 
+There are of course limitations to network deployments on the public cloud:  
 
+* **Lack of transport Features in the Cloud (AWS) underlay**: The public-cloud underlay does a great job for traditional application services however is quite limited when it comes to traditional Telco networking requirements such as IGPs, SR-MPLS, EVPN, SRv6 and more. This mean traditional networking vendors can augment the underlay capabilities by providing virtualized versions of their Network OS to bring in the missing features. This is where Cisco virtual platforms such as XRv9000 and XRd play an important role - serving as edge and transport nodes in the 5G core on public cloud while also dabbling as gateways and route-reflectors in other parts of the network.  
 
-Let's keep a detailed deep dive on this emerging deployment strategy for another day and focus on a more specific problem with regards to whole hearted move to the public cloud for edge and transport roles
+* **Restrictions in Cloud environments (no multicast, broadcast packets)**: With primary focus on server application workloads, Public Cloud underlays are restrictive in nature - multicast and broadcast packets are blocked - which implies traditional IGPs (OSPF, ISIS) or redundancy protocols like HSRP/VRRP just won't work. Thus, even with virtual platforms from networking vendors, operators need to be innovative in their design. For example, a typical 5G deployment that intends to use SR-MPLS+ IGPs for transport will need to create an initial overlay of p2p tunnels (like GRE).
+
+The network in reality becomes a three-layered architecture, with AWS underlay at the bottom for basic connectivity, P2P tunnels between virtual routers as the second layer to help carry the third-layer of traditional network protocols and traffic like IGPs, BGP, SR-MPLS etc. This is shown below:  
+
+![P2P_connection_between_routers_on_cloud.png]({{base_path}}/images/P2P_connection_between_routers_on_cloud.png)
+
+Let's keep a detailed deep dive on this emerging 5G deployment strategy for another day and focus on a more specific problem with regards to whole hearted move to the public cloud for edge and transport roles
 
 
 
