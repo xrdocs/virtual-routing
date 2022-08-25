@@ -158,11 +158,14 @@ The below tables summarize the support for all supported "Interface type (XRd pl
 ### XR_INTERFACES:  
   
 
-| linux (XRd Control Plane) | Identifier           | xr_name | chksum | snoop_{v4,v6} | snoop_{v4,v6}_default_route |
-|---------------------------|----------------------|---------|--------|---------------|-----------------------------|
-| pci (XRd vRouter)         | Linux interface name | ✓       | ✓      | ✓             | ✓                           |
-| pci-range (XRd vRouter)   | PCI address          | X       | X      | X             | X                           |
-  
+| linux (XRd Control Plane)   | pci (XRd vRouter)    | pci-range (XRd vRouter) |
+|-----------------------------|----------------------|-------------------------|
+| Identifier                  | Linux interface name | PCI address             | last&lt;N&gt;/first&lt;N&gt; |
+| xr_name                     | ✓                    | X                       | X                            |
+| chksum                      | ✓                    | X                       | X                            |
+| snoop_{v4,v6}               | ✓                    | X                       | X                            |
+| snoop_{v4,v6}_default_route | ✓                    | X                       | X                            |
+
   
 ### XR_MGMT_INTERFACES:  
   
