@@ -519,6 +519,75 @@ cisco@xrdcisco:~/xrd-tools/scripts$
 </div>  
 
 
+### Run extra checks for docker and xr-compose
+
+
+The `host-check` script can also be used to check for the presence of compatible docker and docker-compose installation on the host system, among other things.  
+
+For this purpose, run `host-check` with the `-e` flag specifying either `docker` or `xr-compose` as the extra check variable. Only one `-e` option can be provided at a time. These extra checks are identical for both platforms - xrd-control-plane and xrd-vrouter, so the `-p` option may be either of the 2 currently supported platforms:  
+
+
+```bash
+cisco@xrdcisco:~/xrd-tools/scripts$ ./host-check -p xrd-control-plane -e docker
+==============================
+Platform checks - xrd-control-plane
+==============================
+PASS -- CPU architecture (x86_64)
+PASS -- CPU cores (8)
+PASS -- Kernel version (5.4)
+PASS -- Base kernel modules
+        Installed module(s): dummy, nf_tables
+PASS -- Cgroups version (v1)
+PASS -- systemd mounts
+        /sys/fs/cgroup and /sys/fs/cgroup/systemd mounted correctly.
+PASS -- Inotify max user instances
+        64000 - this is expected to be sufficient for 16 XRd instance(s).
+PASS -- Inotify max user watches
+        64000 - this is expected to be sufficient for 16 XRd instance(s).
+INFO -- Core pattern (core files managed by the host)
+PASS -- ASLR (full randomization)
+INFO -- Linux Security Modules
+        AppArmor is enabled. XRd is currently unable to run with the
+        default docker profile, but can be run with
+        '--security-opt apparmor=unconfined' or equivalent.
+PASS -- RAM
+        Available RAM is 19.8 GiB.
+        This is estimated to be sufficient for 9 XRd instance(s), although memory
+        usage depends on the running configuration.
+        Note that any swap that may be available is not included.
+
+==============================
+Extra checks
+==============================
+
+docker checks
+-----------------------
+FAIL -- Docker client
+        Docker client not correctly installed on the host (checked with
+        'docker --version').
+        See installation instructions at https://docs.docker.com/engine/install/.
+        At least version 18.0 is required for XRd.
+SKIP -- Docker daemon
+        Skipped due to failed checks: Docker client
+SKIP -- Docker supports d_type
+        Skipped due to failed checks: Docker daemon
+
+==================================================================
+Host environment set up correctly for xrd-control-plane
+------------------------------------------------------------------
+Extra checks failed: docker
+==================================================================
+
+
+```
+
+
+Let's install docker for the host machine (in this example Ubuntu 20.04). Docker installation instructions for different linux distrbutions can be found here:  
+
+>[https://docs.docker.com/engine/install/#server](https://docs.docker.com/engine/install/#server)
+
+We'll use the Ubuntu instructions at: [https://docs.docker.com/engine/install/ubuntu/](https://docs.docker.com/engine/install/ubuntu/)  
+
 
 
 And that's it for setting up the host environment. The `host-check` script makes it super-easy to keep track of the settings to take care of when running XRd Control-Plane or vRouter variants. Next up - let's try spinning up XRd using docker!  
