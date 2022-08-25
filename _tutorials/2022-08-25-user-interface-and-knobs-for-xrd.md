@@ -71,7 +71,10 @@ Variables specific to the XRd vRouter platform.
 | Purpose  | The driver to use for PCI interfaces that need rebinding | The number of MiB of hugepages to provide to XR     | The CPU set to be used for the dataplane packet threads | Avoid implicitly assigning any workloads to these CPU cores (they can still be used by explicit env var cpusets) | The CPU core to use for the dataplane main thread | Control printing of the full allow-list if an unsupported PCI device is given |
 | Contents | One of igb_uio or vfio-pci                               | Integer value representing number of MiB (min 1024) | See CPU options                                         | See CPU options                                                                                                  | See CPU options                                   | 1 (boolean 'true')                                                            |
 | Default  | vfio-pci                                                 | 3072                                                | See CPU options                                         | None                                                                                                             | See CPU options                                   | None                                                                          |
-
+  
+  
+Advanced Variables
+These variables are not expected to be used in the mainline but are provided to allow finer grained control over certain parameters.
 
 XRd vRouter Variables
 Variable	Purpose	Contents	Default
