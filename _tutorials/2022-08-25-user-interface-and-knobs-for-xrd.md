@@ -266,7 +266,7 @@ Examples when this might be used:
 
 The CPUSET variables take as their arguments a cpuset (comma separated list of cpu core indices or ranges of indices).
 
-Docker and Kubernetes both allow restrictions to be placed on the CPU resource that the container is allowed to use – such as via the --cpuset-cpus Docker 'run' argument. If these are specified to the container orchestrator then the CPUSET variables described within this section must be within that restricted set.
+Docker and Kubernetes both allow restrictions to be placed on the CPU resource that the container is allowed to use – such as via the `--cpuset-cpus` Docker 'run' argument. If these are specified to the container orchestrator then the CPUSET variables described within this section must be within that restricted set.
 
 Examples:  
     
