@@ -17,7 +17,7 @@ tags:
   - kubernetes
   - docker
   - linux
-position: hidden
+position: top
 ---
 
 {% include base_path %}
