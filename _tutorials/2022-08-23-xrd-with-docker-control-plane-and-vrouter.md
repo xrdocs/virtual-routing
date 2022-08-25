@@ -47,6 +47,7 @@ While XRd images can be launched using docker natively - `launch-xrd` acts as a 
 ## Launch XRd using docker
 
 
+### Load docker images downloaded from CCO
 Before we begin, let's load the XRd images we downloaded from CCO into the local docker daemon.
 
 The image tarballs we expanded in [Part-1]({{base_path}}/tutorials/2022-08-22-xrd-images-where-can-one-get-them) are dumped below.  
@@ -116,5 +117,8 @@ localhost/xrd-control-plane   latest    dd8d741e50b2   4 weeks ago   1.15GB
 cisco@xrdcisco:~/images/xrd-vrouter$ 
 cisco@xrdcisco:~/images/xrd-vrouter$ 
 ```
+
+
+
 
 Part-5 of the XRd tutorials Series: [here]({{base_path}}/tutorials/2022-08-23-xrd-with-docker-compose-control-plane-and-vrouter).
