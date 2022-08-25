@@ -161,7 +161,9 @@ XR_MGMT_INTERFACES:
   
   
   
-Examples:
+Examples:  
+  
+```  
 XR_INTERFACES="linux:eth0;linux:eth1"
 XR_INTERFACES="linux:eth0,snoop_v4,xr_name=GigabitEthernet0/0/0/1;linux:eth1,chksum,xr_name=GigE0/0/0/0"
 XR_INTERFACES="pci:00:08.1;pci:00:09.0"
@@ -170,7 +172,7 @@ XR_INTERFACES="pci:00:08.0;\
                pci:00:09.0"
 XR_INTERFACES="linux:eth0%3B1,xr_name=Gi0/0/0/10"
 XR_INTERFACES="pci-range:last4"
-
+```
 
 The following gives an example specification of XR_INTERFACES and XR_MGMT_INTERFACES to 'docker run':
 
