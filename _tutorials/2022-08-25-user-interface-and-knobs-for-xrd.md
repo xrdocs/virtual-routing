@@ -123,7 +123,8 @@ Linux interface names must be decodable using the URL encoding scheme. This does
 
 **NOTE**:
 The decoded interface name must not include whitespace, and there is a short-term limitation on XRd Control Plane that the decoded interface name must not include commas or colons.
-{: .notice-info}. 
+{: .notice-info}  
+  
   
 * **Optional flag** are comma separated keywords (not supported for "pci-range" type):
 
