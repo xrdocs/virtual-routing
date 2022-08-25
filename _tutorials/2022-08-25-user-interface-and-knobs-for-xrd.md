@@ -121,31 +121,31 @@ The decoded interface name must not include whitespace, and there is a short-ter
   
 * **Optional flag** are comma separated keywords (not supported for "pci-range" type):
 
-xr_name=<XR interface name> to specify an XR interface name to represent this interface
+  * xr_name=<XR interface name> to specify an XR interface name to represent this interface
 
-Fully qualified name, with support for both short and long XR interface types (ie Gi, GigabitEthernet, Mg, MgmtEth)
+    * Fully qualified name, with support for both short and long XR interface types (ie Gi, GigabitEthernet, Mg, MgmtEth)
 
-For the R/S/I/P section, only the port number may be customized - R/S/I must be 0/0/0 for data ports and 0/RP0/CPU0 for management ports
+    * For the R/S/I/P section, only the port number may be customized - R/S/I must be 0/0/0 for data ports and 0/RP0/CPU0 for management ports
 
-chksum: indicate that TCP/UDP checksums need to be calculated by XRd for ingress packets to counteract checksum offload. This is only supported for linux interfaces.
+  * chksum: indicate that TCP/UDP checksums need to be calculated by XRd for ingress packets to counteract checksum offload. This is only supported for linux interfaces.
 
-snoop_{v4,v6}: indicate that this interface's address (IPv4 or IPv6 as appropriate) should be snooped and applied as XR config. It is possible to specify any combination of these flags. This is only supported for linux interfaces on XRd Control Plane and management interfaces on XRd vRouter. These flags may not be used with ZTP enabled.
+  * snoop_{v4,v6}: indicate that this interface's address (IPv4 or IPv6 as appropriate) should be snooped and applied as XR config. It is possible to specify any combination of these flags. This is only supported for linux interfaces on XRd Control Plane and management interfaces on XRd vRouter. These flags may not be used with ZTP enabled.
 
-snoop_{v4,v6}_default_route: indicate that the IPv4 or IPv6 default route for this interface should be snooped. If either/both of these flags are specified, the corresponding snoop_{v4,v6} flags must also be specified, or this will result in an error. The flags can only be specified for at most one interface in total. This is only supported for linux interfaces on XRd Control Plane and management interfaces on XRd vRouter.
+  * snoop_{v4,v6}_default_route: indicate that the IPv4 or IPv6 default route for this interface should be snooped. If either/both of these flags are specified, the corresponding snoop_{v4,v6} flags must also be specified, or this will result in an error. The flags can only be specified for at most one interface in total. This is only supported for linux interfaces on XRd Control Plane and management interfaces on XRd vRouter.
 
 If the xr_name flag is not specified, the next available XR port number is used (starting at 0, and after taking into account ports where xr_name is specified). This is used in conjunction with the following interface name and R/S/I segment:
 
-For XRd Control Plane:
+* For XRd Control Plane:
 
-GigE0/0/0/X if the interface is in XR_INTERFACES
+  * GigE0/0/0/X if the interface is in XR_INTERFACES
 
-MgmtEth0/RP0/CPU0/X if the interface is in XR_MGMT_INTERFACES
+  * MgmtEth0/RP0/CPU0/X if the interface is in XR_MGMT_INTERFACES
 
-For XRd vRouter:
+* For XRd vRouter:
 
-Name depends on detected underlying interface speed if the interface is in XR_INTERFACES
+  * Name depends on detected underlying interface speed if the interface is in XR_INTERFACES
 
-MgmtEth0/RP0/CPU0/0 if the interface is in XR_MGMT_INTERFACES, as only one management interface is currently supported
+  * MgmtEth0/RP0/CPU0/0 if the interface is in XR_MGMT_INTERFACES, as only one management interface is currently supported
 
 The below tables summarize the support for all supported "Interface type (XRd platform)" permutations:
 
