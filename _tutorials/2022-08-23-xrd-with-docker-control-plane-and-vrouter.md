@@ -21,9 +21,9 @@ tags:
 {% include base_path %}
 {% include toc %}
 
-* This is Part-4 of the [XRd tutorials Series]({{base_path}}/tags/#xrd-tutorial-series).   
-* Skip to Part-5 here: [XRd with Docker-compose: Control-Plane and vRouter]({{base_path}}/tutorials/2022-08-23-xrd-with-docker-compose-control-plane-and-vrouter). 
-* Re-read Part-3 here: [Setting up the Host Environment to run XRd]({{base_path}}/tutorials/2022-08-22-setting-up-host-environment-to-run-xrd)
+* This is Part-5 of the [XRd tutorials Series]({{base_path}}/tags/#xrd-tutorial-series).   
+* Skip to Part-6 here: [XRd with Docker-compose: Control-Plane and vRouter]({{base_path}}/tutorials/2022-08-23-xrd-with-docker-compose-control-plane-and-vrouter). 
+* Re-read Part-4 here: [User Interface and knobs for XRd]({{base_path}}/tutorials/2022-08-22-setting-up-host-environment-to-run-xrd)
 
 
 
@@ -111,7 +111,7 @@ cisco@xrdcisco:~/xrd-tools/scripts$
 
 
 
-## Using docker to launch XRd
+## Launching XRd using docker
 
 
 ### Load docker images downloaded from CCO
@@ -524,4 +524,26 @@ RP/0/RP0/CPU0:ios#
 ```
 
 
-Part-5 of the XRd tutorials Series: [here]({{base_path}}/tutorials/2022-08-23-xrd-with-docker-compose-control-plane-and-vrouter).
+### Bring down the XRd Control-Plane docker container
+
+Standard docker interactions can be used for this purpose.   
+
+To stop the XRd docker container, use `docker stop` or `docker rm`:  
+
+```
+cisco@xrdcisco:~$ docker stop blissful_germain
+blissful_germain
+cisco@xrdcisco:~$ 
+cisco@xrdcisco:~$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+cisco@xrdcisco:~$ 
+
+```
+  
+
+### 
+
+
+
+
+Part-6 of the XRd tutorials Series: [here]({{base_path}}/tutorials/2022-08-23-xrd-with-docker-compose-control-plane-and-vrouter).
