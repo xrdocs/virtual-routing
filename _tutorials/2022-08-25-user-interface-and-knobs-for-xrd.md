@@ -27,3 +27,10 @@ position: hidden
 * Skip to Part-5 here: [XRd with Docker: Control-Plane and vRouter]({{base_path}}/tutorials/2022-08-23-xrd-with-docker-control-plane-and-vrouter).    
 * Re-read Part-3 here: [Setting up the Host Environment to run XRd]({{base_path}}/tutorials/2022-08-22-setting-up-host-environment-to-run-xrd/)
 
+
+
+Part-5 of the XRd tutorials Series here: [XRd with Docker: Control-Plane and vRouter]({{base_path}}/tutorials/2022-08-23-xrd-with-docker-control-plane-and-vrouter)
+
+
+
+
