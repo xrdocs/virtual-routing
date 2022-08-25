@@ -527,6 +527,8 @@ The `host-check` script can also be used to check for the presence of compatible
 For this purpose, run `host-check` with the `-e` flag specifying either `docker` or `xr-compose` as the extra check variable. Only one `-e` option can be provided at a time. These extra checks are identical for both platforms - xrd-control-plane and xrd-vrouter, so the `-p` option may be either of the 2 currently supported platforms:  
 
 
+#### Host-Check for Docker
+
 ```bash
 cisco@xrdcisco:~/xrd-tools/scripts$ ./host-check -p xrd-control-plane -e docker
 ==============================
@@ -587,6 +589,37 @@ Let's install docker for the host machine (in this example Ubuntu 20.04). Docker
 >[https://docs.docker.com/engine/install/#server](https://docs.docker.com/engine/install/#server)
 
 We'll use the Ubuntu instructions at: [https://docs.docker.com/engine/install/ubuntu/](https://docs.docker.com/engine/install/ubuntu/)  
+
+At the end of the install, you should be able to run: 
+
+
+```
+cisco@xrdcisco:~/xrd-tools/scripts$ docker --version
+Docker version 20.10.17, build 100c701
+cisco@xrdcisco:~/xrd-tools/scripts$ 
+
+```
+
+Further, make sure the currently logged in user is added to the `docker` group so that the docker command can be run without using `sudo`:  
+
+```
+cisco@xrdcisco:~/xrd-tools/scripts$ sudo adduser cisco docker
+Adding user `cisco' to group `docker' ...
+Adding user cisco to group docker
+Done.
+cisco@xrdcisco:~/xrd-tools/scripts$ 
+
+```
+
+Re-login over ssh to the system at this point to make sure `docker` is available to the logged-in user:  
+
+```
+cisco@xrdcisco:~$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+cisco@xrdcisco:~$ 
+cisco@xrdcisco:~$ 
+
+```
 
 
 
