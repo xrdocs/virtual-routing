@@ -226,8 +226,302 @@ docker run -it --rm \
 ```
 
 
+We can use either `launch-xrd` or the native docker command as shown above to boot the XRd container.
+As shown above, no information related to interfaces or configuration has been passed to the above `launch-xrd` command, we will try out these options subsequently.  Let's boot the router first:  
 
 
+```
+cisco@xrdcisco:~/xrd-tools/scripts$ ./launch-xrd localhost/xrd-control-plane 
+systemd 230 running in system mode. (+PAM +AUDIT +SELINUX +IMA -APPARMOR +SMACK +SYSVINIT +UTMP -LIBCRYPTSETUP -GCRYPT -GNUTLS +ACL +XZ -LZ4 -SECCOMP +BLKID -ELFUTILS +KMOD -IDN)
+Detected virtualization docker.
+Detected architecture x86-64.
+
+Welcome to Cisco XR (Base Distro SELinux and CGL) 9.0.0.26!
+
+Set hostname to <2b4a359239e7>.
+Initializing machine ID from random generator.
+[  OK  ] Reached target Remote File Systems.
+[  OK  ] Listening on Journal Socket (/dev/log).
+[  OK  ] Reached target Swap.
+[  OK  ] Listening on Journal Socket.
+[  OK  ] Created slice User and Session Slice.
+[  OK  ] Reached target Paths.
+[  OK  ] Listening on Syslog Socket.
+[  OK  ] Created slice System Slice.
+         Mounting Temporary Directory...
+         Mounting FUSE Control File System...
+         Mounting Huge Pages File System...
+[  OK  ] Reached target Slices.
+         Starting Journal Service...
+         Starting Remount Root and Kernel File Systems...
+[  OK  ] Mounted FUSE Control File System.
+[  OK  ] Mounted Huge Pages File System.
+[  OK  ] Mounted Temporary Directory.
+[  OK  ] Started Remount Root and Kernel File Systems.
+         Starting Copy selected logs to var/log/old directories...
+         Starting Create System Users...
+         Starting Rebuild Hardware Database...
+         Starting Load/Save Random Seed...
+         Starting Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling...
+[  OK  ] Started Journal Service.
+[  OK  ] Started Create System Users.
+         Starting Flush Journal to Persistent Storage...
+[  OK  ] Started Load/Save Random Seed.
+[  OK  ] Started Flush Journal to Persistent Storage.
+[  OK  ] Started Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling.
+[  OK  ] Reached target Local File Systems (Pre).
+         Mounting /mnt...
+         Mounting /var/volatile...
+[  OK  ] Mounted /var/volatile.
+[  OK  ] Mounted /mnt.
+[  OK  ] Started Copy selected logs to var/log/old directories.
+[  OK  ] Reached target Local File Systems.
+         Starting Create Volatile Files and Directories...
+         Starting Rebuild Dynamic Linker Cache...
+         Starting Rebuild Journal Catalog...
+[  OK  ] Started Create Volatile Files and Directories.
+         Starting Update UTMP about System Boot/Shutdown...
+[  OK  ] Started Rebuild Journal Catalog.
+[  OK  ] Started Update UTMP about System Boot/Shutdown.
+[  OK  ] Started Rebuild Dynamic Linker Cache.
+[  OK  ] Started Rebuild Hardware Database.
+         Starting Update is Completed...
+[  OK  ] Started Update is Completed.
+[  OK  ] Reached target System Initialization.
+[  OK  ] Started Daily Cleanup of Temporary Directories.
+[  OK  ] Reached target Timers.
+[  OK  ] Listening on D-Bus System Message Bus Socket.
+[  OK  ] Reached target Sockets.
+[  OK  ] Reached target Basic System.
+         Starting System Logging Service...
+[  OK  ] Started Periodic Command Scheduler.
+         Starting OpenSSH Key Generation...
+         Starting sysklogd Kernel Logging Service...
+         Starting IOS-XR Setup Non-Root related tasks...
+[  OK  ] Started Job spooling tools.
+         Starting Resets System Activity Logs...
+[  OK  ] Started D-Bus System Message Bus.
+[  OK  ] Started IOS-XR XRd Core Watcher.
+[  OK  ] Reached target Network.
+         Starting Permit User Sessions...
+         Starting /etc/rc.local Compatibility...
+         Starting Xinetd A Powerful Replacement For Inetd...
+[  OK  ] Started Service for factory reset.
+[  OK  ] Started Resets System Activity Logs.
+[  OK  ] Started Permit User Sessions.
+[  OK  ] Started /etc/rc.local Compatibility.
+[  OK  ] Reached target Login Prompts.
+[  OK  ] Started Xinetd A Powerful Replacement For Inetd.
+[  OK  ] Reached target Multi-User System.
+         Starting Update UTMP about System Runlevel Changes...
+[  OK  ] Started Update UTMP about System Runlevel Changes.
+[  OK  ] Started IOS-XR Setup Non-Root related tasks.
+[  OK  ] Started OpenSSH Key Generation.
+         Starting IOS-XR ISO Installation...
+[  OK  ] Started System Logging Service.
+[  OK  ] Started sysklogd Kernel Logging Service.
+[12351.229709] xrnginstall[358]: 2022 Aug 25 09:16:58.807 UTC: Setting up dumper and build info files
+[12351.309618] xrnginstall[358]: 2022 Aug 25 09:16:58.886 UTC: XR Lineup:  r77x.lu%EFR-00000436820
+[12351.314251] xrnginstall[358]: 2022 Aug 25 09:16:58.891 UTC: XR Version: 7.7.1
+[12351.323159] xrnginstall[358]: 2022 Aug 25 09:16:58.900 UTC: Completed set up of dumper and build info files
+[12351.329081] xrnginstall[358]: 2022 Aug 25 09:16:58.906 UTC: Preparing IOS-XR (first boot)
+[12351.555529] xrnginstall[358]: 2022 Aug 25 09:16:59.132 UTC: Checking if rollback cleanup is required
+[12351.559938] xrnginstall[358]: 2022 Aug 25 09:16:59.137 UTC: Finished rollback cleanup stage
+[12351.563992] xrnginstall[358]: 2022 Aug 25 09:16:59.141 UTC: Single node: starting XR
+[12351.573417] xrnginstall[358]: 2022 Aug 25 09:16:59.150 UTC: xrnginstall completed successfully
+[  OK  ] Started IOS-XR ISO Installation.
+[  OK  ] Started Cisco Directory Services.
+         Starting IOS-XR XRd...
+[  OK  ] Started IOS-XR XRd.
+         Starting IOS-XR Reaperd and Process Manager...
+[  OK  ] Started IOS-XR Reaperd and Process Manager.
+[  OK  ] Reached target XR installation and startup.
+
+
+ios con0/RP0/CPU0 is now available
+
+
+
+
+
+Press RETURN to get started.
+
+
+
+
+
+This product contains cryptographic features and is subject to United 
+States and local country laws governing import, export, transfer and 
+use. Delivery of Cisco cryptographic products does not imply third-party 
+authority to import, export, distribute or use encryption. Importers, 
+exporters, distributors and users are responsible for compliance with 
+U.S. and local country laws. By using this product you agree to comply 
+with applicable laws and regulations. If you are unable to comply with 
+U.S. and local laws, return this product immediately. 
+
+A summary of U.S. laws governing Cisco cryptographic products may be 
+found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to 
+export@cisco.com.
+
+
+
+RP/0/RP0/CPU0:Aug 25 09:17:10.363 UTC: pyztp2[168]: %INFRA-ZTP-4-EXITED : ZTP exited 
+
+!!!!!!!!!!!!!!!!!!!! NO root-system username is configured. Need to configure root-system username. !!!!!!!!!!!!!!!!!!!!
+
+         --- Administrative User Dialog ---
+
+
+  Enter root-system username: cisco
+  Enter secret: 
+  Enter secret again: 
+Use the 'configure' command to modify this configuration.
+User Access Verification
+
+Username: cisco
+Password: 
+
+
+RP/0/RP0/CPU0:ios#
+RP/0/RP0/CPU0:ios#
+RP/0/RP0/CPU0:ios#show  version 
+Thu Aug 25 09:17:37.487 UTC
+Cisco IOS XR Software, Version 7.7.1 LNT
+Copyright (c) 2013-2022 by Cisco Systems, Inc.
+
+Build Information:
+ Built By     : ingunawa
+ Built On     : Mon Jul 25 06:07:25 UTC 2022
+ Build Host   : iox-lnx-121
+ Workspace    : /auto/srcarchive12/prod/7.7.1/xrd-control-plane/ws
+ Version      : 7.7.1
+ Label        : 7.7.1
+
+cisco XRd Control Plane
+cisco XRd-CP-C-01 processor with 30GB of memory
+ios uptime is 0 minutes
+XRd Control Plane Container
+
+RP/0/RP0/CPU0:ios#
+RP/0/RP0/CPU0:ios#
+RP/0/RP0/CPU0:ios#show  running-config 
+Thu Aug 25 09:17:42.875 UTC
+Building configuration...
+!! IOS XR Configuration 7.7.1
+!! Last configuration change at Thu Aug 25 09:17:30 2022 by SYSTEM
+!
+username cisco
+ group root-lr
+ group cisco-support
+ secret 10 $6$00ByfEXz8sj0f...$q4Y1blEefLrM6pQz4.ZRGSSnLYqnYNbJC3Q4tH/68PcFv2AxOumseCQ/5hM2VnIbRyRZ3tunpQpqoK29jXhYV1
+!
+call-home
+ service active
+ contact smart-licensing
+ profile CiscoTAC-1
+  active
+  destination transport-method email disable
+  destination transport-method http
+ !
+!
+interface MgmtEth0/RP0/CPU0/0
+ shutdown
+!
+end
+
+RP/0/RP0/CPU0:ios#
+```
+
+
+
+The boot above is very similar to IOS-XR boot on physical network hardware such as the Cisco8000 or NCS540.  
+It can be seen in the `show run` output above that a default Management interface is added even with the barebone boot we tried above. This is the default docker interface that is added to each docker container.
+
+
+Open up a new shell into the host machine and dump the running docker containers on the system:  
+
+```
+cisco@xrdcisco:~$ docker ps
+CONTAINER ID   IMAGE                         COMMAND                  CREATED         STATUS         PORTS     NAMES
+2b4a359239e7   localhost/xrd-control-plane   "/bin/sh -c /sbin/xr…"   4 minutes ago   Up 4 minutes             blissful_germain
+cisco@xrdcisco:~$ 
+
+```
+
+Let's inspect the IP address assigned to the docker container:  
+
+```
+
+cisco@xrdcisco:~$ docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' blissful_germain
+172.17.0.2
+cisco@xrdcisco:~$ 
+```
+
+Let's try configuring this IP address on the router's Mgmt IP to see if we can establish connectivity:  
+
+
+```
+RP/0/RP0/CPU0:ios#conf t
+Thu Aug 25 09:21:55.229 UTC
+RP/0/RP0/CPU0:ios(config)#int MgmtEth 0/RP0/CPU0/0 
+RP/0/RP0/CPU0:ios(config-if)#no shut
+RP/0/RP0/CPU0:ios(config-if)#ipv4 add 172.17.0.2/24
+RP/0/RP0/CPU0:ios(config-if)#commit
+Thu Aug 25 09:22:11.945 UTC
+RP/0/RP0/CPU0:Aug 25 09:20:49.877 UTC: ifmgr[250]: %PKT_INFRA-LINK-3-UPDOWN : Interface MgmtEth0/RP0/CPU0/0, changed state to Down 
+RP/0/RP0/CPU0:Aug 25 09:20:49.889 UTC: ifmgr[250]: %PKT_INFRA-LINK-3-UPDOWN : Interface MgmtEth0/RP0/CPU0/0, changed state to Up 
+RP/0/RP0/CPU0:ios(config-if)#
+RP/0/RP0/CPU0:ios#
+
+RP/0/RP0/CPU0:ios#show ip int brief 
+Thu Aug 25 09:30:49.235 UTC
+
+Interface                      IP-Address      Status          Protocol Vrf-Name
+MgmtEth0/RP0/CPU0/0            172.17.0.2      Up              Up       default 
+RP/0/RP0/CPU0:ios#
+RP/0/RP0/CPU0:ios#ping 172.17.0.1
+Thu Aug 25 09:22:17.764 UTC
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 172.17.0.1, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/5/17 ms
+RP/0/RP0/CPU0:ios#
+```
+
+Great, we're able to docker daemon default gateway from the router. If we enable SSH in the router, we should also be able to SSH to the running docker container from the host machine:  
+
+
+```
+RP/0/RP0/CPU0:ios#conf t
+Thu Aug 25 09:32:06.031 UTC
+RP/0/RP0/CPU0:ios(config)#
+RP/0/RP0/CPU0:ios(config)#ssh server v2
+RP/0/RP0/CPU0:ios(config)#commit
+Thu Aug 25 09:32:13.356 UTC
+RP/0/RP0/CPU0:ios(config)#
+```
+
+SSH from the host machine using the root username we created during boot:
+
+```
+cisco@xrdcisco:~$ ssh cisco@172.17.0.2
+The authenticity of host '172.17.0.2 (172.17.0.2)' can't be established.
+ECDSA key fingerprint is SHA256:kO8b9uTc+ITEA4EfR4gDwHwl74iZhxZNglX1VsP3EZY.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '172.17.0.2' (ECDSA) to the list of known hosts.
+Password: 
+
+
+
+
+RP/0/RP0/CPU0:ios#
+RP/0/RP0/CPU0:ios#
+RP/0/RP0/CPU0:ios#
+
+```
 
 
 Part-5 of the XRd tutorials Series: [here]({{base_path}}/tutorials/2022-08-23-xrd-with-docker-compose-control-plane-and-vrouter).
