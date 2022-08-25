@@ -930,4 +930,4 @@ And that's it for setting up the host environment. The `host-check` script makes
 {: .notice--success}
 
 
-Part-4 of the XRd tutorials Series here: [XRd with Docker: Control-Plane and vRouter]({{base_path}}/tutorials/2022-08-23-xrd-with-docker-control-plane-and-vrouter).
+Part-4 of the XRd tutorials Series here: [User Interface and Knobs for XRd]({{base_path}}/tutorials/022-08-25-user-interface-and-knobs-for-xrd).
