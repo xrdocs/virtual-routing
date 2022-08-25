@@ -41,12 +41,12 @@ ERROR: Platform init failed
 XRd hit a critical error during initialization and has aborted launch.
 ```
 
-XRd Environment Variables
+## XRd Environment Variables
 The tables in this section detail the full set of launch environment variables that XRd supports for configuring various behaviors. None of the variables are mandatory, and the default behavior when not specified is given too.
 
 An advanced section covers environment variables that are only expected to be used under guidance by the engineering team to tweak advanced parameters.
 
-Common Variables
+### Common Variables
 Variables that can be used across all XRd platforms.
 
 | Variable               | Purpose                                                                                                                    | Contents                                                 | Default                |
@@ -65,7 +65,7 @@ Variables that can be used across all XRd platforms.
 
 
 
-XRd vRouter Variables
+### XRd vRouter Variables
 Variables specific to the XRd vRouter platform.
 
 | Variable | XR_VROUTER_PCI_DRIVER                                    | XR_VROUTER_DP_HUGEPAGE_MB                           | XR_VROUTER_DP_CPUSET                                    | XR_VROUTER_CPUSET_AVOID                                                                                          | XR_VROUTER_DP_MAIN_CORE                           | XR_VROUTER_PCI_ERROR_VERBOSE                                                  |
@@ -75,10 +75,11 @@ Variables specific to the XRd vRouter platform.
 | Default  | vfio-pci                                                 | 3072                                                | See CPU options                                         | None                                                                                                             | See CPU options                                   | None                                                                          |
   
   
-Advanced Variables
+## Advanced Variables
 These variables are not expected to be used in the mainline but are provided to allow finer grained control over certain parameters.
 
-XRd vRouter Variables
+### XRd vRouter Variables  
+
 | Variable | XR_VROUTER_DP_MAIN_TUNE                                                                                                                                     | XR_VROUTER_DP_CPUSET_WKXR_VROUTER_DP_CPUSET_TXXR_VROUTER_DP_CPUSET_RX   | XR_VROUTER_PCI_PERMIT_DEVICES                                                   |
 |----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|---------------------------------------------------------------------------------|
 | Purpose  | Dataplane main thread tuning settings, where tuned mode is where the dataplane main thread is tuned to be friendlier when sharing core with other workloads | The cpusets to use for the dataplane packet RX, TX and worker thread(s) | Comma-separated list of device type IDs to add to the PCI device type allowlist |
