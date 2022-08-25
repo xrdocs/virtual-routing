@@ -619,6 +619,215 @@ CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 cisco@xrdcisco:~$ 
 cisco@xrdcisco:~$ 
 
+```  
+
+Finally, run `host-check` again to verify docker is properly set up:  
+
+
+```bash
+
+cisco@xrdcisco:~/xrd-tools/scripts$ ./host-check -p xrd-control-plane -e docker
+==============================
+Platform checks - xrd-control-plane
+==============================
+PASS -- CPU architecture (x86_64)
+PASS -- CPU cores (8)
+PASS -- Kernel version (5.4)
+PASS -- Base kernel modules
+        Installed module(s): dummy, nf_tables
+PASS -- Cgroups version (v1)
+PASS -- systemd mounts
+        /sys/fs/cgroup and /sys/fs/cgroup/systemd mounted correctly.
+PASS -- Inotify max user instances
+        64000 - this is expected to be sufficient for 16 XRd instance(s).
+PASS -- Inotify max user watches
+        64000 - this is expected to be sufficient for 16 XRd instance(s).
+INFO -- Core pattern (core files managed by the host)
+PASS -- ASLR (full randomization)
+INFO -- Linux Security Modules
+        AppArmor is enabled. XRd is currently unable to run with the
+        default docker profile, but can be run with
+        '--security-opt apparmor=unconfined' or equivalent.
+PASS -- RAM
+        Available RAM is 19.7 GiB.
+        This is estimated to be sufficient for 9 XRd instance(s), although memory
+        usage depends on the running configuration.
+        Note that any swap that may be available is not included.
+
+==============================
+Extra checks
+==============================
+
+docker checks
+-----------------------
+PASS -- Docker client (version 20.10.17)
+PASS -- Docker daemon (running, version 20.10.17)
+PASS -- Docker supports d_type
+
+==================================================================
+Host environment set up correctly for xrd-control-plane
+------------------------------------------------------------------
+Extra checks passed: docker
+==================================================================
+cisco@xrdcisco:~/xrd-tools/scripts$ 
+```
+
+You should see `Extra checks passed: docker` if everything was successful.  
+
+
+#### Host-Check for xr-compose
+
+`xr-compose` script in xrd-tools utilizes docker-compose that the host-check script will check for. Use `xr-compose` with the `-e` option with the `host-check` script:  
+
+
+```
+
+cisco@xrdcisco:~/xrd-tools/scripts$ ./host-check -p xrd-control-plane -e xr-compose
+==============================
+Platform checks - xrd-control-plane
+==============================
+PASS -- CPU architecture (x86_64)
+PASS -- CPU cores (8)
+PASS -- Kernel version (5.4)
+PASS -- Base kernel modules
+        Installed module(s): dummy, nf_tables
+PASS -- Cgroups version (v1)
+PASS -- systemd mounts
+        /sys/fs/cgroup and /sys/fs/cgroup/systemd mounted correctly.
+PASS -- Inotify max user instances
+        64000 - this is expected to be sufficient for 16 XRd instance(s).
+PASS -- Inotify max user watches
+        64000 - this is expected to be sufficient for 16 XRd instance(s).
+INFO -- Core pattern (core files managed by the host)
+PASS -- ASLR (full randomization)
+INFO -- Linux Security Modules
+        AppArmor is enabled. XRd is currently unable to run with the
+        default docker profile, but can be run with
+        '--security-opt apparmor=unconfined' or equivalent.
+PASS -- RAM
+        Available RAM is 19.7 GiB.
+        This is estimated to be sufficient for 9 XRd instance(s), although memory
+        usage depends on the running configuration.
+        Note that any swap that may be available is not included.
+
+==============================
+Extra checks
+==============================
+
+xr-compose checks
+-----------------------
+WARN -- docker-compose
+        Unable to parse Docker Compose version, at least version 1.18 is required.
+PASS -- PyYAML (installed)
+FAIL -- Bridge iptables
+        For xr-compose to be able to use Docker bridges, bridge IP tables must
+        be disabled. Note that there may be security considerations associated
+        with doing so.
+        Bridge IP tables can be disabled by setting the kernel parameters
+        net.bridge.bridge-nf-call-iptables and net.bridge.bridge-nf-call-ip6tables
+        to 0. These can be modified by adding 'net.bridge.bridge-nf-call-iptables=0'
+        and 'net.bridge.bridge-nf-call-ip6tables=0' to /etc/sysctl.conf or in a
+        dedicated conf file under /etc/sysctl.d/.
+        For a temporary fix, run:
+          sysctl -w net.bridge.bridge-nf-call-iptables=0
+          sysctl -w net.bridge.bridge-nf-call-ip6tables=0
+
+==================================================================
+Host environment set up correctly for xrd-control-plane
+------------------------------------------------------------------
+Extra checks failed: xr-compose
+==================================================================
+cisco@xrdcisco:~/xrd-tools/scripts$
+```
+
+**Note**: Today the `host-check` script and XRd platforms only support docker-compose v1. Docker-compose v2 was released with version v2.0.0. Until support for v2 is pushed to the xrd-tools git repo, install the last stable docker-compose v1 release, which is 1.29.2
+{: .notice--warning}
+
+
+#### Install docker-compose v1  
+
+
+```
+cisco@xrdcisco:~/xrd-tools/scripts$ sudo -E curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 12.1M  100 12.1M    0     0  36.6M      0 --:--:-- --:--:-- --:--:-- 36.6M
+cisco@xrdcisco:~/xrd-tools/scripts$ sudo chmod +x /usr/local/bin/docker-compose
+cisco@xrdcisco:~/xrd-tools/scripts$ 
+```
+
+You should be able to check the docker-compose version post a successful install:  
+
+```
+cisco@xrdcisco:~/xrd-tools/scripts$ docker-compose  version
+docker-compose version 1.29.2, build 5becea4c
+docker-py version: 5.0.0
+CPython version: 3.7.10
+OpenSSL version: OpenSSL 1.1.0l  10 Sep 2019
+cisco@xrdcisco:~/xrd-tools/scripts$ 
+
+```
+
+Running the `host-check` script again:  
+
+```
+cisco@xrdcisco:~/xrd-tools/scripts$ ./host-check -p xrd-control-plane -e xr-compose
+==============================
+Platform checks - xrd-control-plane
+==============================
+PASS -- CPU architecture (x86_64)
+PASS -- CPU cores (8)
+PASS -- Kernel version (5.4)
+PASS -- Base kernel modules
+        Installed module(s): dummy, nf_tables
+PASS -- Cgroups version (v1)
+PASS -- systemd mounts
+        /sys/fs/cgroup and /sys/fs/cgroup/systemd mounted correctly.
+PASS -- Inotify max user instances
+        64000 - this is expected to be sufficient for 16 XRd instance(s).
+PASS -- Inotify max user watches
+        64000 - this is expected to be sufficient for 16 XRd instance(s).
+INFO -- Core pattern (core files managed by the host)
+PASS -- ASLR (full randomization)
+INFO -- Linux Security Modules
+        AppArmor is enabled. XRd is currently unable to run with the
+        default docker profile, but can be run with
+        '--security-opt apparmor=unconfined' or equivalent.
+PASS -- RAM
+        Available RAM is 19.7 GiB.
+        This is estimated to be sufficient for 9 XRd instance(s), although memory
+        usage depends on the running configuration.
+        Note that any swap that may be available is not included.
+
+==============================
+Extra checks
+==============================
+
+xr-compose checks
+-----------------------
+PASS -- docker-compose (version 1.29.2)
+PASS -- PyYAML (installed)
+FAIL -- Bridge iptables
+        For xr-compose to be able to use Docker bridges, bridge IP tables must
+        be disabled. Note that there may be security considerations associated
+        with doing so.
+        Bridge IP tables can be disabled by setting the kernel parameters
+        net.bridge.bridge-nf-call-iptables and net.bridge.bridge-nf-call-ip6tables
+        to 0. These can be modified by adding 'net.bridge.bridge-nf-call-iptables=0'
+        and 'net.bridge.bridge-nf-call-ip6tables=0' to /etc/sysctl.conf or in a
+        dedicated conf file under /etc/sysctl.d/.
+        For a temporary fix, run:
+          sysctl -w net.bridge.bridge-nf-call-iptables=0
+          sysctl -w net.bridge.bridge-nf-call-ip6tables=0
+
+==================================================================
+Host environment set up correctly for xrd-control-plane
+------------------------------------------------------------------
+Extra checks failed: xr-compose
+==================================================================
+cisco@xrdcisco:~/xrd-tools/scripts$ 
+
 ```
 
 
