@@ -97,21 +97,21 @@ They both follow the same format, consisting of a semi-colon (and optional white
 
 Where:
 
-Underlying interface type is one of:
+* **Underlying interface type** is one of:
 
-linux: A linux interface identified by name. This option is applicable to data and management ports on XRd Control Plane, and to management ports on XRd vRouter.
+  * linux: A linux interface identified by name. This option is applicable to data and management ports on XRd Control Plane, and to management ports on XRd vRouter.
 
-pci: An interface identified by PCI address. Note this option is only applicable to data ports on XRd vRouter. Attempting to use this option on XRd Control Plane or in the XR_MGMT_INTERFACES environment variable will result in an error.
+  * pci: An interface identified by PCI address. Note this option is only applicable to data ports on XRd vRouter. Attempting to use this option on XRd Control Plane or in the XR_MGMT_INTERFACES environment variable will result in an error.
 
-pci-range: A range in the ordered list of available and supported PCI interfaces discovered at boot. Only supported for XR_INTERFACES on XRd vRouter. No other PCI interfaces may be specified (by pci/pci-range) in addition to this type.
+  * pci-range: A range in the ordered list of available and supported PCI interfaces discovered at boot. Only supported for XR_INTERFACES on XRd vRouter. No other PCI interfaces may be specified (by pci/pci-range) in addition to this type.
 
-Underlying interface identifier is an identifier corresponding to the specified interface type, respectively:
+* **Underlying interface identifier** is an identifier corresponding to the specified interface type, respectively:
 
-The linux interface name for interfaces with type "linux"
+  * The linux interface name for interfaces with type "linux"
 
-The pci address for interfaces with type "pci"
+  * The pci address for interfaces with type "pci"
 
-A range description using the keywords "first" or "last" followed by a positive integer N
+  * A range description using the keywords "first" or "last" followed by a positive integer N
 
 Linux interface names must be decodable using the URL encoding scheme. This does not affect alphanumeric characters (i.e. letters or numbers), but for example "=" and ";" become "%3D" and "%3B" respectively when URL encoded.
 
