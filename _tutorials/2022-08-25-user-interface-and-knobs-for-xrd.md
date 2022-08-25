@@ -131,7 +131,7 @@ The decoded interface name must not include whitespace, and there is a short-ter
   
 * **Optional flag** are comma separated keywords (not supported for "pci-range" type):
 
-  * xr_name=<XR interface name> to specify an XR interface name to represent this interface
+  * `xr_name=<XR interface name>` to specify an XR interface name to represent this interface
 
     * Fully qualified name, with support for both short and long XR interface types (ie Gi, GigabitEthernet, Mg, MgmtEth)
 
