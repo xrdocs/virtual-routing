@@ -70,11 +70,15 @@ Variables that can be used across all XRd platforms.
 Variables specific to the XRd vRouter platform:  
 
 
-| Variable | XR_VROUTER_PCI_DRIVER                                    | XR_VROUTER_DP_HUGEPAGE_MB                           | XR_VROUTER_DP_CPUSET                                    | XR_VROUTER_CPUSET_AVOID                                                                                          | XR_VROUTER_DP_MAIN_CORE                           | XR_VROUTER_PCI_ERROR_VERBOSE                                                  |
-|----------|----------------------------------------------------------|-----------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|---------------------------------------------------|-------------------------------------------------------------------------------|
-| Purpose  | The driver to use for PCI interfaces that need rebinding | The number of MiB of hugepages to provide to XR     | The CPU set to be used for the dataplane packet threads | Avoid implicitly assigning any workloads to these CPU cores (they can still be used by explicit env var cpusets) | The CPU core to use for the dataplane main thread | Control printing of the full allow-list if an unsupported PCI device is given |
-| Contents | One of igb_uio or vfio-pci                               | Integer value representing number of MiB (min 1024) | See CPU options                                         | See CPU options                                                                                                  | See CPU options                                   | 1 (boolean 'true')                                                            |
-| Default  | vfio-pci                                                 | 3072                                                | See CPU options                                         | None                                                                                                             | See CPU options                                   | None                                                                          |
+| Variable                     | Purpose                                                                                                          | Contents                                            | Default         |
+|------------------------------|------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------|-----------------|
+| `XR_VROUTER_PCI_DRIVER`        | The driver to use for PCI interfaces that need rebinding                                                         | One of igb_uio or vfio-pci                          | vfio-pci        |
+| `XR_VROUTER_DP_HUGEPAGE_MB`    | The number of MiB of hugepages to provide to XR                                                                  | Integer value representing number of MiB (min 1024) | 3072            |
+| `XR_VROUTER_DP_CPUSET`         | The CPU set to be used for the dataplane packet threads                                                          | See CPU options                                     | See CPU options |
+| `XR_VROUTER_CPUSET_AVOID`      | Avoid implicitly assigning any workloads to these CPU cores (they can still be used by explicit env var cpusets) | See CPU options                                     | None            |
+| `XR_VROUTER_DP_MAIN_CORE`      | The CPU core to use for the dataplane main thread                                                                | See CPU options                                     | See CPU options |
+| `XR_VROUTER_PCI_ERROR_VERBOSE` | Control printing of the full allow-list if an unsupported PCI device is given                                    | 1 (boolean 'true')                                  | None            |
+
   
   
 ## Advanced Variables
