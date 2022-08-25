@@ -504,7 +504,7 @@ Thu Aug 25 09:32:13.356 UTC
 RP/0/RP0/CPU0:ios(config)#
 ```
 
-SSH from the host machine using the root username we created during boot:
+SSH from the host machine using the root username we created post boot:
 
 ```
 cisco@xrdcisco:~$ ssh cisco@172.17.0.2
