@@ -23,7 +23,7 @@ tags:
 
 * This is Part-5 of the [XRd tutorials Series]({{base_path}}/tags/#xrd-tutorial-series).   
 * Skip to Part-6 here: [XRd with Docker-compose: Control-Plane and vRouter]({{base_path}}/tutorials/2022-08-23-xrd-with-docker-compose-control-plane-and-vrouter). 
-* Re-read Part-4 here: [User Interface and knobs for XRd]({{base_path}}/tutorials/2022-08-22-setting-up-host-environment-to-run-xrd)
+* Re-read Part-4 here: [User Interface and knobs for XRd]({{base_path}}/tutorials/2022-08-25-user-interface-and-knobs-for-xrd)
 
 
 
