@@ -178,11 +178,13 @@ XR_INTERFACES="pci-range:last4"
 
 The following gives an example specification of XR_INTERFACES and XR_MGMT_INTERFACES to 'docker run':
 
+```
 docker run <other args> \
   --env XR_MGMT_INTERFACES="linux:eth0,xr_name=Mg0/RP0/CPU0/0,snoop_v6,snoop_v6_default_route" \
   --env XR_INTERFACES="linux:eth1,xr_name=GigE0/RP0/CPU0/0" \
   <image name>
-
+```
+    
 PCI Interface Details
 On XRd vRouter, the XR_INTERFACES environment variable is composed of either:
 
