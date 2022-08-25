@@ -830,6 +830,101 @@ cisco@xrdcisco:~/xrd-tools/scripts$
 
 ```
 
+Aah! Need to disable bridge iptables in sysctl before we're out of the woods. For this purpose, add the following lines to the end of `/etc/sysctl.conf`:  
+
+```
+net.bridge.bridge-nf-call-ip6tables=0
+net.bridge.bridge-nf-call-iptables=0
+```  
+
+Along with the earlier additions for `max_user_instances` and `max_user_watches`, the last 4 lines of `/etc/sysctl.conf` should like the following:  
+
+```
+cisco@xrdcisco:~/xrd-tools/scripts$ cat /etc/sysctl.conf | tail -4
+fs.inotify.max_user_instances=64000
+fs.inotify.max_user_watches=64000
+net.bridge.bridge-nf-call-ip6tables=0
+net.bridge.bridge-nf-call-iptables=0
+cisco@xrdcisco:~/xrd-tools/scripts$ 
+
+```
+
+To make sure these sysctl settings take effect, the sure-shot method is to simply reboot the system. So let's do that:  
+
+```
+cisco@xrdcisco:~/xrd-tools/scripts$ sudo shutdown -r now
+Connection to x.x.x.x closed by remote host.
+Connection to x.x.x.x closed.
+
+```
+
+Once the host is back up, re-run the `host-check` script:  
+
+
+```
+cisco@xrdcisco:~/xrd-tools/scripts$ ./host-check -p xrd-vrouter -e xr-compose
+==============================
+Platform checks - xrd-vrouter
+==============================
+PASS -- CPU architecture (x86_64)
+PASS -- CPU cores (8)
+PASS -- Kernel version (5.4)
+PASS -- Base kernel modules
+        Installed module(s): dummy, nf_tables
+PASS -- Cgroups version (v1)
+PASS -- systemd mounts
+        /sys/fs/cgroup and /sys/fs/cgroup/systemd mounted correctly.
+PASS -- Inotify max user instances
+        64000 - this is expected to be sufficient for 16 XRd instance(s).
+PASS -- Inotify max user watches
+        64000 - this is expected to be sufficient for 16 XRd instance(s).
+INFO -- Core pattern (core files managed by the host)
+PASS -- ASLR (full randomization)
+INFO -- Linux Security Modules
+        AppArmor is enabled. XRd is currently unable to run with the
+        default docker profile, but can be run with
+        '--security-opt apparmor=unconfined' or equivalent.
+PASS -- CPU extensions (sse4_1, sse4_2, ssse3)
+PASS -- RAM
+        Available RAM is 19.7 GiB.
+        This is estimated to be sufficient for 3 XRd instance(s), although memory
+        usage depends on the running configuration.
+        Note that any swap that may be available is not included.
+PASS -- Hugepages (9 x 1GiB)
+PASS -- Interface kernel driver (vfio-pci loaded)
+PASS -- IOMMU
+        IOMMU enabled for vfio-pci with the following PCI device(s):
+        ens33 (0000:02:01.0), ens160 (0000:03:00.0), ens192 (0000:0b:00.0),
+        ens224 (0000:13:00.0), ens256 (0000:1b:00.0)
+PASS -- Shared memory pages max size (17179869184.0 GiB)
+
+==============================
+Extra checks
+==============================
+
+xr-compose checks
+-----------------------
+
+
+PASS -- docker-compose (version 1.29.2)
+PASS -- PyYAML (installed)
+PASS -- Bridge iptables (disabled)
+
+==================================================================
+Host environment set up correctly for xrd-vrouter
+------------------------------------------------------------------
+Extra checks passed: xr-compose
+==================================================================
+cisco@xrdcisco:~/xrd-tools/scripts$ 
+cisco@xrdcisco:~/xrd-tools/scripts$ 
+
+```
+
+
+Finally, run the `host-check` script again with the `-e xr-compose` option:  
+
+
+
 
 
 And that's it for setting up the host environment. The `host-check` script makes it super-easy to keep track of the settings to take care of when running XRd Control-Plane or vRouter variants. Next up - let's try spinning up XRd using docker!  
