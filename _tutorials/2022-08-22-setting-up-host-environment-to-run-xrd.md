@@ -926,7 +926,7 @@ If you see `Extra checks passed: xr-compose`, you are good to go and the host ma
 
 
 
-And that's it for setting up the host environment. The `host-check` script makes it super-easy to keep track of the settings required to run XRd Control-Plane or vRouter variants. Next up - let's try spinning up XRd using docker!  
+And that's it for setting up the host environment. The `host-check` script makes it super-easy to keep track of the settings and libraries required to run XRd Control-Plane or vRouter variants. Next up - let's try spinning up XRd using docker!  
 {: .notice--success}
 
 
