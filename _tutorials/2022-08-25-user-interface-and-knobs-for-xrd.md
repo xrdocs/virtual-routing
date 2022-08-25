@@ -268,7 +268,7 @@ The CPUSET variables take as their arguments a cpuset (comma separated list of c
 
 Docker and Kubernetes both allow restrictions to be placed on the CPU resource that the container is allowed to use – such as via the `--cpuset-cpus` Docker 'run' argument. If these are specified to the container orchestrator then the CPUSET variables described within this section must be within that restricted set.
 
-Examples:  
+#### Examples:  
     
 ```    
 docker run <other args> \
@@ -300,7 +300,8 @@ docker run <other args> \
     
 This will result in assigning core 0 to control-plane, 1 to the dataplane main thread and a single packet thread to 2
 
-Advanced CPU Options
+## ßAdvanced CPU Options  
+    
 This section documents in detail the advanced CPU options.
 
 XR_VROUTER_DP_MAIN_TUNE – this allows the dataplane main thread's tuning parameters to be fine tuned. These tuning parameters allow the dataplane main thread to share a CPU core with other workloads. It supports the following values (where '1' is the default value when not specified).
