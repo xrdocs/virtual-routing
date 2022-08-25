@@ -84,16 +84,16 @@ cisco@xrdcisco:~/images/xrd-control-plane$ docker load -i xrd-control-plane-cont
 a42828b8fe58: Loading layer [==================================================>]  1.179GB/1.179GB
 Loaded image: localhost/ios-xr:7.7.1
 cisco@xrdcisco:~/images/xrd-control-plane$ 
-cisco@xrdcisco:~/images/xrd-control-plane$ docker tag localhost/ios-xr:7.7.1 localhost:xrd-control-plane
+cisco@xrdcisco:~/images/xrd-control-plane$ docker tag localhost/ios-xr:7.7.1 localhost/xrd-control-plane
 cisco@xrdcisco:~/images/xrd-control-plane$ 
 cisco@xrdcisco:~/images/xrd-control-plane$ docker rmi localhost/ios-xr:7.7.1
 Untagged: localhost/ios-xr:7.7.1
 cisco@xrdcisco:~/images/xrd-control-plane$ 
 cisco@xrdcisco:~/images/xrd-control-plane$ 
 cisco@xrdcisco:~/images/xrd-control-plane$ docker images
-REPOSITORY   TAG                 IMAGE ID       CREATED       SIZE
-localhost    xrd-control-plane   dd8d741e50b2   4 weeks ago   1.15GB
-cisco@xrdcisco:~/images/xrd-control-plane$ 
+REPOSITORY                    TAG       IMAGE ID       CREATED       SIZE
+localhost/xrd-control-plane   latest    dd8d741e50b2   4 weeks ago   1.15GB
+cisco@xrdcisco:~/images/xrd-control-plane$
 ```
 
 Similarly, let's load the xrd-vrouter docker image and rename it to localhost/xrd-vrouter
@@ -109,10 +109,10 @@ cisco@xrdcisco:~/images/xrd-vrouter$
 cisco@xrdcisco:~/images/xrd-vrouter$ docker tag localhost/ios-xr:7.7.1 localhost/xrd-vrouter
 cisco@xrdcisco:~/images/xrd-vrouter$ docker rmi localhost/ios-xr:7.7.1
 Untagged: localhost/ios-xr:7.7.1
-cisco@xrdcisco:~/images/xrd-vrouter$ docker images
-REPOSITORY              TAG                 IMAGE ID       CREATED       SIZE
-localhost/xrd-vrouter   latest              78632a9bbb1d   4 weeks ago   1.2GB
-localhost               xrd-control-plane   dd8d741e50b2   4 weeks ago   1.15GB
+cisco@xrdcisco:~/images/xrd-control-plane$ docker images
+REPOSITORY                    TAG       IMAGE ID       CREATED       SIZE
+localhost/xrd-vrouter         latest    78632a9bbb1d   4 weeks ago   1.2GB
+localhost/xrd-control-plane   latest    dd8d741e50b2   4 weeks ago   1.15GB
 cisco@xrdcisco:~/images/xrd-vrouter$ 
 cisco@xrdcisco:~/images/xrd-vrouter$ 
 ```
