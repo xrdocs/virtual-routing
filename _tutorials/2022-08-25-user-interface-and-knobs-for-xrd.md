@@ -212,23 +212,31 @@ The XR_VROUTER_PCI_PERMIT_DEVICES variable is a comma-separated list that can be
 
 If the XR_VROUTER_PCI_ERROR_VERBOSE variable is set, the assertion of a device type being on the allowlist prints the full allowlist on failure.
 
-Examples:
+Examples:  
+
+```
 docker run <other args> \
   --env XR_INTERFACES="pci:00:03.0;pci:00:04.0" \
   <image name>
-
+```
+    
 A container orchestrator may take control of the first available address and the user may not know what addresses are available before boot. The user can discover addresses from the end of the list to avoid conflict with the orchestrator:
-
+    
+```
 docker run <other args> \
   --env XR_INTERFACES="pci-range:last3" \
   <image name>
-
+```
+    
 By default, if not already bound to one of the supported drivers then XRd will rebind the interfaces to the default driver. If the user wishes to control which driver the default is, then they can use the XR_VROUTER_PCI_DRIVER environment variable (see section 4.1.1 for more details on interface drivers):
 
+```
 docker run <other args> \
   --env XR_VROUTER_PCI_DRIVER="igb_uio" \
   <image name>
-
+```
+    
+   
 CPU Options
 By default, XRd vRouter selects a single CPU core for the packet thread, then uses the remainder of the available CPU cores for control-plane usage and the dataplane main thread.
 
@@ -250,29 +258,36 @@ The CPUSET variables take as their arguments a cpuset (comma separated list of c
 
 Docker and Kubernetes both allow restrictions to be placed on the CPU resource that the container is allowed to use – such as via the --cpuset-cpus Docker 'run' argument. If these are specified to the container orchestrator then the CPUSET variables described within this section must be within that restricted set.
 
-Examples:
+Examples:  
+    
+```    
 docker run <other args> \
   --env XR_VROUTER_DP_CPUSET="0-1" \
   <image name>
-
+```
+    
 Example of 4 logical core HT setup using envvars to ensure dataplane thread gets dedicated physical CPU:
 
+```
 docker run <other args> \
   --cpuset-cpus 0-3
   --env XR_VROUTER_DP_CPUSET="2" \
   --env XR_VROUTER_CPUSET_AVOID="3" \
   <image name>
-
+```
+    
 This will result in assigning cores 0-1 to control-plane, 1 the dataplane main thread and a single packet thread to 2 and nothing to 3
 
 Example of giving the dataplane main thread an exclusive core:
 
+```
 docker run <other args> \
   --cpuset-cpus 0-2
   --env XR_VROUTER_DP_MAIN_CORE="1" \
   --env XR_VROUTER_CPUSET_AVOID="1" \
   <image name>
-
+```
+    
 This will result in assigning core 0 to control-plane, 1 to the dataplane main thread and a single packet thread to 2
 
 Advanced CPU Options
