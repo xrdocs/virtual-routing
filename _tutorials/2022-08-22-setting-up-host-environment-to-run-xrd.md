@@ -858,7 +858,7 @@ Connection to x.x.x.x closed.
 
 ```
 
-Once the host is back up, re-run the `host-check` script:  
+Once the host is back up, re-run the `host-check` script with the `-e xr-compose` option:   
 
 
 ```
@@ -921,8 +921,7 @@ cisco@xrdcisco:~/xrd-tools/scripts$
 ```
 
 
-Finally, run the `host-check` script again with the `-e xr-compose` option:  
-
+If you see 
 
 
 
