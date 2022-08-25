@@ -33,11 +33,13 @@ XRd boot is configured via environment variables passed to the container orchest
 TIP
 The reading of environment variables uses fuzzy matching, so guessed variable names may error with spelling hints. As an example:
 
- > docker run --rm --privileged --env XR_VROUTER_DP_HUGEPAGE=1024 rebuild
+```
+ docker run --rm --privileged --env XR_VROUTER_DP_HUGEPAGE=1024 rebuild
 WARNING: Unexpected XR env var XR_VROUTER_DP_HUGEPAGE, did you mean XR_VROUTER_DP_HUGEPAGE_MB?
 ERROR: Not enough total HugePages free. Required: 3072M, Free: 2048M
 ERROR: Platform init failed
 XRd hit a critical error during initialization and has aborted launch.
+```
 
 XRd Environment Variables
 The tables in this section detail the full set of launch environment variables that XRd supports for configuring various behaviors. None of the variables are mandatory, and the default behavior when not specified is given too.
