@@ -47,8 +47,9 @@ While XRd images can be launched using docker natively - `launch-xrd` acts as a 
 ## Launch XRd using docker
 
 
-Before we begin, let's load the XRd images we downloaded from CCO into the local docker daemon. 
+Before we begin, let's load the XRd images we downloaded from CCO into the local docker daemon.
 
+The image tarballs we expanded in [Part-1]({{base_path}}/tutorials/2022-08-22-xrd-images-where-can-one-get-them) are dumped below.  
 
 ```
 cisco@xrdcisco:~/images$ tree .
