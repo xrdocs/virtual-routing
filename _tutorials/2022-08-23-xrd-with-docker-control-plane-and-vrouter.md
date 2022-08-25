@@ -44,5 +44,36 @@ While XRd images can be launched using docker natively - `launch-xrd` acts as a 
 
 
 
+## Launch XRd using docker
+
+
+Before we begin, let's load the XRd images we downloaded from CCO into the local docker daemon. 
+
+
+```
+cisco@xrdcisco:~/images$ tree .
+.
+├── xrd-control-plane
+│   ├── IOS-XR-SW-XRd.crt
+│   ├── cisco_x509_verify_release.py3
+│   ├── cisco_x509_verify_release.py3.README
+│   ├── cisco_x509_verify_release.py3.signature
+│   ├── xrd-control-plane-container-x64.7.7.1.tgz
+│   ├── xrd-control-plane-container-x64.dockerv1.tgz
+│   └── xrd-control-plane-container-x64.dockerv1.tgz.signature
+└── xrd-vrouter
+    ├── IOS-XR-SW-XRd.crt
+    ├── cisco_x509_verify_release.py3
+    ├── cisco_x509_verify_release.py3.README
+    ├── cisco_x509_verify_release.py3.signature
+    ├── xrd-vrouter-container-x64.7.7.1.tgz
+    ├── xrd-vrouter-container-x64.dockerv1.tgz
+    └── xrd-vrouter-container-x64.dockerv1.tgz.signature
+
+2 directories, 14 files
+cisco@xrdcisco:~/images$ 
+```
+
+
 
 Part-5 of the XRd tutorials Series: [here]({{base_path}}/tutorials/2022-08-23-xrd-with-docker-compose-control-plane-and-vrouter).
