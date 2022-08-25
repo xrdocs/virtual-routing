@@ -168,7 +168,7 @@ The below tables summarize the support for all supported "Interface type (XRd pl
   
   
   
-Examples:  
+## Examples:  
   
 ```  
 XR_INTERFACES="linux:eth0;linux:eth1"
@@ -190,34 +190,39 @@ docker run <other args> \
   <image name>
 ```
     
-PCI Interface Details
+## PCI Interface Details  
+    
 On XRd vRouter, the XR_INTERFACES environment variable is composed of either:
 
-A semicolon separated list of PCI addresses corresponding to single interfaces, like:
+* A semicolon separated list of PCI addresses corresponding to single interfaces, like:  
+    
+  ```
+  pci:<optional domain>:<bus>:<slot>.<func>   
+  ```
 
-pci:<optional domain>:<bus>:<slot>.<func>
+  * Domain can be omitted, and when not specified 0000 is assumed.
 
-Domain can be omitted, and when not specified 0000 is assumed.
+  * Note: only domain ID 0000 is currently supported.
 
-Note: only domain ID 0000 is currently supported.
+* A single range of unspecified PCI addresses of length N, like:
 
-A single range of unspecified PCI addresses of length N, like:
+  ```  
+  pci-range:{first,last}N
+  ```
+    
+  * Addresses are taken from a discovered list of available and supported devices (of the networking class and on the allowed device type list)
 
-pci-range:{first,last}N
+  * Keyword "first" selects from the start of the numerically ordered list and "last" selects from the end
 
-Addresses are taken from a discovered list of available and supported devices (of the networking class and on the allowed device type list)
+  * The boot fails if N is greater than the list of available and supported devices
 
-Keyword "first" selects from the start of the numerically ordered list and "last" selects from the end
+  * No additional flags are supported in this case
 
-The boot fails if N is greater than the list of available and supported devices
+The `XR_VROUTER_PCI_PERMIT_DEVICES` variable is a comma-separated list that can be set with additional PCI device types to permit in addition to the allowlist. This prevents needing to rebuild an image if a device type is missing.
 
-No additional flags are supported in this case
+If the `XR_VROUTER_PCI_ERROR_VERBOSE` variable is set, the assertion of a device type being on the allowlist prints the full allowlist on failure.
 
-The XR_VROUTER_PCI_PERMIT_DEVICES variable is a comma-separated list that can be set with additional PCI device types to permit in addition to the allowlist. This prevents needing to rebuild an image if a device type is missing.
-
-If the XR_VROUTER_PCI_ERROR_VERBOSE variable is set, the assertion of a device type being on the allowlist prints the full allowlist on failure.
-
-Examples:  
+#### Examples:  
 
 ```
 docker run <other args> \
@@ -242,22 +247,22 @@ docker run <other args> \
 ```
     
    
-CPU Options
+## CPU Options
 By default, XRd vRouter selects a single CPU core for the packet thread, then uses the remainder of the available CPU cores for control-plane usage and the dataplane main thread.
 
 There are 3 environment variables that can be used to control this behavior:
 
-XR_VROUTER_DP_CPUSET – use this cpuset for the dataplane threads. If more than 1 cpu then multiple rx, tx and worker threads are created to utilize the threads assigned. Control-plane processes will be assigned to available CPU cores NOT in this cpuset.
+* `XR_VROUTER_DP_CPUSET` – use this cpuset for the dataplane threads. If more than 1 cpu then multiple rx, tx and worker threads are created to utilize the threads assigned. Control-plane processes will be assigned to available CPU cores NOT in this cpuset.
 
-XR_VROUTER_DP_MAIN_CORE – use this core for the dataplane main thread. The dataplane main thread gets assigned to the last control-plane CPU by default, this envvar allows this behavior to be changed.
+* `XR_VROUTER_DP_MAIN_CORE` – use this core for the dataplane main thread. The dataplane main thread gets assigned to the last control-plane CPU by default, this envvar allows this behavior to be changed.
 
-XR_VROUTER_CPUSET_AVOID – avoid implicitly assigning any workloads to these CPUs when automatically picking control-plane and dataplane CPUs. The user can still use these CPUs when explicitly assigning CPUs via the other envvars here.
+* `XR_VROUTER_CPUSET_AVOID` – avoid implicitly assigning any workloads to these CPUs when automatically picking control-plane and dataplane CPUs. The user can still use these CPUs when explicitly assigning CPUs via the other envvars here.
 
 Examples when this might be used:
 
-when running in a hyperthreading setup and want to ensure nothing uses sibling core(s) for core(s) used by dataplane packet threads
+* when running in a hyperthreading setup and want to ensure nothing uses sibling core(s) for core(s) used by dataplane packet threads
 
-when wanting to give the dataplane main thread an exclusive core.
+* when wanting to give the dataplane main thread an exclusive core.
 
 The CPUSET variables take as their arguments a cpuset (comma separated list of cpu core indices or ranges of indices).
 
