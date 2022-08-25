@@ -111,7 +111,7 @@ cisco@xrdcisco:~/xrd-tools/scripts$
 
 
 
-## Launch XRd using docker
+## Using docker to launch XRd
 
 
 ### Load docker images downloaded from CCO
@@ -187,6 +187,19 @@ cisco@xrdcisco:~/images/xrd-vrouter$
 
 
 ### Boot XRd control-plane image using launch-xrd
+
+
+Before we try booting the image, let's use the `--dry-run` option in `launch-xrd` to dump the actual `docker run` command that would have been used in the background by the script:  
+
+
+<div class="highlighter-rouge">
+<pre class="highlight">
+<code style="white-space: pre;">
+cisco@xrdcisco:~/xrd-tools/scripts$<mark> ./launch-xrd --dry-run localhost/xrd-control-plane
+docker run -it --rm --cap-drop all --cap-add AUDIT_WRITE --cap-add CHOWN --cap-add DAC_OVERRIDE --cap-add FOWNER --cap-add FSETID --cap-add KILL --cap-add MKNOD --cap-add NET_BIND_SERVICE --cap-add NET_RAW --cap-add SETFCAP --cap-add SETGID --cap-add SETUID --cap-add SETPCAP --cap-add SYS_CHROOT --cap-add IPC_LOCK --cap-add NET_ADMIN --cap-add SYS_ADMIN --cap-add SYS_NICE --cap-add SYS_PTRACE --cap-add SYS_RESOURCE --device /dev/fuse --device /dev/net/tun --security-opt apparmor=unconfined --security-opt label=disable -v /sys/fs/cgroup:/sys/fs/cgroup:ro --env XR_MGMT_INTERFACES=linux:eth0,chksum localhost/xrd-control-plane</mark>
+</code>
+</pre>
+</div>
 
 
 
