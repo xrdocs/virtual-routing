@@ -422,7 +422,7 @@ Connection to x.x.x.x closed.
 
 ```
 
-### Re-Run Host-Check script post Corrections
+#### Re-Run Host-Check script post Corrections
 
 Once the host machine is back up again, re-run the `host-check` script to make sure it indicates that the host machine is fit for both XRd Control-Plane and XRd vRouter platforms.  
 
@@ -677,7 +677,7 @@ You should see `Extra checks passed: docker` if everything was successful.
 
 #### Host-Check for xr-compose
 
-`xr-compose` script in xrd-tools utilizes docker-compose that the host-check script will check for. Use `xr-compose` with the `-e` option with the `host-check` script:  
+`xr-compose` script in xrd-tools utilizes docker-compose that the host-check script will check for. Use `xr-compose` as the `-e` option with the `host-check` script:  
 
 
 ```
