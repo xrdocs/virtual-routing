@@ -25,5 +25,5 @@ position: hidden
 
 * This is Part-4 of the [XRd tutorials Series]({{base_path}}/tags/#xrd-tutorial-series).   
 * Skip to Part-5 here: [XRd with Docker: Control-Plane and vRouter]({{base_path}}/tutorials/2022-08-23-xrd-with-docker-control-plane-and-vrouter).    
-* Re-read Part-3 here: [Helper Tools to get started with XRd]({{base_path}}/tutorials/2022-08-22-helper-tools-to-get-started-with-xrd/)
+* Re-read Part-3 here: [Setting up the Host Environment to run XRd]({{base_path}}/tutorials/2022-08-22-setting-up-host-environment-to-run-xrd/)
 
