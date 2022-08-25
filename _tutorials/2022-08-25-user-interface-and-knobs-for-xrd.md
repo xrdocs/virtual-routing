@@ -51,21 +51,22 @@ Variables that can be used across all XRd platforms.
 
 | Variable               | Purpose                                                                                                                    | Contents                                                 | Default                |
 |------------------------|----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------|------------------------|
-| XR_INTERFACES          | For specifying interfaces to be used as XR data interfaces                                                                 | See interface specification                              | No interfaces are used |
-| XR_MGMT_INTERFACES     | For specifying interfaces to be used as XR management interfaces                                                           | See interface specification                              | No interfaces are used |
-| XR_FIRST_BOOT_CONFIG   | For specifying a startup config file that should be used for first boot                                                    | Path to config file that has been mounted in by the user | None                   |
-| XR_EVERY_BOOT_CONFIG   | For specifying a startup config to be used on every boot. This is ignored for first boot if the above env var is specified | Path to config file that has been mounted in by the user | None                   |
-| XR_FIRST_BOOT_SCRIPT   | For specifying a startup script to be run on first boot                                                                    | Path to script that has been mounted in by the user      | None                   |
-| XR_EVERY_BOOT_SCRIPT   | For specifying a startup script to be run on every boot. This is ignored for first boot if the above env var is specified  | Path to script file that has been mounted in by the user | None                   |
-| XR_DISK_USAGE_LIMIT    | The disk usage limit which the disk cleanup will attempt to remain under by removing old files                             | A disk size value with units                             | 6G                     |
-| XR_ZTP_ENABLE          | For enabling Zero Touch Provisioning (ZTP) at boot                                                                         | If set, 0 or 1                                           | ZTP is disabled        |
-| XR_ZTP_ENABLE_WITH_INI | For enabling ZTP with a custom "ztp.ini" config file at boot                                                               | Path to mounted ztp.ini file                             | None                   |
-| XR_BOOT_LOG_LEVEL      | (7.8.1) For controlling the level at which the XR boot logging starts being printed to the console                         | One of ERROR, WARNING, INFO or DEBUG                     | WARNING                |
+| `XR_INTERFACES`          | For specifying interfaces to be used as XR data interfaces                                                                 | See interface specification                              | No interfaces are used |
+| `XR_MGMT_INTERFACES`     | For specifying interfaces to be used as XR management interfaces                                                           | See interface specification                              | No interfaces are used |
+| `XR_FIRST_BOOT_CONFIG`   | For specifying a startup config file that should be used for first boot                                                    | Path to config file that has been mounted in by the user | None                   |
+| `XR_EVERY_BOOT_CONFIG`   | For specifying a startup config to be used on every boot. This is ignored for first boot if the above env var is specified | Path to config file that has been mounted in by the user | None                   |
+| `XR_FIRST_BOOT_SCRIPT`   | For specifying a startup script to be run on first boot                                                                    | Path to script that has been mounted in by the user      | None                   |
+| `XR_EVERY_BOOT_SCRIPT`   | For specifying a startup script to be run on every boot. This is ignored for first boot if the above env var is specified  | Path to script file that has been mounted in by the user | None                   |
+| `XR_DISK_USAGE_LIMIT`    | The disk usage limit which the disk cleanup will attempt to remain under by removing old files                             | A disk size value with units                             | 6G                     |
+| `XR_ZTP_ENABLE`          | For enabling Zero Touch Provisioning (ZTP) at boot                                                                         | If set, 0 or 1                                           | ZTP is disabled        |
+| `XR_ZTP_ENABLE_WITH_INI` | For enabling ZTP with a custom "ztp.ini" config file at boot                                                               | Path to mounted ztp.ini file                             | None                   |
+| `XR_BOOT_LOG_LEVEL`      | (7.8.1) For controlling the level at which the XR boot logging starts being printed to the console                         | One of ERROR, WARNING, INFO or DEBUG                     | WARNING                |
 
 
 
 
-### XRd vRouter Variables
+### XRd vRouter Variables  
+
 Variables specific to the XRd vRouter platform:  
 
 
