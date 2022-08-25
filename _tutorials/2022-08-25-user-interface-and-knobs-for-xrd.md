@@ -170,9 +170,13 @@ The below tables summarize the support for all supported "Interface type (XRd pl
 ### XR_MGMT_INTERFACES:  
   
 
-| linux (XRd Control Plane) | Identifier           | xr_name | chksum | snoop_{v4,v6} | snoop_{v4,v6}_default_route |
-|---------------------------|----------------------|---------|--------|---------------|-----------------------------|
-| linux (XRd vRouter)       | Linux interface name | ✓       | ✓      | ✓             | ✓                           |
+| linux (XRd Control Plane)   | linux (XRd vRouter)  |
+|-----------------------------|----------------------|
+| Identifier                  | Linux interface name | Linux interface name |
+| xr_name                     | ✓                    | X                    |
+| chksum                      | ✓                    | ✓                    |
+| snoop_{v4,v6}               | ✓                    | ✓                    |
+| snoop_{v4,v6}_default_route | ✓                    | ✓                    |
 
   
   
