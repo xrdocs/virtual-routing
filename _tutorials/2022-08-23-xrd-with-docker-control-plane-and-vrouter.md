@@ -42,6 +42,73 @@ While XRd images can be launched using docker natively - `launch-xrd` acts as a 
 **Note**: A general guidance on the use of any xrd-tools script is to utilize the `--help` option to first dump the list of options available for use with each script. In these tutorials, we will attempt to try the most important/common options but the reader is encouraged to follow the help blurbs and try each option for each of the scripts.
 {: .notice--info}  
 
+Dumping the available options with `launch-xrd`:  
+
+```bash
+cisco@xrdcisco:~/xrd-tools/scripts$ ./launch-xrd --help
+Usage: launch-xrd [-h|--help] [-n|--dry-run] IMG [<opts>]
+
+
+Launch a single XRd container.
+
+Use '--dry-run' to see the command that would be run without running it.
+
+Required arguments:
+  IMG                           Specify loaded container image to boot
+
+Optional arguments:
+  -f, --first-boot-config FILE  Path to startup config file for first boot
+  -e, --every-boot-config FILE  Path to startup config file for every boot
+  -v, --xrd-volume VOL          Name of volume used for persistency (created if
+                                doesn't already exist)
+  -p, --platform PLATFORM       XR platform to launch (defaults to checking the
+                                image label)
+  -k, --keep                    Keep the container around after it has stopped
+  -c, --ctr-client EXE          Container client executable (defaults to
+                                'docker'), the name is used to determine
+                                whether using docker or podman
+  --name NAME                   Specify container name
+  --privileged                  Run the container with extended privileges
+  --interfaces IF_TYPE:IF_NAME[,IF_FLAG[,...]][;IF_TYPE:IF_NAME[...]...]
+                                XR interfaces to create and their mapping to
+                                underlying linux/pci interfaces
+  --mgmt-interfaces linux:IF_NAME[,MG_FLAG[,...]][;linux:IF_NAME[...]...]
+                                XR management interfaces to create and their
+                                mapping to underlying linux interfaces (defaults
+                                to a single interface mapped to eth0, pass ""
+                                to prevent this)
+  --first-boot-script FILE      Path to script to be run after all config has
+                                been applied on the first boot
+  --every-boot-script FILE      Path to script to be run after all config has
+                                been applied on every boot
+  --disk-limit LIMIT            Disk usage limit to impose (defaults to '6G')
+  --ztp-enable                  Enable Zero Touch Provisioning (ZTP) to start
+                                up after boot, by default ZTP is disabled
+                                (cannot be used with IP snooping)
+  --ztp-config FILE             Enable ZTP with custom ZTP ini configuration
+  --args '<arg1> <arg2> ...'    Extra arguments to pass to '<ctr_mgr> run'
+
+XRd Control Plane arguments:
+  IF_TYPE := { linux }          Interface type
+  IF_NAME := { * }              A linux interface name
+  IF_FLAG := { xr_name | chksum | snoop_v[4|6] | snoop_v[4|6]_default_route }
+                                Flags for interface configuration
+  MG_FLAG := IF_FLAG            Flags for management interface configuration
+
+XRd vRouter arguments:
+  IF_TYPE := { pci | pci-range }
+                                Interface type
+  IF_NAME := { (IF_TYPE=pci)       BUS:SLOT.FUNC |
+               (IF_TYPE=pci-range) lastN | firstN }
+                                Either PCI address e.g. pci:00:09.0, or
+                                selection of addresses e.g. pci-range:last4
+  IF_FLAG := {}                 Flags for interface configuration
+  MG_FLAG := { chksum | snoop_v[4|6] | snoop_v[4|6]_default_route }
+                                Flags for management interface configuration
+cisco@xrdcisco:~/xrd-tools/scripts$ 
+
+```
+
 
 
 ## Launch XRd using docker
@@ -52,7 +119,7 @@ Before we begin, let's load the XRd images we downloaded from CCO into the local
 
 The image tarballs we expanded in [Part-1]({{base_path}}/tutorials/2022-08-22-xrd-images-where-can-one-get-them) are dumped below.  
 
-```
+```bash
 cisco@xrdcisco:~/images$ tree .
 .
 ├── xrd-control-plane
@@ -78,7 +145,7 @@ cisco@xrdcisco:~/images$
 
 Loading the xrd-control-plane docker image first (we rename it explicitly to localhost/xrd-control-plane to easily differentiate the image from the xrd-vrouter image that we will load subsequently):  
 
-```
+```bash
 cisco@xrdcisco:~/images/xrd-vrouter$ 
 cisco@xrdcisco:~/images/xrd-vrouter$ cd ../xrd-control-plane/
 cisco@xrdcisco:~/images/xrd-control-plane$ docker load -i xrd-control-plane-container-x64.dockerv1.tgz
@@ -99,7 +166,7 @@ cisco@xrdcisco:~/images/xrd-control-plane$
 
 Similarly, let's load the xrd-vrouter docker image and rename it to localhost/xrd-vrouter
 
-```
+```bash
 cisco@xrdcisco:~/images/xrd-control-plane$ 
 cisco@xrdcisco:~/images/xrd-control-plane$ cd ../xrd-vrouter/
 cisco@xrdcisco:~/images/xrd-vrouter$ 
@@ -117,6 +184,12 @@ localhost/xrd-control-plane   latest    dd8d741e50b2   4 weeks ago   1.15GB
 cisco@xrdcisco:~/images/xrd-vrouter$ 
 cisco@xrdcisco:~/images/xrd-vrouter$ 
 ```
+
+
+### Boot XRd control-plane image using launch-xrd
+
+
+
 
 
 
