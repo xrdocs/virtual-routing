@@ -66,7 +66,8 @@ Variables that can be used across all XRd platforms.
 
 
 ### XRd vRouter Variables
-Variables specific to the XRd vRouter platform.
+Variables specific to the XRd vRouter platform:  
+
 
 | Variable | XR_VROUTER_PCI_DRIVER                                    | XR_VROUTER_DP_HUGEPAGE_MB                           | XR_VROUTER_DP_CPUSET                                    | XR_VROUTER_CPUSET_AVOID                                                                                          | XR_VROUTER_DP_MAIN_CORE                           | XR_VROUTER_PCI_ERROR_VERBOSE                                                  |
 |----------|----------------------------------------------------------|-----------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|---------------------------------------------------|-------------------------------------------------------------------------------|
