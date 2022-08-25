@@ -75,6 +75,46 @@ cisco@xrdcisco:~/images$ tree .
 cisco@xrdcisco:~/images$ 
 ```
 
+Loading the xrd-control-plane docker image first (we rename it explicitly to localhost/xrd-control-plane to easily differentiate the image from the xrd-vrouter image that we will load subsequently):  
 
+```
+cisco@xrdcisco:~/images/xrd-vrouter$ 
+cisco@xrdcisco:~/images/xrd-vrouter$ cd ../xrd-control-plane/
+cisco@xrdcisco:~/images/xrd-control-plane$ docker load -i xrd-control-plane-container-x64.dockerv1.tgz
+a42828b8fe58: Loading layer [==================================================>]  1.179GB/1.179GB
+Loaded image: localhost/ios-xr:7.7.1
+cisco@xrdcisco:~/images/xrd-control-plane$ 
+cisco@xrdcisco:~/images/xrd-control-plane$ docker tag localhost/ios-xr:7.7.1 localhost:xrd-control-plane
+cisco@xrdcisco:~/images/xrd-control-plane$ 
+cisco@xrdcisco:~/images/xrd-control-plane$ docker rmi localhost/ios-xr:7.7.1
+Untagged: localhost/ios-xr:7.7.1
+cisco@xrdcisco:~/images/xrd-control-plane$ 
+cisco@xrdcisco:~/images/xrd-control-plane$ 
+cisco@xrdcisco:~/images/xrd-control-plane$ docker images
+REPOSITORY   TAG                 IMAGE ID       CREATED       SIZE
+localhost    xrd-control-plane   dd8d741e50b2   4 weeks ago   1.15GB
+cisco@xrdcisco:~/images/xrd-control-plane$ 
+```
+
+Similarly, let's load the xrd-vrouter docker image and rename it to localhost/xrd-vrouter
+
+```
+cisco@xrdcisco:~/images/xrd-control-plane$ 
+cisco@xrdcisco:~/images/xrd-control-plane$ cd ../xrd-vrouter/
+cisco@xrdcisco:~/images/xrd-vrouter$ 
+cisco@xrdcisco:~/images/xrd-vrouter$ docker load -i xrd-vrouter-container-x64.dockerv1.tgz
+e97a8613578a: Loading layer [==================================================>]  1.225GB/1.225GB
+Loaded image: localhost/ios-xr:7.7.1
+cisco@xrdcisco:~/images/xrd-vrouter$ 
+cisco@xrdcisco:~/images/xrd-vrouter$ docker tag localhost/ios-xr:7.7.1 localhost/xrd-vrouter
+cisco@xrdcisco:~/images/xrd-vrouter$ docker rmi localhost/ios-xr:7.7.1
+Untagged: localhost/ios-xr:7.7.1
+cisco@xrdcisco:~/images/xrd-vrouter$ docker images
+REPOSITORY              TAG                 IMAGE ID       CREATED       SIZE
+localhost/xrd-vrouter   latest              78632a9bbb1d   4 weeks ago   1.2GB
+localhost               xrd-control-plane   dd8d741e50b2   4 weeks ago   1.15GB
+cisco@xrdcisco:~/images/xrd-vrouter$ 
+cisco@xrdcisco:~/images/xrd-vrouter$ 
+```
 
 Part-5 of the XRd tutorials Series: [here]({{base_path}}/tutorials/2022-08-23-xrd-with-docker-compose-control-plane-and-vrouter).
