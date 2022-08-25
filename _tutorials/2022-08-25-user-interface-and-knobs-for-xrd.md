@@ -30,8 +30,8 @@ position: top
 
 XRd boot is configured via environment variables passed to the container orchestrator. This page lists each way in which the boot of XRd can be configured.
 
-TIP
-The reading of environment variables uses fuzzy matching, so guessed variable names may error with spelling hints. As an example:
+**TIP**: The reading of environment variables uses fuzzy matching, so guessed variable names may error with spelling hints. As an example:
+{: .notice--info}. 
 
 ```
  docker run --rm --privileged --env XR_VROUTER_DP_HUGEPAGE=1024 rebuild
