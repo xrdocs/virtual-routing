@@ -300,8 +300,8 @@ docker run <other args> \
     
 This will result in assigning core 0 to control-plane, 1 to the dataplane main thread and a single packet thread to 2
 
-## ßAdvanced CPU Options  
-    
+## Advanced CPU Options  
+   
 This section documents in detail the advanced CPU options.
 
 XR_VROUTER_DP_MAIN_TUNE – this allows the dataplane main thread's tuning parameters to be fine tuned. These tuning parameters allow the dataplane main thread to share a CPU core with other workloads. It supports the following values (where '1' is the default value when not specified).
