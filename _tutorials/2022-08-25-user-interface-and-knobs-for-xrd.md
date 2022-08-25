@@ -77,12 +77,13 @@ Advanced Variables
 These variables are not expected to be used in the mainline but are provided to allow finer grained control over certain parameters.
 
 XRd vRouter Variables
-Variable	Purpose	Contents	Default
-XR_VROUTER_DP_MAIN_TUNE	Dataplane main thread tuning settings, where tuned mode is where the dataplane main thread is tuned to be friendlier when sharing core with other workloads	See advanced CPU options	1
-XR_VROUTER_DP_CPUSET_WK
-XR_VROUTER_DP_CPUSET_TX
-XR_VROUTER_DP_CPUSET_RX	The cpusets to use for the dataplane packet RX, TX and worker thread(s)	See advanced CPU options	Automatic allocation using CPUs in the XR_VROUTER_DP_CPUSET
-XR_VROUTER_PCI_PERMIT_DEVICES	Comma-separated list of device type IDs to add to the PCI device type allowlist	See PCI interface details	None
+| Variable | XR_VROUTER_DP_MAIN_TUNE                                                                                                                                     | XR_VROUTER_DP_CPUSET_WKXR_VROUTER_DP_CPUSET_TXXR_VROUTER_DP_CPUSET_RX   | XR_VROUTER_PCI_PERMIT_DEVICES                                                   |
+|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|---------------------------------------------------------------------------------|
+| Purpose  | Dataplane main thread tuning settings, where tuned mode is where the dataplane main thread is tuned to be friendlier when sharing core with other workloads | The cpusets to use for the dataplane packet RX, TX and worker thread(s) | Comma-separated list of device type IDs to add to the PCI device type allowlist |
+| Contents | See advanced CPU options                                                                                                                                    | See advanced CPU options                                                | See PCI interface details                                                       |
+| Default  | 1                                                                                                                                                           | Automatic allocation using CPUs in the XR_VROUTER_DP_CPUSET             | None                                                                            |
+  
+  
 Interface Specification
 The set of interfaces used by XRd, and their options, are specified in the XR_INTERFACES and XR_MGMT_INTERFACES environment variables. XR_INTERFACES is used to specify data ports, and XR_MGMT_INTERFACES is used to specify management ports.
 
