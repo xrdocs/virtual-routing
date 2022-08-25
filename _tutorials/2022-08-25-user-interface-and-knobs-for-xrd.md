@@ -154,12 +154,13 @@ XR_INTERFACES:
   
 XR_MGMT_INTERFACES:
 
-linux (XRd Control Plane)	linux (XRd vRouter)
-Identifier	Linux interface name	Linux interface name
-xr_name	✓	X
-chksum	✓	✓
-snoop_{v4,v6}	✓	✓
-snoop_{v4,v6}_default_route	✓	✓
+| linux (XRd Control Plane) | Identifier           | xr_name | chksum | snoop_{v4,v6} | snoop_{v4,v6}_default_route |
+|---------------------------|----------------------|---------|--------|---------------|-----------------------------|
+| linux (XRd vRouter)       | Linux interface name | ✓       | ✓      | ✓             | ✓                           |
+
+  
+  
+  
 Examples:
 XR_INTERFACES="linux:eth0;linux:eth1"
 XR_INTERFACES="linux:eth0,snoop_v4,xr_name=GigabitEthernet0/0/0/1;linux:eth1,chksum,xr_name=GigE0/0/0/0"
