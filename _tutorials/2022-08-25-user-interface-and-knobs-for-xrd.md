@@ -304,23 +304,23 @@ This will result in assigning core 0 to control-plane, 1 to the dataplane main t
    
 This section documents in detail the advanced CPU options.
 
-XR_VROUTER_DP_MAIN_TUNE – this allows the dataplane main thread's tuning parameters to be fine tuned. These tuning parameters allow the dataplane main thread to share a CPU core with other workloads. It supports the following values (where '1' is the default value when not specified).
+* `XR_VROUTER_DP_MAIN_TUNE` – this allows the dataplane main thread's tuning parameters to be fine tuned. These tuning parameters allow the dataplane main thread to share a CPU core with other workloads. It supports the following values (where '1' is the default value when not specified).
 
-0 - turn off dataplane main thread tuned mode
+  * 0 - turn off dataplane main thread tuned mode
 
-1 - use dataplane main thread tuned mode with default settings: 1000,50,500,20
+  * 1 - use dataplane main thread tuned mode with default settings: 1000,50,500,20
 
-sleep us,pkt processing us,msg processing us,max punt pkts - use dataplane main thread tuned mode with these specific settings
+  * sleep us,pkt processing us,msg processing us,max punt pkts - use dataplane main thread tuned mode with these specific settings
 
-XR_VROUTER_DP_CPUSET_WK, XR_VROUTER_DP_CPUSET_TX, XR_VROUTER_DP_CPUSET_RX – this allows fine grained control over the number of each of the packet thread types and which CPUs they are allocated to.
+* `XR_VROUTER_DP_CPUSET_WK`, `XR_VROUTER_DP_CPUSET_TX`, `XR_VROUTER_DP_CPUSET_RX` – this allows fine grained control over the number of each of the packet thread types and which CPUs they are allocated to.
 
-If one of the XR_VROUTER_DP_CPUSET_XXX options is specified, then the lack of the others implies none of those threads.
+  * If one of the XR_VROUTER_DP_CPUSET_XXX options is specified, then the lack of the others implies none of those threads.
 
-Must specify at least 1 worker and tx thread.
+  * Must specify at least 1 worker and tx thread.
 
-Cannot overlap with each other or the dataplane main core.
+  * Cannot overlap with each other or the dataplane main core.
 
-Cannot be specified at same time as XR_VROUTER_DP_CPUSET.
+  * Cannot be specified at same time as XR_VROUTER_DP_CPUSET.
 
 
 Part-5 of the XRd tutorials Series here: [XRd with Docker: Control-Plane and vRouter]({{base_path}}/tutorials/2022-08-23-xrd-with-docker-control-plane-and-vrouter)
