@@ -149,7 +149,7 @@ If the xr_name flag is not specified, the next available XR port number is used 
 
 The below tables summarize the support for all supported "Interface type (XRd platform)" permutations:
 
-XR_INTERFACES:
+### XR_INTERFACES:
 
 | linux (XRd Control Plane) | Identifier           | xr_name | chksum | snoop_{v4,v6} | snoop_{v4,v6}_default_route |
 |---------------------------|----------------------|---------|--------|---------------|-----------------------------|
@@ -157,7 +157,7 @@ XR_INTERFACES:
 | pci-range (XRd vRouter)   | PCI address          | X       | X      | X             | X                           |
   
   
-XR_MGMT_INTERFACES:
+### XR_MGMT_INTERFACES:
 
 | linux (XRd Control Plane) | Identifier           | xr_name | chksum | snoop_{v4,v6} | snoop_{v4,v6}_default_route |
 |---------------------------|----------------------|---------|--------|---------------|-----------------------------|
