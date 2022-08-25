@@ -921,7 +921,7 @@ cisco@xrdcisco:~/xrd-tools/scripts$
 ```
 
 
-If you see 
+If you see `Extra checks passed: xr-compose`, you are good to go and the host machine is now properly set up.
 
 
 
