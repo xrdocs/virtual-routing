@@ -119,7 +119,7 @@ Linux interface names must be decodable using the URL encoding scheme. This does
 The decoded interface name must not include whitespace, and there is a short-term limitation on XRd Control Plane that the decoded interface name must not include commas or colons.
 {: .notice-info}. 
   
-Optional flags are comma separated keywords (not supported for "pci-range" type):
+* **Optional flag** are comma separated keywords (not supported for "pci-range" type):
 
 xr_name=<XR interface name> to specify an XR interface name to represent this interface
 
