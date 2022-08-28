@@ -121,37 +121,39 @@ The XRd vRouter platform also requires the following capabilities:
   
 The required list contains powerful capabilities - future work aims to reduce this list.
 
-Secondary Considerations
+## Secondary Considerations
 The following considerations may not apply in the lab use case, where it is expected that the host is isolated. They would likely apply in a production deployment scenario and serve as a starting point for moving beyond the basic lab usage.
 
-Host system (Secondary)
-ASLR
+### Host system (Secondary)
+  
+#### ASLR
 Address space layout randomization (ASLR) is a security feature involved in preventing exploitation of memory corruption vulnerabilities by randomly arranging the address space of a process.
 It requires that processes be compiled with position-independent executable code and the ASLR kernel module be enabled.
 
 XRd is compiled position-independent and it is recommended that the ASLR kernel module be enabled to benefit from this protection.
 
-Privileged Users
+#### Privileged Users
 Privileged users on the host have complete control to do anything on the host, either maliciously or accidentally.
 Obviously, a privileged user may modify any of the configuration covering considerations elsewhere on this page but they may also execute process in the container namespace without going through AAA. For example, a user may execute XRd processes without logging in.
 
 Care must be taken to manage privileged access to the host.
 
-Network Filtering
+#### Network Filtering
 XRd only has basic ACL capabilities and does not provide any DDoS protection.
 This must be provided by the surrounding environment and will be dependent on the specific environment. For example, the wider orchestration environment may provide this protection, or Netfilter (nftables/iptables) rules could be used to fulfil the requirements.
 
-Container Orchestrator & Runtime (Secondary)
-Container Resources
+### Container Orchestrator & Runtime (Secondary)  
+
+#### Container Resources
 Docker does not constrain the memory available to a container by default and hence it may be appropriate that resource constraints are used to limit the container resources to prevent the host's memory from being exhausted.
 The appropriate value to set depends on the specific usage but a minimum of 2GB is recommended, and 16GB or more may be required for running high-scale features.
 Similarly, Docker does not constrain a container's access to the CPU by default but runtime options may be used to limit CPU usage; XRd requires at least one CPU core.
 
-The launch-xrd and xr-compose tools do not constrain any resources by default.
-If running a single instance then launch-xrd --dry-run can be used to see the base command that can then be supplemented with the necessary runtime options.
+The `launch-xrd` and `xr-compose` tools do not constrain any resources by default.
+If running a single instance then `launch-xrd --dry-run` can be used to see the base command that can then be supplemented with the necessary runtime options.
 If running multiple instances with xr-compose then refer to the Compose Specification for how to specify resource constraints in the input YAML file.
 
-Mounts
+#### Mounts
 There are various security considerations that apply to storage mounted into the container.
 The mandatory and optional mounts can be understood with the help of the launch-xrd help (--help) and dry run (--dry-run).
 
