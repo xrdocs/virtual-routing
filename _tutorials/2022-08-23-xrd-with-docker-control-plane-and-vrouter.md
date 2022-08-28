@@ -905,7 +905,7 @@ sudo ip link set ens224-mg-local up
 
 Create the container:
 
-* The XR_INTERFACES and XR_MGMT_INTERFACES environment variables map the created macvlan interfaces to XR data and management interfaces respectively. These are semicolon (and optional whitespace) separated entries, each of the form <underlying interface type>:<underlying interface identifier>,<comma separated optional flags> where:
+* The `XR_INTERFACES` and `XR_MGMT_INTERFACES` environment variables map the created macvlan interfaces to XR data and management interfaces respectively. These are semicolon (and optional whitespace) separated entries, each of the form `<underlying interface type>:<underlying interface identifier>,<comma separated optional flags>` where:
 * **underlying interface type**: linux (for the XRd control-plane image)
 * **underlying interface identifier**: Linux interface name or PCI address, as applicable
 optional flags include:
@@ -914,7 +914,7 @@ optional flags include:
 * **`snoop_v[4|6]`**: Snoop the IPv4/6 address of the interface, and add corresponding XR configuration
 * **`snoop_v[4|6]_default_route`**: Snoop the IPv4/6 default route(s) of the interface, and add corresponding XR configuration. May be specified for a maximum of one interface, and only for interfaces with the corresponding `snoop_v[4|6]` flag specified.
 * **`--net none`** is specified so that the container is not added to the default Docker bridge network (this would add an extra unnecessary interface to the container).
-* Startup config is specified here using the XR_EVERY_BOOT_CONFIG environment variable. This is optional.
+* Startup config is specified here using the `XR_EVERY_BOOT_CONFIG` environment variable. This is optional.
 * The image used is the XRd control-plane image:  
   
   
