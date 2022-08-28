@@ -72,14 +72,14 @@ A single XRd container requires a minimum of 2000 inotify user instances/watches
 
 The container orchestrator and runtime obviously has a pivotal role in security as the gateway between the host and XRd.
 
-The ability to run containers as a non-privileged user provides a significant improvement in the security posture of containers. However, this is very much in its infancy and not currently an option for XRd.
+The ability to run containers as a non-privileged user provides a significant improvement in the security posture of containers. However, this is currently not an option for XRd.
 
-Container Privileges
+#### Container Privileges
 XRd requires various Linux kernel capabilities that encompass the default Docker capabilities as well as a number of additional capabilities.
 It is recommended to drop default privileges and explicitly specify all capabilities when starting a container so that any changes in the default set do not cause XRd to receive unnecessary privileges (or lose necessary privileges).
 For example, docker run ... --cap-drop all --cap-add <CAP_1> --cap-add <CAP_2>.
 
-This is the default behavior if using the launch-xrd or xr-compose tools (described on the Getting Started page).
+This is the default behavior if using the `launch-xrd` or `xr-compose` tools (described in the [XRd tutorials Series]({{base_path}}/tags/#xrd-tutorial-series)).
 
 WARNING
 It is recommended to specify the container's capabilities and dependencies explicitly rather than using the --privileged option, as this ensures the container's privileges are kept to the minimum required. Note that for running in Kubernetes it is currently required to use privileged mode due to the need to mount devices.
