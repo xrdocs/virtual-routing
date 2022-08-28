@@ -876,7 +876,7 @@ PING 10.3.1.3 (10.3.1.3): 56 data bytes
 
 ```
 
-Perfect! With this example we were able to bring up a mixed topology of Linux and XRd docker instances, and establish end-to-end connectivity with just a couple of steps, a significantly simplified bring-up flow for a more complex environment as compared to the standalone docker container bring-up with `launch-xrd` that we tried in the earlier tutorial. Take a crack at the other samples in the `samples/` directory of the `xrd-tools/` repository using the exact same steps as above to get used to the nuances of this workflow. Next up - Launching XRd on Kubernetes using Kubernetes In Docker (KIND)!  
+Perfect! With this example we were able to bring up a mixed topology of Linux and XRd docker instances, and establish end-to-end connectivity with just a couple of steps, a significantly simplified bring-up flow for a more complex environment as compared to the standalone docker container bring-up with `launch-xrd` that we tried in the earlier tutorial. Take a crack at the other samples in the `samples/` directory of the `xrd-tools/` repository using the exact same steps as above to get used to the nuances of this workflow. Next up - Setting up Kubernetes using Kubernetes In Docker (KIND) on the host machine to launch XRd on K8s!  
 {: .notice--success}
 
 
