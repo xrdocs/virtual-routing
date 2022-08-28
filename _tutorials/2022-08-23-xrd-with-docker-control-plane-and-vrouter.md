@@ -832,7 +832,7 @@ It was also possible to jump to XR CLI shell by running the `/pkg/bin/xr_cli.sh`
 
 We'll work with 3 physical interfaces available on the current host machine and transform the setup to provide 3 macvlan interfaces corresponding to each of these physical interfaces that we can then pass into the XRd Control-Plane container.  
 
-On the host-machine in use in this tutorial series, the available interfaces are:  
+On the host-machine in use in this tutorial series, the available interfaces are highlighted below (ens33 here is the main gateway interface for the host machine and we'll ignore that):
   
 <div class="highlighter-rouge">
 <pre class="highlight">
