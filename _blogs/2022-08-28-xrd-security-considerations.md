@@ -81,8 +81,8 @@ For example, docker run ... --cap-drop all --cap-add <CAP_1> --cap-add <CAP_2>.
 
 This is the default behavior if using the `launch-xrd` or `xr-compose` tools (described in the [XRd tutorials Series]({{base_path}}/tags/#xrd-tutorial-series)).
 
-WARNING
-It is recommended to specify the container's capabilities and dependencies explicitly rather than using the --privileged option, as this ensures the container's privileges are kept to the minimum required. Note that for running in Kubernetes it is currently required to use privileged mode due to the need to mount devices.
+**WARNING**: It is recommended to specify the container's capabilities and dependencies explicitly rather than using the --privileged option, as this ensures the container's privileges are kept to the minimum required. Note that for running in Kubernetes it is currently required to use privileged mode due to the need to mount devices.
+{: .notice--warning}
 
 The following are the default Docker capabilities (and must be explicitly specified if using --cap-drop all):
 
