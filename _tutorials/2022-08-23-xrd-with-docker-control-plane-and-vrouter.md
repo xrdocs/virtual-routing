@@ -537,7 +537,7 @@ Awesome! we have established basic connectivity over the Mgmt port into the XRd 
 
 Standard docker interactions can be used for this purpose.   
 
-To stop the XRd docker container, use `docker stop` or `docker rm`:  
+To stop the XRd docker container, use `docker stop` or `docker rm -f`:  
 
 ```bash
 cisco@xrdcisco:~$ docker stop blissful_germain
@@ -938,7 +938,6 @@ docker create \
 --mount type=bind,source=/home/cisco/xrd-tools/scripts/xr.config,target=/startup.cfg \
 --net none \
 -it localhost/xrd-control-plane
-
 </code>
 </pre>
 </div>
@@ -1061,7 +1060,7 @@ Perfect! The external connectivity that we established via the maclvan interface
   
   
   
-
+### Launch
 
   
   
