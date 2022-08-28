@@ -1060,8 +1060,23 @@ Perfect! The external connectivity that we established via maclvan interfaces fo
   
   
   
-### Boot XRd control-plane image using launch-xrd 
+### Boot XRd vRouter image using launch-xrd 
   
+Once you have the hang of the XRd Control-Plane image and its launch process using either `launch-xrd` or standalone docker, XRd vRouter is not much different.
+A few additional points however must be taken care of when trying to launch XRd vRouter in a standalone fashion with docker: 
+  
+
+1. The following capabilities are required, in addition to the default XRd Control Plane set:
+   * `SYS_RAWIO`
+2. The following devices must be mounted, in addition to the default XRd Control Plane set:
+   * `/dev/vfio`
+3. The following device cgroup rules are required, to allow the use of PCI driver character 
+   devices: `c *:* rwm` or `c <major>:* rwm` if the major device number is known
+4. The format of XR_INTERFACES is either: a semi-colon separated list of "pci:<BUS>:<SLOT>.<FUNC>" or a range of unspecified addresses via "pci-range:{first,last}<number>" selecting a <number> of interfaces (linux macvlan interfaces are not supported for XR_INTERFACES variable for XRd vRouter).
+  
+The good news is that #1, #2 and #3 are handled by launch-xrd automatically, so you only need to be aware of #4.
+
+
 
   
 
