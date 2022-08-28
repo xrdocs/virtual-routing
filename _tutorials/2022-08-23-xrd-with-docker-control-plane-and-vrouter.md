@@ -4,7 +4,7 @@ date: '2022-08-23 04:52 +0530'
 title: 'XRd with docker: Control-Plane and vRouter'
 author: Akshat Sharma
 excerpt: Learn the basics of bringing up XRd with Docker.
-position: hidden
+position: top
 tags:
   - iosxr
   - cisco
@@ -710,7 +710,7 @@ The steps we used above provide a good segue to understand how to access XRd con
 * Dealing with XRd containers running in the background is quite useful, because this is the typical way in which we will interact with XRd containers especially when they are launched as part of a larger topology using docker-compose or Kubernetes.  
 
 
-  
+
 
 
 
