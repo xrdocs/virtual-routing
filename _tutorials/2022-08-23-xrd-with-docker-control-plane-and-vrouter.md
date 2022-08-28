@@ -754,10 +754,11 @@ RP/0/RP0/CPU0:ios#
 
 
 ```
+We were able to login directly using the credentials provided via the config file earlier.  
 
 ### Dropping into XR bash and using ZTP commands
 
-We were able to login directly using the credentials provided via the config file earlier.  
+  
 
 Let's try dropping into XRd bash and running a few ZTP bash commands (notice we use the docker container name this time from the same `docker ps` output earlier):  
 
