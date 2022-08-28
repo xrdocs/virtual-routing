@@ -345,7 +345,7 @@ Syntax example for xr_l2networks at top-level
 ### Launching Sample XRd docker-compose Topologies
 
 
-In the `xrd-tools/` repository we cloned to the host machine in [Part-2]({{base_path}}/tutorials/2022-08-22-helper-tools-to-get-started-with-xrd/), there is a `samples/` directory that contains some docker-compose.xr.yaml examples. Let's work through a couple of these examples to better understand how to use `xr-compose`:  
+In the `xrd-tools/` repository we cloned to the host machine in [Part-2]({{base_path}}/tutorials/2022-08-22-helper-tools-to-get-started-with-xrd/), there is a `samples/` directory that contains some docker-compose.xr.yaml examples. Let's work through an example to better understand how to use `xr-compose`:  
 
 ```
 cisco@xrdcisco:~/xrd-tools/samples/xr_compose_topos$ pwd
@@ -483,6 +483,27 @@ networks:
 cisco@xrdcisco:~/xrd-tools/samples/xr_compose_topos/simple-bgp$ 
 
 ```
+
+This docker-compose topology creates the following:  
+
+* Services consisting of 4 docker instances:
+    1. `source`: An alpine Linux based docker instance that is one end of the network (source of traffic).
+    2. `dest`: An alpine Linux based docker instance at the other end of the topology (destination of traffic from source)
+    3. `xr-1`: First XRd Control-Plane instance of the router network in the middle, connected directly to `source`
+    4. `xr-2`: Second XRd Control-Plane instance of the router network in the middle, connected directly to `dest`
+
+* 4 Networks :
+
+  1. `mgmt`:  The management network that each XRd instanc Mgmt port is connected to.
+  2. `source-xrd-1`: Network connecting one interface of `source` and one interface of `xr-1`
+  3. `xr_l2networks`: A set of l2 network connections between the routers `xr-1` and `xr-2`
+  4. `xrd-2-dest`:  Network connecting one interface of `xr-2` and one interface of `dest`.
+  
+  
+This is represented in the figure below:  
+
+
+![simple-bgp-xr-compose.png]({{site.baseurl}}/images/simple-bgp-xr-compose.png)
 
 
 
