@@ -1092,6 +1092,41 @@ cisco@xrdcisco:~$
 cisco@xrdcisco:~$   
 ```  
 
+Now, use the `--interfaces` option to specify the list of interfaces as options to `launch-xrd` along with the `--dry-run` option to dump the underlying docker command being used:
+  
+
+```bash
+cisco@xrdcisco:~/xrd-tools/scripts$ ./launch-xrd localhost/xrd-vrouter --interfaces "pci:1b:00.0;pci:03:00.0" --dry-run
+docker run -it --rm --cap-drop all --cap-add AUDIT_WRITE --cap-add CHOWN --cap-add DAC_OVERRIDE --cap-add FOWNER --cap-add FSETID --cap-add KILL --cap-add MKNOD --cap-add NET_BIND_SERVICE --cap-add NET_RAW --cap-add SETFCAP --cap-add SETGID --cap-add SETUID --cap-add SETPCAP --cap-add SYS_CHROOT --cap-add IPC_LOCK --cap-add NET_ADMIN --cap-add SYS_ADMIN --cap-add SYS_NICE --cap-add SYS_PTRACE --cap-add SYS_RESOURCE --cap-add SYS_RAWIO --device /dev/fuse --device /dev/net/tun --security-opt apparmor=unconfined --security-opt label=disable -v /sys/fs/cgroup:/sys/fs/cgroup:ro --device /dev/vfio --device-cgroup-rule 'c *:* rwm' --env 'XR_INTERFACES=pci:1b:00.0;pci:03:00.0' --env XR_MGMT_INTERFACES=linux:eth0,chksum localhost/xrd-vrouter
+cisco@xrdcisco:~/xrd-tools/scripts$ 
+   
+```  
+  
+Doing pretty-dump of the docker command for better discernment:  
+  
+```
+docker run -it --rm \
+--cap-drop all --cap-add AUDIT_WRITE \
+--cap-add CHOWN --cap-add DAC_OVERRIDE \
+--cap-add FOWNER --cap-add FSETID \
+--cap-add KILL --cap-add MKNOD \
+--cap-add NET_BIND_SERVICE --cap-add NET_RAW \
+--cap-add SETFCAP --cap-add SETGID \
+--cap-add SETUID --cap-add SETPCAP \
+--cap-add SYS_CHROOT --cap-add IPC_LOCK \
+--cap-add NET_ADMIN --cap-add SYS_ADMIN \
+--cap-add SYS_NICE --cap-add SYS_PTRACE \
+--cap-add SYS_RESOURCE --cap-add SYS_RAWIO \
+--device /dev/fuse --device /dev/net/tun \
+--security-opt apparmor=unconfined \
+--security-opt label=disable -v /sys/fs/cgroup:/sys/fs/cgroup:ro \
+--device /dev/vfio --device-cgroup-rule 'c *:* rwm' \
+--env 'XR_INTERFACES=pci:1b:00.0;pci:03:00.0' \
+--env XR_MGMT_INTERFACES=linux:eth0,chksum \
+localhost/xrd-vrouter  
+  
+```  
+  
 
   
 
