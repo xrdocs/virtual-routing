@@ -676,6 +676,7 @@ docker run -it --rm --cap-drop all --cap-add AUDIT_WRITE --cap-add CHOWN --cap-a
 </pre>
 </div>
 
+Running the command as is:  
 
 <div class="highlighter-rouge">
 <pre class="highlight">
@@ -687,13 +688,29 @@ cisco@xrdcisco:~/xrd-tools/scripts$
 </pre>
 </div>
 
+A docker container was launched in the background, we can the containers running using `docker ps` to view the container that was launched:
+
 ```
 cisco@xrdcisco:~/xrd-tools/scripts$ docker ps
 CONTAINER ID   IMAGE                         COMMAND                  CREATED         STATUS         PORTS     NAMES
 ef0dabe120fb   localhost/xrd-control-plane   "/bin/sh -c /sbin/xr…"   3 seconds ago   Up 2 seconds             hopeful_goldberg
 cisco@xrdcisco:~/xrd-tools/scripts$ 
 ```
+  
+  
+### Accessing and Managing XRd running in the background
 
+The steps we used above provide a good segue to understand how to access XRd containers running in the background:  
+
+
+* Use the `docker exec -it <container hash or name> <command>` to drop into the container
+* There are two possible commands that we can run:
+  * `/pkg/bin/xr_cli.sh`: Running this command as part of `docker exec` will directly drop us into 
+  * `bash`: Running `bash` will drop us into XRd bash shell directly. From here you have access to the XR ZTP [bash](https://xrdocs.io/device-lifecycle/tutorials/2016-08-26-working-with-ztp/#ztp_helpersh)  and [python](https://github.com/ios-xr/iosxr-ztp-python/) libraries for automation or you can launch `/pkg/bin/xr_cli.sh` as well to drop into XR CLI subsequently.
+* Dealing with XRd containers running in the background is quite useful, because this is the typical way in which we will interact with XRd containers especially when they are launched as part of a larger topology using docker-compose or Kubernetes.  
+
+
+  
 
 
 
