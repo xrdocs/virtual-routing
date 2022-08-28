@@ -1076,6 +1076,23 @@ A few additional points however must be taken care of when trying to launch XRd 
   
 The good news is that #1, #2 and #3 are handled by launch-xrd automatically, so you only need to be aware of #4.
 
+Let's begin by dumping the available pci network devices on the host machine:  
+  
+```
+cisco@xrdcisco:~$ sudo lshw -businfo -c network
+[sudo] password for cisco: 
+Bus info          Device           Class      Description
+=========================================================
+pci@0000:02:01.0  ens33            network    82545EM Gigabit Ethernet Controller (Copper)
+pci@0000:03:00.0  ens160           network    VMXNET3 Ethernet Controller
+pci@0000:0b:00.0  ens192           network    VMXNET3 Ethernet Controller
+pci@0000:13:00.0  ens224           network    VMXNET3 Ethernet Controller
+pci@0000:1b:00.0  ens256           network    VMXNET3 Ethernet Controller
+                  ens224-mg-local  network    Ethernet interface
+cisco@xrdcisco:~$ 
+cisco@xrdcisco:~$   
+  
+```  
 
 
   
