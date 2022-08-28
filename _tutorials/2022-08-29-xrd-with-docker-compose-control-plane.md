@@ -564,9 +564,20 @@ If everything comes up correctly, the xr-1 and xr-2 will learn about each other'
 
 The steps to activate this environment are as follows:  
 
-### Transform docker-compose.xr.yaml to docker-compose.yaml
+### Transform docker-compose.xr.yml to docker-compose.yml
 
-We use the xr-compose script for this [
+We use the `xr-compose` script for this purpose. To create the docker-compose.yml file, run the following command:
+
+
+```
+xr-compose -f docker-compose.xr.yml -i <XRd control-plane image name>
+
+```
+where:
+
+* `-f` or `--input-file`: Options to specify the input docker-compose.xr.yml file 
+
+
 
 
 
