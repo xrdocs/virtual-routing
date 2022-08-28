@@ -1032,7 +1032,29 @@ RP/0/RP0/CPU0:ios#
 Awesome, we're able to ping out from the XRd instance to `ens224-mg-local`.
 Finally, configure ssh server on XRd and connect to the instance over SSH using the local connectivity provided by `ens224-mg-local`:  
   
+```bash
+Sun Aug 28 14:56:05.183 UTC
+RP/0/RP0/CPU0:ios(config)#ssh server v2
+RP/0/RP0/CPU0:ios(config)#commit
+Sun Aug 28 14:56:10.263 UTC
+RP/0/RP0/CPU0:ios(config)#exit
+RP/0/RP0/CPU0:ios#
+RP/0/RP0/CPU0:ios#exit
+cisco@xrdcisco:~$ 
+cisco@xrdcisco:~$ 
+cisco@xrdcisco:~$ ssh cisco@172.50.1.3
+The authenticity of host '172.50.1.3 (172.50.1.3)' can't be established.
+ECDSA key fingerprint is SHA256:sPt+YMSYjJmntBA2G5hfPMfUgVUVyKx7Z8zx+3NKOL8.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '172.50.1.3' (ECDSA) to the list of known hosts.
+Password: 
 
+
+
+RP/0/RP0/CPU0:ios#
+RP/0/RP0/CPU0:ios#
+  
+```
   
   
   
