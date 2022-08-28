@@ -547,7 +547,7 @@ cisco@xrdcisco:~$
 
 ### Passing an initial configuration during boot
 
-To pass an initial configuration, we can use the `--every-boot-script` option for the `launch-xrd` script. Using a simple configuration as shown below:  
+To pass an initial configuration, we can use the `--every-boot-config` option for the `launch-xrd` script. Using a simple configuration as shown below:  
 
 
 ```
@@ -576,8 +576,74 @@ end
 
 ```
 
+we pass it into the `launch-xrd` script:
 
 
+<div class="highlighter-rouge">
+<pre class="highlight">
+<code style="white-space: pre;">
+cisco@xrdcisco:~/xrd-tools/scripts$ ./launch-xrd localhost/xrd-control-plane --every-boot-config xr.config 
+systemd 230 running in system mode. (+PAM +AUDIT +SELINUX +IMA -APPARMOR +SMACK +SYSVINIT +UTMP -LIBCRYPTSETUP -GCRYPT -GNUTLS +ACL +XZ -LZ4 -SECCOMP +BLKID -ELFUTILS +KMOD -IDN)
+Detected virtualization docker.
+Detected architecture x86-64.
+
+Welcome to Cisco XR (Base Distro SELinux and CGL) 9.0.0.26!
+
+Set hostname to &lt;6ba2d89c79a7&gt;.
+Initializing machine ID from random generator.
+[  OK  ] Reached target Remote File Systems.
+
+
+
+################################ truncated O/P #############################
+
+
+If you require further assistance please contact us by sending email to 
+export@cisco.com.
+
+
+
+<mark>RP/0/RP0/CPU0:Aug 28 11:33:57.618 UTC: pyztp2[168]: %INFRA-ZTP-4-EXITED : ZTP exited 
+
+User Access Verification
+
+Username: cisco
+Password: 
+
+
+RP/0/RP0/CPU0:ios#</mark>
+RP/0/RP0/CPU0:ios#
+RP/0/RP0/CPU0:ios#show running-config 
+Sun Aug 28 11:34:13.451 UTC
+Building configuration...
+!! IOS XR Configuration 7.7.1
+!! No configuration change since last restart
+!
+username cisco
+ group root-lr
+ secret 10 $6$MaGnn0dowgBD9n0.$3hEo4Tm.I9mNF0tjXybAn6dhbQx7SxLT0NahSsOJmqfKcOvqLwEEB2jJtytwtTdWOZ32knC03/cGjcIGZHltC1
+!
+call-home
+ service active
+ contact smart-licensing
+ profile CiscoTAC-1
+  active
+  destination transport-method email disable
+  destination transport-method http
+ !
+!
+interface MgmtEth0/RP0/CPU0/0
+ shutdown
+!
+end
+
+RP/0/RP0/CPU0:ios#
+</code>
+</pre>
+</div>
+
+As highlighted above, note how during this boot, we didn't have to create a root username and were able to login using the credentials (cisco/cisco123 in this example) set in the configuration file passed to `launch-xrd`. 
+{: .notice--info}
 
 
 Part-6 of the XRd tutorials Series: [here]({{base_path}}/tutorials/2022-08-23-xrd-with-docker-compose-control-plane-and-vrouter).
