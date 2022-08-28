@@ -442,7 +442,7 @@ RP/0/RP0/CPU0:ios#
 
 
 The boot above is very similar to IOS-XR boot on physical network hardware such as the Cisco8000 or NCS540.  
-It can be seen in the `show run` output above that a default Management interface is added even with the barebone boot we tried above. This is the default docker interface that is added to each docker container.
+It can be seen in the `show run` output above that a default Management interface is added due to the `XR_MGMT_INTERFACES=linux:eth0,chksum` options passed as environment variables during launch.
 
 
 Open up a new shell into the host machine and dump the running docker containers on the system:  
@@ -527,6 +527,8 @@ RP/0/RP0/CPU0:ios#
 
 ```
 
+Awesome! we have established basic connectivity over the Mgmt port into the XRd control-plane router. 
+{: .notice--success}
 
 ### Bring down the XRd Control-Plane docker container
 
