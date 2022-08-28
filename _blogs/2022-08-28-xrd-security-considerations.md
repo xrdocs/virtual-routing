@@ -150,7 +150,7 @@ The appropriate value to set depends on the specific usage but a minimum of 2GB 
 Similarly, Docker does not constrain a container's access to the CPU by default but runtime options may be used to limit CPU usage; XRd requires at least one CPU core.
 
 The `launch-xrd` and `xr-compose` tools do not constrain any resources by default.
-If running a single instance then `launch-xrd --dry-run` can be used to see the base command that can then be supplemented with the necessary runtime options.
+If running a single instance then `launch-xrd --dry-run` can be used to see the base command that can then be supplemented with the necessary [runtime options](https://docs.docker.com/engine/reference/commandline/run/).
 If running multiple instances with xr-compose then refer to the Compose Specification for how to specify resource constraints in the input YAML file.
 
 #### Mounts
