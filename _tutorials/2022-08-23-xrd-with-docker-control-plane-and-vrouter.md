@@ -222,7 +222,8 @@ docker run -it --rm \
 --security-opt apparmor=unconfined \
 --security-opt label=disable \
 -v /sys/fs/cgroup:/sys/fs/cgroup:ro \
---env
+--env XR_MGMT_INTERFACES=linux:eth0,chksum \
+localhost/xrd-control-plane
 ```
 
 
@@ -541,7 +542,10 @@ cisco@xrdcisco:~$
 ```
   
 
-### 
+### Passing an initial configuration during boot
+
+To pass an initial configuration, we can use the ``
+
 
 
 
