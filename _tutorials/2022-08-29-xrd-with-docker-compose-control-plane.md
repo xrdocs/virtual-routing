@@ -553,7 +553,7 @@ end
 
 ```  
 
-This is represented in the figure below:  
+The overall topology represented in the figure below:  
 
 
 ![simple-bgp-xr-compose.png]({{site.baseurl}}/images/simple-bgp-xr-compose.png)
