@@ -584,7 +584,7 @@ we pass it into the `launch-xrd` script:
 
 <div class="highlighter-rouge">
 <pre class="highlight">
-<code style="white-space: pre;">
+<code style="white-space: pre-wrap;">
 cisco@xrdcisco:~/xrd-tools/scripts$ ./launch-xrd localhost/xrd-control-plane --every-boot-config xr.config 
 systemd 230 running in system mode. (+PAM +AUDIT +SELINUX +IMA -APPARMOR +SMACK +SYSVINIT +UTMP -LIBCRYPTSETUP -GCRYPT -GNUTLS +ACL +XZ -LZ4 -SECCOMP +BLKID -ELFUTILS +KMOD -IDN)
 Detected virtualization docker.
@@ -668,7 +668,7 @@ Let's add another twist here though - we'll use the native `-d` or `--daemon` op
 
 <div class="highlighter-rouge">
 <pre class="highlight">
-<code style="white-space: pre;">
+<code style="white-space: pre-wrap;">
 docker run -it --rm --cap-drop all --cap-add AUDIT_WRITE --cap-add CHOWN --cap-add DAC_OVERRIDE --cap-add FOWNER --cap-add FSETID --cap-add KILL --cap-add MKNOD --cap-add NET_BIND_SERVICE --cap-add NET_RAW --cap-add SETFCAP --cap-add SETGID --cap-add SETUID --cap-add SETPCAP --cap-add SYS_CHROOT --cap-add IPC_LOCK --cap-add NET_ADMIN --cap-add SYS_ADMIN --cap-add SYS_NICE --cap-add SYS_PTRACE --cap-add SYS_RESOURCE --device /dev/fuse --device /dev/net/tun --security-opt apparmor=unconfined --security-opt label=disable -v /sys/fs/cgroup:/sys/fs/cgroup:ro --mount type=bind,source=/home/cisco/xrd-tools/scripts/xr.config,target=/etc/xrd/every-boot.cfg --env XR_EVERY_BOOT_CONFIG=/etc/xrd/every-boot.cfg --env XR_MGMT_INTERFACES=linux:eth0,chksum <mark> -d </mark> localhost/xrd-control-plane 
 </code>
 </pre>
@@ -678,7 +678,7 @@ Running the command as is:
 
 <div class="highlighter-rouge">
 <pre class="highlight">
-<code style="white-space: pre;">
+<code style="white-space: pre-wrap;">
 cisco@xrdcisco:~/xrd-tools/scripts$ docker run -it --rm --cap-drop all --cap-add AUDIT_WRITE --cap-add CHOWN --cap-add DAC_OVERRIDE --cap-add FOWNER --cap-add FSETID --cap-add KILL --cap-add MKNOD --cap-add NET_BIND_SERVICE --cap-add NET_RAW --cap-add SETFCAP --cap-add SETGID --cap-add SETUID --cap-add SETPCAP --cap-add SYS_CHROOT --cap-add IPC_LOCK --cap-add NET_ADMIN --cap-add SYS_ADMIN --cap-add SYS_NICE --cap-add SYS_PTRACE --cap-add SYS_RESOURCE --device /dev/fuse --device /dev/net/tun --security-opt apparmor=unconfined --security-opt label=disable -v /sys/fs/cgroup:/sys/fs/cgroup:ro --mount type=bind,source=/home/cisco/xrd-tools/scripts/xr.config,target=/etc/xrd/every-boot.cfg --env XR_EVERY_BOOT_CONFIG=/etc/xrd/every-boot.cfg --env XR_MGMT_INTERFACES=linux:eth0,chksum -d  localhost/xrd-control-plane
 <mark>ef0dabe120fb3a9d5254fae26fc68644392e94203a235e72fd8a37afde4571fa</mark>
 cisco@xrdcisco:~/xrd-tools/scripts$ 
