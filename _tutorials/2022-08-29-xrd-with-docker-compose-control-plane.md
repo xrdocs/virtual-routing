@@ -754,6 +754,33 @@ volumes:
 ```
 
 
+This `docker-compose.yml` can be used to spin up the topology using standard `docker-compose` that we installed on the host machine earlier.
+
+
+### Launch the docker-compose topology
+
+
+To launch, simply run `docker-compose up -d` in the same directory where the `docker-compose.yml` file was created:
+
+
+```bash
+cisco@xrdcisco:~/xrd-tools/samples/xr_compose_topos/simple-bgp$ docker-compose  up -d
+Creating network "simple-bgp_xrd-2-dest" with the default driver
+Creating network "simple-bgp_source-xrd-1" with the default driver
+Creating network "simple-bgp_mgmt" with the default driver
+Creating network "xr-1-gi1-xr-2-gi0" with the default driver
+Creating xr-1   ... done
+Creating dest   ... done
+Creating source ... done
+Creating xr-2   ... done
+cisco@xrdcisco:~/xrd-tools/samples/xr_compose_topos/simple-bgp$ 
+
+```
+
+
+
+
+
 
 
 
