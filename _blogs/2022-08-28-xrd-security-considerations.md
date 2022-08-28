@@ -86,6 +86,7 @@ This is the default behavior if using the `launch-xrd` or `xr-compose` tools (de
 
 The following are the default Docker capabilities (and must be explicitly specified if using --cap-drop all):
 
+```
 CAP_AUDIT_WRITE
 CAP_CHOWN
 CAP_DAC_OVERRIDE
@@ -99,7 +100,9 @@ CAP_SETFCAP
 CAP_SETGID
 CAP_SETPCAP
 CAP_SETUID
-CAP_SYS_CHROOT
+CAP_SYS_CHROOT  
+```
+
 In addition to the default capabilities, all XRd platforms require the following capabilites:
 
 | Capability       | Reason                                                          |
@@ -186,4 +189,3 @@ Cgroup Filesystem Setup
 Before 7.8.1 it was required to pass the host's cgroup filesystem through to the container to allow systemd to run within Docker in non-privileged mode. This gives the container full access to the host's cgroup filesystem, which is undesirable, and so should not be done now that it is no longer required.
 
 The `--cgroupns=private` option is recommended to isolate the container further.
-
