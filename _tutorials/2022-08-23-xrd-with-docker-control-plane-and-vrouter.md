@@ -826,6 +826,7 @@ It was also possible to jump to XR CLI shell by running the `/pkg/bin/xr_cli.sh`
 * A macvlan interface is a standard Linux interface type that is created on top of another interface, which could be a physical interface with an external connection. Multiple macvlan interfaces can be created on top of one standard interface. This allows multiple applications, including XRd, to 'share' the physical interfaces on a particular host server, via these macvlan interfaces.
 * Each macvlan interface is assigned it's own MAC address (hence the name) and data is directed to the correct interface based on this MAC address. This is illustrated in the image below:
 
+![macvlan-interfaces.png]({{site.baseurl}}/images/macvlan-interfaces.png)
 
 
 
