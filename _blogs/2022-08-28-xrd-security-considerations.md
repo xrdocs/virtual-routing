@@ -45,21 +45,21 @@ The requirements to secure the host can vary significantly depending on the indi
 
 #### Linux Kernel Security Policies
 
-#### AppArmor
+**AppArmor**:
 Support for AppArmor in Kubernetes appears to still be in beta. Progress towards general availability seems to have stalled with "out-of-tree enhancements" offered instead. As such, AppArmor is not officially supported for XRd and it is up to the end user to configure a profile and enable it on the node hosts.
 
 By default, if AppArmor is enabled and running on the host, launching Docker without the security option results in a profile docker-default being created and applied. To avoid this the option `--security-opt apparmor=unconfined` is used. Kubernetes by default does not apply a profile to launched pods. The command aa-status (run on the host) shows which profiles are currently enabled and applied to which profiles, and can be used to confirm that XRd is not being run with AppArmor protection.
 
-SELinux
-In production use cases, it is not supported to run XRd in non-privileged mode. In privileged mode, all SELinux checks are bypassed, so therefore it is not supported to secure XRd with SELinux. In unprivileged mode, it is possible to create a custom SELinux profile that allows XRd to run with SELinux enabled. The XRd team have some experience with this, and can help with any effort to run XRd in such a way, but it is not a supported workflow.
+**SELinux**:
+In production use cases, it is not supported to run XRd in non-privileged mode. In privileged mode, all SELinux checks are bypassed, so therefore it is not supported to secure XRd with SELinux. 
 
-On hosts with SELinux enabled, it is possible to run XRd in such a way that bypasses checks, but allowing other workloads to be constrained by SELinux, by passing the --security-opt="label=disable" option to docker run, or by using the --privileged option.
+On hosts with SELinux enabled, it is possible to run XRd in such a way that bypasses checks, but allowing other workloads to be constrained by SELinux, by passing the `--security-opt="label=disable"` option to docker run, or by using the `--privileged` option.
 
-Root of Trust
+**Root of Trust**
 As a software solution, XRd is unable to establish a Root of Trust anchored in the hardware (for example, via a TPM).
 The end user is responsible for building and validating this trust chain and XRd has an implicit trust of the host.
 
-The XRd container archive is signed with a detached signature that is distributed alongside the image allowing it to be validated by the end user - the README provided with the signature describes this validation process.
+The XRd container archive is signed with a detached signature that is distributed alongside the image allowing it to be validated by the end user - we show this process end-to-end in [Part-1]({{base_path}}/tutorials/2022-08-22-xrd-images-where-can-one-get-them/) of the XRd Tutorial Series.
 
 Resource Exhaustion
 If the resources on the host are exhausted such that XRd is starved of (for example) memory or inotify instances by other applications on the host then this could cause a disruption or denial of service.
