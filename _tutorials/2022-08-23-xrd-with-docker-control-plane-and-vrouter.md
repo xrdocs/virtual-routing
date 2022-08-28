@@ -918,11 +918,36 @@ optional flags include:
 * The image used is the XRd control-plane image:  
   
   
-```
+<div class="highlighter-rouge">
+<pre class="highlight">
+<code style="white-space: pre-wrap;">
+docker create \
+<mark>--name xrd</mark> --cap-drop all \
+--cap-add AUDIT_WRITE --cap-add CHOWN --cap-add DAC_OVERRIDE \
+--cap-add FOWNER --cap-add FSETID --cap-add KILL \
+--cap-add MKNOD --cap-add NET_BIND_SERVICE --cap-add NET_RAW \
+--cap-add SETFCAP --cap-add SETGID --cap-add SETUID \
+--cap-add SETPCAP --cap-add SYS_CHROOT --cap-add SYS_ADMIN \
+--cap-add SYS_NICE --cap-add SYS_PTRACE --cap-add SYS_RESOURCE \
+--cap-add NET_ADMIN --cap-add IPC_LOCK \
+--device /dev/fuse --device /dev/net/tun \
+--security-opt apparmor=unconfined \
+--env XR_INTERFACES='linux:ens160-mac,xr_name=Gi0/0/0/0;linux:ens192-mac,xr_name=Gi0/0/0/1' \
+--env XR_MGMT_INTERFACES='linux:ens224-mg,xr_name=MgmtEth0/RP0/CPU0/0,chksum' \
+--env XR_EVERY_BOOT_CONFIG=/startup.cfg \
+--mount type=bind,source=/home/cisco/xrd-tools/scripts/xr.config,target=/startup.cfg \
+--net none \
+-it localhost/xrd-control-plane
+
+</code>
+</pre>
+</div>
+
+**Note**: The `docker create` command is used to set up the container with all the required options without actually starting it. Also notice the name `xrd` that we apply to the container during creation making it easier to reference the container in subsequent steps. 
+{: .notice--info}
+
+
   
-  
-  
-```
 
   
   
