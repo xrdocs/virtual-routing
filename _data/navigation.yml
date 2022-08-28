@@ -1,0 +1,15 @@
+main:
+  - title: "Blogs"
+    url: /blogs/
+
+  - title: "Tutorials"
+    url: /tutorials/
+
+  - title: "CodeRepos"
+    url: /CodeRepos  
+
+  - title: "Search"
+    url: /search
+
+  - title: "Tags"
+    url: /tags/
