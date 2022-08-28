@@ -173,7 +173,7 @@ Explicitly:
   
 There are further considerations that XRd is currently not able to meet and hence must not be enacted:
 
-XRd does not support mounting the root filesystem as read-only - so  do not specify `--read-only` to docker run.
+XRd does not support mounting the root filesystem as read-only - so, do not specify `--read-only` to docker run.
 It would be preferable to mount persistent storage with the nodev,noexec,nosuid mount options but this is not currently supported.
 Terminals & Logging
 Docker will capture the output from stdout and stderr of the default PTY attached to the container and record it in the docker logs.
