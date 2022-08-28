@@ -39,6 +39,44 @@ In this tutorial, we will focus on the `xr-compose` script that we introduced as
 
 The xr-compose script is a wrapper around [docker-compose](https://docs.docker.com/compose/). In addition to the general docker-compose YAML syntax (see https://docs.docker.com/compose/compose-file/), xr-compose also supports some XR-specific fields that 'expand out' to include all the fields required to hide implementation-specific details from the user. It also takes care of boilerplate docker-compose items that are desired for every XR container service.
 
+**Note**: A general guidance on the use of any xrd-tools script is to utilize the `--help` option to first dump the list of options available for use with each script. In these tutorials, we will attempt to try the most important/common options but the reader is encouraged to follow the help blurbs and try each option for each of the scripts.
+{: .notice--info}  
+
+
+Dumping the available options with `xr-compose`:   
+
+```
+cisco@xrdcisco:~/xrd-tools/scripts$ ./xr-compose --help
+usage: xr-compose [-h] [-f FILE] [-o FILE] [-i IMAGE] [-t STR] [-l] [-m PATH [PATH ...]] [-d] [--privileged]
+
+Translate xr-compose input YAML into the full YAML required to run XRd topologies using docker-compose. Specify '--launch' to additionally launch the topology (otherwise
+docker-compose can be run directly with the output YAML). Note that an image must be specified with -i if images are not specified in the YAML input for each service.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -f FILE, --input-file FILE
+                        Specify an alternative input file.
+  -o FILE, --output-file FILE
+                        Specify an alternative output file.
+  -i IMAGE, --image IMAGE
+                        Name/ID of loaded XRd image to launch. This will be overridden by any images specified in the input YAML.
+  -t STR, --topo-id STR
+                        Specify a topology instance identifier used to suffix container, volume, and network names.
+  -l, --launch          Launch a topology from the generated docker-compose YAML.
+  -m PATH [PATH ...], --mount PATH [PATH ...]
+                        A space separated list of paths to mount into each XR container. Relative paths will be treated as relative to the input YAML file. Each path can be of
+                        the form '<src>' or '<src>:<tgt>'.
+  -d, --debug           Enable debug output
+  --privileged          Launch in privileged mode
+cisco@xrdcisco:~/xrd-tools/scripts$ 
+
+```
+
+
+
+
+
+
 
 
 
