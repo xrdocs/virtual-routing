@@ -269,6 +269,78 @@ cisco@xrdcisco:~/xrd-tools/templates$
 
 
 
+### XR-Compose YAML - Services
+The following XR-specific items are accepted in the 'service' section:
+
+#### xr_startup_cfg
+* Startup config filename.
+* Non-qualified filenames are assumed relative to the directory containing the topology YAML.
+* If not specified, no startup config is mounted.
+
+```
+Syntax example for xr_startup_cfg
+ services:
+   xr-1:
+     xr_startup_cfg: xrd-1-startup.cfg
+```  
+
+
+#### xr_interfaces
+* List of interfaces that the container will have in the form Gi0/0/0/x, or Mg0/RP0/CPU0/0.
+* Gi interfaces must be added in a continuous sequence, e.g. cannot specify 0, 2, 3.
+* If not specified, the XR container will not have any interfaces.
+* Each interface must be listed either under networks or xr_l2networks - not both.
+* If an interface is not listed under in either networks or xr_l2networks, then it will be created without linking to anything.  
+
+```
+Syntax example for xr_interfaces at container-level
+ services:
+   xr-1:
+     xr_interfaces:
+       - Gi0/0/0/0
+       - Gi0/0/0/1
+       - Gi0/0/0/2
+       - Mg0/RP0/CPU0/0
+```  
+
+
+### XR-Compose YAML - Networks  
+
+The following XR-specific items may be added to a 'network' section:
+
+#### xr_interfaces
+* List of XR interfaces.
+* Used if an XR interface must be accessible from the host (e.g. for management) or accessible from a non-XRd container.
+* Interfaces must be specified in the following format: service-name:interface-name, e.g. xr-1:GE0/0/0/0.  
+
+```
+Syntax example for xr_interfaces at network-level
+networks:
+   xrd-1-ubuntu-1:
+     xr_interfaces:
+       - "xr-1:Gi0/0/0/2"
+```   
+
+
+### XR-Compose YAML - Top-level
+
+The following top-level XR-specific items may be specified:
+
+#### xr_l2networks
+* List of interface lists.
+* Used to specify which XR container interfaces should be joined together on the same L2 network.
+* Interfaces must be specified in the following format: service-name:interface-name, e.g. xr-1:GE0/0/0/0.
+* One L2 network must not include more than one interface from any one container.
+
+```
+Syntax example for xr_l2networks at top-level
+ xr_l2networks:
+   - ["xr-1:Gi0/0/0/0", "xr-2:Gi0/0/0/0"]
+   - ["xr-1:Gi0/0/0/1", "xr-3:Gi0/0/0/0"]
+   - ["xr-2:Gi0/0/0/1", "xr-3:Gi0/0/0/1", "xr-4:Gi0/0/0/0"]
+```  
+
+
 
 
 
