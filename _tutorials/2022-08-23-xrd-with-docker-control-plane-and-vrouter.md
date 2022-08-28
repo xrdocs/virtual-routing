@@ -699,7 +699,7 @@ cisco@xrdcisco:~/xrd-tools/scripts$
 ```
   
   
-### Accessing and Managing XRd running in the background
+## Accessing and Managing XRd running in the background
 
 The steps we used above provide a good segue to understand how to access XRd containers running in the background:  
 
@@ -710,6 +710,109 @@ The steps we used above provide a good segue to understand how to access XRd con
   * `bash`: Running `bash` will drop us into XRd bash shell directly. From here you have access to the XR ZTP [bash](https://xrdocs.io/device-lifecycle/tutorials/2016-08-26-working-with-ztp/#ztp_helpersh)  and [python](https://github.com/ios-xr/iosxr-ztp-python/) libraries for automation or you can launch `/pkg/bin/xr_cli.sh` as well to drop into XR CLI subsequently.
 * Dealing with XRd containers running in the background is quite useful, because this is the typical way in which we will interact with XRd containers especially when they are launched as part of a larger topology using docker-compose or Kubernetes.  
 
+
+### Dropping directly into XR CLI
+
+Dropping into the XRd instance running in the background (using the container hash from `docker ps` output earlier:  
+
+```
+cisco@xrdcisco:~$ docker exec -it ef0dabe120fb /pkg/bin/xr_cli.sh
+
+User Access Verification
+
+Username: cisco
+Password: 
+
+
+RP/0/RP0/CPU0:ios#
+RP/0/RP0/CPU0:ios#
+RP/0/RP0/CPU0:ios#show  run
+Sun Aug 28 12:51:40.317 UTC
+Building configuration...
+!! IOS XR Configuration 7.7.1
+!! No configuration change since last restart
+!
+username cisco
+ group root-lr
+ secret 10 $6$MaGnn0dowgBD9n0.$3hEo4Tm.I9mNF0tjXybAn6dhbQx7SxLT0NahSsOJmqfKcOvqLwEEB2jJtytwtTdWOZ32knC03/cGjcIGZHltC1
+!
+call-home
+ service active
+ contact smart-licensing
+ profile CiscoTAC-1
+  active
+  destination transport-method email disable
+  destination transport-method http
+ !
+!
+interface MgmtEth0/RP0/CPU0/0
+ shutdown
+!
+end
+
+RP/0/RP0/CPU0:ios#
+
+
+```
+
+### Dropping into XR bash and using ZTP commands
+
+We were able to login directly using the credentials provided via the config file earlier.  
+
+Let's try dropping into XRd bash and running a few ZTP bash commands (notice we use the docker container name this time from the same `docker ps` output earlier):  
+
+<div class="highlighter-rouge">
+<pre class="highlight">
+<code style="white-space: pre-wrap;">
+cisco@xrdcisco:~$ docker exec -it hopeful_goldberg bash
+bash-4.3# 
+bash-4.3#<mark> source /pkg/bin/ztp_helper.sh</mark>
+bash-4.3# 
+bash-4.3#<mark> xrcmd "show run"</mark>
+Building configuration...
+!! IOS XR Configuration 7.7.1
+!! Last configuration change at Sun Aug 28 12:55:34 2022 by ZTP
+!
+username cisco
+ group root-lr
+ secret 10 $6$MaGnn0dowgBD9n0.$3hEo4Tm.I9mNF0tjXybAn6dhbQx7SxLT0NahSsOJmqfKcOvqLwEEB2jJtytwtTdWOZ32knC03/cGjcIGZHltC1
+!
+call-home
+ service active
+ contact smart-licensing
+ profile CiscoTAC-1
+  active
+  destination transport-method email disable
+  destination transport-method http
+ !
+!
+interface MgmtEth0/RP0/CPU0/0
+ shutdown
+!
+end
+
+bash-4.3# 
+bash-4.3# 
+bash-4.3# <mark>xrapply_string "hostname xrd_docker"</mark>
+bash-4.3# 
+bash-4.3# <mark>xrcmd "show running-config hostname"</mark>
+hostname xrd_docker
+
+bash-4.3# 
+bash-4.3# 
+bash-4.3# <mark>/pkg/bin/xr_cli.sh</mark>
+
+User Access Verification
+
+Username: cisco
+Password: 
+
+
+RP/0/RP0/CPU0:xrd_docker#
+RP/0/RP0/CPU0:xrd_docker#
+</code>
+</pre>
+</div>
 
 
 
