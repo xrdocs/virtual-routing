@@ -1060,7 +1060,7 @@ Perfect! The external connectivity that we established via maclvan interfaces fo
   
   
   
-### Boot XRd vRouter image using launch-xrd 
+## Boot XRd vRouter image using launch-xrd 
   
 Once you have the hang of the XRd Control-Plane image and its launch process using either `launch-xrd` or standalone docker, XRd vRouter is not much different.
 A few additional points however must be taken care of when trying to launch XRd vRouter in a standalone fashion with docker: 
