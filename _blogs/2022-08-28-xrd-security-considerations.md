@@ -159,7 +159,7 @@ The mandatory and optional mounts can be understood with the help of the `launch
 
 Mounts should be limited to the minimum required for XRd to run.
 The end user is responsible for encrypting any persistent storage volume mounted into XRd.
-It is recommended that any startup config file is read-only and is mounted to /etc/xrd/.
+It is recommended that any startup config file is read-only and is mounted to `/etc/xrd/`.
 By default, mounts are not bounded in size and hence the host may be vulnerable to exhaustion - this covers both disk storage and memory (such as with tmpfs).
 Explicitly:
 
