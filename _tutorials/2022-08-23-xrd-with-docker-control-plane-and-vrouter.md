@@ -204,7 +204,7 @@ docker run -it --rm --cap-drop all --cap-add AUDIT_WRITE --cap-add CHOWN --cap-a
 
 Structuring the output to better understand it:
 
-```
+```bash
 docker run -it --rm \
 --cap-drop all \
 --cap-add AUDIT_WRITE --cap-add CHOWN \
@@ -234,7 +234,7 @@ We can use either `launch-xrd` or the native docker command as shown above to bo
 Let's do a simple boot using `launch-xrd` first:  
 
 
-```
+```bash
 cisco@xrdcisco:~/xrd-tools/scripts$ ./launch-xrd localhost/xrd-control-plane 
 systemd 230 running in system mode. (+PAM +AUDIT +SELINUX +IMA -APPARMOR +SMACK +SYSVINIT +UTMP -LIBCRYPTSETUP -GCRYPT -GNUTLS +ACL +XZ -LZ4 -SECCOMP +BLKID -ELFUTILS +KMOD -IDN)
 Detected virtualization docker.
@@ -447,7 +447,7 @@ It can be seen in the `show run` output above that a default Management interfac
 
 Open up a new shell into the host machine and dump the running docker containers on the system:  
 
-```
+```bash
 cisco@xrdcisco:~$ docker ps
 CONTAINER ID   IMAGE                         COMMAND                  CREATED         STATUS         PORTS     NAMES
 2b4a359239e7   localhost/xrd-control-plane   "/bin/sh -c /sbin/xr…"   4 minutes ago   Up 4 minutes             blissful_germain
@@ -457,8 +457,7 @@ cisco@xrdcisco:~$
 
 Let's inspect the IP address assigned to the docker container:  
 
-```
-
+```bash
 cisco@xrdcisco:~$ docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' blissful_germain
 172.17.0.2
 cisco@xrdcisco:~$ 
@@ -467,7 +466,7 @@ cisco@xrdcisco:~$
 Let's try configuring this IP address on the router's Mgmt IP to see if we can establish connectivity:  
 
 
-```
+```bash
 RP/0/RP0/CPU0:ios#conf t
 Thu Aug 25 09:21:55.229 UTC
 RP/0/RP0/CPU0:ios(config)#int MgmtEth 0/RP0/CPU0/0 
@@ -537,7 +536,7 @@ Standard docker interactions can be used for this purpose.
 
 To stop the XRd docker container, use `docker stop` or `docker rm`:  
 
-```
+```bash
 cisco@xrdcisco:~$ docker stop blissful_germain
 blissful_germain
 cisco@xrdcisco:~$ 
@@ -558,12 +557,11 @@ To pass an initial configuration, we can use the `--every-boot-config` option fo
 ```
 cisco@xrdcisco:~/xrd-tools/scripts$ cat xr.config 
 !! IOS XR Configuration 7.7.1
-!! Last configuration change at Sun Aug 28 10:56:36 2022 by SYSTEM
+!! No configuration change since last restart
 !
 username cisco
  group root-lr
- group cisco-support
- secret 10 $6$YMi0X/afkM8A4X/.$hmQ5kJ3TjleArKi4XWjVNSvlbnGJYYx3erdl8c2T41GcBTOK.HByFfPOBDuFzjFZVombHm2Cb3NGDPWRhbTIH/
+ secret 10 $6$MaGnn0dowgBD9n0.$3hEo4Tm.I9mNF0tjXybAn6dhbQx7SxLT0NahSsOJmqfKcOvqLwEEB2jJtytwtTdWOZ32knC03/cGjcIGZHltC1
 !
 call-home
  service active
