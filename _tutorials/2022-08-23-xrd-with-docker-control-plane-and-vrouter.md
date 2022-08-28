@@ -818,4 +818,12 @@ It was also possible to jump to XR CLI shell by running the `/pkg/bin/xr_cli.sh`
 
 
 
+
+
+
+
+
+
+
+
 Part-6 of the XRd tutorials Series: [here]({{base_path}}/tutorials/2022-08-23-xrd-with-docker-compose-control-plane-and-vrouter).
