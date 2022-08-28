@@ -167,13 +167,13 @@ Explicitly:
   * XRd has a feature that limits disk usage of the persistent storage to 6GiB (default) that may be configured with the `--env XR_DISK_USAGE_LIMIT=<limit>` to docker run (or the `--disk-limit <limit>` option to `launch-xrd`).
   * Additionally, the directory that volumes are stored on could be configured to be a separate filesystem from the rest of the host.
   * Alternative Docker volume drivers are out of scope of these considerations but could be used as a solution.
-* By default, the /run tmpfs is bounded to half the total memory of the host, regardless of the memory allocated to the container (see above).
-  * The size of tmpfs can be constrained with the tmpfs-size option when specifying the mount.
-  * The expected size of /run is expected to be small and 10% of the container's memory should be sufficient.  
+* By default, the `/run` tmpfs is bounded to half the total memory of the host, regardless of the memory allocated to the container (see above).
+  * The size of tmpfs can be constrained with the `tmpfs-size` [option](https://docs.docker.com/storage/tmpfs/) when specifying the mount.
+  * The expected size of `/run` is expected to be small and 10% of the container's memory should be sufficient.  
   
 There are further considerations that XRd is currently not able to meet and hence must not be enacted:
 
-XRd does not support mounting the root filesystem as read-only - explicitly, do not specify --read-only to docker run.
+XRd does not support mounting the root filesystem as read-only - so  do not specify `--read-only` to docker run.
 It would be preferable to mount persistent storage with the nodev,noexec,nosuid mount options but this is not currently supported.
 Terminals & Logging
 Docker will capture the output from stdout and stderr of the default PTY attached to the container and record it in the docker logs.
