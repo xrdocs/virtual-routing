@@ -1317,4 +1317,4 @@ And there you have it! We learnt how to use the `launch-xrd` script which is par
 
   
 
-Part-6 of the XRd tutorials Series here: [XRd with Docker-compose: Control-Plane and vRouter]({{base_path}}/tutorials/2022-08-23-xrd-with-docker-compose-control-plane-and-vrouter).
+Part-6 of the XRd tutorials Series here: [XRd with Docker-compose: Control-Plane]({{base_path}}/tutorials/2022-08-23-xrd-with-docker-compose-control-plane).
