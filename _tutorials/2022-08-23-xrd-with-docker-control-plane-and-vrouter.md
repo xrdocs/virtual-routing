@@ -457,7 +457,8 @@ cisco@xrdcisco:~$
 
 Let's inspect the IP address assigned to the docker container:  
 
-{% raw  %}
+{% raw  %}  
+
 ```bash
 cisco@xrdcisco:~$ docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' blissful_germain
 172.17.0.2
