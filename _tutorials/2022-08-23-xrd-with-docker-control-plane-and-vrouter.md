@@ -833,26 +833,30 @@ We'll work with 3 physical interfaces available on the current host machine and 
 
 On the host-machine in use in this tutorial series, the available interfaces are:  
   
-```bash 
+<div class="highlighter-rouge">
+<pre class="highlight">
+<code style="white-space: pre-wrap;">
 cisco@xrdcisco:~$ ip link show
-1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
-2: ens160: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+2: <mark>ens160</mark>: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
     link/ether 00:0c:29:0d:60:cc brd ff:ff:ff:ff:ff:ff
-3: ens192: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+3: <mark>ens192</mark>: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
     link/ether 00:0c:29:0d:60:d6 brd ff:ff:ff:ff:ff:ff
-4: ens224: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+4: <mark>ens224</mark>: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
     link/ether 00:0c:29:0d:60:e0 brd ff:ff:ff:ff:ff:ff
-5: ens256: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+5: <mark>ens256</mark>: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
     link/ether 00:0c:29:0d:60:ea brd ff:ff:ff:ff:ff:ff
-6: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP mode DEFAULT group default qlen 1000
+6: ens33: &lt;BROADCAST,MULTICAST,UP,LOWER_UP>&gt; mtu 1500 qdisc fq_codel state UP mode DEFAULT group default qlen 1000
     link/ether 00:50:56:00:00:04 brd ff:ff:ff:ff:ff:ff
-7: docker0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DEFAULT group default 
+7: docker0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP>&gt; mtu 1500 qdisc noqueue state UP mode DEFAULT group default 
     link/ether 02:42:4a:d3:09:25 brd ff:ff:ff:ff:ff:ff
-21: vethb026b12@if20: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP mode DEFAULT group default 
+21: vethb026b12@if20: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue master docker0 state UP mode DEFAULT group default 
     link/ether 2e:c5:7e:66:50:35 brd ff:ff:ff:ff:ff:ff link-netnsid 0
 cisco@xrdcisco
-``` 
+</code>
+</pre>
+</div>
 
 
 ### Step 1 - Create data port macvlan interfaces
