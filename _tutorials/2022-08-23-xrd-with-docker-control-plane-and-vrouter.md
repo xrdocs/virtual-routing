@@ -1060,7 +1060,10 @@ Perfect! The external connectivity that we established via the maclvan interface
   
   
   
-### Launch
+### Boot XRd control-plane image using launch-xrd 
+  
+
+  
 
   
   
