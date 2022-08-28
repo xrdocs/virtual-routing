@@ -758,8 +758,6 @@ We were able to login directly using the credentials provided via the config fil
 
 ### Dropping into XR bash and using ZTP commands
 
-  
-
 Let's try dropping into XRd bash and running a few ZTP bash commands (notice we use the docker container name this time from the same `docker ps` output earlier):  
 
 <div class="highlighter-rouge">
@@ -815,7 +813,8 @@ RP/0/RP0/CPU0:xrd_docker#
 </pre>
 </div>
 
-
+It was also possible to jump to XR CLI shell by running the `/pkg/bin/xr_cli.sh` script from the XRd bash shell that we dropped into.  
+{: .notice--info}
 
 
 
