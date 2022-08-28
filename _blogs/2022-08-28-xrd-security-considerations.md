@@ -26,31 +26,30 @@ position: top
 ## Security Considerations  
 
 The [XRd tutorials Series]({{base_path}}/tags/#xrd-tutorial-series) walks the user through the steps to set up a host and run XRd but there are additional considerations pertaining to security. These cover both ensuring that XRd has sufficient privileges to run whilst also securing the host and XRd within it.
-This page covers a collection of items that should be considered when running XRd. Explicitly, this page does not provide instructions on how an end user should secure their host - general system administration best practice should be used for that - but it highlights specific XRd considerations.
+In this blog, we bring up some security considerations to be kept in mind and implemented when running XRd. Explicitly, we do not provide instructions on how an end user should secure their host - general system administration best practices should be used for that - but the blog highlights specific XRd considerations.
 
-As a container-based platform, XRd does not have control over the host on which it runs; explicitly, the host is the responsibility of the end user. This makes XRd different from other IOS-XR platforms - especially hardware-based platforms - which changes the security considerations of the end user. The user not only has to care about the security of the host environment but some security features of other platforms are simply not available. Whilst this is similar to VM-based platforms (such as XRv9k), the practical impact of the considerations for containers are different and generally more complex.
+As a container-based platform, XRd does not have control over the host on which it runs; the host is the responsibility of the end user. This makes XRd different from other IOS-XR platforms - especially hardware-based platforms - which changes the security considerations of the end user. The user not only has to care about the security of the host environment but some security features of other platforms are simply not available. Whilst this is similar to VM-based platforms (such as XRv9k), the practical impact of the considerations for containers are different and generally more complex.
 
-The initial release of XRd as a lab-only, limited-availability product means that many of the considerations may not apply or the end user is able to take simple mitigation steps. Future use cases (such as deployment as a vRR) will require greater attention and action. As such, the page is structured with primary considerations that apply universally and secondary considerations that are optional or less of a concern within the lab use case.
-Moreover, running XRd within a VM may be a simple mitigation for the lab use case as it isolates XRd from the host and satisfies most of the potential concerns, such as XRd exhausting resources and starving the host or vice versa. A single VM can be used to host multiple XRd instances that has no connectivity to the outside network or a single XRd instance per VM and networking between VMs used to securely manage the connectivity.
 
-Overview
-The responsibility for securing the XRd container image within its runtime environment lies with the end user. Explicitly, once the XRd image archive has been validated and loaded into a repository then XRd (or Cisco) cannot guarantee the security of the environment within which it is used.
+## Overview
+The responsibility for securing the XRd container image within its runtime environment lies with the end user. Once the XRd image archive has been validated and loaded into a repository then XRd (or Cisco) cannot guarantee the security of the environment within which it is used.
 
 The container landscape is evolving rapidly and when running XRd one must be familiar with the various technologies and keep up to date with the latest developments.
 At a high-level the considerations encompass securing the host on which XRd is running, applying security principles to the container orchestrator and runtime when instantiating XRd, and managing the privileged users on the system.
 
-Primary Considerations
+## Primary Considerations
 This section discusses items that must be considered regardless of how XRd is being used.
 
-Host system (Primary)
+### Host system (Primary)
 The requirements to secure the host can vary significantly depending on the individual host and wider environment.
 
-Linux Kernel Security Policies
-For the intial lab use case, there are known incompatibilities between XRd and Linux kernel security features such as SELinux, Apparmor and Seccomp. It is possible/likely that the end user will have to turn off these mechanisms, which should be OK if XRd is isolated within a VM.
-AppArmor
+#### Linux Kernel Security Policies
+There are known incompatibilities between XRd and Linux kernel security features such as SELinux, Apparmor and Seccomp. It is possible/likely that the end user will have to turn off these mechanisms, which should be OK if XRd is isolated within a VM.
+
+#### AppArmor
 Support for AppArmor in Kubernetes appears to still be in beta. Progress towards general availability seems to have stalled with "out-of-tree enhancements" offered instead. As such, AppArmor is not officially supported for XRd and it is up to the end user to configure a profile and enable it on the node hosts.
 
-By default, if AppArmor is enabled and running on the host, launching Docker without the security option results in a profile docker-default being created and applied. To avoid this the option --security-opt apparmor=unconfined is used. Kubernetes by default does not apply a profile to launched pods. The command aa-status (run on the host) shows which profiles are currently enabled and applied to which profiles, and can be used to confirm that XRd is not being run with AppArmor protection.
+By default, if AppArmor is enabled and running on the host, launching Docker without the security option results in a profile docker-default being created and applied. To avoid this the option `--security-opt apparmor=unconfined` is used. Kubernetes by default does not apply a profile to launched pods. The command aa-status (run on the host) shows which profiles are currently enabled and applied to which profiles, and can be used to confirm that XRd is not being run with AppArmor protection.
 
 SELinux
 In production use cases, it is not supported to run XRd in non-privileged mode. In privileged mode, all SELinux checks are bypassed, so therefore it is not supported to secure XRd with SELinux. In unprivileged mode, it is possible to create a custom SELinux profile that allows XRd to run with SELinux enabled. The XRd team have some experience with this, and can help with any effort to run XRd in such a way, but it is not a supported workflow.
