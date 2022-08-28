@@ -668,10 +668,13 @@ Let's add another twist here though - we'll use the native `-d` or `--daemon` op
 <div class="highlighter-rouge">
 <pre class="highlight">
 <code style="white-space: pre;">
-docker run -it --rm --cap-drop all --cap-add AUDIT_WRITE --cap-add CHOWN --cap-add DAC_OVERRIDE --cap-add FOWNER --cap-add FSETID --cap-add KILL --cap-add MKNOD --cap-add NET_BIND_SERVICE --cap-add NET_RAW --cap-add SETFCAP --cap-add SETGID --cap-add SETUID --cap-add SETPCAP --cap-add SYS_CHROOT --cap-add IPC_LOCK --cap-add NET_ADMIN --cap-add SYS_ADMIN --cap-add SYS_NICE --cap-add SYS_PTRACE --cap-add SYS_RESOURCE --device /dev/fuse --device /dev/net/tun --security-opt apparmor=unconfined --security-opt label=disable -v /sys/fs/cgroup:/sys/fs/cgroup:ro --mount type=bind,source=/home/cisco/xrd-tools/scripts/xr.config,target=/etc/xrd/every-boot.cfg --env XR_EVERY_BOOT_CONFIG=/etc/xrd/every-boot.cfg --env XR_MGMT_INTERFACES=linux:eth0,chksum localhost/xrd-control-plane <mark> -d </mark>
+docker run -it --rm --cap-drop all --cap-add AUDIT_WRITE --cap-add CHOWN --cap-add DAC_OVERRIDE --cap-add FOWNER --cap-add FSETID --cap-add KILL --cap-add MKNOD --cap-add NET_BIND_SERVICE --cap-add NET_RAW --cap-add SETFCAP --cap-add SETGID --cap-add SETUID --cap-add SETPCAP --cap-add SYS_CHROOT --cap-add IPC_LOCK --cap-add NET_ADMIN --cap-add SYS_ADMIN --cap-add SYS_NICE --cap-add SYS_PTRACE --cap-add SYS_RESOURCE --device /dev/fuse --device /dev/net/tun --security-opt apparmor=unconfined --security-opt label=disable -v /sys/fs/cgroup:/sys/fs/cgroup:ro --mount type=bind,source=/home/cisco/xrd-tools/scripts/xr.config,target=/etc/xrd/every-boot.cfg --env XR_EVERY_BOOT_CONFIG=/etc/xrd/every-boot.cfg --env XR_MGMT_INTERFACES=linux:eth0,chksum <mark> -d </mark> localhost/xrd-control-plane 
 </code>
 </pre>
 </div>
+
+
+
 
 
 
