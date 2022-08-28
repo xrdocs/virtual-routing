@@ -530,6 +530,7 @@ RP/0/RP0/CPU0:ios#
 Awesome! we have established basic connectivity over the Mgmt port into the XRd control-plane router. 
 {: .notice--success}
 
+
 ### Bring down the XRd Control-Plane docker container
 
 Standard docker interactions can be used for this purpose.   
