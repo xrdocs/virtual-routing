@@ -457,11 +457,13 @@ cisco@xrdcisco:~$
 
 Let's inspect the IP address assigned to the docker container:  
 
+{% raw  %}
 ```bash
 cisco@xrdcisco:~$ docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' blissful_germain
 172.17.0.2
 cisco@xrdcisco:~$ 
 ```
+{% endraw  %}
 
 Let's try configuring this IP address on the router's Mgmt IP to see if we can establish connectivity:  
 
