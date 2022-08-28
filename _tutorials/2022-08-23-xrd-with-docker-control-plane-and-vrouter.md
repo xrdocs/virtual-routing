@@ -893,8 +893,11 @@ sudo ip address add 172.50.1.4/24 dev ens224-mg-local
 sudo ip link set ens224-mg-local up
 ```  
 
-**Warning**: When creating any new interfaces in Linux, there is a default restriction of 15 characters for the interface name (due to `IFNAMSIZ` length= 16 bytes used in the Linux kernel code. If you exceed that, you will see an error similar to: `Error: Attribute failed policy validation.` Try and keep the macvlan interface names you select as part of these steps below 15 visible characters.  
+**Warning**: When creating any new interfaces in Linux, there is a default restriction of 15 characters for the interface name (due to `IFNAMSIZ` length= 16 bytes used in the Linux kernel code. If you exceed that, you will see an error similar to: `Error: Attribute failed policy validation.` Try and keep the macvlan interface names you select as part of these steps, below 15 visible characters.  
 {: .notice--warning}
+
+
+
 
 
 
