@@ -102,17 +102,23 @@ CAP_SETUID
 CAP_SYS_CHROOT
 In addition to the default capabilities, all XRd platforms require the following capabilites:
 
-Capability	Reason
-CAP_IPC_LOCK	Required to use mlock
-CAP_NET_ADMIN	Required for interface creation, and routing table modification
-CAP_SYS_ADMIN	Required for Filesystem in USErspace (FUSE) use
-CAP_SYS_NICE	Required to set process priorities, e.g. packet processing
-CAP_SYS_PTRACE	Required during core production
-CAP_SYS_RESOURCE	Required for mqueues
+| Capability       | Reason                                                          |
+|------------------|-----------------------------------------------------------------|
+| CAP_IPC_LOCK     | Required to use mlock                                           |
+| CAP_NET_ADMIN    | Required for interface creation, and routing table modification |
+| CAP_SYS_ADMIN    | Required for Filesystem in USErspace (FUSE) use                 |
+| CAP_SYS_NICE     | Required to set process priorities, e.g. packet processing      |
+| CAP_SYS_PTRACE   | Required during core production                                 |
+| CAP_SYS_RESOURCE | Required for mqueues                                            |
+
+
 The XRd vRouter platform also requires the following capabilities:
 
-Capability	Reason
-SYS_RAWIO	Required for hardware I/O port operations
+| Capability | Reason                                    |
+|------------|-------------------------------------------|
+| SYS_RAWIO  | Required for hardware I/O port operations |
+  
+  
 The required list contains powerful capabilities - future work aims to reduce this list.
 
 Secondary Considerations
