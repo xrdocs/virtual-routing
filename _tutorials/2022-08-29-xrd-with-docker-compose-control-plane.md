@@ -575,7 +575,184 @@ xr-compose -f docker-compose.xr.yml -i <XRd control-plane image name>
 ```
 where:
 
-* `-f` or `--input-file`: Options to specify the input docker-compose.xr.yml file 
+* `-f` or `--input-file`: Options to specify the input docker-compose.xr.yml file to be transformed
+* '-i' or '--image': Option to specify the XRd control-plane image to use for XRd service in the compose file.
+
+
+
+Running the command from within the `samples/` directory:
+
+```
+cisco@xrdcisco:~/xrd-tools/samples/xr_compose_topos/simple-bgp$ ../../../scripts/xr-compose -f docker-compose.xr.yml -i localhost/xrd-control-plane
+INFO - Writing output docker-compose YAML to docker-compose.yml
+cisco@xrdcisco:~/xrd-tools/samples/xr_compose_topos/simple-bgp$ 
+
+```
+
+
+Dumping the generated `docker-compose.yml` file:  
+
+
+```
+networks:
+  mgmt:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-1
+    ipam:
+      config:
+      - subnet: 172.30.0.0/24
+  source-xrd-1:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-2
+    ipam:
+      config:
+      - subnet: 10.1.1.0/24
+  xr-1-gi1-xr-2-gi0:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-0
+    internal: true
+    name: xr-1-gi1-xr-2-gi0
+  xrd-2-dest:
+    driver_opts:
+      com.docker.network.container_iface_prefix: xr-3
+    ipam:
+      config:
+      - subnet: 10.3.1.0/24
+services:
+  dest:
+    cap_add:
+    - NET_ADMIN
+    command: /bin/sh -c "ip route add 10.0.0.0/8 via 10.3.1.2 && /bin/sh"
+    container_name: dest
+    image: alpine:3.15
+    networks:
+      xrd-2-dest:
+        ipv4_address: 10.3.1.3
+    stdin_open: true
+    tty: true
+  source:
+    cap_add:
+    - NET_ADMIN
+    command: /bin/sh -c "ip route add 10.0.0.0/8 via 10.1.1.3 && /bin/sh"
+    container_name: source
+    image: alpine:3.15
+    networks:
+      source-xrd-1:
+        ipv4_address: 10.1.1.2
+    stdin_open: true
+    tty: true
+  xr-1:
+    cap_add:
+    - CHOWN
+    - DAC_OVERRIDE
+    - FSETID
+    - FOWNER
+    - MKNOD
+    - NET_RAW
+    - SETGID
+    - SETUID
+    - SETFCAP
+    - SETPCAP
+    - NET_BIND_SERVICE
+    - SYS_CHROOT
+    - KILL
+    - AUDIT_WRITE
+    - SYS_NICE
+    - SYS_ADMIN
+    - SYS_RESOURCE
+    - NET_ADMIN
+    - SYS_PTRACE
+    - IPC_LOCK
+    cap_drop:
+    - all
+    container_name: xr-1
+    devices:
+    - /dev/fuse
+    - /dev/net/tun
+    environment:
+      XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
+      XR_INTERFACES: linux:xr-20,xr_name=Gi0/0/0/0,chksum;linux:xr-00,xr_name=Gi0/0/0/1
+      XR_MGMT_INTERFACES: linux:xr-10,xr_name=Mg0/RP0/CPU0/0,chksum
+    image: localhost/xrd-control-plane
+    networks:
+      mgmt: null
+      source-xrd-1:
+        ipv4_address: 10.1.1.3
+      xr-1-gi1-xr-2-gi0: null
+    security_opt:
+    - apparmor:unconfined
+    - label:disable
+    stdin_open: true
+    tty: true
+    volumes:
+    - source: ./xrd-1_xrconf.cfg
+      target: /etc/xrd/startup.cfg
+      type: bind
+    - xr-1:/xr-storage/
+    - read_only: true
+      source: /sys/fs/cgroup
+      target: /sys/fs/cgroup
+      type: bind
+  xr-2:
+    cap_add:
+    - CHOWN
+    - DAC_OVERRIDE
+    - FSETID
+    - FOWNER
+    - MKNOD
+    - NET_RAW
+    - SETGID
+    - SETUID
+    - SETFCAP
+    - SETPCAP
+    - NET_BIND_SERVICE
+    - SYS_CHROOT
+    - KILL
+    - AUDIT_WRITE
+    - SYS_NICE
+    - SYS_ADMIN
+    - SYS_RESOURCE
+    - NET_ADMIN
+    - SYS_PTRACE
+    - IPC_LOCK
+    cap_drop:
+    - all
+    container_name: xr-2
+    devices:
+    - /dev/fuse
+    - /dev/net/tun
+    environment:
+      XR_EVERY_BOOT_CONFIG: /etc/xrd/startup.cfg
+      XR_INTERFACES: linux:xr-00,xr_name=Gi0/0/0/0;linux:xr-30,xr_name=Gi0/0/0/1,chksum
+      XR_MGMT_INTERFACES: linux:xr-10,xr_name=Mg0/RP0/CPU0/0,chksum
+    image: localhost/xrd-control-plane
+    networks:
+      mgmt: null
+      xr-1-gi1-xr-2-gi0: null
+      xrd-2-dest:
+        ipv4_address: 10.3.1.2
+    security_opt:
+    - apparmor:unconfined
+    - label:disable
+    stdin_open: true
+    tty: true
+    volumes:
+    - source: ./xrd-2_xrconf.cfg
+      target: /etc/xrd/startup.cfg
+      type: bind
+    - xr-2:/xr-storage/
+    - read_only: true
+      source: /sys/fs/cgroup
+      target: /sys/fs/cgroup
+      type: bind
+version: '2.4'
+volumes:
+  xr-1:
+    name: xr-1
+  xr-2:
+    name: xr-2
+```
+
 
 
 
