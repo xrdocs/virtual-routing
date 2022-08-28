@@ -862,7 +862,23 @@ cisco@xrdcisco
 
 #### Step 1 - Create data port macvlan interfaces
 
-W
+Create macvlan interfaces to use as data ports. This produces new interfaces with their own MAC address that 'share' the physical interface specified e.g. ens160 or ens192.
+
+```
+sudo ip link add ens160-mac link ens160 type macvlan mode bridge
+sudo ip link add ens192-mac link ens192 type macvlan mode bridge
+```
+
+The 2 new mavlan interfaces show up in `ip link show` as follows:  
+
+```
+cisco@xrdcisco:~$ ip link show | grep \\-mac
+22: ens160-mac@ens160: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+23: ens192-mac@ens192: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
+cisco@xrdcisco:~$ 
+
+
+```
 
 
 
