@@ -151,7 +151,7 @@ Similarly, Docker does not constrain a container's access to the CPU by default 
 
 The `launch-xrd` and `xr-compose` tools do not constrain any resources by default.
 If running a single instance then `launch-xrd --dry-run` can be used to see the base command that can then be supplemented with the necessary [runtime options](https://docs.docker.com/engine/reference/commandline/run/).
-If running multiple instances with xr-compose then refer to the Compose Specification for how to specify resource constraints in the input YAML file.
+If running multiple instances with `xr-compose` then refer to the [Compose Specification](https://github.com/compose-spec/compose-spec/blob/master/spec.md) for how to specify resource constraints in the input YAML file.
 
 #### Mounts
 There are various security considerations that apply to storage mounted into the container.
