@@ -877,8 +877,24 @@ cisco@xrdcisco:~$ ip link show | grep \\-mac
 23: ens192-mac@ens192: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
 cisco@xrdcisco:~$ 
 
+```  
+
+#### Step 2 - Create manageability port macvlan interfaces  
+
+Create macvlan interface to use for manageability, as well as a locally terminating maclvan interface on the same network to enable manageability access from the host. This locally terminating interface will be given an IP address that routes to the XRd manageability port (e.g. on the same subnet).
+
+We'll use the interface ens224 as the "physical" anchor for the mangeability network:  
 
 ```
+sudo ip link add ens224-mg link ens224 type macvlan mode bridge
+# Terminate locally on the container host
+sudo ip link add ens224-mg-local link ens224 type macvlan mode bridge
+sudo ip address add 172.50.1.4/24 dev eth2-mgbl-local
+sudo ip link set eth2-mgbl-local up
+```  
+
+**Warning**: When creating any new interfaces in Linux, there is a default restriction of 15 characters for the interface name (due to the `IFNAMSIZ` value used in the Linux kernel code. If you exceed that, you will see an error something like: `Error: Attribute failed policy validation.` Try and keep the macvlan interface names you select as part of these steps below 15 
+
 
 
 
