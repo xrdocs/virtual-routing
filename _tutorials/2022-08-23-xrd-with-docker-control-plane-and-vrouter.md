@@ -1080,7 +1080,6 @@ Let's begin by dumping the available pci network devices on the host machine:
   
 ```
 cisco@xrdcisco:~$ sudo lshw -businfo -c network
-[sudo] password for cisco: 
 Bus info          Device           Class      Description
 =========================================================
 pci@0000:02:01.0  ens33            network    82545EM Gigabit Ethernet Controller (Copper)
@@ -1091,7 +1090,6 @@ pci@0000:1b:00.0  ens256           network    VMXNET3 Ethernet Controller
                   ens224-mg-local  network    Ethernet interface
 cisco@xrdcisco:~$ 
 cisco@xrdcisco:~$   
-  
 ```  
 
 
