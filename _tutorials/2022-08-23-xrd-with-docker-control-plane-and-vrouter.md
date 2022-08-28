@@ -664,7 +664,7 @@ cisco@xrdcisco:~/xrd-tools/scripts$
 
 ```
 
-Let's add another twist here though - we'll use the native `-d` or `--daemon` option supported by `docker run` to run XRd in the Background, so the command becomes:  
+Let's add another twist here though - we'll use the native `-d` or `--daemon` option supported by `docker run` to run XRd in the background, so the command becomes:  
 
 
 
