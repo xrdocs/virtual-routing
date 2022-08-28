@@ -6,6 +6,7 @@
   <head>
     {% include head.html %}
     {% include head/custom.html %}
+    {% include base_path %}
   </head>
 
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
@@ -18,11 +19,10 @@
         <h1 class="page__title" itemprop="headline" style="">
             Virtual Routing with IOS-XR   
         </h1>
-          <p class="page__lead" style="font-size: 0.9em;text-align:center;"><b>IOS-XR: One Consistent OS for all your virtual router needs - be it VMs or Containers, Cloud or on-prem, Control-Plane Scalability or high throughput applications - we've got you covered!</b></p>
+          <p class="page__lead" style="font-size: 0.9em;text-align:center;"><b>IOS-XR: One Consistent OS for all your virtual-router needs - be it VMs or Containers, Cloud or On-Prem, Control-Plane Scalability or high throughput applications - we've got you covered!</b></p>
           <p>
-            <a href="https://xrdocs.github.io/cisco-service-layer/tutorials/" class="btn btn--large"><i class='fa fa-step-forward'></i> Get Started!</a>
-            <a href="https://www.youtube.com/watch?v=yiN8fAxlfwg" class="btn btn--large" data-lity><i class='fa fa-play-circle-o'></i> Watch Video</a>  
-            <a href="https://github.com/cisco-service-layer" class="btn btn--large" data-lity><i class='fa fa-github'></i> Github</a>  
+            <a href="{{ base_path }}/tutorials/" class="btn btn--large"><i class='fa fa-step-forward'></i> Get Started!</a>
+            <a href="{{ base_path }}/coderepos" class="btn btn--large" data-lity><i class='fa fa-github'></i> Github</a>  
           </p>
       </div>
     </div>
