@@ -909,7 +909,7 @@ Create the container:
 * **underlying interface type**: `linux` (for the XRd control-plane image) or `pci` (for the XRd vRouter image)
 * **underlying interface identifier**: Linux interface name or PCI address, as applicable
 optional flags include:
-* **`xr_name=<XR name>`**: If unspecified, an XR name is automatically assigned
+* `xr_name=<XR name>`: If unspecified, an XR name is automatically assigned
 * **chksum**: For simulations using virtual interfaces, checksum offload counteract may be required
 * `snoop_v[4|6]`: Snoop the IPv4/6 address of the interface, and add corresponding XR configuration
 * `snoop_v[4|6]_default_route`: Snoop the IPv4/6 default route(s) of the interface, and add corresponding XR configuration. May be specified for a maximum of one interface, and only for interfaces with the corresponding `snoop_v[4|6]` flag specified.
