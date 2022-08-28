@@ -231,7 +231,7 @@ We can use either `launch-xrd` or the native docker command as shown above to bo
 {: .notice--info}
 
 
- Let's boot the router first:  
+Let's do a simple boot using `launch-xrd` first:  
 
 
 ```
@@ -547,7 +547,34 @@ cisco@xrdcisco:~$
 
 ### Passing an initial configuration during boot
 
-To pass an initial configuration, we can use the ``
+To pass an initial configuration, we can use the `--every-boot-script` option for the `launch-xrd` script. Using a simple configuration as shown below:  
+
+
+```
+cisco@xrdcisco:~/xrd-tools/scripts$ cat xr.config 
+!! IOS XR Configuration 7.7.1
+!! Last configuration change at Sun Aug 28 10:56:36 2022 by SYSTEM
+!
+username cisco
+ group root-lr
+ group cisco-support
+ secret 10 $6$YMi0X/afkM8A4X/.$hmQ5kJ3TjleArKi4XWjVNSvlbnGJYYx3erdl8c2T41GcBTOK.HByFfPOBDuFzjFZVombHm2Cb3NGDPWRhbTIH/
+!
+call-home
+ service active
+ contact smart-licensing
+ profile CiscoTAC-1
+  active
+  destination transport-method email disable
+  destination transport-method http
+ !
+!
+interface MgmtEth0/RP0/CPU0/0
+ shutdown
+!
+end
+
+```
 
 
 
