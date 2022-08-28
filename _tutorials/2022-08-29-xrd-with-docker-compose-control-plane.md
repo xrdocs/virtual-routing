@@ -778,6 +778,107 @@ cisco@xrdcisco:~/xrd-tools/samples/xr_compose_topos/simple-bgp$
 ```
 
 
+With the topology successfully up, let's look at the running containers:
+
+```bash
+
+cisco@xrdcisco:~/xrd-tools/samples/xr_compose_topos/simple-bgp$ docker ps
+CONTAINER ID   IMAGE                         COMMAND                  CREATED          STATUS          PORTS     NAMES
+78a60ba46388   localhost/xrd-control-plane   "/bin/sh -c /sbin/xr…"   13 seconds ago   Up 11 seconds             xr-1
+c4f653b7e12f   alpine:3.15                   "/bin/sh -c 'ip rout…"   13 seconds ago   Up 11 seconds             source
+5ba8faf8da35   alpine:3.15                   "/bin/sh -c 'ip rout…"   13 seconds ago   Up 12 seconds             dest
+dd04360f3bc4   localhost/xrd-control-plane   "/bin/sh -c /sbin/xr…"   13 seconds ago   Up 11 seconds             xr-2
+cisco@xrdcisco:~/xrd-tools/samples/xr_compose_topos/simple-bgp$ 
+
+
+```
+
+
+And the created docker networks (simple-bgp*):
+
+```
+cisco@xrdcisco:~/xrd-tools/samples/xr_compose_topos/simple-bgp$ docker network list
+NETWORK ID     NAME                      DRIVER    SCOPE
+e1cca51815a4   bridge                    bridge    local
+9e264ebfa892   docker-registry_default   bridge    local
+14ef35eea661   host                      host      local
+f42c705a30f9   none                      null      local
+f149ffc2c678   simple-bgp_mgmt           bridge    local
+9b7d6193098c   simple-bgp_source-xrd-1   bridge    local
+648d0e57729a   simple-bgp_xrd-2-dest     bridge    local
+ff98e1568ab6   xr-1-gi1-xr-2-gi0         bridge    local
+cisco@xrdcisco:~/xrd-tools/samples/xr_compose_topos/simple-bgp$ 
+
+
+```
+
+
+Finally, to test that things came up fine, let's exec to `xr-1` and use the ZTP automation commands to run some basic checks to see BGP neighbors and show route to confirm everything is up and running as expected:  
+
+
+
+```
+cisco@xrdcisco:~/xrd-tools/samples/xr_compose_topos/simple-bgp$ docker exec -it xr-1 bash
+bash-4.3# 
+bash-4.3# source /pkg/bin/ztp_helper.sh
+bash-4.3# xrcmd "show bgp summary"
+BGP router identifier 10.2.1.2, local AS number 100
+BGP generic scan interval 60 secs
+Non-stop routing is enabled
+BGP table state: Active
+Table ID: 0xe0000000   RD version: 10
+BGP main routing table version 10
+BGP NSR Initial initsync version 4 (Reached)
+BGP NSR/ISSU Sync-Group versions 0/0
+BGP scan interval 60 secs
+
+BGP is operating in STANDALONE mode.
+
+
+Process       RcvTblVer   bRIB/RIB   LabelVer  ImportVer  SendTblVer  StandbyVer
+Speaker              10         10         10         10          10           0
+
+Neighbor        Spk    AS MsgRcvd MsgSent   TblVer  InQ OutQ  Up/Down  St/PfxRcd
+10.2.1.3          0   100       5       5       10    0    0 00:02:01          3
+
+bash-4.3# 
+bash-4.3# 
+bash-4.3# xrcmd "show route 10.3.1.0/24"
+
+Routing entry for 10.3.1.0/24
+  Known via "bgp 100", distance 200, metric 0, type internal
+  Installed Aug 28 20:20:40.835 for 00:02:31
+  Routing Descriptor Blocks
+    10.2.1.3, from 10.2.1.3
+      Route metric is 0
+  No advertising protos. 
+bash-4.3# 
+bash-4.3# 
+bash-4.3# exit
+exit
+cisco@xrdcisco:~/xrd-tools/samples/xr_compose_topos/simple-bgp$ 
+cisco@xrdcisco:~/xrd-to
+
+
+```
+
+
+
+```
+cisco@xrdcisco:~/xrd-tools/samples/xr_compose_topos/simple-bgp$ docker exec -it source ping 10.3.1.3
+PING 10.3.1.3 (10.3.1.3): 56 data bytes
+64 bytes from 10.3.1.3: seq=0 ttl=62 time=8.522 ms
+64 bytes from 10.3.1.3: seq=1 ttl=62 time=3.938 ms
+64 bytes from 10.3.1.3: seq=2 ttl=62 time=4.199 ms
+64 bytes from 10.3.1.3: seq=3 ttl=62 time=4.383 ms
+^C
+
+```
+
+
+
+
+
 
 
 
