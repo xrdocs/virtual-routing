@@ -1,11 +1,9 @@
 ---
 published: true
 date: '2022-08-23 05:00 +0530'
-title: 'XRd with docker-compose: Control-Plane and vRouter'
+title: 'XRd with docker-compose: Control-Plane'
 author: Akshat Sharma
-excerpt: >-
-  Learn how to bring up XRd with docker-compose for the Control-Plane and the
-  vRouter variants.
+excerpt: Learn how to bring up XRd with docker-compose for the Control-Plane variant.
 tags:
   - iosxr
   - cisco
@@ -17,7 +15,7 @@ tags:
   - kubernetes
   - docker
   - xrd-tutorial-series
-position: hidden
+position: top
 ---
 {% include base_path %}
 {% include toc %}
