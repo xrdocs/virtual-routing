@@ -37,6 +37,8 @@ Then in [Part-3]({{base_path}}/tutorials/2022-08-22-setting-up-host-environment-
 
 In this tutorial, we will focus on the `xr-compose` script that we introduced as part of the xrd-tools repository in [Part-2]({{base_path}}/tutorials/2022-08-22-helper-tools-to-get-started-with-xrd/) of the [XRd tutorials Series]({{base_path}}/tags/#xrd-tutorial-series).  
 
+The xr-compose script is a wrapper around [docker-compose](https://docs.docker.com/compose/). In addition to the general docker-compose YAML syntax (see https://docs.docker.com/compose/compose-file/), xr-compose also supports some XR-specific fields that 'expand out' to include all the fields required to hide implementation-specific details from the user. It also takes care of boilerplate docker-compose items that are desired for every XR container service.
+
 
 
 
