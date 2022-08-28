@@ -342,6 +342,48 @@ Syntax example for xr_l2networks at top-level
 
 
 
+### Launching Sample XRd docker-compose Topologies
+
+
+In the `xrd-tools/` repository we cloned onto the host machine in [Part-2]({{base_path}}/tutorials/2022-08-22-helper-tools-to-get-started-with-xrd/) of the XRd tutorials Series, there is a `samples/` directory that contains some docker-compose.xr.yaml examples. Let's work through a couple of these examples to better understand how to use `xr-compose`:  
+
+```
+cisco@xrdcisco:~/xrd-tools/samples/xr_compose_topos$ pwd
+/home/cisco/xrd-tools/samples/xr_compose_topos
+cisco@xrdcisco:~/xrd-tools/samples/xr_compose_topos$  tree .
+.
+├── bgp-ospf-triangle
+│   ├── docker-compose.xr.yml
+│   ├── topo-diagram.png
+│   ├── xrd1_xrconf.cfg
+│   ├── xrd2_xrconf.cfg
+│   └── xrd3_xrconf.cfg
+├── segment-routing
+│   ├── docker-compose.xr.yml
+│   ├── xrd-1-startup.cfg
+│   ├── xrd-2-startup.cfg
+│   ├── xrd-3-startup.cfg
+│   ├── xrd-4-startup.cfg
+│   ├── xrd-5-startup.cfg
+│   ├── xrd-6-startup.cfg
+│   ├── xrd-7-startup.cfg
+│   └── xrd-8-startup.cfg
+└── simple-bgp
+    ├── docker-compose.xr.yml
+    ├── xrd-1_xrconf.cfg
+    └── xrd-2_xrconf.cfg
+
+3 directories, 17 files
+cisco@xrdcisco:~/xrd-tools/samples/xr_compose_topos$ 
+```
+
+
+
+
+
+
+
+
 
 
 
