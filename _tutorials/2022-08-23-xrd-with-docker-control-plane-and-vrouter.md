@@ -889,11 +889,11 @@ We'll use the interface ens224 as the "physical" anchor for the mangeability net
 sudo ip link add ens224-mg link ens224 type macvlan mode bridge
 # Terminate locally on the container host
 sudo ip link add ens224-mg-local link ens224 type macvlan mode bridge
-sudo ip address add 172.50.1.4/24 dev eth2-mgbl-local
-sudo ip link set eth2-mgbl-local up
+sudo ip address add 172.50.1.4/24 dev ens224-mg-local
+sudo ip link set ens224-mg-local up
 ```  
 
-**Warning**: When creating any new interfaces in Linux, there is a default restriction of 15 characters for the interface name (due to the `IFNAMSIZ` value used in the Linux kernel code. If you exceed that, you will see an error something like: `Error: Attribute failed policy validation.` Try and keep the macvlan interface names you select as part of these steps below 15 
+**Warning**: When creating any new interfaces in Linux, there is a default restriction of 15 characters for the interface name (due to the `IFNAMSIZ` value being 16 bytes used in the Linux kernel code. If you exceed that, you will see an error something like: `Error: Attribute failed policy validation.` Try and keep the macvlan interface names you select as part of these steps below 15 visible characters.
 
 
 
