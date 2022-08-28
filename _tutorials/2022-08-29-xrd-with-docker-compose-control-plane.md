@@ -345,7 +345,7 @@ Syntax example for xr_l2networks at top-level
 ### Launching Sample XRd docker-compose Topologies
 
 
-In the `xrd-tools/` repository we cloned onto the host machine in [Part-2]({{base_path}}/tutorials/2022-08-22-helper-tools-to-get-started-with-xrd/) of the XRd tutorials Series, there is a `samples/` directory that contains some docker-compose.xr.yaml examples. Let's work through a couple of these examples to better understand how to use `xr-compose`:  
+In the `xrd-tools/` repository we cloned to the host machine in [Part-2]({{base_path}}/tutorials/2022-08-22-helper-tools-to-get-started-with-xrd/), there is a `samples/` directory that contains some docker-compose.xr.yaml examples. Let's work through a couple of these examples to better understand how to use `xr-compose`:  
 
 ```
 cisco@xrdcisco:~/xrd-tools/samples/xr_compose_topos$ pwd
@@ -376,6 +376,115 @@ cisco@xrdcisco:~/xrd-tools/samples/xr_compose_topos$  tree .
 3 directories, 17 files
 cisco@xrdcisco:~/xrd-tools/samples/xr_compose_topos$ 
 ```
+
+
+
+Let's take a look `simple-bgp`:  
+
+
+```bash
+
+cisco@xrdcisco:~/xrd-tools/samples/xr_compose_topos$ cd simple-bgp/
+cisco@xrdcisco:~/xrd-tools/samples/xr_compose_topos/simple-bgp$ ls
+docker-compose.xr.yml  xrd-1_xrconf.cfg  xrd-2_xrconf.cfg
+cisco@xrdcisco:~/xrd-tools/samples/xr_compose_topos/simple-bgp$ 
+cisco@xrdcisco:~/xrd-tools/samples/xr_compose_topos/simple-bgp$ cat docker-compose.xr.yml 
+# Copyright 2020-2022 Cisco Systems Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# Topology
+# source <--> xr-1 <--> xr-2 <--> dest
+
+# IP addresses
+# source:            10.1.1.2
+# xr-1-GE0 (left ):  10.1.1.3
+# xr-1-GE1 (right:   10.2.1.2
+# xr-2-GE0 (left):   10.2.1.3
+# xr-2-GE1 (right):  10.3.1.2
+# dest:              10.3.1.3
+
+services:
+  source:
+    non_xr: true
+    image: alpine:3.15
+    container_name: source
+    stdin_open: true
+    tty: true
+    cap_add:
+      - NET_ADMIN
+    command: /bin/sh -c "ip route add 10.0.0.0/8 via 10.1.1.3 && /bin/sh"
+    networks:
+      source-xrd-1:
+        ipv4_address: 10.1.1.2
+  xr-1:
+    xr_startup_cfg: xrd-1_xrconf.cfg
+    xr_interfaces:
+      - Gi0/0/0/0
+      - Gi0/0/0/1
+      - Mg0/RP0/CPU0/0
+    networks:
+      source-xrd-1:
+        ipv4_address: 10.1.1.3
+  xr-2:
+    xr_startup_cfg: xrd-2_xrconf.cfg
+    xr_interfaces:
+      - Gi0/0/0/0
+      - Gi0/0/0/1
+      - Mg0/RP0/CPU0/0
+    networks:
+      xrd-2-dest:
+        ipv4_address: 10.3.1.2
+  dest:
+    non_xr: true
+    image: alpine:3.15
+    container_name: dest
+    stdin_open: true
+    tty: true
+    networks:
+      xrd-2-dest:
+        ipv4_address: 10.3.1.3
+    cap_add:
+      - NET_ADMIN
+    command: /bin/sh -c "ip route add 10.0.0.0/8 via 10.3.1.2 && /bin/sh"
+
+xr_l2networks:
+  - ["xr-1:Gi0/0/0/1", "xr-2:Gi0/0/0/0"]
+networks:
+  mgmt:
+    xr_interfaces:
+      - xr-1:Mg0/RP0/CPU0/0
+      - xr-2:Mg0/RP0/CPU0/0
+    ipam:
+      config:
+        - subnet: 172.30.0.0/24
+  source-xrd-1:
+    ipam:
+      config:
+        - subnet: 10.1.1.0/24
+    xr_interfaces:
+      - xr-1:Gi0/0/0/0
+  xrd-2-dest:
+    ipam:
+      config:
+        - subnet: 10.3.1.0/24
+    xr_interfaces:
+      - xr-2:Gi0/0/0/1
+cisco@xrdcisco:~/xrd-tools/samples/xr_compose_topos/simple-bgp$ 
+
+```
+
+
 
 
 
