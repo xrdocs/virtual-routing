@@ -155,7 +155,7 @@ If running multiple instances with `xr-compose` then refer to the [Compose Speci
 
 #### Mounts
 There are various security considerations that apply to storage mounted into the container.
-The mandatory and optional mounts can be understood with the help of the launch-xrd help (--help) and dry run (--dry-run).
+The mandatory and optional mounts can be understood with the help of the `launch-xrd` help (`--help`) and dry run (`--dry-run`).
 
 Mounts should be limited to the minimum required for XRd to run.
 The end user is responsible for encrypting any persistent storage volume mounted into XRd.
