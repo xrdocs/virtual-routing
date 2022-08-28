@@ -1313,7 +1313,7 @@ The TenGig interfaces showing up in the "show ip interface brief" output are the
 
 
 And there you have it! We learnt how to use the `launch-xrd` script which is part of the xrd-tools repository to launch both the XRd control-plane and the XRd vRouter images, taking care of their respective requirements, successfully. We further looked at using the standalone docker commands and the different ways to interact with the XRd instances -configuration, SSH access, ZTP automation and more. Next up - we'll look at bringing up XRd topologies using docker-compose.  
-{: .notice-info}
+{: .notice-success}
 
   
 
