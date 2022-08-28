@@ -906,7 +906,7 @@ sudo ip link set ens224-mg-local up
 Create the container:
 
 * The `XR_INTERFACES` and `XR_MGMT_INTERFACES` environment variables map the created macvlan interfaces to XR data and management interfaces respectively. These are semicolon (and optional whitespace) separated entries, each of the form `<underlying interface type>:<underlying interface identifier>,<comma separated optional flags>` where:
-* **underlying interface type**: linux (for the XRd control-plane image)
+* **underlying interface type**: `linux` (for the XRd control-plane image) or `pci` (for the XRd vRouter image)
 * **underlying interface identifier**: Linux interface name or PCI address, as applicable
 optional flags include:
 * **`xr_name=<XR name>`**: If unspecified, an XR name is automatically assigned
