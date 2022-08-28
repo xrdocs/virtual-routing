@@ -818,18 +818,46 @@ It was also possible to jump to XR CLI shell by running the `/pkg/bin/xr_cli.sh`
 
 
 
-## Set Up Network for External Connections
+## Set Up Network for External Connections: XRd Control Plane
 
 
 * In general, it is possible for XRd to use any interface that is moved into the XRd container network namespace. However, this renders that interface inacessible by any other application running on the container host.
 * It's assumed that this is undesirable for the majority of use cases and so the recommended workflow to enable XRd to communicate externally is to use macvlan interfaces.
 * A macvlan interface is a standard Linux interface type that is created on top of another interface, which could be a physical interface with an external connection. Multiple macvlan interfaces can be created on top of one standard interface. This allows multiple applications, including XRd, to 'share' the physical interfaces on a particular host server, via these macvlan interfaces.
-* Each macvlan interface is assigned it's own MAC address (hence the name) and data is directed to the correct interface based on this MAC address. This is illustrated in the image below:
+* Each macvlan interface is assigned its own MAC address (hence the name) and data is directed to the correct interface based on this MAC address. This is illustrated in the image below:
 
 ![macvlan-interfaces.png]({{site.baseurl}}/images/macvlan-interfaces.png)
 
 
+We'll work with 3 physical interfaces available on the current host machine and transform the setup to provide 3 macvlan interfaces corresponding to each of these physical interfaces that we can then pass into the XRd Control-Plane container.  
 
+On the host-machine in use in this tutorial series, the available interfaces are:  
+  
+```bash 
+cisco@xrdcisco:~$ ip link show
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+2: ens160: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 00:0c:29:0d:60:cc brd ff:ff:ff:ff:ff:ff
+3: ens192: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 00:0c:29:0d:60:d6 brd ff:ff:ff:ff:ff:ff
+4: ens224: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 00:0c:29:0d:60:e0 brd ff:ff:ff:ff:ff:ff
+5: ens256: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 00:0c:29:0d:60:ea brd ff:ff:ff:ff:ff:ff
+6: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP mode DEFAULT group default qlen 1000
+    link/ether 00:50:56:00:00:04 brd ff:ff:ff:ff:ff:ff
+7: docker0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DEFAULT group default 
+    link/ether 02:42:4a:d3:09:25 brd ff:ff:ff:ff:ff:ff
+21: vethb026b12@if20: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP mode DEFAULT group default 
+    link/ether 2e:c5:7e:66:50:35 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+cisco@xrdcisco
+``` 
+
+
+### Step 1 - Create data port macvlan interfaces
+
+W
 
 
 
