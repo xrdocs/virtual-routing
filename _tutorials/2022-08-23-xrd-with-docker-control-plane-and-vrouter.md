@@ -754,7 +754,8 @@ RP/0/RP0/CPU0:ios#
 
 
 ```
-We were able to login directly using the credentials provided via the config file earlier.  
+We were able to login directly using the credentials provided via the config file earlier.    
+
 
 ### Dropping into XR bash and using ZTP commands
 
@@ -859,7 +860,7 @@ cisco@xrdcisco
 </div>
 
 
-### Step 1 - Create data port macvlan interfaces
+#### Step 1 - Create data port macvlan interfaces
 
 W
 
