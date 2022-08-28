@@ -1126,7 +1126,194 @@ docker run -it --rm \
 localhost/xrd-vrouter  
   
 ```  
+
+Finally, launching the xrd-vrouter instance:
   
+```
+cisco@xrdcisco:~/xrd-tools/scripts$ ./launch-xrd localhost/xrd-vrouter --interfaces "pci:1b:00.0;pci:03:00.0" 
+CPU assignment: control-plane 0-6, dataplane packet threads 7, dataplane main core 6
+Hugepage assignment: 3072M
+Using interfaces: pci:1b:00.0 pci:03:00.0
+Using management interface: eth0
+systemd 230 running in system mode. (+PAM +AUDIT +SELINUX +IMA -APPARMOR +SMACK +SYSVINIT +UTMP -LIBCRYPTSETUP -GCRYPT -GNUTLS +ACL +XZ -LZ4 -SECCOMP +BLKID -ELFUTILS +KMOD -IDN)
+Detected virtualization docker.
+Detected architecture x86-64.
+
+Welcome to Cisco XR (Base Distro SELinux and CGL) 9.0.0.26!
+
+Set hostname to <931cb555b3b7>.
+Initializing machine ID from random generator.
+[  OK  ] Created slice System Slice.
+[  OK  ] Reached target Swap.
+[  OK  ] Listening on Journal Socket (/dev/log).
+[  OK  ] Listening on Journal Socket.
+         Starting Remount Root and Kernel File Systems...
+[  OK  ] Reached target Remote File Systems.
+         Mounting Debug File System...
+         Mounting Configuration File System...
+[  OK  ] Reached target Paths.
+         Mounting Temporary Directory...
+         Mounting Huge Pages File System...
+[  OK  ] Listening on Syslog Socket.
+         Starting Journal Service...
+         Mounting FUSE Control File System...
+[  OK  ] Created slice User and Session Slice.
+[  OK  ] Reached target Slices.
+[  OK  ] Mounted Debug File System.
+[  OK  ] Mounted Configuration File System.
+[  OK  ] Mounted FUSE Control File System.
+[  OK  ] Mounted Huge Pages File System.
+[  OK  ] Mounted Temporary Directory.
+[  OK  ] Started Remount Root and Kernel File Systems.
+         Starting Load/Save Random Seed...
+         Starting Rebuild Hardware Database...
+         Starting Copy selected logs to var/log/old directories...
+         Starting Create System Users...
+         Starting Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling...
+[  OK  ] Started Load/Save Random Seed.
+[  OK  ] Started Journal Service.
+         Starting Flush Journal to Persistent Storage...
+[  OK  ] Started Create System Users.
+[  OK  ] Started Flush Journal to Persistent Storage.
+[  OK  ] Started Copy selected logs to var/log/old directories.
+[  OK  ] Started Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling.
+[  OK  ] Reached target Local File Systems (Pre).
+         Mounting /var/volatile...
+         Mounting /mnt...
+[  OK  ] Mounted /var/volatile.
+[  OK  ] Mounted /mnt.
+[  OK  ] Reached target Local File Systems.
+         Starting Rebuild Dynamic Linker Cache...
+         Starting Rebuild Journal Catalog...
+         Starting Create Volatile Files and Directories...
+[  OK  ] Started Rebuild Journal Catalog.
+[  OK  ] Started Create Volatile Files and Directories.
+         Starting Update UTMP about System Boot/Shutdown...
+[  OK  ] Started Rebuild Dynamic Linker Cache.
+[  OK  ] Started Update UTMP about System Boot/Shutdown.
+[  OK  ] Started Rebuild Hardware Database.
+         Starting Update is Completed...
+[  OK  ] Started Update is Completed.
+[  OK  ] Reached target System Initialization.
+[  OK  ] Started Daily Cleanup of Temporary Directories.
+[  OK  ] Reached target Timers.
+[  OK  ] Listening on D-Bus System Message Bus Socket.
+[  OK  ] Reached target Sockets.
+[  OK  ] Reached target Basic System.
+         Starting IOS-XR Setup Non-Root related tasks...
+[  OK  ] Started IOS-XR XRd Core Watcher.
+[  OK  ] Started Periodic Command Scheduler.
+[  OK  ] Started Job spooling tools.
+         Starting OpenSSH Key Generation...
+[  OK  ] Started D-Bus System Message Bus.
+[  OK  ] Reached target Network.
+         Starting Permit User Sessions...
+         Starting Xinetd A Powerful Replacement For Inetd...
+         Starting /etc/rc.local Compatibility...
+         Starting Resets System Activity Logs...
+[  OK  ] Started Service for factory reset.
+         Starting sysklogd Kernel Logging Service...
+         Starting System Logging Service...
+[  OK  ] Started Permit User Sessions.
+[  OK  ] Started /etc/rc.local Compatibility.
+[  OK  ] Reached target Login Prompts.
+[  OK  ] Started Xinetd A Powerful Replacement For Inetd.
+[  OK  ] Started Resets System Activity Logs.
+[  OK  ] Reached target Multi-User System.
+         Starting Update UTMP about System Runlevel Changes...
+[  OK  ] Started Update UTMP about System Runlevel Changes.
+[  OK  ] Started IOS-XR Setup Non-Root related tasks.
+[  OK  ] Started OpenSSH Key Generation.
+         Starting IOS-XR ISO Installation...
+[  OK  ] Started System Logging Service.
+[  OK  ] Started sysklogd Kernel Logging Service.
+[294072.879365] xrnginstall[410]: 2022 Aug 28 15:32:20.456 UTC: Setting up dumper and build info files
+[294072.961666] xrnginstall[410]: 2022 Aug 28 15:32:20.539 UTC: XR Lineup:  r77x.lu%EFR-00000436820
+[294072.965596] xrnginstall[410]: 2022 Aug 28 15:32:20.542 UTC: XR Version: 7.7.1
+[294072.973965] xrnginstall[410]: 2022 Aug 28 15:32:20.551 UTC: Completed set up of dumper and build info files
+[294072.979433] xrnginstall[410]: 2022 Aug 28 15:32:20.556 UTC: Preparing IOS-XR (first boot)
+[294073.103570] xrnginstall[410]: 2022 Aug 28 15:32:20.680 UTC: Checking if rollback cleanup is required
+[294073.110342] xrnginstall[410]: 2022 Aug 28 15:32:20.687 UTC: Finished rollback cleanup stage
+[294073.115788] xrnginstall[410]: 2022 Aug 28 15:32:20.692 UTC: Single node: starting XR
+[294073.127630] xrnginstall[410]: 2022 Aug 28 15:32:20.704 UTC: xrnginstall completed successfully
+[  OK  ] Started IOS-XR ISO Installation.
+         Starting IOS-XR XRd...
+[  OK  ] Started Cisco Directory Services.
+[  OK  ] Started IOS-XR XRd.
+         Starting IOS-XR Reaperd and Process Manager...
+[  OK  ] Started IOS-XR Reaperd and Process Manager.
+[  OK  ] Reached target XR installation and startup.
+
+
+ios con0/RP0/CPU0 is now available
+
+
+
+
+
+Press RETURN to get started.
+
+
+
+
+
+This product contains cryptographic features and is subject to United 
+States and local country laws governing import, export, transfer and 
+use. Delivery of Cisco cryptographic products does not imply third-party 
+authority to import, export, distribute or use encryption. Importers, 
+exporters, distributors and users are responsible for compliance with 
+U.S. and local country laws. By using this product you agree to comply 
+with applicable laws and regulations. If you are unable to comply with 
+U.S. and local laws, return this product immediately. 
+
+A summary of U.S. laws governing Cisco cryptographic products may be 
+found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to 
+export@cisco.com.
+
+
+
+RP/0/RP0/CPU0:Aug 28 15:32:58.435 UTC: pyztp2[179]: %INFRA-ZTP-4-EXITED : ZTP exited 
+
+!!!!!!!!!!!!!!!!!!!! NO root-system username is configured. Need to configure root-system username. !!!!!!!!!!!!!!!!!!!!
+
+         --- Administrative User Dialog ---
+
+
+  Enter root-system username: cisco
+  Enter secret: 
+  Enter secret again: 
+Use the 'configure' command to modify this configuration.
+User Access Verification
+
+Username: cisco
+Password: 
+
+
+RP/0/RP0/CPU0:ios#
+RP/0/RP0/CPU0:ios#
+RP/0/RP0/CPU0:ios#show  ip int br
+Sun Aug 28 15:33:42.391 UTC
+
+Interface                      IP-Address      Status          Protocol Vrf-Name
+MgmtEth0/RP0/CPU0/0            unassigned      Shutdown        Down     default 
+TenGigE0/0/0/0                 unassigned      Shutdown        Down     default 
+TenGigE0/0/0/1                 unassigned      Shutdown        Down     default 
+RP/0/RP0/CPU0:ios#
+RP/0/RP0/CPU0:ios#
+ 
+  
+```  
+
+The TenGig interfaces showing up in the "show ip interface brief" output are the two pci interfaces we just passed in as input to the `launch-xrd` script.
+  
+
+
+
+And there you have it! We learnt how to use the `launch-xrd` script which is part of the xrd-tools repository to launch both the XRd control-plane and the XRd vRouter images, taking care of their respective requirements, successfully. We further looked at using the standalone docker commands and the different ways to interact with the XRd instances -configuration, SSH access, ZTP automation and more. Next up - we'll look at bringing up XRd topologies using docker-compose.  
+{: .notice-info}
 
   
 
