@@ -44,7 +44,6 @@ This section discusses items that must be considered regardless of how XRd is be
 The requirements to secure the host can vary significantly depending on the individual host and wider environment.
 
 #### Linux Kernel Security Policies
-There are known incompatibilities between XRd and Linux kernel security features such as SELinux, Apparmor and Seccomp. It is possible/likely that the end user will have to turn off these mechanisms, which should be OK if XRd is isolated within a VM.
 
 #### AppArmor
 Support for AppArmor in Kubernetes appears to still be in beta. Progress towards general availability seems to have stalled with "out-of-tree enhancements" offered instead. As such, AppArmor is not officially supported for XRd and it is up to the end user to configure a profile and enable it on the node hosts.
