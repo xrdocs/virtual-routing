@@ -227,8 +227,11 @@ localhost/xrd-control-plane
 ```
 
 
-We can use either `launch-xrd` or the native docker command as shown above to boot the XRd container.
-As shown above, no information related to interfaces or configuration has been passed to the above `launch-xrd` command, we will try out these options subsequently.  Let's boot the router first:  
+We can use either `launch-xrd` or the native docker command as shown above to boot the XRd container. Note the `--env` option passed to the native docker command - this is where we specify the XRd specific environment variables. These environment variables have been discussed in detail in Part-4 of the XRd tutorial series here: [User Interface and knobs for XRd]({{base_path}}/tutorials/2022-08-25-user-interface-and-knobs-for-xrd). In the above `--dry-run` output, the only XRd environment variable being passed in is `XR_MGMT_INTERFACES`. 
+{: .notice--info}
+
+
+ Let's boot the router first:  
 
 
 ```
