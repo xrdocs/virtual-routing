@@ -61,15 +61,16 @@ The end user is responsible for building and validating this trust chain and XRd
 
 The XRd container archive is signed with a detached signature that is distributed alongside the image allowing it to be validated by the end user - we show this process end-to-end in [Part-1]({{base_path}}/tutorials/2022-08-22-xrd-images-where-can-one-get-them/) of the XRd Tutorial Series.
 
-Resource Exhaustion
+**Resource Exhaustion**
 If the resources on the host are exhausted such that XRd is starved of (for example) memory or inotify instances by other applications on the host then this could cause a disruption or denial of service.
 The end user is responsible for ensuring that XRd is sufficiently resourced at all times on the host.
 
 A single XRd container requires a minimum of 2000 inotify user instances/watches; it is recommended to 'set and forget' the limits on the host to be much higher (such as 128,000+).
 
-Container Orchestrator & Runtime (Primary)
+
+### Container Orchestrator & Runtime (Primary)  
+
 The container orchestrator and runtime obviously has a pivotal role in security as the gateway between the host and XRd.
-The Getting Started page describes the minimum supported versions and configuration required to run XRd, and these must be kept up to date.
 
 The ability to run containers as a non-privileged user provides a significant improvement in the security posture of containers. However, this is very much in its infancy and not currently an option for XRd.
 
