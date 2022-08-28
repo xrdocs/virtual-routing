@@ -31,7 +31,13 @@ position: hidden
 
 In [Part-1]({{base_path}}/tutorials/2022-08-22-xrd-images-where-can-one-get-them) of the [XRd tutorials Series]({{base_path}}/tags/#xrd-tutorial-series), we learnt how to fetch the XRd images from software.cisco.com (CCO) and verified their signatures.  
 Then in [Part-3]({{base_path}}/tutorials/2022-08-22-setting-up-host-environment-to-run-xrd), we set up the host environment required to run XRd (both variants - Control-Plane and vRouter) and also installed docker and docker-compose as part of the Host machine setup. In this tutorial, we will leverage the docker-compose installation and learn to bring up some sample XRd compose topologies.  
-In [Part-5]({{base_path}}/tutorials/2022-08-23-xrd-with-docker-control-plane-and-vrouter) of this tutorial series, we learnt how to launch XRd (both Control-Plane and vRouter formats) in a standalone manner using docker. This involved initial bring-up with required options passed to docker for successful XRd boot, access to the CLI and bash shells, bootstrap configuration and ZTP automation capabilities and establishment of external connectivity by providing macvlan interfaces (XRd control-plane) or pci network devices (XRd vRouter) to XRd instances.  
+In [Part-5]({{base_path}}/tutorials/2022-08-23-xrd-with-docker-control-plane-and-vrouter) of this tutorial series, we learnt how to launch XRd (both Control-Plane and vRouter formats) in a standalone manner using docker. This involved learning about:
+* Initial bring-up with required options passed to docker for successful XRd boot
+* Access to the CLI and bash shells
+* Bootstrap configuration and ZTP automation capabilities and 
+* Establishment of external connectivity by providing macvlan interfaces (XRd control-plane) or pci network devices (XRd vRouter) to XRd instances.  
+
+In this tutorial we will take this knowledge a bit further by leveraging [docker-compose](https://docs.docker.com/compose/) instead of standalone [docker](https://docs.docker.com/get-started/overview/).
 
 
 ## XRd-Tools xr-compose Script
