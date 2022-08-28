@@ -871,7 +871,7 @@ sudo ip link add ens192-mac link ens192 type macvlan mode bridge
 
 The 2 new mavlan interfaces show up in `ip link show` as follows:  
 
-```
+```bash
 cisco@xrdcisco:~$ ip link show | grep \\-mac
 22: ens160-mac@ens160: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
 23: ens192-mac@ens192: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN mode DEFAULT group default qlen 1000
