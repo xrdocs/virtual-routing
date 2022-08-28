@@ -174,17 +174,16 @@ Explicitly:
 There are further considerations that XRd is currently not able to meet and hence must not be enacted:
 
 XRd does not support mounting the root filesystem as read-only - so, do not specify `--read-only` to `docker run`.
-It would be preferable to mount persistent storage with the nodev,noexec,nosuid mount options but this is not currently supported.
-Terminals & Logging
-Docker will capture the output from stdout and stderr of the default PTY attached to the container and record it in the docker logs.
+It would be preferable to mount persistent storage with the `nodev,noexec,nosuid` mount options but this is not currently supported.
+
+#### Terminals & Logging
+Docker will capture the output from `stdout` and `stderr` of the default PTY attached to the container and record it in the [docker logs](https://docs.docker.com/config/containers/logging/).
 This may result in sensitive information - such as configuration or secrets - being logged in plaintext on the host.
 
-If this is a concern then: either SSH should be used to connect to XRd; or the Docker logging driver may be disabled. It is not supported to attach additional terminals to XRd via docker exec.
+If this is a concern then: either SSH should be used to connect to XRd; or the Docker logging driver may be [disabled](https://docs.docker.com/config/containers/logging/configure/#supported-logging-drivers). It is not supported to attach additional terminals to XRd via `docker exec`.
 
 Cgroup Filesystem Setup
 Before 7.8.1 it was required to pass the host's cgroup filesystem through to the container to allow systemd to run within Docker in non-privileged mode. This gives the container full access to the host's cgroup filesystem, which is undesirable, and so should not be done now that it is no longer required.
 
-The --cgroupns=private option is recommended to isolate the container further.
-
-See Cgroup Filesystem Complexities for more details.
+The `--cgroupns=private` option is recommended to isolate the container further.
 
