@@ -912,7 +912,7 @@ optional flags include:
 * **`xr_name=<XR name>`**: If unspecified, an XR name is automatically assigned
 * **chksum**: For simulations using virtual interfaces, checksum offload counteract may be required
 * **`snoop_v[4|6]`**: Snoop the IPv4/6 address of the interface, and add corresponding XR configuration
-* **`snoop_v[4|6]_default_route`**: Snoop the IPv4/6 default route(s) of the interface, and add corresponding XR configuration. May be specified for a maximum of one interface, and only for interfaces with the corresponding snoop_v[4|6] flag specified.
+* **`snoop_v[4|6]_default_route`**: Snoop the IPv4/6 default route(s) of the interface, and add corresponding XR configuration. May be specified for a maximum of one interface, and only for interfaces with the corresponding `snoop_v[4|6]` flag specified.
 * **`--net none`** is specified so that the container is not added to the default Docker bridge network (this would add an extra unnecessary interface to the container).
 * Startup config is specified here using the XR_EVERY_BOOT_CONFIG environment variable. This is optional.
 * The image used is the XRd control-plane image:  
