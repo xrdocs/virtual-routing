@@ -946,6 +946,14 @@ docker create \
 **Note**: The `docker create` command is used to set up the container with all the required options without actually starting it. Also notice the name `xrd` that we apply to the container during creation making it easier to reference the container in subsequent steps. 
 {: .notice--info}
 
+Start the xrd container:  
+  
+```bash
+cisco@xrdcisco:~$ docker start xrd
+xrd
+cisco@xrdcisco:~$
+```
+  
 
   
 
