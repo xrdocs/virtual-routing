@@ -818,6 +818,13 @@ It was also possible to jump to XR CLI shell by running the `/pkg/bin/xr_cli.sh`
 
 
 
+## Set Up Network for External Connections
+
+
+* In general, it is possible for XRd to use any interface that is moved into the XRd container network namespace. However, this renders that interface inacessible by any other application running on the container host.
+* It's assumed that this is undesirable for the majority of use cases and so the recommended workflow to enable XRd to communicate externally is to use macvlan interfaces.
+* A macvlan interface is a standard Linux interface type that is created on top of another interface, which could be a physical interface with an external connection. Multiple macvlan interfaces can be created on top of one standard interface. This allows multiple applications, including XRd, to 'share' the physical interfaces on a particular host server, via these macvlan interfaces.
+* Each macvlan interface is assigned it's own MAC address (hence the name) and data is directed to the correct interface based on this MAC address. This is illustrated in the image below:
 
 
 
