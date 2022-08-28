@@ -227,7 +227,7 @@ localhost/xrd-control-plane
 ```
 
 
-We can use either `launch-xrd` or the native docker command as shown above to boot the XRd container. Note the `--env` option passed to the native docker command - this is where we specify the XRd specific environment variables. These environment variables have been discussed in detail in Part-4 of the XRd tutorial series here: [User Interface and knobs for XRd]({{base_path}}/tutorials/2022-08-25-user-interface-and-knobs-for-xrd). In the above `--dry-run` output, the only XRd environment variable being passed in is `XR_MGMT_INTERFACES`. 
+We can use either `launch-xrd` or the native docker command as shown above to boot the XRd container. Note the `--env` option passed to the native docker command - this is where we specify the XRd specific environment variables. These environment variables have been discussed in detail in Part-4 of the XRd tutorial series here: [User Interface and knobs for XRd]({{base_path}}/tutorials/2022-08-25-user-interface-and-knobs-for-xrd). In the above `--dry-run` output, the only XRd environment variable being passed in is `XR_MGMT_INTERFACES` which connects the `eth0` interface passed by the docker daemon to the container into XRd.
 {: .notice--info}
 
 
