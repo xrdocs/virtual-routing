@@ -857,11 +857,12 @@ bash-4.3#
 bash-4.3# exit
 exit
 cisco@xrdcisco:~/xrd-tools/samples/xr_compose_topos/simple-bgp$ 
-cisco@xrdcisco:~/xrd-to
-
 
 ```
+Great, the BGP neighbors are up and `xr-1` seems to have learnt the `dest` network prefix (10.3.1.0/24)
+{: .notice--success}
 
+Now, let's issue a ping from the `source` container to the `dest` container IP 10.3.1.3. If successful, then our topology 
 
 
 ```
