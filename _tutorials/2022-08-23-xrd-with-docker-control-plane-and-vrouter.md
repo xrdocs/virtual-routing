@@ -988,6 +988,56 @@ RP/0/RP0/CPU0:ios#
 ```
 
 
+Great, the interfaces have been created! Now, let's bring them up and configure the MgmtEth interface in the subnet `172.50.1.0/24` so that it's reachable from the host-based mac-vlan interface (ens224-mg-local) that we created earlier.  
+  
+```bash
+
+RP/0/RP0/CPU0:ios(config)#int GigabitEthernet 0/0/0/0
+RP/0/RP0/CPU0:ios(config-if)#no shutdown 
+RP/0/RP0/CPU0:ios(config-if)#int GigabitEthernet 0/0/0/1
+RP/0/RP0/CPU0:ios(config-if)#no shutdown 
+RP/0/RP0/CPU0:ios(config-if)#exit        
+RP/0/RP0/CPU0:ios(config)#int MgmtEth 0/RP0/CPU0/0 
+RP/0/RP0/CPU0:ios(config-if)#no shutdown 
+RP/0/RP0/CPU0:ios(config-if)#commit
+Sun Aug 28 14:54:47.290 UTC
+RP/0/RP0/CPU0:ios(config-if)#
+RP/0/RP0/CPU0:ios#
+RP/0/RP0/CPU0:ios#
+RP/0/RP0/CPU0:ios#show  ip int br
+Sun Aug 28 14:54:53.384 UTC
+
+Interface                      IP-Address      Status          Protocol Vrf-Name
+MgmtEth0/RP0/CPU0/0            unassigned      Up              Up       default 
+GigabitEthernet0/0/0/0         unassigned      Up              Up       default 
+GigabitEthernet0/0/0/1         unassigned      Up              Up       default 
+RP/0/RP0/CPU0:ios#conf t
+Sun Aug 28 14:55:03.625 UTC
+RP/0/RP0/CPU0:ios(config)#int MgmtEth 0/RP0/CPU0/0 
+RP/0/RP0/CPU0:ios(config-if)#ipv4 address 172.50.1.3/24
+RP/0/RP0/CPU0:ios(config-if)#commit
+Sun Aug 28 14:55:36.302 UTC
+RP/0/RP0/CPU0:ios(config-if)#
+RP/0/RP0/CPU0:ios#
+RP/0/RP0/CPU0:ios#
+RP/0/RP0/CPU0:ios#ping 172.50.1.4
+Sun Aug 28 14:55:46.551 UTC
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 172.50.1.4, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/4/13 ms
+RP/0/RP0/CPU0:ios#
+```
+
+Awesome, we're able to ping out from the XRd instance to `ens224-mg-local`.
+Finally, configure ssh server on XRd and connect to the instance over SSH using the local connectivity provided by `ens224-mg-local`:  
+  
+
+  
+  
+  
+  
+
 
 
 
