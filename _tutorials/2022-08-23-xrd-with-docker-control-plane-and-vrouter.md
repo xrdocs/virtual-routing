@@ -547,6 +547,8 @@ cisco@xrdcisco:~$
 
 ### Passing an initial configuration during boot
 
+#### Using the `launch-xrd` script
+
 To pass an initial configuration, we can use the `--every-boot-config` option for the `launch-xrd` script. Using a simple configuration as shown below:  
 
 
@@ -644,6 +646,9 @@ RP/0/RP0/CPU0:ios#
 
 As highlighted above, note how during this boot, we didn't have to create a root username and were able to login using the credentials (cisco/cisco123 in this example) set in the configuration file passed to `launch-xrd`. 
 {: .notice--info}
+
+
+####
 
 
 Part-6 of the XRd tutorials Series: [here]({{base_path}}/tutorials/2022-08-23-xrd-with-docker-compose-control-plane-and-vrouter).
