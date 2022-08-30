@@ -25,11 +25,14 @@ position: hidden
 {% include toc %}
 
 
-This is Part-6 of the [XRd tutorials Series]({{base_path}}/tags/#xrd-tutorial-series). Skip to Part-7 [here]({{base_path}}/tutorials/2022-08-23-xrd-with-helm-charts-on-k8s-control-plane-and-vrouter). 
+
+
+
+* This is Part-7 of the [XRd tutorials Series]({{base_path}}/tags/#xrd-tutorial-series)  
+* Skip to Part-8 here: [Xrd with helm charts: Control-Plane and vRouter]({{base_path}}/tutorials/2022-08-23-xrd-with-helm-charts-on-k8s-control-plane-and-vrouter)
+* Re-read Part-6 here: [XRd with Docker-Compose: Control-Plane](2022-08-29-xrd-with-docker-compose-control-plane) 
 
 
 
 
-
-
-Part-7 of the XRd tutorials Series: [here]({{base_path}}/2022-08-23-xrd-with-helm-charts-on-k8s-control-plane-and-vrouter).
+Part-7 of the XRd tutorials Series here: [Xrd with helm charts: Control-Plane and vRouter]({{base_path}}/tutorials/2022-08-23-xrd-with-helm-charts-on-k8s-control-plane-and-vrouter)
