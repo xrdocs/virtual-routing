@@ -161,7 +161,7 @@ When a failure occurs (The current "Active" router goes down or the neighboring 
 #### The HA App State Machine, Split-Brain/Active-Active scenarios...
 
 
-While the detection and failover mechanisms have been explained above, an obvious scenario to handle is the split-brain/Active-Active scenario described thus:
+While the detection and failover mechanisms have been explained above, an obvious scenario to handle is the split-brain/Active-Active scenario, described thus:
 
 * Current "Active" router (rtr1) goes down
 * "Standby" router (rtr2) detects the event and triggers failover.
