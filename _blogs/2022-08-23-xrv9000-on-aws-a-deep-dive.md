@@ -33,9 +33,10 @@ tags:
 
 ## Where are the images?
 
-### Build your own AMI from XRv9000 ISO
+### Download XRv9000 ISO from CCO
 
-### Public AMIs on AWS marketplace
+### Build your own AMI from ISO
+
 
 ## Launching XRv9000 on AWS EC2
 
