@@ -44,6 +44,11 @@ tags:
 
 ### Supported AWS EC2 Instance Types
 
-### 
+### Step-by-Step Manual Bring-Up on AWS EC2
 
+
+### Bring-up using Terraform templates
+
+
+### Bring-up using Cloudformation
 
