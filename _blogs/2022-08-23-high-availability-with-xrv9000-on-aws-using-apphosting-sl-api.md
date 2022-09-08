@@ -178,7 +178,7 @@ In this HA app, we implement a keepalive between each router and the AWS API ins
 
 In short, the state machine works as follows:  
 
-* So each HA app runs a parallel thread whose sole purpose is to query the AWS API to know whether the common secondary IP is currently configured on its own incoming interface or not. 
+* Each HA app runs a parallel thread whose sole purpose is to query the AWS API to know whether the common secondary IP is currently configured on its own incoming interface or not. 
 * If yes, then the router assumes it is "Active" - which means it starts ignoring any incoming BFD down events
 * If no, then the router assumes it is the "Standby" router - and starts monitoring any incoming BFD down events to know when to trigger a failover.
 * If the "Active" router (rtr1) goes down, then upon coming back up, it restarts the keepalive with the AWS API. Since post failover, the secondary IP would have shifted to the original "Standby" router (rtr2),  rtr1 then realizes that it no longer holds the secondary IP on its instance and promptly assumes the "Standby" state. Thus, the dreaded Active-Active scenario is avoided.
