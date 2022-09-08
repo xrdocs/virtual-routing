@@ -25,3 +25,25 @@ tags:
 
 {% include base_path %}
 {% include toc %}
+
+
+## Running Virtual Routers on Public Cloud
+
+### XRv9000 on AWS
+
+## Where are the images?
+
+### Public AMIs on AWS marketplace
+
+### Build your own AMI for XRv9000
+
+
+## Launching XRv9000 on AWS EC2
+
+### Minimum Resource requirements
+
+### Supported AWS EC2 Instance Types
+
+### 
+
+
