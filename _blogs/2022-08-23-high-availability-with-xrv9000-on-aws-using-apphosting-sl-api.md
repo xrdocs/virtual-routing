@@ -45,7 +45,7 @@ The focus of this architecture is to leverage 5G components for services in mult
 ### Challenges with network deployments on Public Cloud
 There are however limitations to network deployments on the public cloud:  
 
-* **Lack of transport Features in the Cloud (AWS) underlay**: The public-cloud underlay does a great job for traditional application services however is quite limited when it comes to traditional Telco networking requirements such as IGPs, SR-MPLS, EVPN, SRv6 and more. This mean traditional networking vendors can augment the underlay capabilities by providing virtualized versions of their Network OS to bring in the missing features. This is where Cisco virtual platforms such as XRv9000 and XRd play an important role - serving as edge and transport nodes in the 5G core on public cloud while also dabbling as gateways and route-reflectors in other parts of the network.  
+* **Lack of transport Features in the Cloud (AWS) underlay**: The public-cloud underlay does a great job for traditional application services, however, it is quite limited when it comes to traditional Telco networking requirements such as IGPs, SR-MPLS, EVPN, SRv6 and more. This means traditional networking vendors can augment the underlay capabilities by providing virtualized versions of their Network OS to bring in the missing features. This is where Cisco virtual platforms such as XRv9000 and XRd play an important role - serving as edge and transport nodes in the 5G core on public cloud while also dabbling as gateways and route-reflectors in other parts of the network.  
 
 * **Restrictions in Cloud environments (no multicast, broadcast packets)**: With primary focus on server application workloads, Public Cloud underlays are restrictive in nature - multicast and broadcast packets are blocked - which implies traditional IGPs (OSPF, ISIS) or redundancy protocols like HSRP/VRRP just won't work. Thus, even with virtual platforms from networking vendors, operators need to be innovative in their design. For example, a typical 5G deployment that intends to use SR-MPLS+ IGPs for transport will need to create an initial overlay of p2p tunnels (like GRE).
 
@@ -1072,6 +1072,3 @@ Last Created: 2021/07/06 12:11:12.123067
 RP/0/RP0/CPU0:rtr2#
 
 ```
-
-
-
