@@ -356,7 +356,7 @@ aws_security_group.server_sg: Creating...
 
 ```
 
-Once the build is complete and successful, you should be able to view the built AMI will be available in the AMIs tab on the AWS EC2 console with the same name as the `xrv9k_iso_name` variable as indicated by the user in the `variables.tf` file.  
+Once the build is complete and successful, you should be able to view the built AMI in the AMIs tab on the AWS EC2 console with the same name as the `xrv9k_iso_name` variable as indicated by the user in the `variables.tf` file.  
 {: .notice--success}
 
 
