@@ -955,14 +955,16 @@ cisco@xrdcisco:~$
 
 Determine the pid of the launched container and add the macvlan interfaces created earlier to the network namespace (netns) associated with the container pid (effectively we pass the macvlan interfaces into the newly launched container):  
 
-  
+
+{% raw  %} 
 ```bash
 cisco@xrdcisco:~$ pid=$(docker inspect xrd -f '{{.State.Pid}}')
 cisco@xrdcisco:~$ sudo ip link set ens160-mac netns $pid
 cisco@xrdcisco:~$ sudo ip link set ens192-mac netns $pid
 cisco@xrdcisco:~$ sudo ip link set ens224-mg netns $pid  
 
-```  
+```
+{% endraw  %} 
   
 Finally, drop into the container to see that interfaces have been picked up by XRd:  
   
