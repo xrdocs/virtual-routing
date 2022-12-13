@@ -1,7 +1,7 @@
 ---
 published: true
 date: '2022-12-08 15:34 -0800'
-title: XRd on EKS
+title: Deploy XRd on AWS
 author: Taran Deshpande
 excerpt: Learn how to deploy and interact with XRd running in an EKS cluster
 tags:
@@ -19,7 +19,6 @@ position: hidden
 ---
 {% include base_path %}
 {% include toc %}
-# Deploying XRd on EKS
 ## Introduction
 
 With the release of IOS XR 7.8.1, XRd is supported as a Cloud Router and SR-PCE. In this tutorial we will explore how to deploy a topology of XRd cloud routers on Amazon Elastic Kubernetes Service (EKS).
