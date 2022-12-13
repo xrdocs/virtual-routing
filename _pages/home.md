@@ -6,10 +6,10 @@ date: null
 excerpt: High performance access to the IOS-XR infrastructure Layer including RIB, Label Switch Database and more. Bring your own protocol or controller and operate your network your way!
 
 feature_row_benefits:
-  - title: Performance 
-    image_path: performance.png
+  - title: Containers 
+    image_path: container_networking.png
     excerpt: >-
-      Batch updates straight to RIB, Lable Switch Database (and more in the future) over gRPC without going through a Network state database results in much higher performance than equivalent Management APIs.
+      XRd is a family of container-based IOSXR-LNT platforms. It is a lightweight solution that can be used as a vRR (virtual-route-reflector), provider edge, vCSR (virtual Cell-Site Router), and cloud router (gateway for the cloud).
 
   - title: API for the “Do-it-yourself" system
     image_path: building_block.png  
