@@ -11,15 +11,10 @@ feature_row_benefits:
     excerpt: >-
       XRd is a family of container-based IOSXR-LNT platforms. It is a lightweight solution that can be used as a vRR (virtual-route-reflector), provider edge, vCSR (virtual Cell-Site Router), and cloud router (gateway for the cloud).
 
-  - title: API for the “Do-it-yourself" system
-    image_path: building_block.png  
+  - title: Cloud Deployment
+    image_path: container_cloud.png  
     excerpt: >-
-      Bring your own Protocol or Controller – Use the same APIs that the IOS-XR protocol stacks use internally, but over GRPC.
-
-  - title: Offload Low-level tasks to IOS-XR
-    image_path: offload.png
-    excerpt: >-
-      Users can focus on higher layer protocols and Controller logic while the IOS-XR infrastructure layer handles conflict resolution, transactional notifications, scalability and data plane abstraction.
+      Both XRd (container) and XRv9k (VM) function in cloud environments; with current support for AWS
 
 published: true
 ---
