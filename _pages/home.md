@@ -25,50 +25,15 @@ published: true
 <div class="feature__wrapper">
     <div class="feature__item--right">
       <div class="archive__item">
-          <div class="archive__item-teaser center" style="display: block; margin-left: auto; margin-right: auto;">
-            <a href="https://xrdocs.io/images/openr-integration-xr.png"><img src="https://xrdocs.io/images/openr-integration-xr.png" alt="" /></a>
-          </div>
-        <div class="archive__item-body">
-            <h2 class="archive__item-title"><a href="https://xrdocs.github.io/cisco-service-layer/blogs/2018-02-16-xr-s-journey-to-the-we-b-st-open-r-integration-with-ios-xr/">Open/R integration with IOS XR</a></h2>
-            <div class="archive__item-excerpt" style="font-size: 0.65em;">
-              <p>Explore how IOS-XR’s service layer APIs and application hosting capabilities can be
-                                leveraged to host and integrate Open/R as an IGP on IOS-XR.</p>
-            </div>
-          <p><a href="https://xrdocs.github.io/cisco-service-layer/blogs/2018-02-16-xr-s-journey-to-the-we-b-st-open-r-integration-with-ios-xr/" 
-          class="btn ">Learn more</a></p>        </div>
-      </div>
-    </div>
-</div>
-
-<div class="feature__wrapper">    
-    <div class="feature__item--left">
-      <div class="archive__item" style="margin-left: 2em;">
-          <div class="archive__item-teaser center" style="display: block; margin-left: auto; margin-right: auto;">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/yiN8fAxlfwg" frameborder="0" allowfullscreen></iframe>
-          </div>
-        <div class="archive__item-body">
-            <h2 class="archive__item-title"><a href="https://www.youtube.com/watch?v=yiN8fAxlfwg"></a>Techfield Day 15 @Cisco Systems</h2>
-            <div class="archive__item-excerpt" style="font-size: 0.65em;">
-            <p>Akshat Sharma gives a lowdown on the latest advancements in Cisco IOS-XR programmability as Cisco enables end-users to take advantange of a high performance channel to directly program the IOS-XR infrastructure layer, called the Service Layer, over gRPC. The talk focuses on the architectural tenets of Service Layer APIs and ends with a demo of an OpenBMP controller implemented using the Service Layer APIs.</p>
-            </div>
-          <p><a href="https://www.youtube.com/watch?v=yiN8fAxlfwg" class="btn btn--large">Watch on Youtube</a></p>
-        </div>
-      </div>
-    </div>
-</div>
-
-<div class="feature__wrapper">
-    <div class="feature__item--right">
-      <div class="archive__item">
           <div class="archive__item-teaser center" style="max-height: 300px; max-width: 300px;display: block; margin-left: auto; margin-right: auto;">
             <a href="{{ base_path }}/apidocs"><img src="{{ base_path }}/images/apidocs.png" alt="" /></a>
           </div>
         <div class="archive__item-body">
-            <h2 class="archive__item-title"><a href="{{ base_path }}/apidocs">Documentation auto-generated from Code</a></h2>
+            <h2 class="archive__item-title"><a href="{{ base_path }}/tutorials/2022-08-22-xrd-images-where-can-one-get-them/">Get Started with XRd</a></h2>
             <div class="archive__item-excerpt" style="font-size: 0.65em;">
-              <p>Doxygen Based API Documentation auto-generated from the protobuf IDLs. Documentation always remains up to date with the API!</p>
+              <p>Download the latest XRd image and learn how to set up your environment to deploy it locally</p>
             </div>
-          <p><a href="{{ base_path }}/apidocs" class="btn ">Check out the APIdocs</a></p>
+          <p><a href="{{ base_path }}/}/tutorials/2022-08-22-xrd-images-where-can-one-get-them/" class="btn ">Check out XRd tutorials</a></p>
         </div>
       </div>
     </div>
