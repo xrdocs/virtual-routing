@@ -26,14 +26,14 @@ published: true
     <div class="feature__item--right">
       <div class="archive__item">
           <div class="archive__item-teaser center" style="max-height: 300px; max-width: 300px;display: block; margin-left: auto; margin-right: auto;">
-            <a href="{{ base_path }}/apidocs"><img src="{{ base_path }}/images/apidocs.png" alt="" /></a>
+            <a href="{{ base_path }}/apidocs"><img src="{{ base_path }}/images/docker-iosxr.png" alt="" /></a>
           </div>
         <div class="archive__item-body">
             <h2 class="archive__item-title"><a href="{{ base_path }}/tutorials/2022-08-22-xrd-images-where-can-one-get-them/">Get Started with XRd</a></h2>
             <div class="archive__item-excerpt" style="font-size: 0.65em;">
               <p>Download the latest XRd image and learn how to set up your environment to deploy it locally</p>
             </div>
-          <p><a href="{{ base_path }}/}/tutorials/2022-08-22-xrd-images-where-can-one-get-them/" class="btn ">Check out XRd tutorials</a></p>
+          <p><a href="{{ base_path }}//tutorials/2022-08-22-xrd-images-where-can-one-get-them/" class="btn ">Check out XRd tutorials</a></p>
         </div>
       </div>
     </div>
@@ -43,14 +43,14 @@ published: true
     <div class="feature__item--right">
       <div class="archive__item">
           <div class="archive__item-teaser center" style="display: block; margin-left: auto; margin-right: auto;">
-            <a href="{{ base_path }}/tutorials/2017-09-26-use-case-openbmp-controller-using-service-layer-apis/"><img src="{{ base_path  }}/images/openbmp-controller.png" alt="" /></a>
+            <a href="{{ base_path }}/tutorials/2022-12-08-deploy-xrd-on-aws/"><img src="{{ base_path  }}/images/eks-logo.png" alt="" /></a>
           </div>
         <div class="archive__item-body">
-            <h2 class="archive__item-title"><a href="{{ base_path }}/tutorials/2017-09-26-use-case-openbmp-controller-using-service-layer-apis/">OpenBMP Controller using Service Layer APIs</a></h2>
+            <h2 class="archive__item-title"><a href="{{ base_path }}/tutorials/2022-12-08-deploy-xrd-on-aws/">Deploy XRd on AWS</a></h2>
             <div class="archive__item-excerpt" style="font-size: 0.65em;">
-              <p>Selective Route download for BGP is a use case that most CDN network operators have taken a stab at. Being able to manipulate the RIB directly with custom route policies to optimize TCAM usage at a CDN PoP router is made much simpler through a high performance Model-Driven API directly into the XR RIB as part of the Cisco Service Layer. <b>Akshat Sharma</b> explains.</p>
+              <p>Launch XRd on AWS, by deploying XRd on an EKS cluster</p>
             </div>
-          <p><a href="{{ base_path }}/tutorials/2017-09-26-use-case-openbmp-controller-using-service-layer-apis/" class="btn ">Take a Look</a></p>
+          <p><a href="{{ base_path }}/tutorials/2022-12-08-deploy-xrd-on-aws/" class="btn ">Take a Look</a></p>
         </div>
       </div>
     </div>
