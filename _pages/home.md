@@ -25,7 +25,7 @@ published: true
 <div class="feature__wrapper">
     <div class="feature__item--right">
       <div class="archive__item">
-          <div class="archive__item-teaser center" style="max-height: 300px; max-width: 300px;display: block; margin-left: auto; margin-right: auto;">
+          <div class="archive__item-teaser center" style="max-height: 100px; max-width: 100px;display: block; margin-left: auto; margin-right: auto;">
             <a href="{{ base_path }}/apidocs"><img src="{{ base_path }}/images/docker-iosxr.png" alt="" /></a>
           </div>
         <div class="archive__item-body">
