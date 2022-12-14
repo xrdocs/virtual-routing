@@ -15,7 +15,7 @@ tags:
   - AWS
   - virtual
   - EKS
-position: hidden
+position: top
 ---
 {% include base_path %}
 {% include toc %}
