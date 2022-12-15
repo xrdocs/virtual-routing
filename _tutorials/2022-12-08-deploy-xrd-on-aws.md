@@ -25,12 +25,11 @@ With the release of IOS XR 7.8.1, XRd is supported as a Cloud Router and SR-PCE.
 ## Prerequisites
 We will need the a XRd vRouter image release 7.8.1 or later. The steps to do this was outlined in a previous [tutorial](https://xrdocs.io/virtual-routing/tutorials/2022-08-22-xrd-images-where-can-one-get-them/). In addition, we will need an AWS account and the `aws` [cli](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) installed and configured on our local machine. Although these following tools aren't strictly required to launch XRd on EKS, we will use them in our tutorial:
 
-* `helm`
 * `kubectl`
 * `docker`
 * `skopeo`
 
-Clone the [XRd on AWS EKS](https://github.com/ios-xr/xrd-eks) repository for access to cloudformation templates and sample scripts that we will use in this deployment
+Clone the [XRd on AWS EKS](https://github.com/ios-xr/xrd-eks) repository for access to cloudformation templates and sample scripts that we will use in this deployment.
 
 ```bash
 tadeshpa@TADESHPA-M-F92B ~> git clone https://github.com/ios-xr/xrd-eks.git
@@ -42,6 +41,11 @@ remote: Total 87 (delta 16), reused 86 (delta 15), pack-reused 0
 Receiving objects: 100% (87/87), 75.09 KiB | 1.79 MiB/s, done.
 Resolving deltas: 100% (16/16), done.
 ```
+From this repository, we will directly use three scripts for the tutorial:
+* `publish-ecr.sh`
+* `publish-s3-bucket.sh`
+* `create-stack.sh`
+
 ## Publish XRd Images on Elastic Container Registry
 EKS needs to pull the XRd image from a container image repository which is accessible to AWS. For this, we will create a repository using AWS's ECR (Elastic Container Registry) service and host the XRd images there.
 
