@@ -42,9 +42,9 @@ Receiving objects: 100% (87/87), 75.09 KiB | 1.79 MiB/s, done.
 Resolving deltas: 100% (16/16), done.
 ```
 From this repository, we will directly use three scripts for the tutorial:
-* `publish-ecr.sh`
-* `publish-s3-bucket.sh`
-* `create-stack.sh`
+* `publish-ecr`
+* `publish-s3-bucket`
+* `create-stack`
 
 ## Publish XRd Images on Elastic Container Registry
 EKS needs to pull the XRd image from a container image repository which is accessible to AWS. For this, we will create a repository using AWS's ECR (Elastic Container Registry) service and host the XRd images there.
