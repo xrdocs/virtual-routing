@@ -44,8 +44,8 @@ published: true
 </div>
 
 <div class="feature__wrapper">
-    <div class="feature__item--right">
-      <div class="archive__item">
+    <div class="feature__item--left">
+      <div class="archive__item" style="margin-left: 2em;">
           <div class="archive__item-teaser center" style="max-height: 100px; max-width: 100px; display: block; margin-left: auto; margin-right: auto;">
             <a href="{{ base_path }}/tutorials/2022-12-08-deploy-xrd-on-aws/"><img src="{{ base_path  }}/images/aws-eks-logo-48.png" alt="" /></a>
           </div>
