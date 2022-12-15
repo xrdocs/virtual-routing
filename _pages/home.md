@@ -30,7 +30,7 @@ published: true
     <div class="feature__item--right">
       <div class="archive__item">
           <div class="archive__item-teaser center" style="max-height: 300px; max-width: 300px;display: block; margin-left: auto; margin-right: auto;">
-            <a href="{{ base_path }}/apidocs"><img src="{{ base_path }}/images/docker-iosxr.png" alt="" /></a>
+            <a href="{{ base_path }}/tutorials/2022-08-22-xrd-images-where-can-one-get-them/><img src="{{ base_path }}/images/docker-iosxr.png" alt="" /></a>
           </div>
         <div class="archive__item-body">
             <h2 class="archive__item-title"><a href="{{ base_path }}/tutorials/2022-08-22-xrd-images-where-can-one-get-them/">Get Started with XRd</a></h2>
@@ -59,3 +59,18 @@ published: true
       </div>
     </div>
 </div>
+<div class="feature__wrapper">
+    <div class="feature__item--right">
+      <div class="archive__item">
+          <div class="archive__item-teaser center" style="max-height: 300px; max-width: 300px;display: block; margin-left: auto; margin-right: auto;">
+            <a href="{{ base_path }}/blogs/2022-08-23-high-availability-with-xrv9000-on-aws-using-apphosting-sl-api/"><img src="{{ base_path }}/images/HA-xrv9k.png" alt="" /></a>
+          </div>
+        <div class="archive__item-body">
+            <h2 class="archive__item-title"><a href="{{ base_path }}/blogs/2022-08-23-high-availability-with-xrv9000-on-aws-using-apphosting-sl-api/">High Availability with XRv9000 on AWS: Using AppHosting + SL-API</a></h2>
+            <div class="archive__item-excerpt" style="font-size: 0.65em;">
+              <p>Learn how to enable 1:1 high-availability with XRv9000 when running on AWS. In this blog we discuss a solution to achieve HA by building our own third-party container application that hooks into IOS-XR Service-layer APIs and can be deployed using XR AppMgr</p>
+            </div>
+          <p><a href="{{ base_path }}/blogs/2022-08-23-high-availability-with-xrv9000-on-aws-using-apphosting-sl-api/" class="btn ">Learn More</a></p>
+        </div>
+      </div>
+    </div>
