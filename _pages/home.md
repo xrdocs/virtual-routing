@@ -14,8 +14,12 @@ feature_row_benefits:
   - title: Cloud Deployment
     image_path: container_cloud.png  
     excerpt: >-
-      Both XRd (container) and XRv9k (VM) function in cloud environments; with current support for AWS
-
+      Both XRd (container) and XRv9k (VM) function in cloud environments; with current support for AWS.
+  
+  - title: Kubernetes Orchestration
+    image_path: Kubernetes_logo.png  
+    excerpt: >-
+      Automate the orchestration and deployment of XRd containers with Kubernetes.
 published: true
 ---
 {% include base_path %} 
