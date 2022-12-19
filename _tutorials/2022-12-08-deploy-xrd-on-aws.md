@@ -42,9 +42,9 @@ Receiving objects: 100% (87/87), 75.09 KiB | 1.79 MiB/s, done.
 Resolving deltas: 100% (16/16), done.
 ```
 From this repository, we will directly use three scripts for the tutorial:
-* `publish-ecr`
-* `publish-s3-bucket`
-* `create-stack`
+* `publish-ecr` - Places XRd container images in a container registry on AWS
+* `publish-s3-bucket` - Uploads example cloudformation templates and AMI assets from the github repository to an S3 bucket on AWS
+* `create-stack` - Automates the deployment of an example topology using cloudformation templates
 
 ## Publish XRd Images on Elastic Container Registry
 EKS needs to pull the XRd image from a container image repository which is accessible to AWS. For this, we will create a repository using AWS's ECR (Elastic Container Registry) service and host the XRd images there.
@@ -134,7 +134,7 @@ Now when we navigate to the AWS Console and view S3 buckets, we can see that one
 
 ![s3-view]({{site.baseurl}}/images/s3-view.jpeg)
 ![s3-assets]({{site.baseurl}}/images/s3-assets.jpeg)
-## Launching the application
+## Launching the Application
 We need an AWS key-pair to access the Bastion and Worker nodes created by stack. If you have not already created one in the region that you are deploying the cluster in, follow this [guide](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/create-key-pairs.html).
 ### Launch from AWS Console
 Navigate to 'Create Stack' within the AWS console
@@ -290,7 +290,16 @@ HundredGigE0/0/0/1             10.0.2.11       Up              Up       default
 HundredGigE0/0/0/2             10.0.3.11       Up              Up       default 
 RP/0/RP0/CPU0:xrd1#
 ```
-     
+
+## Deleting the Application
+
+First, navigate to the Stacks page in the AWS Console. Next, we will select the stack that we created in this example, and click delete.
+
+![delete-stack]({{site.baseurl}}/images/delete-stack.png)
+
+It will ask us form confirmation, and then begin to delete all of the AWS resources we created in order to launch the example application.
+
+![confirm-delete-stack]({{site.baseurl}}/images/confirm-delete-stack.png)
 
 There you have it! In this tutorial, we learned how to deploy an XRd topology on EKS. To build an XRd topology specific to your own use case, you can use the *atomic* and *composite* building blocks, to create a new *application* cloudformation template.
 {: .notice--success}
