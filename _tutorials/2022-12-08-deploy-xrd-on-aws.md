@@ -19,6 +19,10 @@ position: top
 ---
 {% include base_path %}
 {% include toc %}
+
+**Disclaimer**
+The the topologies deployed in the following scenario are intended to be a lab environment for the user to gain familiarity with XRd's integration with AWS. This deployment will likely not be sufficient for a production use-case.
+
 ## Introduction
 
 With the release of IOS XR 7.8.1, XRd is supported as a Cloud Router and SR-PCE. In this tutorial we will explore how to deploy a topology of XRd cloud routers on Amazon Elastic Kubernetes Service (EKS).
