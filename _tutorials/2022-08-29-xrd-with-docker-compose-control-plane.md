@@ -21,7 +21,7 @@ excerpt: Learn how to bring up XRd with docker-compose for the Control-Plane var
 {% include toc %}
 
 * This is Part-6 of the [XRd tutorials Series]({{base_path}}/tags/#xrd-tutorial-series)  
-* Skip to Part-7 here: [Setting up k8s using KIND for XRd]({{base_path}}/tutorials/2022-08-23-setting-up-kubernetes-using-kind-for-xrd). 
+<!-- * Skip to Part-7 here: [Setting up k8s using KIND for XRd]({{base_path}}/tutorials/2022-08-23-setting-up-kubernetes-using-kind-for-xrd).  -->
 * Re-read Part-5 here: [Xrd with Docker: Control-Plane and vRouter]({{base_path}}/tutorials/2022-08-23-xrd-with-docker-control-plane-and-vrouter)
 
 ## Introduction
