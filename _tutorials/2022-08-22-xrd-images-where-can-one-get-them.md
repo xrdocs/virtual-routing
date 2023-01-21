@@ -23,7 +23,7 @@ excerpt: Learn how to download the latest XRd images and set them up for further
 
 **Disclaimer**
 This tutorial series is intended for a user to setup XRd in a lab environment, not a production deployment.
-{: .notice--success}
+{: .notice--warning}
 
 * This is Part-1 of the [XRd tutorials Series]({{base_path}}/tags/#xrd-tutorial-series)  
 * Skip to Part-2 here: [Helper Tools to get started with XRd]({{base_path}}/tutorials/2022-08-22-helper-tools-to-get-started-with-xrd).     

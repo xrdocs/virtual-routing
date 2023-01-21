@@ -22,7 +22,7 @@ position: top
 
 **Disclaimer**
 The the topologies deployed in the following scenario are intended to be a lab environment for the user to gain familiarity with XRd's integration with AWS. This deployment will likely not be sufficient for a production use-case.
-{: .notice--success}
+{: .notice--warning}
 
 ## Introduction
 
