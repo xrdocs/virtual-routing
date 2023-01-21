@@ -903,4 +903,4 @@ Perfect! With this example we were able to bring up a mixed topology of Linux an
 
 
 
-Part-7 of the XRd tutorials Series here: [Setting up k8s using KIND for XRd]({{base_path}}/2022-08-23-setting-up-kubernetes-using-kind-for-xrd).
+
