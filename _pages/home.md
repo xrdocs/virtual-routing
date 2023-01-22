@@ -29,7 +29,7 @@ published: true
 <div class="feature__wrapper">
     <div class="feature__item--right">
       <div class="archive__item">
-          <div class="archive__item-teaser center" style="max-height: 300px; max-width: 300px;display: block; margin-left: auto; margin-right: auto;">
+          <div class="archive__item-teaser center" style="max-height: 200px; max-width: 200px;display: block; margin-left: auto; margin-right: auto;">
             <a href="{{ base_path }}/tutorials/2022-08-22-xrd-images-where-can-one-get-them/"><img src="{{ base_path }}/images/xrd-router.png" alt="" /></a>
           </div>
         <div class="archive__item-body">
