@@ -327,6 +327,333 @@ HundredGigE0/0/0/1             10.0.2.11       Up              Up       default
 HundredGigE0/0/0/2             10.0.3.11       Up              Up       default 
 RP/0/RP0/CPU0:xrd1#
 ```
+### Modify Deployment using Helm
+[Helm](helm.sh) is a package manager for kubernetes, and we will use it to modify the current deployment.
+
+Let's start by adding the xrd-eks helm repository to our current namespace.
+
+```
+tadeshpa@TADESHPA-M-F92B ~/xrd-eks (main) [1]> helm repo add xrd-eks https://ios-xr.github.io/xrd-eks
+"xrd-eks" has been added to your repositories
+```
+
+Next, we can view which [helm charts](https://helm.sh/docs/topics/charts/) are available in this helm repository. These charts are essentially sample XRd deployments.
+
+```
+tadeshpa@TADESHPA-M-F92B ~/xrd-eks (main)> helm search repo xrd-eks
+NAME                       	CHART VERSION	APP VERSION	DESCRIPTION                                       
+xrd-eks/aws-overlay-example	0.1.0        	latest     	Two XRd instances providing overlay with contai...
+xrd-eks/simple-host        	0.1.0        	latest     	Deployment of a specified image (default alpine...
+```
+
+Then we can view details of our current deployment.
+
+```
+tadeshpa@TADESHPA-M-F92B ~/xrd-eks (main)> helm list
+NAME       	NAMESPACE	REVISION	UPDATED                                	STATUS  	CHART                    	APP VERSION
+xrd-example	default  	1       	2023-01-18 03:56:43.307742177 +0000 UTC	deployed	aws-overlay-example-0.1.0	latest
+```
+Our current deployment is `xrd-example` which is a modification of the chart `aws-overlay-example-0.1.0`. We can use `helm` to check the configuration settings of this chart.
+
+```
+tadeshpa@TADESHPA-M-F92B ~/xrd-eks (main)> helm show values xrd-eks/aws-overlay-example
+# Default values for aws-overlay-example.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+xrd1:
+  # Image configuration
+  image:
+    # repository:
+    pullPolicy: Always
+    #tag: ""
+  resources:
+    limits:
+      memory: 8Gi
+      hugepages-1Gi: 3Gi
+  securityContext:
+    privileged: true
+  nodeSelector:
+      xrd.node: nodeA
+  persistence:
+    enabled: true
+    size: "6Gi"
+    accessModes:
+    - ReadWriteOnce
+    storageClass: "gp2"
+  config:
+    # ASCII XR configuration to be applied on XR boot.
+    ascii: |
+      hostname xrd1
+      logging console debugging
+      logging monitor debugging
+      vrf nfs
+       address-family ipv4 unicast
+        import route-target
+         100:100
+        !
+        export route-target
+         100:100
+        !
+       !
+      !
+      line default
+       exec-timeout 0 0
+       width 0
+       length 0
+      !
+      bfd
+       multipath include location 0/RP0/CPU0
+       echo disable
+      !
+      call-home
+       service active
+       contact smart-licensing
+       profile CiscoTAC-1
+        active
+        destination transport-method email disable
+        destination transport-method http
+       !
+      !
+      interface Loopback0
+       ipv4 address 1.0.0.11 255.255.255.255
+      !
+      interface tunnel-ip1
+       mtu 1450
+       ipv4 address 10.1.2.11 255.255.255.0
+       tunnel source 10.0.2.11
+       tunnel destination 10.0.2.12
+       logging events link-status
+      !
+      interface tunnel-ip2
+       mtu 1450
+       ipv4 address 10.1.3.11 255.255.255.0
+       tunnel source 10.0.3.11
+       tunnel destination 10.0.3.12
+       logging events link-status
+      
+      ...
+      
+      segment-routing
+      !
+    asciiEveryBoot: True
+  interfaces:
+    - type: pci
+      config:
+        last: 3
+  pciDriver: "igb_uio"
+  cpu:
+    cpuset: 2-3
+xrd2:
+  # Image configuration
+  image:
+    # repository:
+    pullPolicy: Always
+    #tag: ""
+  resources:
+    limits:
+      memory: 8Gi
+      hugepages-1Gi: 3Gi
+  securityContext:
+    privileged: true
+  nodeSelector:
+      xrd.node: nodeB
+  persistence:
+    enabled: true
+    size: "6Gi"
+    accessModes:
+    - ReadWriteOnce
+    storageClass: "gp2"
+  config:
+    # ASCII XR configuration to be applied on XR boot.
+    ascii: |
+      hostname xrd2
+      logging console debugging
+      logging monitor debugging
+      vrf nfs
+       address-family ipv4 unicast
+        import route-target
+         100:100
+        !
+        export route-target
+         100:100
+        !
+       !
+      !
+      line default
+       exec-timeout 0 0
+       width 0
+       length 0
+      !
+      bfd
+       multipath include location 0/RP0/CPU0
+       echo disable
+      !
+      call-home
+       service active
+       contact smart-licensing
+       profile CiscoTAC-1
+        active
+        destination transport-method email disable
+        destination transport-method http
+       !
+      !
+      interface Loopback0
+       ipv4 address 1.0.0.12 255.255.255.255
+      !
+      interface tunnel-ip1
+       mtu 1450
+       ipv4 address 10.1.2.12 255.255.255.0
+       tunnel source 10.0.2.12
+       tunnel destination 10.0.2.11
+       logging events link-status
+      !
+      interface tunnel-ip2
+       mtu 1450
+       ipv4 address 10.1.3.12 255.255.255.0
+       tunnel source 10.0.3.12
+       tunnel destination 10.0.3.11
+       logging events link-status
+      !
+      
+      ...
+      
+      segment-routing
+      !
+    asciiEveryBoot: True
+  interfaces:
+  - type: pci
+    config:
+      last: 3
+  pciDriver: "igb_uio"
+  cpu:
+    cpuset: 2-3
+
+host1:
+  image:
+    repository: alpine
+    pullPolicy: IfNotPresent
+    # Overrides the image tag whose default is the chart appVersion.
+    tag: ""
+  networkAttachment:
+    config: '{
+        "cniVersion": "0.3.1",
+        "type": "host-device",
+        "device": "eth1",
+        "ipam": {
+          "type": "static",
+          "addresses" : [
+              {
+                  "address": "10.0.1.10/24",
+                  "gateway": "10.0.1.11"
+              }
+          ],
+          "routes" : [
+              {
+                  "dst": "10.0.4.0/24"
+              }
+          ]
+        }
+      }'
+
+  nodeSelector:
+    xrd.node: nodeC
+
+host2:
+  image:
+    repository: alpine
+    pullPolicy: IfNotPresent
+    # Overrides the image tag whose default is the chart appVersion.
+    tag: ""
+  networkAttachment:
+    config: '{
+        "cniVersion": "0.3.1",
+        "type": "host-device",
+        "device": "eth2",
+        "ipam": {
+          "type": "static",
+          "addresses" : [
+              {
+                  "address": "10.0.4.10/24",
+                  "gateway": "10.0.4.12"
+              }
+          ],
+          "routes" : [
+              {
+                  "dst": "10.0.1.0/24"
+              }
+          ]
+        }
+      }'
+
+  nodeSelector:
+    xrd.node: nodeC
+```
+This chart specifies most of the configuration settings in our current deployment (for a detailed view of what settings can be configured here, view: [xrd-vrouter/values.yaml](https://github.com/ios-xr/xrd-helm/blob/main/charts/xrd-vrouter/values.yaml)). However, the image repository and tag are commented out. In our current deployment, we used ECR as our image repository. These values were specified in our `xrd-example` deployment.
+
+```
+tadeshpa@TADESHPA-M-F92B ~/xrd-eks (main)> helm get values xrd-example
+USER-SUPPLIED VALUES:
+xrd1:
+  config:
+    password: cisco123
+    username: cisco
+  image:
+    repository: 655415053484.dkr.ecr.us-east-2.amazonaws.com/xrd/xrd-vrouter
+    tag: latest
+xrd2:
+  config:
+    password: cisco123
+    username: cisco
+  image:
+    repository: 655415053484.dkr.ecr.us-east-2.amazonaws.com/xrd/xrd-vrouter
+    tag: latest
+```
+
+The values that were specified in `xrd-example` overwrite the default values in `aws-overlay-example`. To make a modification to the current depoyment, we simply need to make a YAML file the contains the configuration values we wish to modify. Let's modify our current deployment by changing the credentials for xrd1.
+
+```
+tadeshpa@TADESHPA-M-F92B ~/xrd-eks (main)> cat example.yaml 
+USER-SUPPLIED VALUES:
+xrd1:
+  config:
+    password: xrd-password
+    username: xrd1
+  image:
+    repository: 655415053484.dkr.ecr.us-east-2.amazonaws.com/xrd/xrd-vrouter
+    tag: latest
+xrd2:
+  config:
+    password: cisco123
+    username: cisco
+  image:
+    repository: 655415053484.dkr.ecr.us-east-2.amazonaws.com/xrd/xrd-vrouter
+    tag: latest
+```
+
+Now, we can use helm to stop our current installment using `helm uninstall`,re-deploy with our updated config, and login with our updated credentials.
+
+```
+tadeshpa@TADESHPA-M-F92B ~/xrd-eks (main) [SIGTERM]> helm uninstall xrd-example
+release "xrd-example" uninstalled
+tadeshpa@TADESHPA-M-F92B ~/xrd-eks (main)> helm install -f example.yaml xrd-example xrd-eks/aws-overlay-example
+NAME: xrd-example
+LAST DEPLOYED: Mon Jan 23 13:14:51 2023
+NAMESPACE: default
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+tadeshpa@TADESHPA-M-F92B ~/xrd-eks (main)> kubectl exec -it xrd-example-xrd1-0 -- xr
+
+User Access Verification
+
+Username: xrd1
+Password: 
+
+
+RP/0/RP0/CPU0:xrd1#
+```
+Stay tuned for a full tutorial on using helm with XRd.
 
 ## Deleting the Application
 
