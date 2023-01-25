@@ -327,7 +327,7 @@ HundredGigE0/0/0/1             10.0.2.11       Up              Up       default
 HundredGigE0/0/0/2             10.0.3.11       Up              Up       default 
 RP/0/RP0/CPU0:xrd1#
 ```
-### Modify Deployment using Helm
+## Modify Deployment using Helm
 [Helm](helm.sh) is a package manager for kubernetes, and we will use it to modify the current deployment.
 
 Let's start by adding the xrd-eks helm repository to our current namespace.
