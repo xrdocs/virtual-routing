@@ -94,7 +94,11 @@ There are three types of templates:
  
 The application templates that we deploy create [nested stacks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html), since they may reference multiple atomic or composite building blocks. Due to this, all necessary templates should be placed in an S3 Bucket so that Cloudformation can easily access them. 
 
-In addition to the cloudformation templates, we will also place the [ami assets](https://github.com/ios-xr/xrd-eks/tree/main/ami_assets/etc), in the same S3 bucket. These AMI Assets are required so an AMI suitable for running XRd vRouter can be created as part of the CloudFormation stack.
+In addition to the cloudformation templates, we will also place the [ami assets](https://github.com/ios-xr/xrd-eks/tree/main/ami_assets/etc), in the same S3 bucket. These AMI Assets are required so an AMI suitable for running XRd vRouter can be created as part of the CloudFormation stack. This AMI is an Amazon Linux 2 instance with modifications made to several OS-level settings so that the XRd vRouter can maximize performance. This is accomplished by using the tool [TuneD](https://tuned-project.org/) to:
+* Turn off kernel timer ticks
+* Offload kernel RCU callbacks
+* Prevent process scheduling
+* Offload IRQ interrupts
 
 ## Publishing S3 Bucket
 The script `publish-s3-bucket.sh` automates the process of creating the bucket and uploading the relevant resources.
