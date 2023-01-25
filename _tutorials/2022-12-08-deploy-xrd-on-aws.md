@@ -86,11 +86,39 @@ Now if we check our ECR Repositories list on the AWS console, we can see that an
 ## Cloudformation Templates and AMI Assets
 In the [XRd on AWS EKS](https://github.com/ios-xr/xrd-eks) github repository, a number of Cloudformation templates are provided to assist with deploying XRd on EKS. 
 
-There are three types of templates:
+There are three types of templates included in the github repository:
 
-* Atomic Building Block - elements used to build a full deployment stack.
-* Composite Building Block - convenient combinations of the atomic building block templates.
-* Application - example XRd deployments.
+* **Atomic Building Block** - elements used to build a full deployment stack.
+    * **xrd-vpc** - Create VPC suitable for running XRd.
+        Augments aws-vpc with additional subnets to build network topologies with.
+        These subnets are tagged so that topologies can be built referring to the tag rather than 		  the SubnetId which varies every time a new VPC is created.
+        
+    * **xrd-eks-existing-vpc** - Create EKS control plane suitable for running XRd using an existing VPC.
+        Augments amazon-eks-entrypoint-existing-vpc with XRd K8S settings and installs Multus.
+        Includes provisioning a Bastion for access to worker nodes
+    * **xrd-eks-ami** - Creates an AMI for the EKS worker node which is able to run XRd vRouter.
+        Builds and installs a patched version of the igb_uio driver to add write-combine supported which in turn is needed to achieve high volume and low latency on AWS ENA interfaces.
+        Installs a tuned profile to isolate cores and prevent interrupts from running on data processing cores etc.
+    * **xrd-eks-node-launch-template** - Create a node launch template suitable for running XRd.
+    * **xrd-ec2-network-interface**
+        Create a network interface on a subnet and attach it to an EC2 instance.
+        The subnet is identified by tag rather than SubnetId. The tag is constant across VPCs, whereas the SubnetId varies.
+
+* **Composite Building Block** - convenient combinations of the atomic building block templates.
+    * **xrd-eks-new-vpc** - Create EKS control plane and VPC. Composite of xrd-vpc and xrd-eks-existing-vpc.
+
+    * **xrd-eks-node** - Create an EKS worker node suitable for hosting an XRd instance.
+        Brings together xrd-eks-node-launch-template and xrd-ec2-network-interface to create a worker node with interfaces attached to the desired subnets.
+        The EC2 instance is labelled to provide a target for the associated XRd instance.
+
+* **Application** - example XRd deployments.
+
+    * **xrd-overlay-example-existing-eks** - Two routers connected via an overlay constructed using GRE, IS-IS and L3VPN.
+        Each router is connected to a simple container workload emulating a NF in an isolated VRF.
+    * **xrd-singleton-existing-eks** - Single XRd instance of desired platform type.
+        This template can also be a useful building block.
+    * **xrd-example** - Creates a complete stack, including a parameter to choose either 'overlay' or 'singleton'
+
  
 The application templates that we deploy create [nested stacks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html), since they may reference multiple atomic or composite building blocks. Due to this, all necessary templates should be placed in an S3 Bucket so that Cloudformation can easily access them. 
 
