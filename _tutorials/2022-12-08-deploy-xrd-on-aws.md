@@ -33,6 +33,7 @@ We will need the a XRd vRouter image release 7.8.1 or later. The steps to do thi
 * `kubectl`
 * `docker`
 * `skopeo`
+* `helm`
 
 Clone the [XRd on AWS EKS](https://github.com/ios-xr/xrd-eks) repository for access to cloudformation templates and sample scripts that we will use in this deployment.
 
