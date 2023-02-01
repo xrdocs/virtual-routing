@@ -12,7 +12,7 @@ tags:
   - kubernetes
   - virtual
 author: Raja Kolagatla
-position: top
+position: hidden
 ---
 {% include base_path %}
 {% include toc %}
