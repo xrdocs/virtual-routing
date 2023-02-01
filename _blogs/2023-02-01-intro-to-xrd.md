@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 date: '2023-02-01 14:10 -0800'
 title: Intro to XRd
 tags:
@@ -12,6 +12,7 @@ tags:
   - kubernetes
   - virtual
 author: Raja Kolagatla
+position: top
 ---
 {% include base_path %}
 {% include toc %}
