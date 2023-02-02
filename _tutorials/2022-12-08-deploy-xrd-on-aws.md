@@ -1,7 +1,7 @@
 ---
 published: true
 date: '2022-12-08 15:34 -0800'
-title: Deploy XRd on AWS
+title: Getting Started with XRd on AWS
 author: Taran Deshpande
 excerpt: Learn how to deploy and interact with XRd running in an EKS cluster
 tags:
@@ -21,7 +21,7 @@ position: top
 {% include toc %}
 
 **Disclaimer**
-The the topologies deployed in the following scenario are intended to be a lab environment for the user to gain familiarity with XRd's integration with AWS. This deployment will likely not be sufficient for a production use-case.
+The topologies deployed in the following scenario are intended to be a lab environment for the user to gain familiarity with XRd's integration with AWS. This example will not be sufficient for a production use-case.
 {: .notice--warning}
 
 ## Introduction
@@ -128,6 +128,8 @@ In addition to the cloudformation templates, we will also place the [ami assets]
 * Offload kernel RCU callbacks
 * Prevent process scheduling
 * Offload IRQ interrupts
+
+The XRd vRouter also requires an interface driver to be loaded in the underlying OS's kernel. When running on AWS EKS, this interface driver must support write combining as described in the [DPDK documentation](https://doc.dpdk.org/guides/nics/ena.html#prerequisites). XRd has been validated using the `igb_uio` interface driver from DPDK 19.11.12 LTS, and building and loading this module is done as a part of a [script](https://github.com/ios-xr/xrd-eks/blob/main/ami_assets/etc/xrd/xrd-vrouter-build-ami.sh) included in the AMI assets.
 
 ## Publishing S3 Bucket
 The script `publish-s3-bucket.sh` automates the process of creating the bucket and uploading the relevant resources.
@@ -329,9 +331,9 @@ HundredGigE0/0/0/2             10.0.3.11       Up              Up       default
 RP/0/RP0/CPU0:xrd1#
 ```
 ## Modify Deployment using Helm
-[Helm](helm.sh) is a package manager for kubernetes, and we will use it to modify the current deployment.
+[Helm](helm.sh) is a package manager for kubernetes, and we will use it to modify the current deployment. There is a general [helm repo](https://ios-xr.github.io/xrd-helm/) for XRd, with sample [value files](https://github.com/ios-xr/xrd-helm/blob/main/charts/xrd-vrouter/values.yaml), that document all possible settings that can be configured when deploying XRd on K8s. There is also an `xrd-eks` helm repo, with EKS-specific charts derived from the `xrd-helm` repo.
 
-Let's start by adding the xrd-eks helm repository to our current namespace.
+To modify the deployment, let's start by adding the xrd-eks helm repository to our current namespace.
 
 ```
 tadeshpa@TADESHPA-M-F92B ~/xrd-eks (main) [1]> helm repo add xrd-eks https://ios-xr.github.io/xrd-eks
