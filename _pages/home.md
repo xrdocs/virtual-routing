@@ -50,7 +50,7 @@ published: true
             <a href="{{ base_path }}/tutorials/2022-12-08-getting-started-with-xrd-on-aws/"><img src="{{ base_path  }}/images/aws-eks-logo.png" alt="" /></a>
           </div>
         <div class="archive__item-body">
-            <h2 class="archive__item-title"><a href="{{ base_path }}/tutorials/2022-12-08-getting-started-with-xrd-on-aws/">Deploy XRd on AWS</a></h2>
+            <h2 class="archive__item-title"><a href="{{ base_path }}/tutorials/2022-12-08-getting-started-with-xrd-on-aws/">XRd on AWS</a></h2>
             <div class="archive__item-excerpt" style="font-size: 0.65em;">
               <p>Launch XRd on AWS, by deploying XRd on an EKS cluster</p>
             </div>
