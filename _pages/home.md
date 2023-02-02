@@ -54,7 +54,7 @@ published: true
             <div class="archive__item-excerpt" style="font-size: 0.65em;">
               <p>Launch XRd on AWS, by deploying XRd on an EKS cluster</p>
             </div>
-          <p><a href="{{ base_path }}/tutorials/2022-12-08-deploy-xrd-on-aws/" class="btn ">Take a Look</a></p>
+          <p><a href="{{ base_path }}/tutorials/2022-12-08-getting-started-with-xrd-on-aws/" class="btn ">Take a Look</a></p>
         </div>
       </div>
     </div>
