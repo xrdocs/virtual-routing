@@ -24,7 +24,7 @@ tags:
 {% include toc %}
 
 * This is Part-3 of the [XRd tutorials Series]({{base_path}}/tags/#xrd-tutorial-series).   
-* Skip to Part-4 here: [User Interface and Knobs for XRd]({{base_path}}/tutorials/022-08-25-user-interface-and-knobs-for-xrd).    
+* Skip to Part-4 here: [User Interface and Knobs for XRd]({{base_path}}/tutorials/2022-08-25-user-interface-and-knobs-for-xrd).    
 * Re-read Part-2 here: [Helper Tools to get started with XRd]({{base_path}}/tutorials/2022-08-22-helper-tools-to-get-started-with-xrd/)
 
 
