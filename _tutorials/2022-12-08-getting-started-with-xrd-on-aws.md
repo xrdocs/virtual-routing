@@ -668,5 +668,5 @@ It will ask us form confirmation, and then begin to delete all of the AWS resour
 
 ![confirm-delete-stack]({{site.baseurl}}/images/confirm-delete-stack.png)
 
-There you have it! In this tutorial, we learned how to deploy an XRd topology on EKS. To build an XRd topology specific to your own use case, you can use the *atomic* and *composite* building blocks, to create a new *application* cloudformation template.
+There you have it! In this tutorial, we learned how to deploy an XRd topology on EKS. You can continue to play around with XRd on AWS by using *atomic* and *composite* building blocks to create a new *application* cloudformation template, and you can create new helm charts based on the existing charts in the xrd-eks helm repo.
 {: .notice--success}
