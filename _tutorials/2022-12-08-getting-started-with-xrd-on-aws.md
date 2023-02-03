@@ -85,7 +85,7 @@ Now if we check our ECR Repositories list on the AWS console, we can see that an
 ![ECR]({{site.baseurl}}/images/ecr-upload.jpeg)
 
 ## Cloudformation Templates and AMI Assets
-In the [XRd on AWS EKS](https://github.com/ios-xr/xrd-eks) github repository, a number of Cloudformation templates are provided to assist with deploying XRd on EKS. 
+In the [XRd on AWS EKS](https://github.com/ios-xr/xrd-eks) github repository, a number of Cloudformation templates are provided as building blocks for bringing up and experimenting with XRd (_these templates are provided as open-source artifacts without cisco support_).
 
 There are three types of templates included in the github repository:
 
