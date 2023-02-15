@@ -38,14 +38,33 @@ We will need the a XRd vRouter image release 7.8.1 or later. The steps to do thi
 Clone the [XRd on AWS EKS](https://github.com/ios-xr/xrd-eks) repository for access to cloudformation templates and sample scripts that we will use in this deployment.
 
 ```bash
-tadeshpa@TADESHPA-M-F92B ~> git clone https://github.com/ios-xr/xrd-eks.git
+tadeshpa@TADESHPA-M-F92B ~> git clone --recurse-submodules https://github.com/ios-xr/xrd-eks.git
 Cloning into 'xrd-eks'...
-remote: Enumerating objects: 87, done.
-remote: Counting objects: 100% (87/87), done.
-remote: Compressing objects: 100% (61/61), done.
-remote: Total 87 (delta 16), reused 86 (delta 15), pack-reused 0
-Receiving objects: 100% (87/87), 75.09 KiB | 1.79 MiB/s, done.
-Resolving deltas: 100% (16/16), done.
+remote: Enumerating objects: 177, done.
+remote: Counting objects: 100% (177/177), done.
+remote: Compressing objects: 100% (115/115), done.
+remote: Total 177 (delta 73), reused 135 (delta 48), pack-reused 0
+Receiving objects: 100% (177/177), 105.08 KiB | 2.39 MiB/s, done.
+Resolving deltas: 100% (73/73), done.
+Submodule 'submodules/quickstart-amazon-eks' (https://github.com/aws-quickstart/quickstart-amazon-eks.git) registered for path 'submodules/quickstart-amazon-eks'
+Submodule 'submodules/quickstart-aws-vpc' (https://github.com/aws-quickstart/quickstart-aws-vpc.git) registered for path 'submodules/quickstart-aws-vpc'
+Cloning into '/Users/matgreen/test/xrd-eks/submodules/quickstart-amazon-eks'...
+remote: Enumerating objects: 6870, done.
+remote: Counting objects: 100% (6870/6870), done.
+remote: Compressing objects: 100% (2240/2240), done.
+remote: Total 6870 (delta 4288), reused 6748 (delta 4196), pack-reused 0
+Receiving objects: 100% (6870/6870), 430.56 MiB | 8.02 MiB/s, done.
+Resolving deltas: 100% (4288/4288), done.
+Cloning into '/Users/matgreen/test/xrd-eks/submodules/quickstart-aws-vpc'...
+remote: Enumerating objects: 1118, done.
+remote: Counting objects: 100% (432/432), done.
+remote: Compressing objects: 100% (195/195), done.
+remote: Total 1118 (delta 233), reused 406 (delta 223), pack-reused 686
+Receiving objects: 100% (1118/1118), 1.26 MiB | 6.80 MiB/s, done.
+Resolving deltas: 100% (654/654), done.
+Submodule path 'submodules/quickstart-amazon-eks': checked out 'cfa2cfa3bfd218195230cb1fc1ad488055563ef2'
+<snip>
+Submodule path 'submodules/quickstart-aws-vpc': checked out '9dc47510f71f1fb6baf8c4e96b5330a6f51f540e'
 ```
 From this repository, we will directly use three scripts for the tutorial:
 * `publish-ecr` - Places XRd container images in a container registry on AWS
@@ -132,7 +151,7 @@ In addition to the cloudformation templates, we will also place the [ami assets]
 The XRd vRouter also requires an interface driver to be loaded in the underlying OS's kernel. When running on AWS EKS, this interface driver must support write combining as described in the [DPDK documentation](https://doc.dpdk.org/guides/nics/ena.html#prerequisites). XRd has been validated using the `igb_uio` interface driver from DPDK 19.11.12 LTS, and building and loading this module is done as a part of a [script](https://github.com/ios-xr/xrd-eks/blob/main/ami_assets/etc/xrd/xrd-vrouter-build-ami.sh) included in the AMI assets.
 
 ## Publishing S3 Bucket
-The script `publish-s3-bucket.sh` automates the process of creating the bucket and uploading the relevant resources.
+The script `publish-s3-bucket` automates the process of creating the bucket and uploading the relevant resources.
 
 ```bash
 tadeshpa@TADESHPA-M-F92B ~/xrd-eks (main) [254]> ./publish-s3-bucket
