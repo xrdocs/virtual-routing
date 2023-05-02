@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 date: '2023-05-02 16:43 -0700'
 title: XRd on Openshift
 author: Taran Deshpande
