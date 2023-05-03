@@ -5,19 +5,19 @@ title: XRd on Openshift
 author: Taran Deshpande
 position: hidden
 ---
-## Introduction
+# Introduction
 
-## Tuning the Worker Node
+# Tuning the Worker Node
 
-### Host Check
+## Host Check
 
-### Machine Config
+## Machine Config
 
-### TuneD
+## TuneD
 
-### Performance Profile
+## Performance Profile
 
-## Deploy XRd Control Plane
+# Deploy XRd Control Plane
 
 
 
