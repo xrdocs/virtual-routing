@@ -113,8 +113,102 @@ XR platforms NOT supported: xrd-vrouter
 
 ## Machine Config
 
+We will use the [Machine Config Operator](https://docs.openshift.com/container-platform/4.12/post_installation_configuration/machine-configuration-tasks.html) to set the Inotify max user watches and Inotify max user instances settings. 
+
+<p class="codeblock-label">sysctl_mc.yaml</p>
+```yaml
+apiVersion: machineconfiguration.openshift.io/v1
+kind: MachineConfig
+metadata:
+  labels:
+    machineconfiguration.openshift.io/role: master
+  name: 99-master-sysctl-inotify-override-iosxr
+spec:
+  config:
+    ignition:
+      config: {}
+      security:
+        tls: {}
+      timeouts: {}
+      version: 3.2.0
+    networkd: {}
+    passwd: {}
+    storage:
+      files:
+       - contents:
+           source: data:,%0Afs.inotify.max_user_watches%20%3D%2065536%0Afs.inotify.max_user_instances%20%3D%2064000%0A
+         mode: 420
+         overwrite: true
+         path: /etc/sysctl.d/inotify.conf
+```
+
+Apply the configuration with: `oc apply -f sysctl_mc.yaml`
 ## TuneD
+The [node tuning operator](https://docs.openshift.com/container-platform/4.12/scalability_and_performance/using-node-tuning-operator.html) sets up some kernel parameters and tuning options to help XRd achieve high performance.
 
+<p class="codeblock-label">tuned.yaml</p>
+```yaml
+apiVersion: tuned.openshift.io/v1
+kind: Tuned
+metadata:
+  name: sysctl-updates-iosxr
+  namespace: openshift-cluster-node-tuning-operator
+spec:
+  profile:
+  - data: |
+      [main]
+      summary=A custom profile for Cisco xrd
+      include=openshift-node-performance-iosxr-performanceprofile
+      [sysctl]
+      net.ipv4.ip_local_port_range="1024 65535"
+      net.ipv4.tcp_tw_reuse=1
+      fs.inotify.max_user_instances=64000
+      fs.inotify.max_user_watches=64000
+      kernel.randomize_va_space=2
+      net.core.rmem_max=67108864
+      net.core.wmem_max=67108864
+      net.core.rmem_default=67108864
+      net.core.wmem_default=67108864
+      net.core.netdev_max_backlog=300000
+      net.core.optmem_max=67108864
+      net.ipv4.udp_mem="1124736 10000000 67108864"
+    name: cisco-xrd
+  recommend:
+  - machineConfigLabels:
+      machineconfiguration.openshift.io/role: master
+    priority: 10
+    profile: cisco-xrd
+    ```
+    
+Apply the configuration with: `oc apply -f tuned.yaml`
 ## Performance Profile
+Create a Performance Profile to set the number of desired Hugepages and reserved CPUs. HugePages of size 1GiB must be enabled with a total of 3GiB of available HugePages RAM for each XRd vRouter. Remember to enable Hugepages for each NUMA node that will be running XRd.
 
+<p class="codeblock-label">pao.yaml</p>
+```yaml
+apiVersion: performance.openshift.io/v2
+kind: PerformanceProfile
+metadata:
+  name: iosxr-performanceprofile
+spec:
+  additionalKernelArgs:
+  cpu:
+    isolated: 4-39
+    reserved: 0-3
+  hugepages:
+    defaultHugepagesSize: 1G
+    pages:
+      - count: 32
+        node: 0
+        size: 1G
+      - count: 32
+        node: 1
+        size: 1G
+  nodeSelector:
+    node-role.kubernetes.io/master: ''
+  realTimeKernel:
+    enabled: false
+```
+
+Apply the configuration with: `oc apply -f pao.yaml`
 # Deploy XRd Control Plane
