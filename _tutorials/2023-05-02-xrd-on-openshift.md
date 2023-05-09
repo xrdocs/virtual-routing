@@ -178,7 +178,7 @@ spec:
       machineconfiguration.openshift.io/role: master
     priority: 10
     profile: cisco-xrd
-    ```
+```
     
 Apply the configuration with: `oc apply -f tuned.yaml`
 ## Performance Profile
