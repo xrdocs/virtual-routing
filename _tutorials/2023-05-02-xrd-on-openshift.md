@@ -8,7 +8,8 @@ position: hidden
 # Introduction
 
 # Tuning the Worker Node
-In our previous [tutorial](https://xrdocs.io/virtual-routing/tutorials/2022-08-22-setting-up-host-environment-to-run-xrd/), we outlined the host requirements of running XRd and configured a Ubuntu 20.04 host machine. To deploy XRd on Openshift, each worker node must meet these host requirements. 
+In our previous [tutorial](https://xrdocs.io/virtual-routing/tutorials/2022-08-22-setting-up-host-environment-to-run-xrd/), we outlined the host requirements of running XRd and configured a Ubuntu 20.04 host machine. To deploy XRd on Openshift, each worker node must meet these host requirements. In this tutorial, I've done a single-node install on a UCS C220 M5, so there is only one worker node.
+
 ## Host Check
 The [host check script](https://github.com/ios-xr/xrd-tools/blob/main/scripts/host-check) will run on a pod instead of as a script directly on the worker node.
 
@@ -182,7 +183,7 @@ spec:
     
 Apply the configuration with: `oc apply -f tuned.yaml`
 ## Performance Profile
-Create a Performance Profile to set the number of desired Hugepages and reserved CPUs. HugePages of size 1GiB must be enabled with a total of 3GiB of available HugePages RAM for each XRd vRouter. Remember to enable Hugepages for each NUMA node that will be running XRd.
+Create a Performance Profile to set the number of desired Hugepages as well as reserved and isolated CPUs. HugePages of size 1GiB must be enabled with a total of 3GiB of available HugePages RAM for each XRd vRouter. Remember to enable Hugepages for each NUMA node that will be running XRd. The isolated CPUs are ones that will be available to be pinned to specific XRd workloads.
 
 <p class="codeblock-label">pao.yaml</p>
 ```yaml
@@ -193,7 +194,7 @@ metadata:
 spec:
   additionalKernelArgs:
   cpu:
-    isolated: 4-39
+    isolated: 4-79
     reserved: 0-3
   hugepages:
     defaultHugepagesSize: 1G
@@ -211,4 +212,30 @@ spec:
 ```
 
 Apply the configuration with: `oc apply -f pao.yaml`
-# Deploy XRd Control Plane
+
+## Load PCI driver
+The vfio-pci driver must be loaded for the XRd vRouter to use PCI passthrough. Creating just one VF will load the vfio-pci driver on the worker node. In this example, we have an Intel X710 NIC, and this is reflected in the nicSelector field with relevant vendor, deviceID, pfNames, and rootDevices values. 
+<p class="codeblock-label">intel-dpdk-node-policy.yaml</p>
+```yaml
+apiVersion: sriovnetwork.openshift.io/v1
+kind: SriovNetworkNodePolicy
+metadata:
+  name: intel-dpdk-node-policy
+  namespace: openshift-sriov-network-operator
+spec:
+  resourceName: intelnics
+  nodeSelector:
+    feature.node.kubernetes.io/network-sriov.capable: "true"
+  priority: 0
+  numVfs: 1
+  nicSelector:
+    vendor: "8086"
+    deviceID: "1572"
+    pfNames: ["ens1f1"]
+    rootDevices: ["0000:5e:00.1"]
+  deviceType: vfio-pci 
+  ```
+  
+  We will create this NetworkNode Policy with: `oc create -f intel-dpdk-node-policy.yaml`
+  
+# Deploy XRd vRouter
