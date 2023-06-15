@@ -239,3 +239,101 @@ spec:
   We will create this NetworkNode Policy with: `oc create -f intel-dpdk-node-policy.yaml`
   
 # Deploy XRd vRouter
+
+## Add Helm Repository
+[Helm](helm.sh) is a package manager for kubernetes, and there is a public [helm repo](https://ios-xr.github.io/xrd-helm/) for XRd, with [charts](https://github.com/ios-xr/xrd-helm/tree/main/charts) that can deploy a single instance of either the XRd Control-Plane or vRouter. The [value files](https://github.com/ios-xr/xrd-helm/blob/main/charts/xrd-vrouter/values.yaml) present in the repo document all possible settings that can be configured when deploying XRd on K8s.
+
+To add the helm repo:
+```
+tadeshpa@TADESHPA-M-F92B ~/openshift> helm repo add xrd https://ios-xr.github.io/xrd-helm
+```
+
+And now we can see the charts that under the xrd repo:
+```
+tadeshpa@TADESHPA-M-F92B ~/openshift> helm search repo xrd/
+NAME                    CHART VERSION   APP VERSION     DESCRIPTION                                  
+xrd/xrd-common          1.0.2                           Common helpers for Cisco IOS-XR XRd platforms
+xrd/xrd-control-plane   1.0.2                           Cisco IOS-XR XRd Control Plane platform      
+xrd/xrd-vrouter         1.0.2                           Cisco IOS-XR XRd vRouter platform
+```
+
+## Deploy a single instance of XRd vRouter
+
+Now let's deploy a single instance of the XRd vRouter attached to one PCI interface. Make sure the XRd vrouter is hosted on a container repository and accessible from the host. We are binding it to the NIC with PCI address 5e:00.1, and we are pinning cpus 5 and 6 for XRd. We will create our own custom values file that describes this.
+
+values.yaml
+```yaml
+config:
+  ascii: |
+    hostname xrd1
+  username: cisco
+  password: cisco123
+  scriptEveryBoot: false
+  ztpEnable: false
+cpu:
+  cpuset: 5-6
+hostNetwork: false
+image:
+  pullPolicy: Always
+  repository: <your-container-repository>
+  tag: <your-container-tag>
+interfaces:
+- config:
+    device: 5e:00.1
+  type: pci
+```
+
+Now to launch:
+```
+tadeshpa@TADESHPA-M-F92B ~/openshift [1]> helm install xrd-single xrd/xrd-vrouter -f values.yaml
+NAME: xrd-single
+LAST DEPLOYED: Wed Jun 14 17:14:52 2023
+NAMESPACE: openshift
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+NOTES:
+You have installed XRd vRouter version 7.8.1.
+```
+
+After a few mins we can see that our pod has launched:
+```
+tadeshpa@TADESHPA-M-F92B ~/openshift> oc get pods
+NAME                               READY   STATUS              RESTARTS   AGE
+xrd-single-xrd-vrouter-0           1/1     Running             0          2m4s
+```
+
+And we can also view the syslogs:
+```
+tadeshpa@TADESHPA-M-F92B ~/openshift> oc logs xrd-single-xrd-vrouter-0
+CPU assignments
+  available cpuset: node0 0-19,40-59, node1 20-39,60-79
+  control-plane cpuset: 5
+  dataplane main cpuset: 5 (tune enabled)
+  dataplane packet cpuset: 6 (rx:- tx:- wk:6)
+Hugepage assignment (per NUMA node): node0 3072M, node1 0M
+Using interfaces: pci:5e:00.1
+systemd 230 running in system mode. (+PAM +AUDIT +SELINUX +IMA -APPARMOR +SMACK +SYSVINIT +UTMP -LIBCRYPTSETUP -GCRYPT -GNUTLS +ACL +XZ -LZ4 -SECCOMP +BLKID -ELFUTILS +KMOD -IDN)
+Detected virtualization container-other.
+Detected architecture x86-64.
+
+Welcome to Cisco XR (Base Distro SELinux and CGL) 9.0.0.26!
+```
+
+To exec into the xr shell of the pod:
+```
+tadeshpa@TADESHPA-M-F92B ~/openshift> oc exec -it xrd-single-xrd-vrouter-0 -- xr
+
+User Access Verification
+
+Username: cisco
+Password: 
+
+
+RP/0/RP0/CPU0:xrd1#sh ip int brie
+Thu Jun 15 00:19:21.901 UTC
+
+Interface                      IP-Address      Status          Protocol Vrf-Name
+TenGigE0/0/0/0                 unassigned      Shutdown        Down     default 
+RP/0/RP0/CPU0:xrd1#
+```
