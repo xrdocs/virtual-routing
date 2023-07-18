@@ -111,6 +111,73 @@ XR platforms supported: xrd-control-plane
 XR platforms NOT supported: xrd-vrouter
 ==================================================================
 ```
+## Performance Profile
+Create a Performance Profile to set the number of desired Hugepages as well as reserved and isolated CPUs. HugePages of size 1GiB must be enabled with a total of 3GiB of available HugePages RAM for each XRd vRouter. Remember to enable Hugepages for each NUMA node that will be running XRd. The isolated CPUs are ones that will be available to be pinned to specific XRd workloads.
+
+<p class="codeblock-label">pao.yaml</p>
+```yaml
+apiVersion: performance.openshift.io/v2
+kind: PerformanceProfile
+metadata:
+  name: iosxr-performanceprofile
+spec:
+  additionalKernelArgs:
+  cpu:
+    isolated: 4-79
+    reserved: 0-3
+  hugepages:
+    defaultHugepagesSize: 1G
+    pages:
+      - count: 32
+        node: 0
+        size: 1G
+      - count: 32
+        node: 1
+        size: 1G
+  nodeSelector:
+    node-role.kubernetes.io/master: ''
+  realTimeKernel:
+    enabled: false
+```
+
+Apply the configuration with: `oc apply -f pao.yaml`
+
+## TuneD
+The [node tuning operator](https://docs.openshift.com/container-platform/4.12/scalability_and_performance/using-node-tuning-operator.html) sets up some kernel parameters and tuning options to help XRd achieve high performance.
+
+<p class="codeblock-label">tuned.yaml</p>
+```yaml
+apiVersion: tuned.openshift.io/v1
+kind: Tuned
+metadata:
+  name: sysctl-updates-iosxr
+  namespace: openshift-cluster-node-tuning-operator
+spec:
+  profile:
+  - data: |
+      [main]
+      summary=A custom profile for Cisco xrd
+      include=openshift-node-performance-iosxr-performanceprofile
+      [sysctl]
+      net.ipv4.ip_local_port_range="1024 65535"
+      net.ipv4.tcp_tw_reuse=1
+      kernel.randomize_va_space=2
+      net.core.rmem_max=67108864
+      net.core.wmem_max=67108864
+      net.core.rmem_default=67108864
+      net.core.wmem_default=67108864
+      net.core.netdev_max_backlog=300000
+      net.core.optmem_max=67108864
+      net.ipv4.udp_mem="1124736 10000000 67108864"
+    name: cisco-xrd
+  recommend:
+  - machineConfigLabels:
+      machineconfiguration.openshift.io/role: master
+    priority: 10
+    profile: cisco-xrd
+```
+    
+Apply the configuration with: `oc apply -f tuned.yaml`
 
 ## Machine Config
 
@@ -144,74 +211,6 @@ spec:
 ```
 
 Apply the configuration with: `oc apply -f sysctl_mc.yaml`
-## TuneD
-The [node tuning operator](https://docs.openshift.com/container-platform/4.12/scalability_and_performance/using-node-tuning-operator.html) sets up some kernel parameters and tuning options to help XRd achieve high performance.
-
-<p class="codeblock-label">tuned.yaml</p>
-```yaml
-apiVersion: tuned.openshift.io/v1
-kind: Tuned
-metadata:
-  name: sysctl-updates-iosxr
-  namespace: openshift-cluster-node-tuning-operator
-spec:
-  profile:
-  - data: |
-      [main]
-      summary=A custom profile for Cisco xrd
-      include=openshift-node-performance-iosxr-performanceprofile
-      [sysctl]
-      net.ipv4.ip_local_port_range="1024 65535"
-      net.ipv4.tcp_tw_reuse=1
-      fs.inotify.max_user_instances=64000
-      fs.inotify.max_user_watches=64000
-      kernel.randomize_va_space=2
-      net.core.rmem_max=67108864
-      net.core.wmem_max=67108864
-      net.core.rmem_default=67108864
-      net.core.wmem_default=67108864
-      net.core.netdev_max_backlog=300000
-      net.core.optmem_max=67108864
-      net.ipv4.udp_mem="1124736 10000000 67108864"
-    name: cisco-xrd
-  recommend:
-  - machineConfigLabels:
-      machineconfiguration.openshift.io/role: master
-    priority: 10
-    profile: cisco-xrd
-```
-    
-Apply the configuration with: `oc apply -f tuned.yaml`
-## Performance Profile
-Create a Performance Profile to set the number of desired Hugepages as well as reserved and isolated CPUs. HugePages of size 1GiB must be enabled with a total of 3GiB of available HugePages RAM for each XRd vRouter. Remember to enable Hugepages for each NUMA node that will be running XRd. The isolated CPUs are ones that will be available to be pinned to specific XRd workloads.
-
-<p class="codeblock-label">pao.yaml</p>
-```yaml
-apiVersion: performance.openshift.io/v2
-kind: PerformanceProfile
-metadata:
-  name: iosxr-performanceprofile
-spec:
-  additionalKernelArgs:
-  cpu:
-    isolated: 4-79
-    reserved: 0-3
-  hugepages:
-    defaultHugepagesSize: 1G
-    pages:
-      - count: 32
-        node: 0
-        size: 1G
-      - count: 32
-        node: 1
-        size: 1G
-  nodeSelector:
-    node-role.kubernetes.io/master: ''
-  realTimeKernel:
-    enabled: false
-```
-
-Apply the configuration with: `oc apply -f pao.yaml`
 
 ## Load PCI driver
 The vfio-pci driver must be loaded for the XRd vRouter to use PCI passthrough. Creating just one VF will load the vfio-pci driver on the worker node. In this example, we have an Intel X710 NIC, and this is reflected in the nicSelector field with relevant vendor, deviceID, pfNames, and rootDevices values. 
