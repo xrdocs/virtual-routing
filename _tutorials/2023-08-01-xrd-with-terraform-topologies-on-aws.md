@@ -3,6 +3,8 @@ published: true
 date: '2023-08-01 17:02 -0700'
 title: 'XRd with Terraform: Topologies on AWS'
 position: hidden
+author: Taran Deshpande
+excerpt: Learn how to deploy XRd workloads on AWS EKS using Terraform
 ---
 **Disclaimer**
 The topologies deployed in the following scenario are intended to be a lab environment for the user to gain familiarity with XRd's integration with AWS. This example will not be sufficient for a production use-case.
@@ -452,4 +454,3 @@ There you have it! In this tutorial, we learned how to deploy an XRd topology on
 
 
 To delete all of the aws resources using terraform
-
