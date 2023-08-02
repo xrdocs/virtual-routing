@@ -12,7 +12,11 @@ The topologies deployed in the following scenario are intended to be a lab envir
 
 # Introduction
 
-With the release of IOS XR 7.8.1, XRd is supported as a Cloud Router and SR-PCE. In this tutorial we will explore how to deploy a topology of XRd cloud routers on Amazon Elastic Kubernetes Service (EKS). In addition to an automated deployment of [XRd on AWS using cloudformation](https://xrdocs.io/virtual-routing/tutorials/2022-12-08-getting-started-with-xrd-on-aws/), we now support deployment using [Terraform](https://www.terraform.io/). 
+With the release of IOS XR 7.8.1, XRd is supported as a Cloud Router and SR-PCE. In this tutorial we will explore how to deploy a topology of XRd cloud routers on Amazon Elastic Kubernetes Service (EKS). In addition to an automated deployment of [XRd on AWS using cloudformation](https://xrdocs.io/virtual-routing/tutorials/2022-12-08-getting-started-with-xrd-on-aws/), we now support deployment using [Terraform](https://www.terraform.io/).
+
+**Note**: The cloudformation [github repository](https://github.com/ios-xr/xrd-eks) is now deprecated and will only support EKS versions up to 1.24.
+{: .notice--warning}
+
 # Prerequisites
 We will need the a XRd vRouter image release 7.8.1 or later. The steps to do this was outlined in a previous [tutorial](https://xrdocs.io/virtual-routing/tutorials/2022-08-22-xrd-images-where-can-one-get-them/). In addition, we will need:
  
@@ -271,7 +275,7 @@ NAME                 READY   STATUS    RESTARTS   AGE     IP           NODE     
 xrd1-xrd-vrouter-0   1/1     Running   0          2m32s   10.0.0.228   ip-10-0-0-10.us-west-2.compute.internal   <none>           <none>
 ```
 ## Modify Deployment using Helm
-[Helm](helm.sh) is a package manager for kubernetes, and we will use it to modify the current deployment. There is a general [helm repo](https://ios-xr.github.io/xrd-helm/) for XRd, with sample [value files](https://github.com/ios-xr/xrd-helm/blob/main/charts/xrd-vrouter/values.yaml), that document all possible settings that can be configured when deploying XRd on K8s. 
+[Helm](https://www.helm.sh/) is a package manager for kubernetes, and we will use it to modify the current deployment. There is a general [helm repo](https://ios-xr.github.io/xrd-helm/) for XRd, with sample [value files](https://github.com/ios-xr/xrd-helm/blob/main/charts/xrd-vrouter/values.yaml), that document all possible settings that can be configured when deploying XRd on K8s. 
 
 To modify the deployment, let's start by adding the xrd-helm repository to our current namespace.
 
@@ -450,7 +454,3 @@ Destroy complete! Resources: 16 destroyed.
 
 There you have it! In this tutorial, we learned how to deploy an XRd topology on EKS using terraform using both the quickstart script and the Terraform workload modules.
 {: .notice--success}
-
-
-
-To delete all of the aws resources using terraform
