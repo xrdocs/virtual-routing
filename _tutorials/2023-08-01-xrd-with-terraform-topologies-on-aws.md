@@ -4,26 +4,24 @@ date: '2023-08-01 17:02 -0700'
 title: 'XRd with Terraform: Topologies on AWS'
 position: hidden
 ---
-# XRd with Terraform: Topologies on AWS
-
 **Disclaimer**
 The topologies deployed in the following scenario are intended to be a lab environment for the user to gain familiarity with XRd's integration with AWS. This example will not be sufficient for a production use-case.
 {: .notice--warning}
 
-## Introduction
+# Introduction
 
 With the release of IOS XR 7.8.1, XRd is supported as a Cloud Router and SR-PCE. In this tutorial we will explore how to deploy a topology of XRd cloud routers on Amazon Elastic Kubernetes Service (EKS). In addition to an automated deployment of [XRd on AWS using cloudformation](https://xrdocs.io/virtual-routing/tutorials/2022-12-08-getting-started-with-xrd-on-aws/), we now support deployment using [Terraform](https://www.terraform.io/). 
-## Prerequisites
+# Prerequisites
 We will need the a XRd vRouter image release 7.8.1 or later. The steps to do this was outlined in a previous [tutorial](https://xrdocs.io/virtual-routing/tutorials/2022-08-22-xrd-images-where-can-one-get-them/). In addition, we will need:
  
  * The [`aws cli`](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) installed and configured on our local machine with account details.
  * [`terraform`](https://www.terraform.io/) 
  * [`helm`](https://www.helm.sh/) 
  * [`docker`](https://www.docker.com/)
- * [`packer`](https://www.packer.io/) - which we will use in the quick start script to build an AMI suitable to host XRd
+ * [`packer`](https://www.packer.io/) - which we will to build an AMI suitable to host XRd
  * [`kubectl`](https://kubernetes.io/docs/reference/kubectl/) to interact with our deployed cluster
 
-Clone the [XRd-Terraform]() github repository for access to terraform modules and sample scripts that we will use in this deployment.
+Clone the [XRd-Terraform](https://github.com/ios-xr/xrd-terraform/) github repository for access to terraform modules and sample scripts that we will use in this deployment.
 
 ```bash
 tadeshpa@TADESHPA-M-F92B ~> git clone https://github.com/ios-xr/xrd-terraform.git
@@ -40,7 +38,7 @@ From this repository, we will directly use two scripts for the tutorial:
 * `publish-ecr` - Places XRd container images in a container registry on AWS
 * `aws-quickstart` - Creates a sample topology in an EKS cluster which includes two XRd pods and two Alpine Linux pods
 
-## Publish XRd Images on Elastic Container Registry
+# Publish XRd Images on Elastic Container Registry
 EKS needs to pull the XRd image from a container image repository which is accessible to AWS. For this, we will create a repository using AWS's ECR (Elastic Container Registry) service and host the XRd images there.
 
 ```bash
@@ -75,7 +73,7 @@ Now if we check our ECR Repositories list on the AWS console, we can see that an
 
 ![ECR-TF]({{site.baseurl}}/images/ECR-tf.png)
 
-## Quick Start Deployment
+# Quick Start Deployment
 
 The `aws-quickstart` script will create all of the required AWS required resources, such as the VPC, EKS Cluster, and EC2 Worker nodes, and then it will deploy an XRd topology. This topology includes two routers connected via an overlay constructed using GRE, IS-IS and L3VPN. Each router is also connected to an alpine linux container workload emulating a NF in an isolated VRF.
 
@@ -86,7 +84,7 @@ Run the script and pass desired XRd login credentials as parameters:
 ```
 tadeshpa@TADESHPA-M-F92B ~/xrd-terraform (main)> ./aws-quickstart -u cisco -p cisco123
 ```
-### Custom AMI to run XRd
+## Custom AMI to run XRd
 In addition to creating the necessary AWS resources to run XRd in an EKS cluster, the quickstart script will automatically create an AMI that tuned to run XRd with optimal performance. This is done using [XRd Packer templates](https://github.com/ios-xr/xrd-packer).
 
 This AMI is an Amazon Linux 2 instance with modifications made to several OS-level settings so that the XRd vRouter can maximize performance. This is accomplished by using the tool [TuneD](https://tuned-project.org/) to:
@@ -100,8 +98,8 @@ If we navigate to the EC2 AMIs section in the AWS console, we will see that the 
 
 ![XRd AMI]({{site.baseurl}}/images/XRD-AMI.png)
 
-### Access XRd Deployment
-If we navigate to the EC2 Instances page of the AWS Console, we can see that four new instances have been created. The bastion host, alpha and beta which are hosting.
+## Access XRd Deployment
+If we navigate to the EC2 Instances page of the AWS Console, we can see that four new instances have been created. The bastion host, alpha and beta which are hosting XRd workloads, and gamma which is hosting Alpine Linux workloads.
 
 ![XRd-ec2]({{site.baseurl}}/images/XRd-ec2.png)
 
@@ -162,7 +160,7 @@ traceroute to 10.0.4.10 (10.0.4.10), 30 hops max, 46 byte packets
  3  ip-10-0-4-10.us-west-2.compute.internal (10.0.4.10)  0.624 ms  0.565 ms  0.867 ms
 ```
 
-### Tear Down the Deployment
+## Tear Down the Deployment
 
 Finally, we can use the quickstart script to delete all of the AWS resources that we created:
 
@@ -170,11 +168,11 @@ Finally, we can use the quickstart script to delete all of the AWS resources tha
 tadeshpa@TADESHPA-M-F92B ~/xrd-terraform (main)> ./aws-quickstart --destroy
 ```
 
-## Terraform Module Deployment
+# Terraform Module Deployment
 
 Let's walk through an example where we create the infrastructure EKS cluster v1.26 using Terraform, and then update our XRd deployment using helm.
 
-### Create XRd suitable AMI for Kubernetes v1.26
+## Create XRd suitable AMI for Kubernetes v1.26
 The quickstart script automatically created an AMI suitable for running XRd, but for version 1.26. The [XRd Packer Modules](https://github.com/ios-xr/xrd-packer) contains resources that can build XRd AMIs for different EKS versions.
 
 Begin by cloning the repository:
@@ -270,7 +268,7 @@ tadeshpa@TADESHPA-M-F92B ~/xrd-terraform (main)> kubectl get pods -o wide
 NAME                 READY   STATUS    RESTARTS   AGE     IP           NODE                                      NOMINATED NODE   READINESS GATES
 xrd1-xrd-vrouter-0   1/1     Running   0          2m32s   10.0.0.228   ip-10-0-0-10.us-west-2.compute.internal   <none>           <none>
 ```
-### Modify Deployment using Helm
+## Modify Deployment using Helm
 [Helm](helm.sh) is a package manager for kubernetes, and we will use it to modify the current deployment. There is a general [helm repo](https://ios-xr.github.io/xrd-helm/) for XRd, with sample [value files](https://github.com/ios-xr/xrd-helm/blob/main/charts/xrd-vrouter/values.yaml), that document all possible settings that can be configured when deploying XRd on K8s. 
 
 To modify the deployment, let's start by adding the xrd-helm repository to our current namespace.
@@ -414,7 +412,44 @@ Password:
 RP/0/RP0/CPU0:xrd1#
 ```
 
-### Teardown Resources Using Terraform
+## Teardown Resources Using Terraform
+
+To delete all of the aws resources using terraform we will call the same modules that were used to bring up the topology, but in reverse order.
+
+**Note**: It is recommended to pass the same configuration to terraform destroy as were passed to terraform apply: this ensures that any mandatory arguments are set (even if their values don't matter) and means that any automatic inference of values is the same (e.g. automatically picking up XRd Packer AMIs at the correct cluster version, which will fail of no such image is present even in destroy mode)
+{: .notice--warning}
+
+```
+tadeshpa@TADESHPA-M-F92B ~/xrd-terraform (main) [SIGTERM]> terraform -chdir=examples/workload/singleton destroy -var cluster_version=1.26
+var.xr_root_password
+  Root user password to use on XRd instances.
+
+  Enter a value: cisco123
+
+var.xr_root_user
+  Root user name to use on XRd instances.
+
+  Enter a value: cisco
+...
+Destroy complete! Resources: 11 destroyed.
+```
+
+```
+tadeshpa@TADESHPA-M-F92B ~/xrd-terraform (main)> terraform -chdir=examples/infra/eks-setup destroy
+...
+Destroy complete! Resources: 24 destroyed.
+```
+
+```
+tadeshpa@TADESHPA-M-F92B ~/xrd-terraform (main)> terraform -chdir=examples/infra/eks-cluster destroy
+...
+Destroy complete! Resources: 16 destroyed.
+```
+
+There you have it! In this tutorial, we learned how to deploy an XRd topology on EKS using terraform using both the quickstart script and the Terraform workload modules.
+{: .notice--success}
+
+
 
 To delete all of the aws resources using terraform
 
