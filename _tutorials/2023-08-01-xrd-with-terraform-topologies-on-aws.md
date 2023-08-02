@@ -172,10 +172,10 @@ tadeshpa@TADESHPA-M-F92B ~/xrd-terraform (main)> ./aws-quickstart --destroy
 
 # Terraform Module Deployment
 
-Let's walk through an example where we create the infrastructure EKS cluster v1.26 using Terraform, and then update our XRd deployment using helm.
+Let's walk through an example where we deploy a Singleton XRd workload on an EKS cluster v1.26 using Terraform, and then update our XRd deployment using helm.
 
 ## Create XRd suitable AMI for Kubernetes v1.26
-The quickstart script automatically created an AMI suitable for running XRd, but for version 1.26. The [XRd Packer Modules](https://github.com/ios-xr/xrd-packer) contains resources that can build XRd AMIs for different EKS versions.
+The quickstart script automatically created an AMI suitable for running XRd, but for version 1.27. If we want to create an AMI for version 1.26, we can use the [XRd Packer Modules](https://github.com/ios-xr/xrd-packer), as it contains resources that can build XRd AMIs for different EKS versions.
 
 Begin by cloning the repository:
 
@@ -210,7 +210,7 @@ Next, we can create a basic EKS cluster:
 
 ```
 terraform -chdir=examples/infra/eks-cluster init
-terraform -chdir=examples/infra/eks-cluster apply
+terraform -chdir=examples/infra/eks-cluster apply -var cluster_version=1.26
 ...
 module.eks.aws_eks_cluster.this: Creation complete after 9m21s [id=xrd-cluster]
 
@@ -221,9 +221,9 @@ Outputs:
 cluster_name = "xrd-cluster"
 ```
 
-After 9 minutes, our cluster was created.
+It was created fairly quickly - in only nine minutes.
 
-Now let's run the eks-setup module to make the EKS cluster suitable to run an XRd workload:
+Now let's run the eks-setup module to make our EKS cluster suitable to run an XRd workload:
 
 ```
 terraform -chdir=examples/infra/eks-setup init
@@ -357,7 +357,7 @@ resources:
     memory: 8Gi
 ```
 
-Here we can see the XR configuration, the host resource allocation, and image and credentials are defined. 
+Here we can see the XR configuration, the host resource allocation, container image, and credentials are defined.
 
 Let's make a simple change to our current deployment by updating the username and password. To do this, we will create a new YAML file `update.yaml`. We also set the `asciiEveryBoot` flag to ensure that our XR config is updated upon the reboot of our XRd workload.
 
