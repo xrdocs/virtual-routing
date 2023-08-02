@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 date: '2023-08-01 17:02 -0700'
 title: 'XRd with Terraform: Topologies on AWS'
 position: hidden
