@@ -235,7 +235,7 @@ Apply complete! Resources: 24 added, 0 changed, 0 destroyed.
 Finally, let's deploy a singleton workload on top of our cluster, using cluster version 1.26. We will be prompted to set the XR root username and password.
 
 ```
-terraform -chdir=examples/workload/singleton init
+tadeshpa@TADESHPA-M-F92B ~/xrd-terraform (main)> terraform -chdir=examples/workload/singleton init
 tadeshpa@TADESHPA-M-F92B ~/xrd-terraform (main)> terraform -chdir=examples/workload/singleton apply -var cluster_version=1.26 
 var.xr_root_password
   Root user password to use on XRd instances.
