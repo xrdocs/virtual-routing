@@ -6,6 +6,8 @@ position: hidden
 author: Taran Deshpande
 excerpt: Learn how to deploy XRd workloads on AWS EKS using Terraform
 ---
+{% include toc %}
+
 **Disclaimer**
 The topologies deployed in the following scenario are intended to be a lab environment for the user to gain familiarity with XRd's integration with AWS. This example will not be sufficient for a production use-case.
 {: .notice--warning}
