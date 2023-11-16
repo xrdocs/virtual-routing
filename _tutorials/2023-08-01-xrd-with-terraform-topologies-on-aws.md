@@ -2,7 +2,7 @@
 published: true
 date: '2023-08-01 17:02 -0700'
 title: 'XRd with Terraform: Topologies on AWS'
-position: hidden
+position: top
 author: Taran Deshpande
 excerpt: Learn how to deploy XRd workloads on AWS EKS using Terraform
 ---
