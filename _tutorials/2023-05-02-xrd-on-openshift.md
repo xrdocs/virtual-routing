@@ -3,7 +3,11 @@ published: true
 date: '2023-05-02 16:43 -0700'
 title: XRd on Openshift
 author: Taran Deshpande
+excerpt: Learn how to deploy and interact with XRd running in an Openshift cluster
+position: top
 ---
+{% include base_path %}
+{% include toc %}
 # Introduction
 
 # Tuning the Worker Node
