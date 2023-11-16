@@ -3,7 +3,6 @@ published: true
 date: '2023-05-02 16:43 -0700'
 title: XRd on Openshift
 author: Taran Deshpande
-position: hidden
 ---
 # Introduction
 
@@ -47,7 +46,6 @@ spec:
       name: hostpath-lib-modules
       readOnly: true
   priority: 0
-  # serviceAccountName: iosxr 	TODO: is this required?
   hostNetwork: true
   restartPolicy: Never
   volumes:
@@ -336,3 +334,6 @@ Interface                      IP-Address      Status          Protocol Vrf-Name
 TenGigE0/0/0/0                 unassigned      Shutdown        Down     default 
 RP/0/RP0/CPU0:xrd1#
 ```
+
+There you go! We now have an XRd-vrouter running on an Openshift cluster.
+{: .notice--success}
