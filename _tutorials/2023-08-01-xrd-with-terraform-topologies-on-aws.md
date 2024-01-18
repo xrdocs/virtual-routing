@@ -114,8 +114,8 @@ If we navigate to the EC2 Instances page of the AWS Console, we can see that fou
 Let's update our kubeconfig to view and access our deployed workloads.
 
 ```
-tadeshpa@TADESHPA-M-F92B ~/xrd-terraform (main) [1]> aws eks update-kubeconfig --name xrd-cluster
-Added new context arn:aws:eks:us-west-2:655415053484:cluster/xrd-cluster to /Users/tadeshpa/.kube/config
+tadeshpa@TADESHPA-M-F92B ~/xrd-terraform (main) [1]> aws eks update-kubeconfig --name $(terraform -chdir=examples/overlay/workload output -raw cluster_name)
+Added new context arn:aws:eks:us-west-2:655415053484:cluster/xrd-terraform-5b4dcb3f to /Users/tadeshpa/.kube/config
 ```
 
 Now we can see our running pods:
@@ -212,37 +212,33 @@ And if we navigate to the AMIs page in the AWS console, we can see that this new
 
 ![]({{site.baseurl}}/images/xrd-1.26-ami.png)
 
-Next, we can create a basic EKS cluster:
+Next, we can bootstrap a base EKS v1.26 environment:
 
 ```
-terraform -chdir=examples/infra/eks-cluster init
-terraform -chdir=examples/infra/eks-cluster apply -var cluster_version=1.26
+terraform -chdir=examples/bootstrap init
+terraform -chdir=examples/bootstrap apply -var cluster_version=1.26
 ...
-module.eks.aws_eks_cluster.this: Creation complete after 9m21s [id=xrd-cluster]
-
-Apply complete! Resources: 16 added, 0 changed, 0 destroyed.
-
-Outputs:
-
-cluster_name = "xrd-cluster"
+Apply complete! Resources: 39 added, 0 changed, 0 destroyed.
 ```
 
 It was created fairly quickly - in only nine minutes.
 
-Now let's run the eks-setup module to make our EKS cluster suitable to run an XRd workload:
+Now let's deploy the infrastructure resources necessary for the Singleton XRd workload:
 
 ```
-terraform -chdir=examples/infra/eks-setup init
-terraform -chdir=examples/infra/eks-setup apply
+terraform -chdir=examples/singleton/infra init
+terraform -chdir=examples/singleton/infra apply
 ...
-Apply complete! Resources: 24 added, 0 changed, 0 destroyed.
+Apply complete! Resources: 21 added, 0 changed, 0 destroyed.
 ```
 
-Finally, let's deploy a singleton workload on top of our cluster, using cluster version 1.26. We will be prompted to set the XR root username and password.
+This should take a couple of minutes to complete.
+
+Finally, let's deploy the Singleton workload itself. We will be prompted to set the XR root username and password.
 
 ```
-tadeshpa@TADESHPA-M-F92B ~/xrd-terraform (main)> terraform -chdir=examples/workload/singleton init
-tadeshpa@TADESHPA-M-F92B ~/xrd-terraform (main)> terraform -chdir=examples/workload/singleton apply -var cluster_version=1.26 
+tadeshpa@TADESHPA-M-F92B ~/xrd-terraform (main)> terraform -chdir=examples/singleton/workload init
+tadeshpa@TADESHPA-M-F92B ~/xrd-terraform (main)> terraform -chdir=examples/singleton/workload apply
 var.xr_root_password
   Root user password to use on XRd instances.
 
@@ -252,11 +248,11 @@ var.xr_root_user
   Root user name to use on XRd instances.
 
   Enter a value: cisco
-
-data.aws_caller_identity.current: Reading...
-data.aws_region.current: Reading...
 ...
-Plan: 11 to add, 0 to change, 0 to destroy.
+Plan: 1 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  + cluster_name = "xrd-terraform-112607da"
 
 Do you want to perform these actions?
   Terraform will perform the actions described above.
@@ -264,14 +260,18 @@ Do you want to perform these actions?
 
   Enter a value: yes
 ...
-Apply complete! Resources: 11 added, 0 changed, 0 destroyed.
+Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+cluster_name = "xrd-terraform-112607da"
 ```
 
 Once again, we will need to update our kubeconfig to view and attach to our XRd deployment:
 
 ```
-tadeshpa@TADESHPA-M-F92B ~/xrd-terraform (main) [1]> aws eks update-kubeconfig --name xrd-cluster
-Updated context arn:aws:eks:us-west-2:655415053484:cluster/xrd-cluster in /Users/tadeshpa/.kube/config
+tadeshpa@TADESHPA-M-F92B ~/xrd-terraform (main) [1]> aws eks update-kubeconfig --name $(terraform -chdir=examples/singleton/workload output -raw cluster_name)
+Updated context arn:aws:eks:us-west-2:655415053484:cluster/xrd-terraform-112607da in /Users/tadeshpa/.kube/config
 tadeshpa@TADESHPA-M-F92B ~/xrd-terraform (main)> kubectl get pods -o wide
 NAME                 READY   STATUS    RESTARTS   AGE     IP           NODE                                      NOMINATED NODE   READINESS GATES
 xrd1-xrd-vrouter-0   1/1     Running   0          2m32s   10.0.0.228   ip-10-0-0-10.us-west-2.compute.internal   <none>           <none>
@@ -428,7 +428,7 @@ To delete all of the aws resources using terraform we will call the same modules
 {: .notice--warning}
 
 ```
-tadeshpa@TADESHPA-M-F92B ~/xrd-terraform (main) [SIGTERM]> terraform -chdir=examples/workload/singleton destroy -var cluster_version=1.26
+tadeshpa@TADESHPA-M-F92B ~/xrd-terraform (main) [SIGTERM]> terraform -chdir=examples/singleton/workload destroy
 var.xr_root_password
   Root user password to use on XRd instances.
 
@@ -439,19 +439,19 @@ var.xr_root_user
 
   Enter a value: cisco
 ...
-Destroy complete! Resources: 11 destroyed.
+Destroy complete! Resources: 1 destroyed.
 ```
 
 ```
-tadeshpa@TADESHPA-M-F92B ~/xrd-terraform (main)> terraform -chdir=examples/infra/eks-setup destroy
+tadeshpa@TADESHPA-M-F92B ~/xrd-terraform (main)> terraform -chdir=examples/singleton/infra destroy
 ...
-Destroy complete! Resources: 24 destroyed.
+Destroy complete! Resources: 21 destroyed.
 ```
 
 ```
-tadeshpa@TADESHPA-M-F92B ~/xrd-terraform (main)> terraform -chdir=examples/infra/eks-cluster destroy
+tadeshpa@TADESHPA-M-F92B ~/xrd-terraform (main)> terraform -chdir=examples/bootstrap destroy
 ...
-Destroy complete! Resources: 16 destroyed.
+Destroy complete! Resources: 39 destroyed.
 ```
 
 There you have it! In this tutorial, we learned how to deploy an XRd topology on EKS using terraform using both the quickstart script and the Terraform workload modules.
