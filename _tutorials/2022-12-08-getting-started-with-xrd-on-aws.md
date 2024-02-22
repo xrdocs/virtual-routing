@@ -22,7 +22,7 @@ position: top
 
 **Disclaimer**
 The CloudFormation templates used in this tutorial are now deprecated. Please refer to the [XRd with Terraform](https://xrdocs.io/virtual-routing/tutorials/2023-08-01-xrd-with-terraform-topologies-on-aws/) tutorial instead.
-{: .notice--error}
+{: .notice--warning}
 
 ## Introduction
 
