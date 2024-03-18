@@ -3,7 +3,7 @@ published: true
 date: '2022-12-08 15:34 -0800'
 title: Getting Started with XRd on AWS
 author: Taran Deshpande
-excerpt: Learn how to deploy and interact with XRd running in an EKS cluster
+excerpt: Learn how to deploy and interact with XRd running in an EKS cluster using CloudFormation
 tags:
   - iosxr
   - cisco
@@ -21,7 +21,7 @@ position: top
 {% include toc %}
 
 **Disclaimer**
-The topologies deployed in the following scenario are intended to be a lab environment for the user to gain familiarity with XRd's integration with AWS. This example will not be sufficient for a production use-case.
+The CloudFormation templates used in this tutorial are now deprecated. Please refer to the [XRd with Terraform](https://xrdocs.io/virtual-routing/tutorials/2023-08-01-xrd-with-terraform-topologies-on-aws/) tutorial instead.
 {: .notice--warning}
 
 ## Introduction
