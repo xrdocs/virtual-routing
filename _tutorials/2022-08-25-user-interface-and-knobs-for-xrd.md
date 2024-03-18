@@ -145,7 +145,7 @@ The decoded interface name must not include whitespace, and there is a short-ter
 
   * `snoop_{v4,v6}`: indicate that this interface's address (IPv4 or IPv6 as appropriate) should be snooped and applied as XR config. It is possible to specify any combination of these flags. This is only supported for linux interfaces on XRd Control Plane and management interfaces on XRd vRouter. These flags may not be used with ZTP enabled.
 
-  * `snoop_{v4,v6}_default_route`: indicate that the IPv4 or IPv6 default route for this interface should be snooped. If either/both of these flags are specified, the corresponding snoop_{v4,v6} flags must also be specified, or this will result in an error. The flags can only be specified for at most one interface in total. This is only supported for linux interfaces on XRd Control Plane and management interfaces on XRd vRouter.
+  * `snoop_{v4,v6}_default_route`: indicate that the IPv4 or IPv6 default route for this interface should be snooped. If either/both of these flags are specified, the corresponding `snoop_{v4,v6}` flags must also be specified, or this will result in an error. The flags can only be specified for at most one interface in total. This is only supported for linux interfaces on XRd Control Plane and management interfaces on XRd vRouter.
 
   * `pci_id_filter=<PCI ID>` to filter the list of interfaces by PCI ID, of the form ‘XXXX:XXXX’ with ‘X’ a hexadecimal digit.  This is only supported for the "pci-index" type.
 
