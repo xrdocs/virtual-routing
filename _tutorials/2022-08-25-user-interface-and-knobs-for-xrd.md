@@ -112,7 +112,7 @@ Where:
 
   * pci: An interface identified by PCI address. Note this option is only applicable to data ports on XRd vRouter. Attempting to use this option on XRd Control Plane or in the XR_MGMT_INTERFACES environment variable will result in an error.
 
-  * pci-index: An index within the ordered list of available and supported PCI interfaces, which may be optionally filtered by PCI ID. The index may be positive (forward-indexing) or negative (backward-indexing). Note this option is only applicable to data ports on XRd vRouter. Attempting to use this option on XRd Control Plane or in the XR_MGMT_INTERFACES environment variable will result in an error.  This is supported from IOS-XR version 24.1.1 onwards.
+  * pci-index: An index within the ordered list of available and supported PCI interfaces, which may be optionally filtered by PCI ID. The index may be positive (forward-indexing) or negative (backward-indexing). Note this option is only applicable to data ports on XRd vRouter. Attempting to use this option on XRd Control Plane or in the XR_MGMT_INTERFACES environment variable will result in an error.  **Note**: This is supported from IOS-XR version **24.1.1** onwards.
 
   * pci-range: A range in the ordered list of available and supported PCI interfaces discovered at boot. Only supported for XR_INTERFACES on XRd vRouter. No other PCI interfaces may be specified (by pci/pci-index/pci-range) in addition to this type.
 
