@@ -112,13 +112,17 @@ Where:
 
   * pci: An interface identified by PCI address. Note this option is only applicable to data ports on XRd vRouter. Attempting to use this option on XRd Control Plane or in the XR_MGMT_INTERFACES environment variable will result in an error.
 
-  * pci-range: A range in the ordered list of available and supported PCI interfaces discovered at boot. Only supported for XR_INTERFACES on XRd vRouter. No other PCI interfaces may be specified (by pci/pci-range) in addition to this type.
+  * pci-index: An index within the ordered list of available and supported PCI interfaces, which may be optionally filtered by PCI ID. The index may be positive (forward-indexing) or negative (backward-indexing). Note this option is only applicable to data ports on XRd vRouter. Attempting to use this option on XRd Control Plane or in the XR_MGMT_INTERFACES environment variable will result in an error.  This is supported from IOS-XR version 24.1.1 onwards.
+
+  * pci-range: A range in the ordered list of available and supported PCI interfaces discovered at boot. Only supported for XR_INTERFACES on XRd vRouter. No other PCI interfaces may be specified (by pci/pci-index/pci-range) in addition to this type.
 
 * **Underlying interface identifier** is an identifier corresponding to the specified interface type, respectively:
 
   * The linux interface name for interfaces with type "linux"
 
   * The pci address for interfaces with type "pci"
+
+  * A positive or negative integer N for interfaces with type "pci-index"
 
   * A range description using the keywords "first" or "last" followed by a positive integer N
 
@@ -129,7 +133,7 @@ The decoded interface name must not include whitespace, and there is a short-ter
 {: .notice-info}  
   
   
-* **Optional flag** are comma separated keywords (not supported for "pci-range" type):
+* **Optional flag** are comma separated keywords (not supported for "pci" and "pci-range" type):
 
   * `xr_name=<XR interface name>` to specify an XR interface name to represent this interface
 
@@ -137,11 +141,13 @@ The decoded interface name must not include whitespace, and there is a short-ter
 
     * For the R/S/I/P section, only the port number may be customized - R/S/I must be 0/0/0 for data ports and 0/RP0/CPU0 for management ports
 
-  * chksum: indicate that TCP/UDP checksums need to be calculated by XRd for ingress packets to counteract checksum offload. This is only supported for linux interfaces.
+  * `chksum`: indicate that TCP/UDP checksums need to be calculated by XRd for ingress packets to counteract checksum offload. This is only supported for linux interfaces.
 
-  * snoop_{v4,v6}: indicate that this interface's address (IPv4 or IPv6 as appropriate) should be snooped and applied as XR config. It is possible to specify any combination of these flags. This is only supported for linux interfaces on XRd Control Plane and management interfaces on XRd vRouter. These flags may not be used with ZTP enabled.
+  * `snoop_{v4,v6}`: indicate that this interface's address (IPv4 or IPv6 as appropriate) should be snooped and applied as XR config. It is possible to specify any combination of these flags. This is only supported for linux interfaces on XRd Control Plane and management interfaces on XRd vRouter. These flags may not be used with ZTP enabled.
 
-  * snoop_{v4,v6}_default_route: indicate that the IPv4 or IPv6 default route for this interface should be snooped. If either/both of these flags are specified, the corresponding snoop_{v4,v6} flags must also be specified, or this will result in an error. The flags can only be specified for at most one interface in total. This is only supported for linux interfaces on XRd Control Plane and management interfaces on XRd vRouter.
+  * `snoop_{v4,v6}_default_route`: indicate that the IPv4 or IPv6 default route for this interface should be snooped. If either/both of these flags are specified, the corresponding `snoop_{v4,v6}` flags must also be specified, or this will result in an error. The flags can only be specified for at most one interface in total. This is only supported for linux interfaces on XRd Control Plane and management interfaces on XRd vRouter.
+
+  * `pci_id_filter=<PCI ID>` to filter the list of interfaces by PCI ID, of the form ‘XXXX:XXXX’ with ‘X’ a hexadecimal digit.  This is only supported for the "pci-index" type.
 
 If the xr_name flag is not specified, the next available XR port number is used (starting at 0, and after taking into account ports where xr_name is specified). This is used in conjunction with the following interface name and R/S/I segment:
 
@@ -162,25 +168,26 @@ The below tables summarize the support for all supported "Interface type (XRd pl
 ### XR_INTERFACES:  
   
 
-| linux (XRd Control Plane)   | pci (XRd vRouter)    | pci-range (XRd vRouter) |
-|-----------------------------|----------------------|-------------------------|
-| Identifier                  | Linux interface name | PCI address             | last&lt;N&gt;/first&lt;N&gt; |
-| xr_name                     | ✓                    | X                       | X                            |
-| chksum                      | ✓                    | X                       | X                            |
-| snoop_{v4,v6}               | ✓                    | X                       | X                            |
-| snoop_{v4,v6}_default_route | ✓                    | X                       | X                            |
+|                               |   linux  (XRd CP)    | pci (XRd VR)| pci-range (XRd VR) | pci-index (XRd VR)|
+|-------------------------------|----------------------|-------------|--------------------|-------------------|
+| Identifier                    | Linux interface name | PCI address |`last<N>`/`first<N>`| `<index>`         |
+| `xr_name`                     | ✓                    | X           | X                  | X                 |
+| `chksum`                      | ✓                    | X           | X                  | X                 |
+| `snoop_{v4,v6}`               | ✓                    | X           | X                  | X                 |
+| `snoop_{v4,v6}_default_route` | ✓                    | X           | X                  | X                 |
+| `pci_id_filter`               | X                    | X           | X                  | ✓                 |
 
   
 ### XR_MGMT_INTERFACES:  
   
 
-| linux (XRd Control Plane)   | linux (XRd vRouter)  |
-|-----------------------------|----------------------|
-| Identifier                  | Linux interface name | Linux interface name |
-| xr_name                     | ✓                    | X                    |
-| chksum                      | ✓                    | ✓                    |
-| snoop_{v4,v6}               | ✓                    | ✓                    |
-| snoop_{v4,v6}_default_route | ✓                    | ✓                    |
+|                               | linux (XRd Control Plane) | linux (XRd vRouter)       |
+|-------------------------------|---------------------------|---------------------------|
+| Identifier                    | Linux interface name      | Linux interface name      |
+| `xr_name`                     | ✓                         | X                         |
+| `chksum`                      | ✓                         | ✓                         |
+| `snoop_{v4,v6}`               | ✓                         | ✓                         |
+| `snoop_{v4,v6}_default_route` | ✓                         | ✓                         |
 
   
   
@@ -196,6 +203,8 @@ XR_INTERFACES="pci:00:08.0;\
                pci:00:09.0"
 XR_INTERFACES="linux:eth0%3B1,xr_name=Gi0/0/0/10"
 XR_INTERFACES="pci-range:last4"
+XR_INTERFACES="pci-index:-1;pci:00:08.0"
+XR_INTERFACES="pci-index:0,pci_id_filter=8086:124c;pci-index:0,pci_id_filter=8086:124d"
 ```
 
 The following gives an example specification of XR_INTERFACES and XR_MGMT_INTERFACES to 'docker run':
@@ -254,7 +263,15 @@ docker run <other args> \
   --env XR_INTERFACES="pci-range:last3" \
   <image name>
 ```
-    
+
+A user may want to specify the last interface with a particular PCI ID:
+
+```
+docker run <other args> \
+  --env XR_INTERFACES="pci-index:-1,pci_id_filter=8086:124e" \
+  <image name>
+```
+
 By default, if not already bound to one of the supported drivers then XRd will rebind the interfaces to the default driver. If the user wishes to control which driver the default is, then they can use the XR_VROUTER_PCI_DRIVER environment variable (see section 4.1.1 for more details on interface drivers):
 
 ```
