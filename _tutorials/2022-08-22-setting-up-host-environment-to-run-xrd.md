@@ -49,15 +49,19 @@ For XRd Control-Plane containers, the host must meet the following minimum requi
 
 * An x86_64 CPU with at least 2 CPU cores
 * 4GiB RAM
-* Linux kernel version 4+
+* Linux kernel version 4.6+
   * With the 'dummy' and 'nf_tables' kernel modules installed
 * Linux cgroups version 1 (unified hierarchy cgroups not yet supported)
+* Minimum host disk space of
+  * 5GiB for the host
+  * 3GiB for each XRd instance
 
 Further, each XRd Control Plane instance running on the host must have the following resources allocated to it:
 
 * 1 CPU
 * 2GiB RAM
-* 2000 inotify user instances and watches
+* 4000 inotify user instances and watches
+* 3000 pids minimum, heavy use may require more
 
 
 ### XRd vRouter
@@ -67,7 +71,7 @@ For XRd vRouter, the minimum requirements for the host entail:
 * An x86_64 CPU with:
   * At least 4 CPU cores
   * Support for the SSSE3, SSE4.1 and SSE4.2 instruction sets
-* Linux kernel version 4+, with the following modules installed:
+* Linux kernel version 4.6+, with the following modules installed:
   * dummy
   * nf_tables
   * vfio-pci or igb_uio
@@ -95,7 +99,8 @@ Further, each XRd vRouter instance running on the host must have the following r
 * 3GiB additional hugepage RAM  
   Hugepage support must be enabled, with 2MiB or 1GiB hugepage size supported. There must be 3GiB 
   of available hugepages per XRd vRouter instance.
-* 2000 inotify user instances and watches
+* 4000 inotify user instances and watches
+* 3000 pids minimum, heavy use may require more
 
 
 ### Docker Version
