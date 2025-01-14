@@ -37,7 +37,7 @@ Both servers run the same CPU, Memory, Disk & Management complex:
 It’s important to check UCS appliance is healthy before proceeding further. This can be verified on the CIMC interface and no faults should be reported:
 ![UCS-CIMC-precheck.png]({{site.baseurl}}/images/UCS-CIMC-precheck.png)
 
-Review faults and logs and ensure there is anything suspicious:
+Review faults and logs and ensure there is nothing suspicious:
 ![UCS-CIMC-precheck.png]({{site.baseurl}}/images/UCS-CIMC-precheck.png)
 
 In case of doubt, please open a TAC case.
