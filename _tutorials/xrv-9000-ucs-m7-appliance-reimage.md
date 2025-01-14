@@ -79,23 +79,18 @@ To execute the reimage procedure, xrv9k-fullk9-x.vrr-24.4.1.iso must be used.
 # Virtual Media Mapping
 
 The ISO file is mapped to a virtual CD/DVD which will be later used as a boot device. To do so, click on the _Remote Management Properties_ button in the KVM Console window:
-
 ![UCS-CIMC-properties.png]({{site.baseurl}}/images/UCS-CIMC-properties.png)
 
 This opens a new window with a list of current mappings. This list should be empty by default:
-
 ![UCS-CIMC-current-mapping.png]({{site.baseurl}}/images/UCS-CIMC-current-mapping.png)
 
 Click on the _Edit Configuration_ button, this will open a new Remote Management window:
-
 ![UCS-CIMC-add-mapping.png]({{site.baseurl}}/images/UCS-CIMC-add-mapping.png)
 
 From here, a new mapping can be added. Click on _Add New Mapping_ button. Populate the fields to upload the ISO to the CIMC using your favorite protocol. The Virtual Media Type must be CD:
-
 ![UCS-CIMC-virtualCD.png]({{site.baseurl}}/images/UCS-CIMC-virtualCD.png)
 
 A message indicates the successful creation of the virtual media, which can be seen as mapped:
-
 ![UCS-CIMC-virtualCD-success.png]({{site.baseurl}}/images/UCS-CIMC-virtualCD-success.png)
 
 **Note:** If CIMC cannot be used to create the virtual media, the vKVM allows to create a vKVM-Mapped vDVD which can uploaded from the user web browser directly.
