@@ -31,7 +31,7 @@ Both servers run the same CPU, Memory, Disk & Management complex:
 - Intel I5420+ CPU, 28 cores running at 2GHz
 - 128GB DDR5 RAM
 - 480GB SSD
-- Intel X710-T2L NIC for OCP 3.0
+- Intel X710-T2L NIC for OCP 3.0 Management Ethernet
 
 # Prerequisites
 It’s important to check UCS appliance is healthy before proceeding further. This can be verified on the CIMC interface and no faults should be reported:
