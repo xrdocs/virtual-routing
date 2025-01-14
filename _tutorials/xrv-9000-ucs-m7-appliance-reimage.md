@@ -7,6 +7,7 @@ tags:
   - iosxr
   - Appliance
   - XRv 9000
+  - UCS
 position: top
 excerpt: >-
   This procedure aims to document the steps required to fully reimage a Cisco
