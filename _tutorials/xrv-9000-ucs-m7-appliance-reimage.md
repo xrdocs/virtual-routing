@@ -26,10 +26,11 @@ Benefits:
 - Scale and performance
 - Fully integrated solutions
 - Native 100G connectivity, with ability to support 100G LR4 optics
+- Power consumption: 250W
 
 There are two references available:
-- XRV-M7-APLN-25G: 4x10G/25G ports available on a single NIC 
-- XRV-M7-APLN-100G: 4x100G ports available on 2 x NICs
+- XRV-M7-APLN-25G: 4x10G/25G ports available on a single NIC (Cisco-Intel E810XXVDA4L 4x25/10 GbE SFP28 PCIe NIC)
+- XRV-M7-APLN-100G: 4x100G ports available on 2 x NICs (Cisco-MLNX MCX623106AS-CDAT 2x100GbE QSFP56 PCIe NIC)
 
 # Prerequisites
 It’s important to check UCS appliance is healthy before proceeding further. This can be verified on the CIMC interface and no faults should be reported:
@@ -44,6 +45,9 @@ IOS XR 24.4.1 image can be downloaded from this location. The file fullk9-R-XRV9
 # Boot Order Update
 
 # Appliance Reboot
+
+# Video
+The whole process is illustrated in following video:
 
 # Conclusion
 This document covered reimage procedure which can be used to stage or recover an IOS XRv 9000 appliance based on Cisco UCS M7 server. While IOS XR 24.4.1 was used to illustrate it, the method will be similar for upcoming software releases.
