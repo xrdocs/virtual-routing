@@ -7,7 +7,7 @@ tags:
   - iosxr
   - Appliance
   - XRv 9000
-position: hidden
+position: top
 excerpt: >-
   This procedure aims to document the steps required to fully reimage a Cisco
   IOS XRv 9000 Appliance running IOS XR 24.4.1 and based on Cisco UCS M7 series.
