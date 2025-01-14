@@ -95,7 +95,7 @@ A message indicates the successful creation of the virtual media, status can be 
 
 **Note:** If CIMC cannot be used to create the virtual media, the vKVM allows to create a vKVM-Mapped vDVD which can uploaded from the user web browser directly.
 ![UCS-CIMC-vDVD-vKVM.png]({{site.baseurl}}/images/UCS-CIMC-vDVD-vKVM.png)
-{: .notice--primary}
+{: .notice--info}
 
 # Boot Order Update
 
