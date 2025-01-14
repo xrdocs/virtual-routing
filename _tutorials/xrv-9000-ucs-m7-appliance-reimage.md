@@ -90,7 +90,7 @@ Click on the _Edit Configuration_ button, this will open a new Remote Management
 From here, a new mapping can be added. Click on _Add New Mapping_ button. Populate the fields to upload the ISO to the CIMC using your favorite protocol. The Virtual Media Type must be CD:
 ![UCS-CIMC-virtualCD.png]({{site.baseurl}}/images/UCS-CIMC-virtualCD.png)
 
-A message indicates the successful creation of the virtual media, which can be seen as mapped:
+A message indicates the successful creation of the virtual media, status can be seen as "Mapped":
 ![UCS-CIMC-virtualCD-success.png]({{site.baseurl}}/images/UCS-CIMC-virtualCD-success.png)
 
 **Note:** If CIMC cannot be used to create the virtual media, the vKVM allows to create a vKVM-Mapped vDVD which can uploaded from the user web browser directly.
