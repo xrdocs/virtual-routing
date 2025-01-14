@@ -513,7 +513,7 @@ snip
 ![UCS-CIMC-ejectCD.png]({{site.baseurl}}/images/UCS-CIMC-ejectCD.png)
 And confirm:
 ![UCS-CIMC-ejectCD-confirm.png]({{site.baseurl}}/images/UCS-CIMC-ejectCD-confirm.png)
-{: .notice--primary}
+{: .notice--info}
 
 The appliance then reboots from the HDD.
 Following logs can be observed on the console:
