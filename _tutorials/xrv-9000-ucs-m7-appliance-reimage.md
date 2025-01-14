@@ -12,6 +12,8 @@ excerpt: >-
   This procedure aims to document the steps required to fully reimage a Cisco
   IOS XRv 9000 Appliance running IOS XR 24.4.1 and based on Cisco UCS M7 series.
 ---
+{% include toc icon="table" title="Cisco IOS XRv 9000 UCS M7 reimage procedure" %}
+
 # Objectives
 This procedure aims to document the steps required to fully reimage a Cisco IOS XRv 9000 Appliance based on UCS M7 C220 series running IOS XR 24.4.1. 
 Reimage can be used to fully reinstall the system from scratch for staging or system recovery purposes. 
