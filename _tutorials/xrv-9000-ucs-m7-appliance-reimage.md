@@ -19,11 +19,17 @@ Reimage will remove all files and configuration from the system. Perform backup 
 
 # Cisco IOS XRv 9000 UCS M7 appliance introduction
 
+The Cisco IOS XRv 9000 UCS M7 appliance is powered by Cisco UCS C220 M7 series and Cisco IOS-XR 64bit. It is perfectly suitable for BGP Route-Reflector (RR) and Path Computation Element (PCE) use cases.
+
 Benefits:
 - Proven architecture: robust IOS-XR field-proven BGP stack
 - Scale and performance
 - Fully integrated solutions
 - Native 100G connectivity, with ability to support 100G LR4 optics
+
+There are two references available:
+- XRV-M7-APLN-25G: 4x10G/25G ports available on a single NIC 
+- XRV-M7-APLN-100G: 4x100G ports available on 2 x NICs
 
 # Prerequisites
 It’s important to check UCS appliance is healthy before proceeding further. This can be verified on the CIMC interface and no faults should be reported:
@@ -39,6 +45,5 @@ IOS XR 24.4.1 image can be downloaded from this location. The file fullk9-R-XRV9
 
 # Appliance Reboot
 
-# Known Issues
-
 # Conclusion
+This document covered reimage procedure which can be used to stage or recover an IOS XRv 9000 appliance based on Cisco UCS M7 server. While IOS XR 24.4.1 was used to illustrate it, the method will be similar for upcoming software releases.
