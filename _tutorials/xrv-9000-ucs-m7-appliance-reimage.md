@@ -74,7 +74,7 @@ Once extracted, following files are available:
 </pre>
 </div>
 
-To execute the reimage procedure, xrv9k-fullk9-x.vrr-24.4.1.iso will be used.
+To execute the reimage procedure, xrv9k-fullk9-x.vrr-24.4.1.iso must be used.
 
 # Virtual Media Mapping
 
