@@ -54,7 +54,7 @@ Once extracted, following files are available:
 ├── xrv9k-bng-1.0.0.0-r2441.x86_64.rpm
 ├── xrv9k-bng-supp-x64-1.0.0.0-r2441.x86_64.rpm
 ├── xrv9k-eigrp-1.0.0.0-r2441.x86_64.rpm
-├── xrv9k-fullk9-x.vrr-24.4.1.iso
+<mark>├── xrv9k-fullk9-x.vrr-24.4.1.iso</mark>
 ├── xrv9k-isis-1.0.0.0-r2441.x86_64.rpm
 ├── xrv9k-k9sec-1.0.0.0-r2441.x86_64.rpm
 ├── xrv9k-li-x-1.0.0.0-r2441.x86_64.rpm
@@ -124,7 +124,7 @@ On the console, following logs can be observed. Existing system is totally wiped
 <div class="highlighter-rouge">
 <pre class="highlight">
 <code>
-Booting from cdrom..
+<mark>Booting from cdrom..</mark>
 Loading Kernel..
 Verifying (loop)/boot/bzImage...
 (loop)/boot/bzImage verified using attached signature.
@@ -316,8 +316,8 @@ Welcome to Linux Distro for XR 11.1.2 (dunfell)!
 [  OK  ] Stopped Redis In-Memory Data Store.
 [  OK  ] Started Redis In-Memory Data Store.
 [  OK  ] Started Suspend/Resume Running libvirt Guests.
-[   33.623244] pxe_install.sh[1704]: Thu Jan  9 13:44:10 UTC 2025: Removing old boot partition
-[   33.642069] pxe_install.sh[1704]: Thu Jan  9 13:44:10 UTC 2025: Removing old volumes
+<mark>[   33.623244] pxe_install.sh[1704]: Thu Jan  9 13:44:10 UTC 2025: Removing old boot partition</mark>
+<mark>[   33.642069] pxe_install.sh[1704]: Thu Jan  9 13:44:10 UTC 2025: Removing old volumes</mark>
 [   33.652032] pxe_install.sh[1704]: Thu Jan  9 13:44:10 UTC 2025: Inside Volume-Cleaning Function
 [  OK  ] Stopped Redis In-Memory Data Store.
 [  OK  ] Started Redis In-Memory Data Store.
@@ -354,7 +354,7 @@ See 'systemctl status redis.service' for details.
          Stopping LVM event activation on device 8:5...
 [   36.990685] pxe_install.sh[1704]: Thu Jan  9 13:44:13 UTC 2025: LVM size (178089 MB) DEBUG part size (0 MB)
 [  OK  ] Stopped LVM event activation on device 8:3.
-[   37.010105] pxe_install.sh[1704]: Thu Jan  9 13:44:13 UTC 2025: Creating partitions, BOOT=944MB, LVM=178089MB, EFI=20MB
+<mark>[   37.010105] pxe_install.sh[1704]: Thu Jan  9 13:44:13 UTC 2025: Creating partitions, BOOT=944MB, LVM=178089MB, EFI=20MB</mark>
 [  OK  ] Stopped LVM event activation on device 8:5.
 [   37.059597] pxe_install.sh[1704]: Thu Jan  9 13:44:13 UTC 2025: Created Partition of size 4096 for use of App-Volume
 [   37.109452] pxe_install.sh[1704]: Thu Jan  9 13:44:14 UTC 2025: Partition creation on /dev/sda took 1 seconds
@@ -377,7 +377,7 @@ ios login: [   43.856589] pxe_install.sh[1720]: Thu Jan  9 13:44:20 UTC 2025: St
 [   49.327060] pxe_install.sh[1720]: Cleaning up labels on /tmp
 [   49.334992] pxe_install.sh[1720]:  * Relabel done.
 [   49.339100] pxe_install.sh[1720]: Thu Jan  9 13:44:26 UTC 2025: Finished Calvados patch for lxc
-[   49.361821] pxe_install.sh[1720]: Thu Jan  9 13:44:26 UTC 2025 (/etc/rc.d/init.d/pxe_install.sh): force hw_profile to be vrr
+<mark>[   49.361821] pxe_install.sh[1720]: Thu Jan  9 13:44:26 UTC 2025 (/etc/rc.d/init.d/pxe_install.sh): force hw_profile to be vrr</mark>
 [   49.372734] pxe_install.sh[1720]: Thu Jan  9 13:44:26 UTC 2025 (/etc/rc.d/init.d/pxe_install.sh): Disabling SMT
 [   50.007607] pxe_install.sh[1720]: Thu Jan  9 13:44:26 UTC 2025 (/etc/rc.d/init.d/pxe_install.sh): Based on system memory and socket number, use the following huge page setting:
 [   50.010732] pxe_install.sh[1720]: Thu Jan  9 13:44:26 UTC 2025 (/etc/rc.d/init.d/pxe_install.sh):     default_hugepagesz=1G hugepagesz=1G hugepages=6
@@ -506,7 +506,7 @@ snip
 [  100.034871] pxe_install.sh[4220]: MirroredPercentageAbove4G: 0.00
 [  100.034885] pxe_install.sh[4220]: MirrorMemoryBelow4GB: false
 [  100.038027] pxe_install.sh[1704]: Thu Jan  9 13:45:16 UTC 2025: Install finished on sda
-[  100.051689] pxe_install.sh[11564]: Thu Jan  9 13:45:16 UTC 2025 (/etc/rc.d/init.d/pxe_install.sh): Eject CDROM and reboot XRv9k system after installation ...
+<mark>[  100.051689] pxe_install.sh[11564]: Thu Jan  9 13:45:16 UTC 2025 (/etc/rc.d/init.d/pxe_install.sh): Eject CDROM and reboot XRv9k system after installation ...</mark>
 �����������������������������������������������������
 </code>
 </pre>
@@ -524,9 +524,9 @@ Following logs can be observed on the console:
 <div class="highlighter-rouge">
 <pre class="highlight">
 <code>
-  Booting `System Host OS'
+<mark>  Booting `System Host OS'
 
-Booting from Disk..
+Booting from Disk..</mark>
 Loading Kernel..
 Verifying /boot/bzImage...
 /boot/bzImage verified using attached signature.
@@ -917,8 +917,8 @@ ios con0/RP0/CPU0 is now available
 Press RETURN to get started.
 
 0/RP0/ADMIN0:Jan  9 13:52:46.000 UTC: inst_agent[1842]: %INFRA-INSTAGENT-4-XR_PART_PREP_REQ : Received SDR/XR partition request. Looking for available matching partition. If not found, new one will be created after copying relevant image and RPMs
-0/RP0/ADMIN0:Jan  9 13:52:50.000 UTC: inst_agent[1842]: %INFRA-INSTAGENT-4-XR_PART_PREP_IMG : SDR/XR image baking in progress
-0/RP0/ADMIN0:Jan  9 13:53:39.000 UTC: inst_agent[1842]: %INFRA-INSTAGENT-4-XR_PART_PREP_RESP : SDR/XR partition preparation completed successfully
+<mark>0/RP0/ADMIN0:Jan  9 13:52:50.000 UTC: inst_agent[1842]: %INFRA-INSTAGENT-4-XR_PART_PREP_IMG : SDR/XR image baking in progress
+0/RP0/ADMIN0:Jan  9 13:53:39.000 UTC: inst_agent[1842]: %INFRA-INSTAGENT-4-XR_PART_PREP_RESP : SDR/XR partition preparation completed successfully</mark>
 
 
 
@@ -985,8 +985,8 @@ RP/0/RP0/CPU0:RR-1#sh platform
 Thu Jan  9 21:54:37.429 UTC
 Node              Type                       State             Config state
 --------------------------------------------------------------------------------
-0/0/CPU0          R-IOSXRV9000-LC-A          IOS XR RUN        NSHUT
-0/RP0/CPU0        R-IOSXRV9000-RP-A(Active)  IOS XR RUN        NSHUT
+0/0/CPU0          R-IOSXRV9000-LC-A          <mark>IOS XR RUN</mark>        NSHUT
+0/RP0/CPU0        R-IOSXRV9000-RP-A(Active)  <mark>IOS XR RUN</mark>        NSHUT
 0/FT0             XRV9K-GENERIC-FT           OPERATIONAL       NSHUT
 0/PT0             XRV9K-GENERIC-PT           OPERATIONAL       NSHUT
 RP/0/RP0/CPU0:RR-1#
@@ -1008,7 +1008,7 @@ Build Information:
  Built On     : Tue Dec 17 07:14:03 PST 2024
  Built Host   : iox-ucs-078
  Workspace    : /auto/srcarchive10/prod/24.4.1/xrv9k/ws
- Version      : 24.4.1
+ <mark>Version      : 24.4.1</mark>
  Location     : /opt/cisco/XR/packages/
  Label        : 24.4.1
 
