@@ -745,7 +745,7 @@ Failed to create symlink /sys/fs/cgroup/net_cls: File exists
 
 Welcome to Linux Distro for XR 11.1.2 (dunfell)!
 
-Set hostname to <ios>.
+Set hostname to ios.
 Initializing machine ID from container UUID.
 Couldn't move remaining userspace processes, ignoring: Input/output error
 user.slice: unit configures an IP firewall, but the local system does not support BPF/cgroup firewalling.
