@@ -42,6 +42,8 @@ Review faults and logs and ensure there is nothing suspicious:
 
 In case of doubt, please open a TAC case.
 
+The procedure will leverage UCS Cisco Integrated Management Controller (CIMC) to access KVM. Console access is done using the physical COM port located on the rear side of the appliance. By default, Serial Over LAN (SOL) feature is disabled on CIMC. Note SOL and physical COM port cannot be activated simultaneously. Refer to UCS C220 M7 [installation guide](https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/c/hw/C220M7/install/b-c220-m7-installation-guide.pdf)for more information.
+
 # Cisco IOS XRv 9000 ISO Download
 IOS XR 24.4.1 image can be downloaded from [this](https://software.cisco.com/download/home/286288939/type/280805694) location. The file fullk9-R-XRV9000-2441-RR.tar must be used: it contains k9 package for crypto features (e.g SSH), and the image is optimized for a BGP Route-Reflector function: 72GB of RAM is dedicated to the virtual Route Processor, 16GB for the virtual Line Card.  
 
@@ -1025,7 +1027,7 @@ RP/0/RP0/CPU0:RR-1#
 </div>
 
 # Video
-The whole process is illustrated in following video:
+The whole process is illustrated in the following video:
 
 # Conclusion
 This document covered reimage procedure which can be used to stage or recover an IOS XRv 9000 appliance based on Cisco UCS M7 server. While IOS XR 24.4.1 was used to illustrate it, the method will be similar for upcoming software releases.
