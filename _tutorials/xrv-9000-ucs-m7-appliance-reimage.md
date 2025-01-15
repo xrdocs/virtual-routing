@@ -49,7 +49,7 @@ In case of doubt, please open a TAC case.
 The procedure will leverage UCS Cisco Integrated Management Controller (CIMC) to access KVM. Console access is done using the physical COM port located on the rear side of the appliance. By default, Serial Over LAN (SOL) feature is disabled on CIMC. Note SOL and physical COM port cannot be activated simultaneously. Refer to UCS C220 M7 [installation guide](https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/c/hw/C220M7/install/b-c220-m7-installation-guide.pdf) for more information.
 
 # Cisco IOS XRv 9000 ISO Download
-IOS XR 24.4.1 image can be downloaded from [this](https://software.cisco.com/download/home/286288939/type/280805694) location. The file fullk9-R-XRV9000-2441-RR.tar must be used: it contains k9 package for crypto features (e.g SSH), and the image is optimized for a BGP Route-Reflector function: 72GB of RAM is dedicated to the virtual Route Processor, 16GB for the virtual Line Card.  
+IOS XR 24.4.1 image can be downloaded from [this](https://software.cisco.com/download/home/286288939/type/280805694) location (login required). The file fullk9-R-XRV9000-2441-RR.tar must be used: it contains k9 package for crypto features (e.g SSH), and the image is optimized for a BGP Route-Reflector function: 72GB of RAM is dedicated to the virtual Route Processor, 16GB for the virtual Line Card.  
 
 Once extracted, following files are available:
 
