@@ -1033,6 +1033,8 @@ RP/0/RP0/CPU0:RR-1#
 </pre>
 </div>
 
+Both active and commited software configurations are the same.
+
 # Video
 The whole process is illustrated in the following video:
 
