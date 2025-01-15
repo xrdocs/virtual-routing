@@ -1042,7 +1042,7 @@ RP/0/RP0/CPU0:RR-1#
 </div>
 
 # Video
-The whole process is illustrated in the following video:
+The whole process takes 15min and is illustrated in this video:
 
 # Conclusion
-This document covered reimage procedure which can be used to stage or recover an IOS XRv 9000 appliance based on Cisco UCS M7 server. While IOS XR 24.4.1 was used to illustrate it, the method will be similar for upcoming software releases.
+This document covered reimage procedure which can be used to stage or recover an IOS XRv 9000 appliance based on Cisco UCS M7 server. While IOS XR 24.4.1 was used to illustrate it, the method will be similar for future software releases.
