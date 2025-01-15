@@ -1029,11 +1029,17 @@ Label : 24.4.1
         xrv9k-xr-24.4.1 version=24.4.1 [Boot image]
 
 RP/0/RP0/CPU0:RR-1#
+RP/0/RP0/CPU0:RR-1#sh install committed summary
+Wed Jan 15 20:19:18.432 UTC
+Label : 24.4.1
+
+    Committed Packages: 1
+        xrv9k-xr-24.4.1 version=24.4.1 [Boot image]
+
+RP/0/RP0/CPU0:RR-1#
 </code>
 </pre>
 </div>
-
-Both active and commited software configurations are the same.
 
 # Video
 The whole process is illustrated in the following video:
