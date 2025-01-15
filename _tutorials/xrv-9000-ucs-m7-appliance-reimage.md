@@ -82,6 +82,9 @@ Once extracted, following files are available:
 
 To execute the reimage procedure, xrv9k-fullk9-x.vrr-24.4.1.iso must be used.
 
+**Note:** XRv9000 UCS M7 appliance has FCS with IOS XR 24.4.1 and this is the minimum supported release. Reimaging an older version is not supported and system will fail to boot.
+{: .notice--info}
+
 # Virtual Media Mapping
 
 The ISO file is mapped to a virtual CD/DVD which will be later used as a boot device. To do so, click on the _Remote Management Properties_ button in the KVM Console window:
