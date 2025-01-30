@@ -34,8 +34,12 @@ Both servers run the same CPU, Memory, Disk & Management complex:
 - 480GB SSD
 - Intel X710-T2L NIC for OCP 3.0 Management Ethernet
 
-![XRV-M7-APLN-100G.png]({{site.baseurl}}/images/XRV-M7-APLN-100G.png)
-XRV-M7-APLN-100G rear view with 4x100G QSFP ports
+![XRV-M7-APLN-100G.png]({{site.baseurl}}/images/XRV-M7-APLN-100G.png)  
+XRV-M7-APLN-100G rear view with 4x100G QSFP56 ports
+
+![XRV-M7-APLN-25G.png]({{site.baseurl}}/images/XRV-M7-APLN-25G.png)  
+XRV-M7-APLN-25G rear view with 4x10G/25G SFP28 ports
+
 
 # Prerequisites
 It’s important to check UCS appliance is healthy before proceeding further. This can be verified on the CIMC interface and no faults should be reported:
