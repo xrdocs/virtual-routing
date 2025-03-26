@@ -1,10 +1,10 @@
 ---
-published: false
+published: true
 date: '2025-03-27 16:43 -0700'
 title: XRd Control Plane on Openshift
-author: Taran Deshpande
+author: Lawrence Troup
 excerpt: Overview of running XRd Control Plane on Red Hat OpenShift
-position: top
+position: hidden
 ---
 {% include base_path %}
 {% include toc %}
