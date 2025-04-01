@@ -91,7 +91,28 @@ Each XRd instance requires at least 3GB of disk space. This can either be in a p
 
 ## Core file handling
 
-When running XRd, the host machine must have a robust core handling system in place to avoid disk exhaustion and availability issues. One of the considerations of this strategy is how much disk space is available on each worker node. For XRd Control Plane, the worker node must have at least three times the maximum memory allocation plus disk size of all deployed XRd Control Planes.
+When running XRd, the host machine must have a robust core handling system in place to avoid disk exhaustion and availability issues. One of the considerations of this strategy is how much disk space is available on each worker node. For XRd Control Plane, the worker node must have at least three times the maximum memory allocation plus disk size of all deployed XRd Control Planes. I.e.
+
+```
+total_disk_size = <disk-space-for-host> +
+                   <disk-space-for-xrd-instances> +
+                   <disk-space-for-core-files>
+                = <disk-space-for-host> +
+                   (<number-of-xrd-instances> * <per-instance-disk-space>) +
+                   (3 * <number-of-xrd-instances> * <per-instance-ram>)
+```
+
+So for example, if:
+
+* There are 2 XRd Control Plane instance
+* Each instance has 4GB disk space and 6GB RAM
+* The worker node host requires 5GB disk space
+
+Then the total disk size required for the worker node can be calculated as:
+
+```
+total_disk_size = 5GB + (2 * 4GB) + (3 * 2 * 6GB) = 49GB
+```
 
 In these instructions, per-worker-node core file handling is set up using `systemd`. Users should consider what core file handling strategy suites their needs in multi-node deployments (see [this Red Hat blog](https://www.redhat.com/en/blog/a-guide-to-core-dump-handling-in-openshift)).
 
