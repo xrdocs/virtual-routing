@@ -1,6 +1,6 @@
 ---
 published: true
-date: '2025-03-27 16:43 -0700'
+date: '2025-04-23 16:43 -0700'
 title: XRd Control Plane on Openshift
 author: Lawrence Troup
 excerpt: Overview of running XRd Control Plane on Red Hat OpenShift
@@ -17,12 +17,17 @@ OpenShift is Red Hat's Kubernetes offering.
 
 The OpenShift documentation should be referred to alongside this guide for more information.
 
-These instructions walk through how to configure worker nodes in an OpenShift cluster for running XRd, and how to deploy XRd on those nodes.
+These instructions walk through how to:
+
+1. Configure worker nodes in an OpenShift cluster for running XRd
+2. Verify the setup
+3. Deploy XRd on those nodes
 
 # Content
 
 * [XRd Control Plane requirements](#xrd-control-plane-requirements)
 * [Configuring workers in an OpenShift cluster for running XRd Control Plane](#configuring-a-node-for-xrd-control-plane)
+* [Verifying OpenShift cluster setup](#verifying-openshift-cluster-setup)
 * [Creating SR-IOV networking resources](#sr-iov-network-resources)
 * [Creating a Namespace and Service Account](#namespace-and-service-account)
 * [Running XRd Control Plane](#running-xrd-control-plane)
@@ -46,7 +51,7 @@ These instructions assume a pre-existing OpenShift setup that meets the followin
 * IP addresses on the cluster's internal network are reachable, for example using a Kubernetes Service (see [Kubernetes documentation](https://kubernetes.io/docs/concepts/services-networking/service/)) or allowing direct SSH access to worker nodes in the cluster
 * A PersistentVolume must be set up and usable by Pods on the worker node(s) to be used by XRd (see [Kubernetes documentation](https://kubernetes.io/docs/concepts/storage/persistent-volumes/))
 
-These instructions use the OpenShift CLI (`oc`) (see [OpenShift documentation](https://docs.openshift.com/container-platform/4.14/cli_reference/openshift_cli/getting-started-cli.html)) to interact with the cluster.
+These instructions use the OpenShift CLI (`oc`) (see [OpenShift documentation](https://docs.openshift.com/container-platform/4.14/cli_reference/openshift_cli/getting-started-cli.html)) to interact with the cluster. In addition, Helm (see [Helm documentation](https://helm.sh/)) is used to deploy XRd Control Plane. Both tools must be available on the machine from which the OpenShift cluster is being managed.
 
 In order to configure worker nodes for running XRd, some information about the worker machine is required. These instructions use the `oc debug` command to gather this information, but other methods, such as direct ssh access to the worker machine, would also work.
 
@@ -56,6 +61,24 @@ These instructions are for OpenShift 4.14 and 4.16, but more recent OpenShift ve
 ## Running commands from the instructions
 
 Throughout the instructions several bits of output from OpenShift commands should be noted down for use in future commands. Values in angle brackets, e.g. `<node name>`, that are present in code blocks should be substituted with values taken from earlier command output, or with other values as specified.
+
+## Installing Helm charts
+
+In later steps, Helm is used to deploy Kubernetes workloads. In order to do this, the XRd Helm repository must be added to the machine from which you are interacting with the cluster with
+
+```bash
+helm repo add xrd https://ios-xr.github.io/xrd-helm
+```
+
+Verify that the XRd Helm repository has been successfully added with
+
+```bash
+$ helm repo list
+NAME        	URL
+xrd         	https://ios-xr.github.io/xrd-helm
+```
+
+The `xrd` repo should be present.
 
 # XRd Control Plane requirements
 
@@ -91,7 +114,28 @@ Each XRd instance requires at least 3GB of disk space. This can either be in a p
 
 ## Core file handling
 
-When running XRd, the host machine must have a robust core handling system in place to avoid disk exhaustion and availability issues. One of the considerations of this strategy is how much disk space is available on each worker node. For XRd Control Plane, the worker node must have at least three times the maximum memory allocation plus disk size of all deployed XRd Control Planes.
+When running XRd, the host machine must have a robust core handling system in place to avoid disk exhaustion and availability issues. One of the considerations of this strategy is how much disk space is available on each worker node. For XRd Control Plane, the worker node must have at least three times the maximum memory allocation plus disk size of all deployed XRd Control Planes. I.e.
+
+```
+total_disk_size = <disk-space-for-host> +
+                   <disk-space-for-xrd-instances> +
+                   <disk-space-for-core-files>
+                = <disk-space-for-host> +
+                   (<number-of-xrd-instances> * <per-instance-disk-space>) +
+                   (3 * <number-of-xrd-instances> * <per-instance-ram>)
+```
+
+So for example, if:
+
+* There are 2 XRd Control Plane instance
+* Each instance has 4GB disk space and 6GB RAM
+* The worker node host requires 5GB disk space
+
+Then the total disk size required for the worker node can be calculated as:
+
+```
+total_disk_size = 5GB + (2 * 4GB) + (3 * 2 * 6GB) = 49GB
+```
 
 In these instructions, per-worker-node core file handling is set up using `systemd`. Users should consider what core file handling strategy suites their needs in multi-node deployments (see [this Red Hat blog](https://www.redhat.com/en/blog/a-guide-to-core-dump-handling-in-openshift)).
 
@@ -205,6 +249,82 @@ NAME           TUNED           APPLIED   DEGRADED   AGE
 
 where `<node name>` is the name of a worker node in the cluster (the list of all available nodes in the cluster is given by the command `oc get nodes`). This should be checked for all worker nodes. The profile should be successfully applied (i.e. `DEGRADED` should be false). The worker nodes are now setup so that XRd can be deployed on it. However, before we do so we shall create SR-IOV network resources to use for networking.
 
+# Verifying OpenShift cluster setup
+
+XRd is sensitive to host setup and so it is important to verify the host is setup correctly to ensure that XRd performs as expected. A `host-check` script is provided to do this.
+
+The `host-check` script and a Dockerfile for creating a Kubernetes Job to run it are available for download [here](https://github.com/ios-xr/xrd-tools/releases). Follow the instructions in `Dockerfile.host-check` and push the resulting container image to a repository accessible from the OpenShift node.
+
+To run `host-check`, first create a file `host-check.yaml` containing the following
+
+```yaml
+# Image configuration
+image:
+  repository: <repository uri containing host-check image>
+  tag: <tag>
+  pullSecrets:
+  - name: <image pull secrets>
+
+targetPlatforms:
+  - xrd-control-plane
+
+nodeSelector:
+  kubernetes.io/hostname: <node name>
+```
+
+Then, run the `host-check` job with
+
+```bash
+helm install hc xrd/host-check -f host-check.yaml
+```
+
+Check the progress of the Job with `oc get job hc-host-check`. Once the Job has completed, the output will have "1/1" completions, such as
+
+```bash
+$ oc get job hc-host-check
+NAME            COMPLETIONS   DURATION   AGE
+hc-host-check   1/1           19s        21s
+```
+
+The outcome of the `host-check` script can be seen in the Job logs, for example in a successful case
+
+```bash
+$ oc logs job/hc-host-check
+==============================
+Platform checks - xrd-control-plane
+==============================
+ PASS -- CPU architecture (x86_64)
+ PASS -- CPU cores (64)
+ PASS -- Kernel version (5.14)
+ PASS -- Base kernel modules
+         Installed module(s): dummy, nf_tables
+ PASS -- Cgroups (v1)
+ PASS -- Inotify max user instances
+         65536 - this is expected to be sufficient for 16 XRd instance(s).
+ PASS -- Inotify max user watches
+         65536 - this is expected to be sufficient for 16 XRd instance(s).
+ PASS -- Socket kernel parameters (valid settings)
+ PASS -- UDP kernel parameters (valid settings)
+ INFO -- Core pattern (core files managed by the host)
+ PASS -- ASLR (full randomization)
+ INFO -- Linux Security Modules (No LSMs are enabled)
+ PASS -- Kernel module parameters
+         Kernel modules loaded with expected parameters.
+ PASS -- RAM
+         Available RAM is 175.6 GiB.
+         This is estimated to be sufficient for 87 XRd instance(s), although memory
+         usage depends on the running configuration.
+         Note that any swap that may be available is not included.
+
+============================================================================
+Host environment set up correctly for xrd-control-plane
+============================================================================
+```
+
+Ensure that the logs confirm the environment is set up correctly. In the case of any error, check that the Machine Config and TuneD configurations have been correctly and successfully applied.
+
+Once the node configuration has been validated, the `host-check` workload can be removed with `helm uninstall hc`.
+
 # SR-IOV network resources
 
 In OpenShift deployments, XRd Control Plane is able to use SR-IOV virtual functions (VFs) for its data and management interfaces. To use VFs in OpenShift, SR-IOV networking resource pools must first be created. This section runs through the creation of SR-IOV network resource pools to be used by XRd Control Plane.
@@ -237,7 +357,7 @@ ls /sys/bus/pci/devices/*/net | grep <interface name> -B 1 | grep -oE '([0-9a-fA
 
 ## Creating SR-IOV resource pools
 
- Create the file `<network node policy name>.netnodepolicy.yaml`, where `<network node policy name>` is a unique name for the policy. Into this file copy the following:
+Create the file `<network node policy name>.netnodepolicy.yaml`, where `<network node policy name>` is a unique name for the policy. Into this file copy the following:
 
 ```yaml
 apiVersion: sriovnetwork.openshift.io/v1
@@ -377,22 +497,6 @@ Under the `SERVICEACCOUNTS` heading `xrd/xrd-sa` should be listed.
 
 We have now configured the worker nodes and created OpenShift resources required to run XRd. This section describes how to run XRd Pods in this environment.
 
-First, add the XRd Helm repository to the machine from which you are interacting with the cluster with
-
-```bash
-helm repo add xrd https://ios-xr.github.io/xrd-helm
-```
-
-Verify that the XRd Helm repository has been successfully added with
-
-```bash
-$ helm repo list
-NAME        	URL
-xrd         	https://ios-xr.github.io/xrd-helm
-```
-
-The `xrd` repo should be present.
-
 ## Installing XRd Control Plane
 
 Create a file `xrd.yaml` containing the following
@@ -411,21 +515,28 @@ config:
   ascii: |
     hostname xrd-1
     ssh server v2
+    interface MgmtEth0/RP0/CPU0/0
+     ipv4 address <mgmt IP address>/24
+    !
 
 # XRd line interfaces.
 interfaces:
 - type: sriov
-  resource: openshift.io/<resource name>
+  resource: openshift.io/<resource name 1>
   config:
     type: sriov
     trust: "on"
     spoofChk: "off"
 
-# Management interfaces. snoopIpv4Address adds detected IP address to XR config to allow SSH access.
+# Management interface is a tagged VF on a different PF from the line interface.
 mgmtInterfaces:
-- type: defaultCni
-  chksum: true
-  snoopIpv4Address: true
+- type: sriov
+  resource: openshift.io/<resource name 2>
+  config:
+    type: sriov
+    trust: "on"
+    spoofChk: "off"
+    vlan: 1
 
 resources:
   requests:
@@ -454,6 +565,8 @@ where:
 * `<image pull secrets>` is a standard Kubernetes Pod imagePullSecrets array ([see here](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/))
 * `<username>` a username to log into XR with
 * `<password>` a password to log into XR with
+* `<mgmt IP address>` a fixed IP address for management access
+* `<resource name 1>` and `<resource name 2>` are the names of the SR-IOV resource pools containing the desired line and management interfaces respectively
 * `<persistent volume name>` is the name of the Persistent Volume
 * `<storage class name>` is the name of the Storage Class to which the Persistent Volume belongs
 
@@ -463,9 +576,7 @@ Note that if no persistent storage is given, for example if the `persistence` se
 
 The `xrd.yaml` Helm values file will be used to install an XRd Control Plane as a Burstable Pod that requests 4 CPU cores and 8GB of memory, with a limit of 8 and 12GB respectively. If desired, XRd Control Plane can be deployed as a Guaranteed Pod by specifying equal requests and limits for the number of CPU cores and amount of memory respectively.
 
-The XRd Control Plane will have a single interface drawn from the `<resource name>` SR-IOV network resource pool created in [SR-IOV network resources](#sr-iov-network-resources) section. Setting `config.trust` to `"on"` for VFs is required to be able receive multicast traffic (and thus is required for multicast based protocols to work such as IPv6 ND). Setting `config.spoofChk` to `"off"` for VFs is required to send packets from other unicast MAC addresses (such as the VRRP vMAC, and thus is required for protocols such as VRRP).
-
-The XRd will also have a management interface that uses the Pod's default veth interface on the cluster network. The applied config allows SSH access to XRd Control Plane at the Pod's IP address.
+The XRd Control Plane will have a single line interface drawn from the `<resource name 1>` SR-IOV network resource pool created in [SR-IOV network resources](#sr-iov-network-resources) section. Setting `config.trust` to `"on"` for VFs is required to be able receive multicast traffic (and thus is required for multicast based protocols to work such as IPv6 ND). Setting `config.spoofChk` to `"off"` for VFs is required to send packets from other unicast MAC addresses (such as the VRRP vMAC, and thus is required for protocols such as VRRP). The XRd Control Plane will also have a management interface drawn from the `<resource name 2>` SR-IOV network resource pool. The VLAN tag `1` is applied to this interface. The applied config allows SSH access to XRd Control Plane over the management interface at the specified IP address.
 
 Multiple interfaces and management interfaces can be requested from multiple SR-IOV resource pools by listing the desired interfaces under the `interfaces` and `mgmtInterfaces` keys, for example:
 
@@ -473,13 +584,13 @@ Multiple interfaces and management interfaces can be requested from multiple SR-
 # XRd line interfaces.
 interfaces:
 - type: sriov
-  resource: openshift.io/<resource name>
+  resource: openshift.io/<resource name 1>
   config:
     type: sriov
     trust: "on"
     spoofChk: "off"
 - type: sriov
-  resource: openshift.io/<resource name of another resource pool>
+  resource: openshift.io/<resource name 3>
   config:
     type: sriov
     trust: "on"
@@ -488,11 +599,29 @@ interfaces:
 # XRd management interfaces.
 mgmtInterfaces:
 - type: sriov
-  resource: openshift.io/<resource name of another resource pool>
+  resource: openshift.io/<resource name 2>
   config:
     type: sriov
     trust: "on"
+    spoofChk: "off"
+    vlan: 1
+- type: sriov
+  resource: openshift.io/<resource name 4>
+  config:
+    type: sriov
+    trust: "on"
+    spoofChk: "off"
 ```
+
+The Pod's default veth interface on the cluster network can also be used for at most one management interfaces, e.g.
+
+```yaml
+mgmtInterfaces:
+- type: defaultCni
+  chksum: true
+```
+
+Note also that it is possible to use separate VFs on the same underlying PF for management and a line interface (different VLAN tags should be used for the different interfaces).
 
 The full range of options supported in the XRd Control Plane Helm values file are documented [here](https://github.com/ios-xr/xrd-helm/blob/main/charts/xrd-control-plane/values.yaml).
 
@@ -514,13 +643,7 @@ NAME                      READY   STATUS    RESTARTS   AGE
 xrd-xrd-control-plane-0   1/1     Running   0          4m36s
 ```
 
-Once the Pod is in `Running` state, we can connect to the Pod using SSH. To do so, first identify the IP address assigned to the Pod by running
-
-```bash
-oc get pod xrd-xrd-control-plane-0 --template '{{.status.podIP}}'
-```
-
-Make a note of the returned IP address. Then, wait for XR to finish booting. To see the current status, run
+Once the Pod is in `Running` state, we still need to wait for XR to finish booting. To see the current status, run
 
 ```bash
 oc logs xrd-xrd-control-plane-0
@@ -534,23 +657,23 @@ $ oc logs xrd-xrd-control-plane-0
 RP/0/RP0/CPU0:Oct 22 16:21:29.194 UTC: ifmgr[229]: %PKT_INFRA-LINK-3-UPDOWN : Interface MgmtEth0/RP0/CPU0/0, changed state to Up
 ```
 
-Now, the Pod can be accessed via SSH from an end point with access to the cluster-internal network (for example if the network has been exposed via a Kubernetes Service (see [Kubernetes documentation](https://kubernetes.io/docs/concepts/services-networking/service/)) or using the node as a jump host) using
+Now, the Pod can be accessed via SSH. The configured `<mgmt IP address>` is accessible from a network connected to the PF used to create the SR-IOV VF resorce pool in the [SR-IOV network resources](#sr-iov-network-resources) section. Connect using
 
 ```bash
-ssh <username>@<Pod IP>
+ssh <username>@<mgmt IP address>
 ```
 
-where `<Pod IP>` is the address returned in the previous step. Enter the password `<password>` for access.
+Enter the password `<password>` for access.
 
-Once past the prompt, the status of the XR interfaces can be checked by running `show ip interfaces brief`, which should show a management interface and data interface in the output, similar to:
+Once past the prompt, the status of the XR interfaces can be checked by running `show ip interfaces brief`, which should show a management interface and line interface in the output, similar to:
 
 ```bash
 RP/0/RP0/CPU0:xrd-1#show ip interfaces brief
 Wed Jul 10 12:55:05.810 UTC
 
-Interface                      IP-Address      Status          Protocol Vrf-Name
-MgmtEth0/RP0/CPU0/0            (Pod IP)        Up              Up       default
-GigabitEthernetE0/0/0/0        unassigned      Shutdown        Down     default
+Interface                    IP-Address        Status        Protocol Vrf-Name
+MgmtEth0/RP0/CPU0/0          <mgmt IP address> Up            Up       default
+GigabitEthernetE0/0/0/0      unassigned        Shutdown      Down     default
 ```
 
 The SSH connection can be closed by running `exit`.
@@ -559,12 +682,13 @@ The SSH connection can be closed by running `exit`.
 
 XRd Control Plane will now be running in Red Hat OpenShift.
 
-This was covered in four steps from a functioning OpenShift cluster:
+This was covered in five steps from a functioning OpenShift cluster:
 
 1. The machine was set up for running XRd using Machine Config and TuneD
-2. SR-IOV networking resources were created
-3. A namespace and Service Account for running XRd were created
-4. An XRd Control Plane workload was deployed on a worker node
+2. The setup was validated using `host-check`
+3. SR-IOV networking resources were created
+4. A namespace and Service Account for running XRd were created
+5. An XRd Control Plane workload was deployed on a worker node
 
 # Appendix A: Using physical functions (PFs)
 
