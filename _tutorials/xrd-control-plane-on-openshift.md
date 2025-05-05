@@ -4,7 +4,7 @@ date: '2025-04-23 16:43 -0700'
 title: XRd Control Plane on Openshift
 author: Lawrence Troup
 excerpt: Overview of running XRd Control Plane on Red Hat OpenShift
-position: hidden
+position: top
 ---
 {% include base_path %}
 {% include toc %}
