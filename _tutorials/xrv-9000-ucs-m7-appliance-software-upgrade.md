@@ -31,7 +31,8 @@ This article will strictly focus on the software upgrade aspect, it does not cov
 
 # Prerequisite
 
-The files required to perform software upgrade can be obtained on cisco.com in the [IOS XRv 9000 Download section](https://software.cisco.com/download/home/286288939/type/280805694/release).
+The files required to perform software upgrade can be obtained on cisco.com in the [IOS XRv 9000 Download section](https://software.cisco.com/download/home/286288939/type/280805694/release).  
+
 ![xrv9k-download-section.png]({{site.baseurl}}/images/xrv9k-download-section.png)
 
 Always download and read the software upgrade document, as it contains important information about potential mandatory bridge SMU and rollback procedure.
