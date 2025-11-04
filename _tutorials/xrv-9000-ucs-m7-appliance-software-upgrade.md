@@ -255,7 +255,7 @@ Upload the file:
 ![xrv9k-cimc-upload.png]({{site.baseurl}}/images/xrv9k-cimc-upload.png)
 
 
-Once it’s uploaded, file integrity is verified and new firmware can be activated. Click on Activate:
+Once it’s uploaded, file integrity is verified and new firmware can be activated. Click on Activate Firmware:
 ![xrv9k-cimc-activation.png]({{site.baseurl}}/images/xrv9k-cimc-activation.png)
 
 CIMC upgrade kicks in. During activation, CIMC access is temporarily unavailable. Operation takes ~120s. CIMC upgrade does not impact underlying UCS workload, which in this case is the IOS XRv 9000 route-reflector.
