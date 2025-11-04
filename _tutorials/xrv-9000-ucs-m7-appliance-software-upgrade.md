@@ -481,6 +481,7 @@ BIOS:
 </div>    
 
 # Conclusion
+
 There are fundamentally very few differences between upgrading a traditional ASR 9000 router and the IOS XRv 9000 UCS M7 appliance: both run the same IOS XR 64bit architecture.
 
 - For IOS XR software upgrades, users have the choice between the traditional install add/activate/commit picking up individual mini ISO and optional RPMs (packages, SMUs) or simply use install replace with a golden ISO (custom built or Cisco provided)
