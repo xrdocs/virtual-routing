@@ -211,7 +211,7 @@ RP/0/RP0/CPU0:IOS-XRv9000_M7_Appliance#
 
 # Appliance Firmware Management
 
-UCS CIMC, BIOS, NIC drivers, RAID controller firmware etc. can be considered as Field Programmable Devices (FPD).  Like any software, those firmwares might need software upgrade to add new functionality, fix bugs, or improve security.  
+UCS CIMC, BIOS, NIC drivers, RAID controller firmware etc. can be considered as Field Programmable Devices (FPD).  Like any software, those firmwares might need upgrades to add new functionality, fix bugs, or improve security.  
 
 While ASR 9000 contains a specific FPD package to cover those components, this is currently not the case on the appliance. Instead, those components software upgrade is currently handled at CIMC level. Always use the supported combination, which is documented in the release notes, and always refer to the latest [documentation](https://www.cisco.com/c/en/us/td/docs/routers/virtual-routers/configuration/guide/b-xrv9k-cg/b-xrv9k-cg_chapter_01010.html#firmware-management):
 
