@@ -218,7 +218,7 @@ While ASR 9000 contains a specific FPD package to cover those components, this i
 ![xrv9k-firmware-combination.png]({{site.baseurl}}/images/xrv9k-firmware-combination.png)
 
 
-**Important** Do not download CIMC/BIOS files directly from UCS software download section. Instead, download the signed images from the IOS XRv 9000 download section.
+**Important:** Do not download CIMC/BIOS files directly from UCS software download section. Instead, download the signed images from the IOS XRv 9000 download section.
 {: .notice--danger}
 
 ![xrv9k-firmware-download.png]({{site.baseurl}}/images/xrv9k-firmware-download.png)
