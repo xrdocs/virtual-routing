@@ -218,6 +218,8 @@ While ASR 9000 contains a specific FPD package to cover those components, this i
 **Important** Do not download CIMC/BIOS files directly from UCS software download section. Instead, download the signed images from the IOS XRv 9000 download section.
 {: .notice--danger}
 
+![xrv9k-firmware-download.png]({{site.baseurl}}/images/xrv9k-firmware-download.png)
+
 The IOS XRv 9000 appliance Host Upgrade Utility (HUU) TAR archive contains the files firmware files required for this operation:
 
 <div class="highlighter-rouge">
@@ -243,15 +245,22 @@ The next part of the article will describe two ways to upgrade firmwares:
 
 ## CIMC GUI
 
-Login on the appliance CIMC, navigate to the Administration plane, and select Firmware Management. Select CIMC to upgrade the CIMC
+Login on the appliance CIMC, navigate to the Administration plane, and select Firmware Management. Select CIMC to upgrade the CIMC:
+![xrv9k-cimc-management.png]({{site.baseurl}}/images/xrv9k-cimc-management.png)
 
 Upload the file:
+![xrv9k-cimc-upload.png]({{site.baseurl}}/images/xrv9k-cimc-upload.png)
+
 
 Once it’s uploaded, file integrity is verified and new firmware can be activated. Click on Activate:
+![xrv9k-cimc-activation.png]({{site.baseurl}}/images/xrv9k-cimc-activation.png)
 
 CIMC upgrade kicks in. During activation, CIMC access is temporarily unavailable. Operation takes ~120s. CIMC upgrade does not impact underlying UCS workload, which in this case is the IOS XRv 9000 route-reflector.
 
 After activation and CIMC reconnection, the new version is running:
+![xrv9k-cimc-new-version-1.png]({{site.baseurl}}/images/xrv9k-cimc-new-version-1.png)
+
+![xrv9k-cimc-new-version-2.png]({{site.baseurl}}/images/xrv9k-cimc-new-version-2.png)
 
 For BIOS upgrade, same process is used: the BIOS file must be uploaded, and activated:
 
