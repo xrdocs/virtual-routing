@@ -73,7 +73,7 @@ This section will be short: IOS XR software upgrades are consistent between IOS 
 Users have the choice between 2 techniques:
 
 - Pickup the mini ISO file from a given release, optional packages, SMUs, and use the legendary and traditional install add/activate/commit commands, specifying individual files as argument
-- Build a custom golden ISO or use the Cisco provided golden ISO, and use the simpler and faster <code>install replace</code> command. This is the recommended way: not only it makes software upgrades simpler, but the process and the same golden ISO file can also be used to patch (install SMU) an existing system. This technique is illustrated below.
+- Build a custom golden ISO or use the Cisco provided golden ISO, and use the simpler and faster <code>install replace</code> command. This is the recommended way: not only it makes software upgrades simpler, but the process and the same golden ISO file can also be used to patch (install SMU) an existing system. This technique is executed and illustrated below.
 
 After copying golden ISO on the appliance harddisk, and when BGP RR is in maintenance mode, user can start the upgrade process using <code>install replace</code> command:
 
