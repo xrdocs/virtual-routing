@@ -79,7 +79,7 @@ After copying golden ISO on the appliance harddisk, and when BGP RR is in mainte
 <div class="highlighter-rouge">
 <pre class="highlight">
 <code>
-RP/0/RP0/CPU0:IOS-XRv9000_M7_Appliance#install replace /harddisk:/xrv9k-goldenk9-x-25.2.2-PROD_BUILD_25_2_2.iso synchronous
+RP/0/RP0/CPU0:IOS-XRv9000_M7_Appliance#<mark>install replace /harddisk:/xrv9k-goldenk9-x-25.2.2-PROD_BUILD_25_2_2.iso synchronous</mark>
 Tue Nov  4 16:27:25.284 UTC
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 2025-11-04 16:27:32 Install operation 1 started by cisco:
@@ -152,9 +152,9 @@ Once appliance has rebooted, and post checks are conform, new version can be com
 <div class="highlighter-rouge">
 <pre class="highlight">
 <code>
-RP/0/RP0/CPU0:IOS-XRv9000_M7_Appliance#sh install active summary
+RP/0/RP0/CPU0:IOS-XRv9000_M7_Appliance#<mark>sh install active summary</mark>
 Tue Nov  4 16:42:01.041 UTC
-Label : 25.2.2-PROD_BUILD_25_2_2
+<mark>Label : 25.2.2-PROD_BUILD_25_2_2</mark>
 
     Active Packages: 13
         xrv9k-xr-25.2.2 version=25.2.2 [Boot image]
@@ -171,22 +171,22 @@ Label : 25.2.2-PROD_BUILD_25_2_2
         xrv9k-mpls-1.0.0.0-r2522
         xrv9k-mpls-te-rsvp-1.0.0.0-r2522
 
-RP/0/RP0/CPU0:IOS-XRv9000_M7_Appliance#sh install committed summary
+RP/0/RP0/CPU0:IOS-XRv9000_M7_Appliance#<mark>sh install committed summary</mark>
 Tue Nov  4 16:42:19.678 UTC
-Label : 24.4.2
+<mark>Label : 24.4.2</mark>
 
     Committed Packages: 1
         xrv9k-xr-24.4.2 version=24.4.2 [Boot image]
 
-RP/0/RP0/CPU0:IOS-XRv9000_M7_Appliance#install commit synchronous
+RP/0/RP0/CPU0:IOS-XRv9000_M7_Appliance#<mark>install commit synchronous</mark>
 Tue Nov  4 16:42:29.630 UTC
 2025-11-04 16:42:33 Install operation 3 started by cisco:
   install commit synchronous
 2025-11-04 16:43:00 Install operation 3 finished successfully
 2025-11-04 16:43:00 Ending operation 3
-RP/0/RP0/CPU0:IOS-XRv9000_M7_Appliance#sh install committed summary
+RP/0/RP0/CPU0:IOS-XRv9000_M7_Appliance#<mark>sh install committed summary</mark>
 Tue Nov  4 16:43:11.657 UTC
-Label : 25.2.2-PROD_BUILD_25_2_2
+<mark>Label : 25.2.2-PROD_BUILD_25_2_2</mark>
 
     Committed Packages: 13
         xrv9k-xr-25.2.2 version=25.2.2 [Boot image]
@@ -292,9 +292,9 @@ User must log in CIMC via SSH. From here, current CIMC version can be verified:
 <code>
 C220-WZP28359K2C# scope cimc
 C220-WZP28359K2C /cimc # show firmware
-Update Stage Update Progress Current FW Version
+Update Stage Update Progress <mark>Current FW Version</mark>
 ------------ --------------- ------------------
-NONE         0               4.3(5.240021)
+NONE         0               <mark>4.3(5.240021)</mark>
 </code>
 </pre>
 </div>
@@ -309,8 +309,8 @@ Firmware update initialized.
 Please check the status using "show detail".
 C220-WZP28359K2C /cimc/firmware # show detail
 Firmware Image Information:
-    Update Stage: DOWNLOAD
-    Update Progress: 5
+    <mark>Update Stage: DOWNLOAD<mark>
+    <mark>Update Progress: 5<mark>
     Current FW Version: 4.3(5.240021)
     FW Image 1 Version: 4.3(5.240021)
     FW Image 1 State: BACKUP INACTIVATED
@@ -320,8 +320,8 @@ Firmware Image Information:
     Secure Boot: DISABLED
 C220-WZP28359K2C /cimc/firmware # show detail
 Firmware Image Information:
-    Update Stage: INSTALL
-    Update Progress: 45
+    <mark>Update Stage: INSTALL<mark>
+    <mark>Update Progress: 45<mark>
     Current FW Version: 4.3(5.240021)
     FW Image 1 Version: 4.3(5.240021)
     FW Image 1 State: BACKUP INACTIVATED
@@ -331,8 +331,8 @@ Firmware Image Information:
     Secure Boot: DISABLED
 C220-WZP28359K2C /cimc/firmware # show detail
 Firmware Image Information:
-    Update Stage: NONE
-    Update Progress: 100
+    <mark>Update Stage: NONE<mark>
+    <mark>Update Progress: 100<mark>
     Current FW Version: 4.3(5.240021)
     FW Image 1 Version: 4.3(5.250001)
     FW Image 1 State: BACKUP INACTIVATED
@@ -350,9 +350,9 @@ After CIMC firmware upload, new version can be activated and CIMC access is temp
 <div class="highlighter-rouge">
 <pre class="highlight">
 <code>
-C220-WZP28359K2C /cimc/firmware # activate
+C220-WZP28359K2C /cimc/firmware # <mark>activate</mark>
 This operation will activate firmware 1 and reboot the BMC.
-Continue?[y|N]y
+Continue?[y|N]<mark>y</mark>
 --- connection to CIMC is lost and must be reestablished
 C220-WZP28359K2C /cimc/firmware # Read from remote host 172.20.166.102: Operation timed out
 Connection to 172.20.166.102 closed.
@@ -372,7 +372,7 @@ sC220-WZP28359K2C /cimc/firmware # show detail
 Firmware Image Information:
     Update Stage: NONE
     Update Progress: 0
-    Current FW Version: 4.3(5.250001)
+    <mark>Current FW Version: 4.3(5.250001)</mark>
     FW Image 1 Version: 4.3(5.250001)
     FW Image 1 State: RUNNING ACTIVATED
     FW Image 2 Version: 4.3(5.240021)
@@ -388,10 +388,10 @@ For BIOS upgrade, exact same procedure exists and happens inside a different CIM
 <div class="highlighter-rouge">
 <pre class="highlight">
 <code>
-C220-WZP28359K2C# scope bios
+C220-WZP28359K2C# <mark>scope bios</mark>
 C220-WZP28359K2C /bios # show detail
 BIOS:
-    BIOS Version: C220M7.4.3.5a.0_XRV9K
+    <mark>BIOS Version: C220M7.4.3.5a.0_XRV9K</mark>
     Backup BIOS Version: C220M7.4.3.5a.0_XRV9K
     Boot Order: CDROM,HDD
     FW Update Status: None, OK
@@ -408,7 +408,7 @@ The BIOS file is uploaded, signature verified:
 <div class="highlighter-rouge">
 <pre class="highlight">
 <code>
-C220-WZP28359K2C /bios # update http 172.20.166.52 /bios.pkg
+C220-WZP28359K2C /bios # <mark>update http 172.20.166.52 /bios.pkg</mark>
 bios update has started.
 Please check the status using "show detail".
 C220-WZP28359K2C /bios # show detail
@@ -416,7 +416,7 @@ BIOS:
     BIOS Version: C220M7.4.3.5a.0_XRV9K
     Backup BIOS Version: C220M7.4.3.5a.0_XRV9K
     Boot Order: CDROM,HDD
-    FW Update Status: Image Download (0 %), OK
+    <mark>FW Update Status: Image Download (0 %), OK</mark>
     UEFI Secure Boot: enabled
     Actual Boot Mode: Uefi
     Last Configured Boot Order Source: CIMC
@@ -426,7 +426,7 @@ BIOS:
     BIOS Version: C220M7.4.3.5a.0_XRV9K
     Backup BIOS Version: C220M7.4.3.5a.0_XRV9K
     Boot Order: CDROM,HDD
-    FW Update Status: Write Host Flash (50 %), OK
+    <mark>FW Update Status: Write Host Flash (50 %), OK</mark>
     UEFI Secure Boot: enabled
     Actual Boot Mode: Uefi
     Last Configured Boot Order Source: CIMC
@@ -436,7 +436,7 @@ BIOS:
     BIOS Version: C220M7.4.3.5a.0_XRV9K
     Backup BIOS Version: C220M7.4.3.5b.0_XRV9K
     Boot Order: CDROM,HDD
-    FW Update Status: Done, OK
+    <mark>FW Update Status: Done, OK</mark>
     UEFI Secure Boot: enabled
     Actual Boot Mode: Uefi
     Last Configured Boot Order Source: CIMC
@@ -451,12 +451,12 @@ And then it can be activated, after an appliance reload:
 <div class="highlighter-rouge">
 <pre class="highlight">
 <code>
-220-WZP28359K2C /bios # activate
+220-WZP28359K2C /bios # <mark>activate</mark>
 System is powered-on. This operation will activate backup BIOS version "C220M7.4.3.5b.0_XRV9K" during next boot.
 Continue?[y|N]y
 C220-WZP28359K2C /bios # exit
-C220-WZP28359K2C# scope chassis
-C220-WZP28359K2C /chassis # power cycle
+C220-WZP28359K2C# <mark>scope chassis</mark>
+C220-WZP28359K2C /chassis # <mark>power cycle</mark>
 </code>
 </pre>
 </div>
@@ -468,7 +468,7 @@ After reboot and logging in CIMC, new version can be observed:
 <code>
 C220-WZP28359K2C /bios # show detail
 BIOS:
-    BIOS Version: C220M7.4.3.5b.0_XRV9K
+    <mark>BIOS Version: C220M7.4.3.5b.0_XRV9K</mark>
     Backup BIOS Version: C220M7.4.3.5a.0_XRV9K
     Boot Order: CDROM,HDD
     FW Update Status: Done, OK
