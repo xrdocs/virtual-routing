@@ -11,7 +11,7 @@ tags:
   - Appliance
   - RR
   - XRv 9000
-position: hidden
+position: top
 ---
 {% include toc icon="table" title="Cisco IOS XRv 9000 UCS M7 appliance software upgrade" %}
 
