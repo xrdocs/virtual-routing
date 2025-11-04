@@ -223,7 +223,7 @@ While ASR 9000 contains a specific FPD package to cover those components, this i
 
 ![xrv9k-firmware-download.png]({{site.baseurl}}/images/xrv9k-firmware-download.png)
 
-The IOS XRv 9000 appliance Host Upgrade Utility (HUU) TAR archive contains the files firmware files required for this operation:
+The IOS XRv 9000 appliance Host Upgrade Utility (HUU) TAR archive contains the firmware files required for this operation:
 
 <div class="highlighter-rouge">
 <pre class="highlight">
