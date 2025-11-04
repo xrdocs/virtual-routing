@@ -310,8 +310,8 @@ Firmware update initialized.
 Please check the status using "show detail".
 C220-WZP28359K2C /cimc/firmware # show detail
 Firmware Image Information:
-    <mark>Update Stage: DOWNLOAD<mark>
-    <mark>Update Progress: 5<mark>
+    <mark>Update Stage: DOWNLOAD</mark>
+    <mark>Update Progress: 5</mark>
     Current FW Version: 4.3(5.240021)
     FW Image 1 Version: 4.3(5.240021)
     FW Image 1 State: BACKUP INACTIVATED
@@ -321,8 +321,8 @@ Firmware Image Information:
     Secure Boot: DISABLED
 C220-WZP28359K2C /cimc/firmware # show detail
 Firmware Image Information:
-    <mark>Update Stage: INSTALL<mark>
-    <mark>Update Progress: 45<mark>
+    <mark>Update Stage: INSTALL</mark>
+    <mark>Update Progress: 45</mark>
     Current FW Version: 4.3(5.240021)
     FW Image 1 Version: 4.3(5.240021)
     FW Image 1 State: BACKUP INACTIVATED
@@ -332,8 +332,8 @@ Firmware Image Information:
     Secure Boot: DISABLED
 C220-WZP28359K2C /cimc/firmware # show detail
 Firmware Image Information:
-    <mark>Update Stage: NONE<mark>
-    <mark>Update Progress: 100<mark>
+    <mark>Update Stage: NONE</mark>
+    <mark>Update Progress: 100</mark>
     Current FW Version: 4.3(5.240021)
     FW Image 1 Version: 4.3(5.250001)
     FW Image 1 State: BACKUP INACTIVATED
