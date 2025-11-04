@@ -13,6 +13,8 @@ tags:
   - XRv 9000
 position: hidden
 ---
+{% include toc icon="table" title="Cisco IOS XRv 9000 UCS M7 appliance software upgrade" %}
+
 # Introduction
 
 This document aims to describe and document how to upgrade Cisco IOS XR software running on a Cisco IOS XRv 9000 UCS M7 appliance.
