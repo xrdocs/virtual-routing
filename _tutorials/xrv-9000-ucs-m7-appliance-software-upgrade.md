@@ -265,7 +265,7 @@ After activation and CIMC reconnection, the new version is running:
 
 ![xrv9k-cimc-new-version-2.png]({{site.baseurl}}/images/xrv9k-cimc-new-version-2.png)
 
-For BIOS upgrade, same process is used: the BIOS file must be uploaded, and activated.
+For BIOS upgrade, same process is used: the BIOS file must be first uploaded, and then activated.
 ![bios-upload.png]({{site.baseurl}}/images/bios-upload.png)
 
 Unlike CIMC, BIOS activation requires host reboot to be effective, meaning impact on underlying IOS XRv 9000 software running on the appliance:
