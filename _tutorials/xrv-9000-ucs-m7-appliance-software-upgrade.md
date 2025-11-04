@@ -284,7 +284,7 @@ And finally new version is visible in CIMC. After this, both CIMC and BIOS versi
 
 ## CIMC CLI
 
-Getting access to CIMC GUI can often be challenging in out-of-band administration networks. It’s also possible to execute this procedure using the CIMC CLI.  
+Getting access to CIMC GUI can be often challenging in out-of-band administration networks. It’s also possible to execute this procedure using the CIMC CLI.  
 
 User must log in CIMC via SSH. From here, current CIMC version can be verified:
 
