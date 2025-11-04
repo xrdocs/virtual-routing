@@ -36,6 +36,9 @@ The individual mini ISO, optional RPMs packages, and a pre-built golden ISO file
 
 Content of the archive is the following:
 
+<div class="highlighter-rouge">
+<pre class="highlight">
+<code>
 {25-11-04 17:16}FCUILLER-M-NQD1:~/Downloads/ISO/fullk9-R-XRV9000-2522 fcuiller% ls -l
 total 18512656
 -rw-------@ 1 fcuiller  staff        2320 Sep 22 20:48 README-fullk9-R-XRV9000-2522.txt
@@ -56,6 +59,9 @@ total 18512656
 -r-xr-xr-x@ 1 fcuiller  staff     2329691 Sep 21 00:27 xrv9k-mpls-1.0.0.0-r2522.x86_64.rpm
 -r-xr-xr-x@ 1 fcuiller  staff     8500488 Sep 21 00:27 xrv9k-mpls-te-rsvp-1.0.0.0-r2522.x86_64.rpm
 -r-xr-xr-x@ 1 fcuiller  staff     4116598 Sep 21 00:27 xrv9k-ospf-1.0.0.0-r2522.x86_64.rpm
+</code>
+</pre>
+</div>
 
 # IOS XR Software Upgrade
 
@@ -67,6 +73,9 @@ Users have the choice between 2 techniques:
 
 After copying golden ISO on the appliance harddisk, and when BGP RR is in maintenance mode, user can start the upgrade process using <code>install replace</code> command:
 
+<div class="highlighter-rouge">
+<pre class="highlight">
+<code>
 RP/0/RP0/CPU0:IOS-XRv9000_M7_Appliance#install replace /harddisk:/xrv9k-goldenk9-x-25.2.2-PROD_BUILD_25_2_2.iso synchronous
 Tue Nov  4 16:27:25.284 UTC
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -129,11 +138,17 @@ RP/0/RP0/CPU0:Nov  4 16:33:03.633 UTC: sdr_instmgr[1291]: %INSTALL-INSTMGR-2-SYS
 0/RP0/ADMIN0:Nov  4 16:33:05.000 UTC: inst_mgr[3364]: %INFRA-INSTMGR-5-OPERATION_TO_RELOAD : This rack will now reload as part of the install operation
 ^@Connection to 172.20.163.15 closed by remote host.
 Connection to 172.20.163.15 closed.
+</code>
+</pre>
+</div>
 
 The appliance reloads on the new version of code. The whole process takes approximatively 8min.  
 
 Once appliance has rebooted, and post checks are conform, new version can be committed:
 
+<div class="highlighter-rouge">
+<pre class="highlight">
+<code>
 RP/0/RP0/CPU0:IOS-XRv9000_M7_Appliance#sh install active summary
 Tue Nov  4 16:42:01.041 UTC
 Label : 25.2.2-PROD_BUILD_25_2_2
@@ -186,6 +201,9 @@ Label : 25.2.2-PROD_BUILD_25_2_2
         xrv9k-mpls-te-rsvp-1.0.0.0-r2522
 
 RP/0/RP0/CPU0:IOS-XRv9000_M7_Appliance#
+</code>
+</pre>
+</div>
 
 # Appliance Firmware Management
 
@@ -198,6 +216,9 @@ While ASR 9000 contains a specific FPD package to cover those components, this i
 
 The IOS XRv 9000 appliance Host Upgrade Utility (HUU) TAR archive contains the files firmware files required for this operation:
 
+<div class="highlighter-rouge">
+<pre class="highlight">
+<code>
 {25-11-04 15:51}FCUILLER-M-NQD1:~/Downloads/ISO/xrv9k-ucs-c220m7-huu-container-4.3.5.250001/firmware fcuiller% ls -l
 total 0
 drwxr-xr-x@   3 fcuiller  staff    96 Mar 25  2025 bios
@@ -205,9 +226,12 @@ drwxr-xr-x@   4 fcuiller  staff   128 Oct 21 11:38 cimc
 drwxr-xr-x@ 136 fcuiller  staff  4352 Mar 25  2025 Common
 drwxr-xr-x@   3 fcuiller  staff    96 Mar 25  2025 MOUNTRAINIER1
 drwxr-xr-x@   4 fcuiller  staff   128 Mar 25  2025 VIC_FIRMWARE
+</code>
+</pre>
+</div>
 
-- CIMC firmware is located in cimc/cimc.bin
-- Signed BIOS is located in bios/bios.pkg
+- CIMC firmware is located in <code>cimc/cimc.bin</code>
+- Signed BIOS is located in <code>bios/bios.pkg</code>
 
 The next part of the article will describe two ways to upgrade firmwares:
 - CIMC GUI
@@ -240,14 +264,24 @@ And finally new version is visible in CIMC. After this, both CIMC and BIOS versi
 Getting access to CIMC GUI can often be challenging in out-of-band administration networks. It’s also possible to execute this procedure using the CIMC CLI.  
 
 User must log in CIMC via SSH. From here, current CIMC version can be verified:
+
+<div class="highlighter-rouge">
+<pre class="highlight">
+<code>
 C220-WZP28359K2C# scope cimc
 C220-WZP28359K2C /cimc # show firmware
 Update Stage Update Progress Current FW Version
 ------------ --------------- ------------------
 NONE         0               4.3(5.240021)
+</code>
+</pre>
+</div>
 
 CIMC firmware can be uploaded via multiple protocols, and the progress can be monitored:
 
+<div class="highlighter-rouge">
+<pre class="highlight">
+<code>
 C220-WZP28359K2C /cimc/firmware # update http 172.20.166.52 /cimc.bin
 Firmware update initialized.
 Please check the status using "show detail".
@@ -285,17 +319,31 @@ Firmware Image Information:
     Boot-loader Version: 4.3(5.240021)
     Secure Boot: DISABLED
 C220-WZP28359K2C /cimc/firmware #
+</code>
+</pre>
+</div>
 
 After CIMC firmware upload, new version can be activated and CIMC access is temporarily unavailable:
+
+<div class="highlighter-rouge">
+<pre class="highlight">
+<code>
 C220-WZP28359K2C /cimc/firmware # activate
 This operation will activate firmware 1 and reboot the BMC.
 Continue?[y|N]y
-<<< connection to CIMC is lost and must be reestablished
+--- connection to CIMC is lost and must be reestablished
 C220-WZP28359K2C /cimc/firmware # Read from remote host 172.20.166.102: Operation timed out
 Connection to 172.20.166.102 closed.
 client_loop: send disconnect: Broken pipe
+</code>
+</pre>
+</div>
 
 After logging back to CIMC CLI, new version can be seen as active:
+
+<div class="highlighter-rouge">
+<pre class="highlight">
+<code>
 C220-WZP28359K2C# scope cimc
 C220-WZP28359K2C /cimc # scope firmware
 sC220-WZP28359K2C /cimc/firmware # show detail
@@ -309,9 +357,15 @@ Firmware Image Information:
     FW Image 2 State: BACKUP INACTIVATED
     Boot-loader Version: 4.3(5.250001)
     Secure Boot: DISABLED
-
+</code>
+</pre>
+</div>
 
 For BIOS upgrade, exact same procedure exists and happens inside a different CIMC scope:
+
+<div class="highlighter-rouge">
+<pre class="highlight">
+<code>
 C220-WZP28359K2C# scope bios
 C220-WZP28359K2C /bios # show detail
 BIOS:
@@ -323,8 +377,15 @@ BIOS:
     Actual Boot Mode: Uefi
     Last Configured Boot Order Source: CIMC
     One time boot device: (none)
+</code>
+</pre>
+</div>
 
 The BIOS file is uploaded, signature verified:
+
+<div class="highlighter-rouge">
+<pre class="highlight">
+<code>
 C220-WZP28359K2C /bios # update http 172.20.166.52 /bios.pkg
 bios update has started.
 Please check the status using "show detail".
@@ -359,18 +420,30 @@ BIOS:
     Last Configured Boot Order Source: CIMC
     One time boot device: (none)
 C220-WZP28359K2C /bios #
-
+</code>
+</pre>
+</div>
 
 And then it can be activated, after an appliance reload:
+
+<div class="highlighter-rouge">
+<pre class="highlight">
+<code>
 220-WZP28359K2C /bios # activate
 System is powered-on. This operation will activate backup BIOS version "C220M7.4.3.5b.0_XRV9K" during next boot.
 Continue?[y|N]y
 C220-WZP28359K2C /bios # exit
 C220-WZP28359K2C# scope chassis
 C220-WZP28359K2C /chassis # power cycle
-
+</code>
+</pre>
+</div>
 
 After reboot and logging in CIMC, new version can be observed:
+
+<div class="highlighter-rouge">
+<pre class="highlight">
+<code>
 C220-WZP28359K2C /bios # show detail
 BIOS:
     BIOS Version: C220M7.4.3.5b.0_XRV9K
@@ -381,6 +454,9 @@ BIOS:
     Actual Boot Mode: Uefi
     Last Configured Boot Order Source: CIMC
     One time boot device: (none)
+</code>
+</pre>
+</div>    
 
 # Conclusion
 There are fundamentally very few differences between upgrading a traditional ASR 9000 router and the IOS XRv 9000 UCS M7 appliance: both run the same IOS XR 64bit architecture.
