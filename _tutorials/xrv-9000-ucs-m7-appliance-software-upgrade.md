@@ -242,7 +242,7 @@ drwxr-xr-x@   4 fcuiller  staff   128 Mar 25  2025 VIC_FIRMWARE
 - CIMC firmware is located in <code>cimc/cimc.bin</code>
 - Signed BIOS is located in <code>bios/bios.pkg</code>
 
-The next part of the article will describe two ways to upgrade firmwares:
+The next part of the article will describe two ways to upgrade firmwares using:
 - CIMC GUI
 - CIMC CLI
 
